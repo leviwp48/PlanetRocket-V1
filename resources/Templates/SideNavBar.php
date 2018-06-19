@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Resources\Templates;
 
@@ -21,7 +21,7 @@ private $_user;
 
 	public function concatenate() {  ob_start(); ?>
 
-	    <div id="nav_sidebar_content" style="position:fixed; display:none; height:0px; width:0px;">	
+	    <div id="nav_sidebar_content" style="position:fixed; display:none; height:0px; width:0px;">
 
 	        <div id="sidenav_header" class="row" style="background:#333333; color:#FFFFFF; padding:15px;">
 	            <div class="box back_facing_chevron" style="vertical-align:middle;"></div><div class="box" style="vertical-align:middle; left:5px; font-size:2.3em; color:#03C7F4;"><b>BACK</b></div>
@@ -41,6 +41,11 @@ private $_user;
 	            			Projects
 	            			</a>
 	                    </li>
+											<li class="row">
+	                       	<a href="<?php echo APP_BASE; ?>/calendar" class="row styled_sidebar_item">
+	            			Calendar
+	            			</a>
+	                    </li>
 	                    <li class="row">
 	                       	<a href="<?php echo APP_BASE; ?>/about" class="row styled_sidebar_item">
 	            			About
@@ -52,7 +57,7 @@ private $_user;
 	                    	</a>
 	                    </li>
 
-	        	
+
 	        	<!--
 	        	<li class="row">
 	        		<div class="row styled_sidebar_item">
