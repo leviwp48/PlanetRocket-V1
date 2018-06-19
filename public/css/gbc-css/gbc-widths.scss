@@ -1,0 +1,183 @@
+
+@mixin featured_article_box_width($screenSize) {
+
+$width: 50%;
+
+	@if $screenSize == 2 {
+	$width: 100%;
+	}
+
+	.featured_article_box_width {
+	width: $width;
+	}
+
+}
+
+@mixin embedded_video_player_width($screenSize) {
+
+$width: 80%;
+
+	@if $screenSize == 2 {
+	$width: 100%;
+	}
+
+	.embedded_video_player_width {
+	width: $width;
+	}
+
+}
+
+@mixin embedded_image_width($screenSize) {
+
+$width: 80%;
+
+	@if $screenSize == 2 {
+	$width: 100%;
+	}
+
+	.embedded_image_width {
+	width: $width;
+	}
+
+}
+
+@mixin lightbox_width_800($screenSize) {
+
+$width: 800px;
+
+
+	@if $screenSize != 0 {
+	$width: 90%;
+	}
+
+	.lightbox_width_800 {
+	width: $width;
+	}
+
+}
+
+
+@mixin content_home_margin($screenSize) {
+
+$margin:20px;
+
+	@if($screenSize == 2) {
+	$margin: 10px;
+	}
+
+	.content_home_margin {
+	margin:$margin;
+	}
+
+}
+
+@mixin content_home_featured_padding($screenSize) {
+
+$padding:10px;
+
+	@if($screenSize == 2) {
+	$padding: 5px;
+	}
+
+	.content_home_featured_padding {
+	padding:$padding;
+	}
+
+}
+
+@mixin archive_page_main_content_padding($screenSize) {
+
+$padding:10px;
+
+	@if($screenSize == 2) {
+	$padding: 5px;
+	}
+
+	.archive_page_main_content_padding {
+	padding:$padding;
+	}
+
+}
+
+
+@mixin featured_posts_padding($screenSize) {
+
+$padding:10px;
+
+	@if($screenSize == 2) {
+	$padding: 5px;
+	}
+
+	.featured_posts_padding {
+	padding:$padding;
+	padding-bottom:15px;
+	}
+
+}
+
+@mixin sortable_table_id_column_width($screenSize) {
+
+$width:80px;
+$display:table-cell;
+
+	@if($screenSize > 1) {
+	$width:0px;
+	$display:none !important;
+	}
+
+	.sortable_table_id_column_width {
+	width:$width;
+	display:$display;
+	}	
+
+}
+
+@mixin sortable_table_desc_column_width($screenSize) {
+
+$width:calc(100% - 80px);
+
+	@if($screenSize > 1) {
+	$width:100%;
+	}
+	.sortable_table_desc_column_width {
+	width:$width;
+	}	
+
+}
+
+@mixin index_page_column_width($screenSize) {
+
+$width:70%;
+
+	@if($screenSize > 1) {
+	$width:90%;
+	}
+	.index_page_column_width {
+	width:$width;
+	}	
+
+}
+
+
+@mixin js_responsive_device_width($screenSize) {
+
+$width: 0px;
+
+	//these are arbitrary numbers that get read later on by javascript
+	//to tell what screen-size code we're dealing with.
+	//remember- they start at desktop-size: 0 and go to mobile size: 2.
+	@if($screenSize == 0) {
+	$width: 100px;
+	} 
+	@if($screenSize == 1) {
+	$width: 200px;
+	} 
+	@if($screenSize == 2) {
+	$width: 300px;
+	}
+
+	#js_responsive_device_width {
+	width:$width;
+	}
+
+}

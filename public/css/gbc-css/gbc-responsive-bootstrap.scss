@@ -1,0 +1,156 @@
+
+@mixin responsive_classes($isHiRes, $screenSize) {
+
+$mainTitleHeight: 304px;
+
+$mainTitleColumnPctWidth: 80%;
+
+  @if $screenSize > 0 {
+  $mainTitleColumnPctWidth: 90%;
+  }
+
+
+  @if $isHiRes == true {
+
+    @if $screenSize == 1  {
+
+    $mainTitleHeight:200px;
+
+    } @elseif $screenSize == 2 {
+
+    $mainTitleHeight:150px;
+
+    } @else {
+
+    $mainTitleHeight:304px;
+
+    }
+
+  } @else {
+
+    @if $screenSize == 1 {
+
+    $mainTitleHeight:200px;
+
+    } @elseif $screenSize == 2 {
+
+    $mainTitleHeight:150px;
+
+    } @else {
+
+    $mainTitleHeight:304px;
+
+    }
+
+  }
+
+  @include js_responsive_device_width($screenSize);
+
+  @include body($screenSize);
+
+  @include h1($screenSize);
+
+  @include post_title_h1($screenSize);
+
+  @include h2($screenSize);
+
+  @include h2_featured_post_tile_title($screenSize);
+
+  @include page_title_with_background_repeater($isHiRes);
+
+  @include top_nav_negative_margin($screenSize);
+
+  @include h2_indexpage($screenSize);
+
+  @include h3_indexpage($screenSize);
+
+  //@include content_left_column_width($screenSize);
+  //@include content_right_column_width($screenSize);
+
+  @include featured_article_box_width($screenSize);
+
+  @include embedded_image_width($screenSize);
+
+  @include index_page_column_width($screenSize);
+
+  @include lightbox_width_800($screenSize);
+
+  @include content_home_margin($screenSize);
+
+  @include content_home_featured_padding($screenSize);
+
+  @include featured_posts_padding($screenSize);
+
+  @include archive_page_main_content_padding($screenSize);
+
+  @include embedded_video_player_width($screenSize);
+
+  @include main_title($isHiRes, $screenSize);
+
+  @include main_title_column_width($mainTitleColumnPctWidth);
+
+  @include main_title_mobile($isHiRes, $screenSize);
+
+  @include main_title_repeater($mainTitleHeight, $isHiRes, $screenSize);
+
+  @include main_title_explainer($isHiRes, $screenSize);
+
+  @include main_title_height($mainTitleHeight, $isHiRes, $screenSize);
+
+  @include main_title_img_dimensions($screenSize);
+
+  @include main_title_img_position($screenSize);
+
+  //@include main_title_background($mainTitleHeight, $isHiRes, $screenSize);
+
+  @include main_title_background_left($mainTitleHeight, $isHiRes, $screenSize);
+
+  @include main_title_background_right($mainTitleHeight, $isHiRes, $screenSize);
+
+  @include hamburger_menu_icon($isHiRes, $screenSize);
+
+  @include pagination_box($screenSize);
+
+  @include sortable_table_id_column_width($screenSize);
+
+  @include sortable_table_desc_column_width($screenSize);
+
+  @include back_facing_chevron($isHiRes, $screenSize);
+
+  @include visible_at_screen_lt_size1($screenSize);
+
+  @include visible_at_screen_gt_size1($screenSize);
+
+  @include visible_at_screen_gt_size2($screenSize);
+
+  @include visible_at_screen_size2($screenSize);
+
+}
+
+
+
+  @include responsive_classes($isHiRes:false, $screenSize:0);
+
+    @media only screen and (max-device-width : $_screenSizeMedium_0), only screen and (max-width: $_screenSizeMedium_0) {
+    @include responsive_classes($isHiRes:false, $screenSize:1);
+    } 
+
+    @media only screen and (max-device-width : $_screenSizeSmall), only screen and (max-width: $_screenSizeSmall) {
+    @include responsive_classes($isHiRes:false, $screenSize:2);
+    }
+
+  @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @include responsive_classes($isHiRes:true, $screenSize:0);
+
+    @media only screen and (max-device-width : $_screenSizeMedium_0), only screen and (max-width: $_screenSizeMedium_0) {
+    @include responsive_classes($isHiRes:true, $screenSize:1);
+    } 
+
+    @media only screen and (max-device-width : $_screenSizeSmall), only screen and (max-width: $_screenSizeSmall) {
+    @include responsive_classes($isHiRes:true, $screenSize:2);
+    }
+      
+  }
+
+
+

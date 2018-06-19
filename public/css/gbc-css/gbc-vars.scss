@@ -1,0 +1,26 @@
+
+//the size at which we switch to tablet styles
+$_screenSizeMedium_0: 900px;
+
+$_screenSizeMedium_1: 800px;
+
+$_screenSizeMedium_2: 700px;
+
+//the small screen-size when we switch to phone styles
+$_screenSizeSmall: 500px;
+
+//the high-resolution token for image urls
+$_hiResTokenString: '-2x';
+
+//the relative url to the images folder, relative to main.scss:
+$_imagesFolder: '../../images/';
+
+
+$mainBlue: #3061c1;//#4166af;
+$navBarBlue: #104aa5;//#1755b7;
+$blueContrast1: #1e2e84;
+$blueContrast2: #3271d3;//#4286f4;//#0e1959;//#152372;
+
+$grey: #999999;
+$medGrey: #CCCCCC;
+$lightGrey: #F2F2F2;

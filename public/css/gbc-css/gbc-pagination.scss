@@ -1,0 +1,33 @@
+
+@mixin pagination_box($screenSize) {
+
+	@if $screenSize == 0 {
+
+		.pagination_box {
+		position:absolute;
+		display:inline;
+		top:0px;
+		right:0px; 
+		left:auto; 
+		top:-40px;
+		}
+
+	}
+	@else {
+
+		.pagination_box {
+		box-sizing:border-box;
+		-moz-box-sizing: border-box;
+		display:inline-block; 
+		position:relative;
+		/*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+		that's the strange problem that happens when you don't have this style.*/
+		vertical-align:top;
+		margin-top:40px;
+		}
+
+	}
+
+
+
+}

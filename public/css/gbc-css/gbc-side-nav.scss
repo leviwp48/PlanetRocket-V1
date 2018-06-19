@@ -1,0 +1,153 @@
+//mobile side-nav styles
+//$baseTriangleWidth: 27px;
+$baseTriangleWidth: 45px;
+
+$blue0: #03C7F4;
+$blue0_hover: #84E7F7;
+$red0: #F9215A;
+$red1: #f95462;
+
+
+@mixin top_nav_negative_margin($screenSize) {
+
+$marginTop: -40px;
+
+	@if $screenSize > 0 {
+	$marginTop: 0px;
+	}
+
+	.top_nav_negative_margin {
+	margin-top: $marginTop;
+	}
+
+}
+
+.fixed_nav_sidebar {
+position:fixed; 
+top:75px; 
+left:-100%; 
+width:100%; 
+height:100%; 
+z-index:11; 
+background:#333333; 
+overflow:scroll;
+}
+
+
+.sidenav-svg {
+left:0px;
+top:0px; 
+height:100%; 
+width:100%;
+padding:0px; 
+margin:0px;
+}
+
+
+.styled_sidebar_item {
+color:#FFFFFF;
+text-decoration: none;
+font-size:2em;
+padding:10px;
+padding-left:15px;
+border-bottom:1px solid #03C7F4;
+border-left:8px solid #03C7F4;
+background:#242424;
+}
+
+
+
+.styled_sidebar_item {
+color: $blue0;
+cursor:pointer;
+}
+.styled_sidebar_item:hover {
+color: $blue0_hover;
+}
+
+a.styled_sidebar_item {
+color: $blue0;
+//transition: color 0.3s ease;
+}
+a.styled_sidebar_item:active  {
+color: $blue0;
+}
+a.styled_sidebar_item:hover {
+color: $blue0_hover;
+}
+a.styled_sidebar_item:visited {
+color:$red0;
+}
+a.styled_sidebar_item:visited:hover {
+color:$red1;
+}
+
+
+
+
+/* We need this little margin-bottom:100px thing here because somehow it doesn't trigger the scrolling bar 
+      when the options expand otherwise and I'm not sure what's going on. */
+.sidenav_menu_container {
+padding-left:10px; 
+padding-right:10px; 
+font-weight:bold; 
+margin-bottom:100px;
+}
+
+.mobile_ul {
+list-style:none;
+font-size:1em;
+text-transform: uppercase;
+padding-left:30px;
+}
+
+.mobile_ul li ul {
+overflow:hidden;
+height:0px;
+}
+
+.mobile_li_last {
+border-bottom:solid 1px #222222;
+}
+
+
+.styled_sidebar_item a {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+
+//We kind of fake the nesting this way, that way we can have a nice 
+//black borders that stretch all the way across.
+// .mobile_ul_nest_1 {
+// background:#1C4DBA;
+// }
+// .mobile_ul_nest_1 .styled_sidebar_item {
+// padding-left:20px;
+// }
+// .mobile_ul_nest_2 {
+// background:#0571D3;
+// }
+// .mobile_ul_nest_2 .styled_sidebar_item {
+// padding-left:40px;
+// }
+// .mobile_ul_nest_3 {
+// background:#0089EF;
+// }
+// .mobile_ul_nest_3 .styled_sidebar_item {
+// padding-left:60px;
+// }
+// .mobile_ul_nest_4 {
+// background:#03AAF4;
+// }
+// .mobile_ul_nest_4 .styled_sidebar_item {
+// padding-left:80px;
+// }
+// .mobile_ul_nest_5 {
+// background:#03C7F4;
+// }
+// .mobile_ul_nest_5 .styled_sidebar_item {
+// padding-left:100px;
+// }
+
+
