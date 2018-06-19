@@ -44,7 +44,7 @@ private $_forHomePage = false;
               </div>
 
               <div class="visible_at_screen_lt_size1">
-                <div id="hamburger_menu_icon" class="abox hamburger_menu_icon"></div>
+                <div id="hamburger_menu_icon" class="hamburger_menu_icon"></div>
               </div>
 
             </div>
@@ -54,7 +54,7 @@ private $_forHomePage = false;
 
               <div class="visible_at_screen_lt_size1">
                 <div class="row" style="height:100px;">
-                  <div id="hamburger_menu_icon" class="abox hamburger_menu_icon"></div>
+                  <div id="hamburger_menu_icon" class="hamburger_menu_icon"></div>
                 </div>
               </div>
 
@@ -62,7 +62,7 @@ private $_forHomePage = false;
 
             <?php } ?>
 
-      
+
 
         </div>
 

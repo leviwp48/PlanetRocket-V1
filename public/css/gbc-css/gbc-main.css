@@ -402,9 +402,10 @@ h3.indexpage {
 .hamburger_menu_icon {
   background: url("../../images/hamburger-icon.png");
   background-size: 60px 50px;
+  position: absolute;
   width: 60px;
   height: 50px;
-  left: 0px;
+  right: 0px;
   top: 50%;
   transform: translateY(-50%);
   -ms-transform: translateY(-50%); }
@@ -580,9 +581,10 @@ h3.indexpage {
   .hamburger_menu_icon {
     background: url("../../images/hamburger-icon.png");
     background-size: 60px 50px;
+    position: absolute;
     width: 60px;
     height: 50px;
-    left: 0px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%); }
@@ -759,9 +761,10 @@ h3.indexpage {
   .hamburger_menu_icon {
     background: url("../../images/hamburger-icon.png");
     background-size: 60px 50px;
+    position: absolute;
     width: 60px;
     height: 50px;
-    left: 0px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%); }
@@ -938,9 +941,10 @@ h3.indexpage {
   .hamburger_menu_icon {
     background: url("../../images/hamburger-icon-2x.png");
     background-size: 60px 50px;
+    position: absolute;
     width: 60px;
     height: 50px;
-    left: 0px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%); }
@@ -1115,9 +1119,10 @@ h3.indexpage {
   .hamburger_menu_icon {
     background: url("../../images/hamburger-icon-2x.png");
     background-size: 60px 50px;
+    position: absolute;
     width: 60px;
     height: 50px;
-    left: 0px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%); }
@@ -1294,9 +1299,10 @@ h3.indexpage {
   .hamburger_menu_icon {
     background: url("../../images/hamburger-icon-2x.png");
     background-size: 60px 50px;
+    position: absolute;
     width: 60px;
     height: 50px;
-    left: 0px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%); }
@@ -1345,6 +1351,6 @@ Added by Eric Mott
 #logo_main{
     position: absolute;
     z-index: 5;
-    right: 15px;
-    top: 0px;
+    left: 15px;
+    top: 1%;
 }

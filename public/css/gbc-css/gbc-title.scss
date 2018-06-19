@@ -54,7 +54,7 @@ $x:-50%;
     }
 
   .main_title_img_position {
-  top:50%; left:50%; 
+  top:50%; left:50%;
   transform: translateX($x) translateY(-50%);
   -ms-transform: translateX($x) translateY(-50%);
   }
@@ -110,11 +110,11 @@ $imageURL: getImageURL('GlowingBlueCore-Title.png',$isHiRes, $screenSize);
 
   .main_title {
   width:322px;
-  height:92px; 
+  height:92px;
   background:url($imageURL) no-repeat;
   background-size: 322px 92px;
   top:14px;
-  left:60px; 
+  left:60px;
   }
 
 }
@@ -125,12 +125,12 @@ $imageURL: getImageURL('GlowingBlueCore-Title.png',$isHiRes, $screenSize);
 
     .main_title_mobile {
     width:268px;
-    height:78px; 
+    height:78px;
     background:url($imageURL) no-repeat;
     background-size: 268px 78px;
     top:5px;
-    left:auto; 
-    right:0px; 
+    left:auto;
+    right:0px;
     }
 
 }
@@ -141,12 +141,12 @@ $imageURL: getImageURL('GlowingBlueCore-Title-Explainer.png',$isHiRes, $screenSi
 
   .main_title_explainer {
   width:290px;
-  height:115px; 
+  height:115px;
   background:url($imageURL) no-repeat;
   background-size: 290px 115px;
   right:20px;
   top:2px;
-  left:auto !important; 
+  left:auto !important;
   }
 
 }
@@ -154,7 +154,7 @@ $imageURL: getImageURL('GlowingBlueCore-Title-Explainer.png',$isHiRes, $screenSi
 @mixin main_title_column_width($pctWidth) {
 
   .main_title_column_width {
-  width:$pctWidth; 
+  width:$pctWidth;
   max-width:950px;
   }
 
@@ -168,9 +168,10 @@ $imageURL: getImageURL('hamburger-icon.png',$isHiRes, -1);
   .hamburger_menu_icon {
   background:url($imageURL);
   background-size:60px 50px;
+  position: absolute;
   width:60px;
   height:50px;
-  left:0px;
+  right:0px;
   top:50%;
   transform: translateY(-50%);
   -ms-transform: translateY(-50%);
