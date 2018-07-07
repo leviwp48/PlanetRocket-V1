@@ -1,0 +1,196 @@
+.fixed_row {
+position:fixed;
+top: 0px;
+left:0px;
+width:100%;
+display:none;
+}
+
+
+// .main_title_background_color {
+// background:$mainBlue;
+// }
+
+
+@mixin main_title_repeater($height, $isHiRes, $screenSize) {
+
+$imageURL: getImageURL('GlowingBlueCore-Title-Repeater.png',$isHiRes, $screenSize);
+
+  .main_title_repeater {
+  height: $height;
+  background:#383838 url($imageURL) repeat-x;
+  background-size: 10px $height;
+  }
+
+}
+
+@mixin main_title_img_dimensions($screenSize) {
+
+$w:950px;
+$h:304px;
+
+    @if $screenSize == 1 {
+    $w:855px;
+    $h:274px;
+    }
+
+    @if $screenSize == 2 {
+    $w:522px;
+    $h:167px;
+    }
+
+  .main_title_img_dimensions {
+  width:$w;
+  height:$h;
+  }
+
+}
+@mixin main_title_img_position($screenSize) {
+
+$x:-50%;
+
+    @if $screenSize == 2 {
+    $x:-42%;
+    }
+
+  .main_title_img_position {
+  top:50%; left:50%; 
+  transform: translateX($x) translateY(-50%);
+  -ms-transform: translateX($x) translateY(-50%);
+  }
+
+}
+
+
+// @mixin main_title_background($height, $isHiRes, $screenSize) {
+// $imageURL: getImageURL('PlanetRocketHeader-cropped-for-website-header.png',$isHiRes, $screenSize);
+//   .main_title_background {
+//   background:url($imageURL) no-repeat;
+//   background-size: 950px 304px;
+//   }
+// }
+
+@mixin main_title_background_left($height, $isHiRes, $screenSize) {
+$imageURL: getImageURL('PR-Header-Black-Gradient-Left.png',$isHiRes, $screenSize);
+
+  .main_title_background_left {
+  background:url($imageURL) no-repeat;
+  background-size: 96px 304px;
+  width:96px;
+  height:304px;
+  }
+
+}
+
+@mixin main_title_background_right($height, $isHiRes, $screenSize) {
+$imageURL: getImageURL('PR-Header-Black-Gradient-Right.png',$isHiRes, $screenSize);
+
+  .main_title_background_right {
+  background:url($imageURL) no-repeat;
+  background-size: 96px 304px;
+  width:96px;
+  height:304px;
+  }
+
+}
+
+
+@mixin main_title_height($height, $isHiRes, $screenSize) {
+
+  .main_title_height {
+  height:$height;
+  }
+
+}
+
+
+@mixin main_title($isHiRes, $screenSize) {
+
+$imageURL: getImageURL('GlowingBlueCore-Title.png',$isHiRes, $screenSize);
+
+  .main_title {
+  width:322px;
+  height:92px; 
+  background:url($imageURL) no-repeat;
+  background-size: 322px 92px;
+  top:14px;
+  left:60px; 
+  }
+
+}
+
+@mixin main_title_mobile($isHiRes, $screenSize) {
+
+$imageURL: getImageURL('GlowingBlueCore-Title.png',$isHiRes, $screenSize);
+
+    .main_title_mobile {
+    width:268px;
+    height:78px; 
+    background:url($imageURL) no-repeat;
+    background-size: 268px 78px;
+    top:5px;
+    left:auto; 
+    right:0px; 
+    }
+
+}
+
+@mixin main_title_explainer($isHiRes, $screenSize) {
+
+$imageURL: getImageURL('GlowingBlueCore-Title-Explainer.png',$isHiRes, $screenSize);
+
+  .main_title_explainer {
+  width:290px;
+  height:115px; 
+  background:url($imageURL) no-repeat;
+  background-size: 290px 115px;
+  right:20px;
+  top:2px;
+  left:auto !important; 
+  }
+
+}
+
+@mixin main_title_column_width($pctWidth) {
+
+  .main_title_column_width {
+  width:$pctWidth; 
+  max-width:950px;
+  }
+
+}
+
+
+@mixin hamburger_menu_icon($isHiRes, $screenSize) {
+
+$imageURL: getImageURL('hamburger-icon.png',$isHiRes, -1);
+
+  .hamburger_menu_icon {
+  background:url($imageURL);
+  background-size:60px 50px;
+  position: absolute;
+  width:60px;
+  height:50px;
+  right:0px;
+  top:50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  }
+
+}
+
+
+
+@mixin back_facing_chevron($isHiRes, $screenSize) {
+
+$imageURL: getImageURL('GlowingBlueCore-UI-Sprite.png',$isHiRes, $screenSize);
+
+  .back_facing_chevron {
+  background:url($imageURL) no-repeat;
+  background-position: -0px -62px;
+  background-size:120px 120px;
+  width:33px;
+  height:47px;
+  }
+
+}

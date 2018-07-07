@@ -1,0 +1,65 @@
+
+//Our visibility classes. You can apply these classes to any element 
+//to make it visible or invisible at a certain screen size. Very handy for things
+//like sidebar navigation.
+//See Notes SASS handy visibility classes and important flag.txt
+@mixin visible_at_screen_lt_size1($screenSize) {
+$visibleDisplay: none;
+
+  //remember the screen sizes start at full desktop size: 0 
+  //and the screen size then ticks up for smaller screen-sizes.
+  //1 for tablet, 2 for phones.
+  @if $screenSize >= 1 {
+  $visibleDisplay: block !important;
+  }
+
+  .visible_at_screen_lt_size1 {
+  display: $visibleDisplay;
+  }
+
+}
+
+
+
+
+
+
+@mixin visible_at_screen_gt_size1($screenSize) {
+$visibleDisplay: block;
+
+  @if $screenSize >= 1 {
+  $visibleDisplay: none !important;
+  }
+
+  .visible_at_screen_gt_size1 {
+  display: $visibleDisplay;
+  }  
+}
+@mixin visible_at_screen_gt_size2($screenSize) {
+$visibleDisplay: block;
+
+  @if $screenSize >= 2 {
+  $visibleDisplay: none !important;
+  }
+
+  .visible_at_screen_gt_size2 {
+  display: $visibleDisplay;
+  }  
+}
+
+
+
+
+
+//visible only at size2. 
+@mixin visible_at_screen_size2($screenSize) {
+$visibleDisplay: none;
+
+  @if $screenSize == 2 {
+  $visibleDisplay: block !important;
+  }
+
+  .visible_at_screen_size2 {
+  display: $visibleDisplay;
+  }
+}

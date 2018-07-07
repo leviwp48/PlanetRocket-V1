@@ -1,0 +1,35 @@
+
+@function getImageURL($imgURL, $isHiRes:false, $screenSize:-1) {
+
+//When you're doing string functions, always make it easy on yourself 
+//and have an easy test case to consider 
+//hello.png
+//123456789
+
+//get the number of characters.
+$numChars: str-length($imgURL);
+
+//start from one and exclude the last 4 characters (.png)
+$firstPart : str-slice($imgURL, 1, $numChars - 4);
+
+//get the last 4 characters. Inclusivity problem here hence the "3". 
+//just think about the easy test case.
+$extension: str-slice($imgURL, $numChars - 3);
+
+$hiResToken: if($isHiRes, $_hiResTokenString, "");
+
+//get the screen-size token. do this if the screensize is different than the default -1 value.
+$screenSizeToken: if($screenSize > -1, "-Size" + $screenSize, "");
+
+//put it all together
+@return  "#{$_imagesFolder}#{$firstPart}#{$screenSizeToken}#{$hiResToken}#{$extension}";
+
+}
+
+
+
+@function getImageURLRaw($imgURL) {
+
+@return  "#{$_imagesFolder}#{$imgURL}";
+
+}

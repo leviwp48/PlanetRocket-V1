@@ -1,0 +1,195 @@
+@mixin body($screenSize) {
+
+$fontSize: 15px;
+
+	@if $screenSize >= 1 {
+	$fontSize: 12px;
+	}
+
+	body {
+	//    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background:#FFFFFF;
+	line-height:1.5;
+	font-size:$fontSize;
+	color:#444444;
+	}
+
+}
+
+@mixin h1($screenSize) {
+
+$fontSize: 2.3em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.7em;
+	}
+
+	h1 {
+	font-size:$fontSize;
+	}
+
+
+}
+
+@mixin post_title_h1($screenSize) {
+
+$fontSize: 2em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.7em;
+	}
+
+	.post_title h1 {
+	font-size:$fontSize;
+	}
+
+}
+
+@mixin h2($screenSize) {
+
+$fontSize: 1.8em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.5em;
+	}
+
+	h2 {
+	font-size:$fontSize;
+	}
+
+
+}
+
+@mixin h2_featured_post_tile_title($screenSize) {
+
+$fontSize: 1.3em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.1em;
+	}
+
+	h2.featured_post_tile_title {
+	font-size:$fontSize;
+	}
+
+}
+
+@mixin h2_indexpage($screenSize) {
+
+$fontSize:3em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.8em;
+	}
+
+	h2.indexpage {
+	font-family:'Neuropol';
+	font-size:$fontSize;
+	font-weight:bold;
+	}
+
+}
+
+@mixin h3_indexpage($screenSize) {
+
+$fontSize:1.8em;
+
+	@if $screenSize >= 1 {
+	$fontSize: 1.6em;
+	}
+
+	h3.indexpage {
+	font-size:$fontSize;
+	font-weight:bold;
+	}
+
+}
+
+
+.photo_caption_credit {
+font-size:0.8em;
+}
+
+
+h3.corner_box_title a {
+color:#03C7F4;
+text-transform: uppercase;
+font-size:1em;
+font-weight:bold;
+text-decoration:none;	
+}
+
+h3.corner_box_title a:hover {
+color:#9DEAFC;
+}
+
+h3.corner_box_title a:visited {
+color:#F9215A;
+}
+
+
+a {
+color:#4286f4;
+font-weight:bold;
+text-decoration:none;		
+}
+
+
+a.featured_article_link {
+color:#03C7F4;
+text-transform: uppercase;
+font-weight:bold;
+text-decoration:none;		
+}
+// a.featured_article_link h2 {
+// //font-size:20px;
+// //font-size:1.6em;
+// }
+
+a.featured_article_link:hover {
+color:#9DEAFC;		
+}
+a.featured_article_link:visited {
+color:#F9215A;		
+}
+
+
+a.sidebar_link {
+color:#4286f4 !important;
+text-transform: uppercase;
+font-weight:bold;
+text-decoration:none;		
+}
+a.sidebar_link:hover {
+color:#2aa3f9 !important;		
+}
+a.sidebar_link:visited {
+color:#F9215A;		
+}
+
+@mixin page_title_with_background_repeater($isHiRes) {
+
+$imageURL: getImageURL('GBC-title-background-stroke.png', $isHiRes);
+
+	.page_title_with_background_repeater {
+	background:url($imageURL) repeat;
+	background-size:121px 61px;
+	top:-300px; 
+	left:-100px; 
+	width:1000px; 
+	height:1000px; 
+	z-index:1; 
+	transform:rotate(45deg); 
+	opacity:0.35;
+	}
+
+}
+
+
+.js_gbc_app {
+display:none;
+}
+input.search-field {
+padding:10px;
+}
