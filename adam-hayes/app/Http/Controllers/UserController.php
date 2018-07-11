@@ -341,15 +341,9 @@ class UserController extends Controller {
 		/*
 			BEGIN ALEC'S EDITS
 		*/
-		
+			
 
-		
-		
-		
-		$projectNotHaveDate = trim($request->input('nodate'));
-		
-		if(!$projectNotHaveDate)
-		{
+
 		//the daynum
 		$projectDayNum = trim($request->input('daynum'));
 		
@@ -369,19 +363,22 @@ class UserController extends Controller {
 		$projectAMorPM = trim($request->input('amORpm'));
 		
 		$projectReoccur = trim($request->input('reoccur'));
-
-		}
 		
-		else
+		$nodatebox = $request->input('datebox');		
+		
+		if($nodatebox === 'dateless')
 		{
-			$projectDayNum = null;
+						$projectDayNum = null;
 			$projectMonth = null;
 			$projectYear = null;
 			$projectStartHour = null;
 			$projectStartMin = null;
 			$projectAMorPM = null;
 			$projectReoccur = 'none';
-		}
+			
+
+					
+		} 
 				$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
 		/*
@@ -557,8 +554,15 @@ class UserController extends Controller {
 					}	
 				}
 				
-				elseif($projectReoccur == 'monthly' and $pdaynum <= 28)
+				elseif($projectReoccur == 'monthly')
 				{
+					if($pdaynum > 28)
+					{
+						$pdaynum = 28;
+						$OGDateString = $this->returnDateTime($pdaynum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+						$projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
+
+					}
 					date_add($projectDateTime, date_interval_create_from_date_string("1 month"));
 					while($reoccurStopDateTime >= $projectDateTime)
 					{

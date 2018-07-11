@@ -9,7 +9,7 @@ use Resources\Templates\SideNavBar;
 use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
- 
+
 <title>Planet Rocket - Login</title>
 
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
@@ -29,7 +29,7 @@ use Resources\Templates\Banner;
 
     <div id="fixed_row" class="fixed_row top_nav_bar_blue_rgba2" style="z-index: 3; display: none;"></div>
 
-    <?php 
+    <?php
     $user = NULL;
     SideNavBar::go($user);
     ?>
@@ -37,7 +37,7 @@ use Resources\Templates\Banner;
     <!-- The page is first based on a vertical-group. The reason for this is that we want the header and footer
     elements to do the infinite sandwich effect where they go off to infinity on either side, and we wouldn't be able
     to do that if everything was in a single center column.
-    This vertical-group is based on Ex 2 in vertical conservation elements.html in the html research folder. 
+    This vertical-group is based on Ex 2 in vertical conservation elements.html in the html research folder.
     Also, we have an overflow:hidden style here because otherwise we tend to get annoying "bleed-off" scrolling
     where it lets us scroll horizontally even through there's nothing there.
     -->
@@ -66,12 +66,12 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-      <div class="v-inner">    
+      <div class="v-inner">
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
             <div class="center_column" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
-           
+
 
 
 
@@ -153,9 +153,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
 
         <div class="row" style="height:20px;"></div>
         </div>

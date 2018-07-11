@@ -9,7 +9,7 @@ use Resources\Templates\SideNavBar;
 use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
- 
+
 <title>Planet Rocket - All Projects</title>
 
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
@@ -37,14 +37,14 @@ use Resources\Templates\Banner;
 
     <div id="fixed_row" class="fixed_row top_nav_bar_blue_rgba2" style="z-index: 3; display: none;"></div>
 
-    <?php 
+    <?php
     SideNavBar::go($user);
     ?>
 
     <!-- The page is first based on a vertical-group. The reason for this is that we want the header and footer
     elements to do the infinite sandwich effect where they go off to infinity on either side, and we wouldn't be able
     to do that if everything was in a single center column.
-    This vertical-group is based on Ex 2 in vertical conservation elements.html in the html research folder. 
+    This vertical-group is based on Ex 2 in vertical conservation elements.html in the html research folder.
     Also, we have an overflow:hidden style here because otherwise we tend to get annoying "bleed-off" scrolling
     where it lets us scroll horizontally even through there's nothing there.
     -->
@@ -73,12 +73,12 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-      <div class="v-inner">    
+      <div class="v-inner">
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
             <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
-            
+
 
             <div class="row width-check"></div>
             <!--
@@ -87,16 +87,16 @@ use Resources\Templates\Banner;
             <div class="row"><h1>What is Planet Rocket?</h1></div>
             <br/><br/>
 
-            <strong>Bring up an issue:</strong> You know the ins and outs of your family, your school, and your community. You are the expert on what is going on. See an issue? See something that can be improved in your community? In your school? All over the world?  Tell people about it on Planet Rocket. 
+            <strong>Bring up an issue:</strong> You know the ins and outs of your family, your school, and your community. You are the expert on what is going on. See an issue? See something that can be improved in your community? In your school? All over the world?  Tell people about it on Planet Rocket.
 
             <br/><br/>
-            <strong>Share your opinion:</strong> Not all problems have easy fixes. The solutions are sometimes complicated, and all sides need to be heard. Planet Rocket is a collaborative approach to problem solving. We want to hear from you. 
+            <strong>Share your opinion:</strong> Not all problems have easy fixes. The solutions are sometimes complicated, and all sides need to be heard. Planet Rocket is a collaborative approach to problem solving. We want to hear from you.
 
             <br/><br/>
             <strong>Start a project:</strong> Are you ready to hit the ground running with a project? Are you ready to get the party started? Share your successes with others at Planet Rocket. Here you will find support from people all over the globe, anxious to hear all the good things you can accomplish.
 
             <br/><br/>
-            <strong>Contribute to a project:</strong> Can you volunteer to be a part of a project? Do you have a skill that can be used on a project? Can you offer professional advice to make sure the project is successful? Do you have equipment that can be used for a project? Are you great at organizing people to volunteer for a project? It is going to take all of us to change the world. Planet Rocket connects you to causes you’re passionate about and gives you the opportunity to use your skills to create change. 
+            <strong>Contribute to a project:</strong> Can you volunteer to be a part of a project? Do you have a skill that can be used on a project? Can you offer professional advice to make sure the project is successful? Do you have equipment that can be used for a project? Are you great at organizing people to volunteer for a project? It is going to take all of us to change the world. Planet Rocket connects you to causes you’re passionate about and gives you the opportunity to use your skills to create change.
 
             <br/><br/>
             <strong>Donate to a good cause:</strong> Do you want to contribute to a project but don’t have the time to volunteer? Users in our network can donate to projects that they believe in with the peace of mind that their money is contributing to change!
@@ -105,19 +105,19 @@ use Resources\Templates\Banner;
             <br/><br/><br/>
             <div class="row"><h2>Who is Planet Rocket for?<h2></div>
 
-            Planet Rocket is for EVERYONE. 
+            Planet Rocket is for EVERYONE.
 
             <br/><br/>
             <strong>Individuals:</strong> Do you have an idea about improving your community? Do you have time to volunteer to projects that will help out your neighbors?
 
             <br/><br/>
-            <strong>Groups:</strong> Do you need help locating others to join your cause? Do you have ideas or research you can share with others on how to improve your community?  
+            <strong>Groups:</strong> Do you need help locating others to join your cause? Do you have ideas or research you can share with others on how to improve your community?
 
             <br/><br/>
-            <strong>Entrepreneurs:</strong> Find people interested in your idea. Share your idea with others to get feedback. Get funding from people who want to see you succeed. 
+            <strong>Entrepreneurs:</strong> Find people interested in your idea. Share your idea with others to get feedback. Get funding from people who want to see you succeed.
 
             <br/><br/>
-            <strong>Nonprofits:</strong> Do you have an issue you are trying to solve and need community input? Are you interested in hearing from other agencies or community members who have had success with those issues? 
+            <strong>Nonprofits:</strong> Do you have an issue you are trying to solve and need community input? Are you interested in hearing from other agencies or community members who have had success with those issues?
 
             <br/><br/>
             <strong>Companies:</strong> Share the great projects you are working on and get feedback from others. Have open communication about how you can better serve your customers.
@@ -149,7 +149,7 @@ use Resources\Templates\Banner;
             <strong>Jason Jones</strong> is an alumni of Humboldt State University having earned a business degree with an emphasis in marketing and an MBA with an emphasis in strategic sustainability. He has previously worked with local organizations such as Humboldt County's Economic Development Department and the Humboldt Area Foundation to find viable solutions for issues within the community. He joined the Planet Rocket team because of his passion for community improvement through collaboration and networking
 
             <br/><br/>
-            <strong>Irene Moreno</strong> brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together. 
+            <strong>Irene Moreno</strong> brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.
 
 -->
 
@@ -172,7 +172,7 @@ use Resources\Templates\Banner;
                   <div class="box">
                   </div>
                   <div class="box" style="width:230px;">
-                 
+
                     <div class="img-wrap-w-center">
                       <img class="box" alt="CEO Adam Hayes" src="/images/founder-profile-adam-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right">
@@ -181,14 +181,14 @@ use Resources\Templates\Banner;
                       </div>
 
                     </div>
-                 
+
                   </div>
                 </div>
               </div>
 
                <!-- The row for Adam Hayes, visible at tablet/phone screen-size -->
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2;">
-              
+
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
                       <img class="box" alt="CEO Adam Hayes" src="/images/founder-profile-adam-planet-rocket.png">
@@ -208,7 +208,7 @@ use Resources\Templates\Banner;
               <!-- The rows for Jason JOnes, visible at large-screen-size. -->
               <div class="row founder-row-visible-gt-600px">
                 <div class="h-group" style="padding:20px; background:#343434; color:#F2F2F2;">
-                  
+
                   <div class="box" style="width:240px;">
                   </div>
                   <div class="box">
@@ -220,9 +220,9 @@ use Resources\Templates\Banner;
               </div>
               <div class="row founder-row-visible-gt-600px" style="margin-top:-260px;">
                 <div class="h-group">
-  
+
                   <div class="box" style="width:230px;">
-                 
+
                     <div class="img-wrap-w-center">
                       <img class="box" alt="CFO Jason Jones" src="/images/founder-profile-jason-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-left">
@@ -241,7 +241,7 @@ use Resources\Templates\Banner;
 
                <!-- The row for Jason Jones, visible at tablet/phone screen-size -->
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2; margin-top:40px;">
-              
+
                 <div style="position:relative; display:inline; width:100px; float:left; left:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
                       <img class="box" alt="CFO Jason Jones" src="/images/founder-profile-jason-planet-rocket.png">
@@ -264,7 +264,7 @@ use Resources\Templates\Banner;
                 <div class="h-group" style="padding:20px; background:#343434; color:#F2F2F2;">
                   <div class="box">
                     <div class="row about-orange-font" style="margin-bottom:10px;"><h2>THE COO</h2></div>
-                    Irene Moreno brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.  
+                    Irene Moreno brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.
                   </div>
                   <div class="box" style="width:270px;">
                   </div>
@@ -275,7 +275,7 @@ use Resources\Templates\Banner;
                   <div class="box">
                   </div>
                   <div class="box" style="width:260px;">
-                 
+
                     <div class="img-wrap-w-center">
                       <img class="box" alt="COO Irene Moreno" src="/images/founder-profile-irene-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right" style="bottom:10px;">
@@ -284,14 +284,14 @@ use Resources\Templates\Banner;
                       </div>
 
                     </div>
-                 
+
                   </div>
                 </div>
               </div>
 
                <!-- The row for Irene, visible at tablet/phone screen-size -->
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2; margin-top:40px;">
-              
+
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
                       <img class="box" alt="COO Irene Moreno" src="/images/founder-profile-irene-planet-rocket.png">
@@ -304,8 +304,8 @@ use Resources\Templates\Banner;
                 </div>
 
                 <div class="row about-orange-font"><h2>THE COO</h2></div>
-                Irene Moreno brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.  
-           
+                Irene Moreno brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.
+
               </div>
 
 
@@ -324,9 +324,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
 
         <div class="row" style="height:20px;"></div>
         </div>

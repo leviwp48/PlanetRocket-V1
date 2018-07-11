@@ -41,24 +41,22 @@ private $_user;
 	            					Projects
 	            				</a>
 	                  </li>
-										<li class="row">
+										<!--<li class="row">
 											<a href="<?php echo APP_BASE; ?>/calendar" class="row styled_sidebar_item">
 												Calendar
 											</a>
-										</li>
+										</li>-->
 	                  <li class="row">
 	                  	<a href="<?php echo APP_BASE; ?>/about" class="row styled_sidebar_item">
 	            					About
 	            				</a>
 	                 	</li>
-	                  <li class="row">
-	                  	<a href="<?php echo APP_BASE; ?>/contact" class="row styled_sidebar_item">
+	                  <!--<li class="row">
+	                  	<a href="/contact" class="row styled_sidebar_item">
 	                    	Contact
 	                    </a>
 	                  </li>
 
-
-	        	<!--
 	        	<li class="row">
 	        		<div class="row styled_sidebar_item">
 	          		Categories

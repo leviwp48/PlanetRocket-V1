@@ -178,6 +178,8 @@ use Resources\Templates\Banner;
                 $short_desc = $project->short_description;
                 $desc = trim(preg_replace('/\s+/',' ', $desc));
                 $short_desc = trim(preg_replace('/\s+/',' ', $short_desc));
+                $desc = str_replace('"', '\"', $desc);
+                $short_desc = str_replace('"', '\"', $short_desc);
 
                 ?>
                 <script>
@@ -224,9 +226,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
 
         <div class="row" style="height:20px;"></div>
         </div>
