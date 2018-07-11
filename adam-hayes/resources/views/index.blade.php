@@ -12,10 +12,10 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="/css/index-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="/js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="./css/index-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="./js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -84,7 +84,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
                 <div class="img-wrap-w-center">
-                  <img class="box" alt="For Individuals" src="/images/home-page-individuals.png">
+                  <img class="box" alt="For Individuals" src="./images/home-page-individuals.png">
                 </div>
               </div>
               <div class="box" style="vertical-align:middle;">
@@ -97,7 +97,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
                 <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="/images/home-page-groups.png">
+                  <img class="box" alt="For Groups" src="./images/home-page-groups.png">
                 </div>
               </div>
               <div class="box" style="vertical-align:middle;">
@@ -110,7 +110,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
                 <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="/images/home-page-entrepreneurs.png">
+                  <img class="box" alt="For Groups" src="./images/home-page-entrepreneurs.png">
                 </div>
               </div>
               <div class="box" style="vertical-align:middle;">
@@ -123,7 +123,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
                 <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="/images/home-page-nonprofits.png">
+                  <img class="box" alt="For Groups" src="./images/home-page-nonprofits.png">
                 </div>
               </div>
               <div class="box" style="vertical-align:middle;">
@@ -135,7 +135,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
                 <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="/images/home-page-companies.png">
+                  <img class="box" alt="For Groups" src="./images/home-page-companies.png">
                 </div>
               </div>
               <div class="box" style="vertical-align:middle;">
@@ -157,10 +157,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
-
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
@@ -174,7 +176,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="./js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

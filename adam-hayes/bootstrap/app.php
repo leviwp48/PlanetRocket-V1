@@ -12,7 +12,7 @@
 */
 
 //define('APP_BASE', 'http://138.68.248.178');
-define('APP_BASE', 'https://planetrocket.com');
+define('APP_BASE', 'http://localhost/adam-hayes/public');
 
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')

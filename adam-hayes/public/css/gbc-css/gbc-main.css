@@ -99,7 +99,7 @@ a.styled_sidebar_item:visited {
 a.styled_sidebar_item:visited:hover {
   color: #f95462; }
 
-/* We need this little margin-bottom:100px thing here because somehow it doesn't trigger the scrolling bar 
+/* We need this little margin-bottom:100px thing here because somehow it doesn't trigger the scrolling bar
       when the options expand otherwise and I'm not sure what's going on. */
 .sidenav_menu_container {
   padding-left: 10px;
@@ -594,7 +594,7 @@ h3.indexpage {
     -moz-box-sizing: border-box;
     display: inline-block;
     position: relative;
-    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html
     that's the strange problem that happens when you don't have this style.*/
     vertical-align: top;
     margin-top: 40px; }
@@ -774,7 +774,7 @@ h3.indexpage {
     -moz-box-sizing: border-box;
     display: inline-block;
     position: relative;
-    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html
     that's the strange problem that happens when you don't have this style.*/
     vertical-align: top;
     margin-top: 40px; }
@@ -1132,7 +1132,7 @@ h3.indexpage {
     -moz-box-sizing: border-box;
     display: inline-block;
     position: relative;
-    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html
     that's the strange problem that happens when you don't have this style.*/
     vertical-align: top;
     margin-top: 40px; }
@@ -1312,7 +1312,7 @@ h3.indexpage {
     -moz-box-sizing: border-box;
     display: inline-block;
     position: relative;
-    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+    /*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html
     that's the strange problem that happens when you don't have this style.*/
     vertical-align: top;
     margin-top: 40px; }
@@ -1348,9 +1348,90 @@ h3.indexpage {
 Added by Eric Mott
 */
 
+/*For the header*/
 #logo_main{
     position: absolute;
     z-index: 5;
     left: 15px;
     top: 1%;
+}
+
+/*For the footer*/
+.contact_us{
+  width: 20%;
+  position:  absolute;
+}
+
+/*For the videos*/
+.videoWrapper {
+  text-align: center;
+  padding-top: 30px;
+}
+.videoWrapper iframe {
+  width: 100%;
+  margin-bottom: -6px;
+}
+
+.videoCard{
+	  margin: auto 120px 35px 120px;
+	  background: black;
+	  border-radius:  5px;
+}
+
+.videoHeader{
+	height: 55px;
+	/* background:  black; */
+	/*background: #1e2e84;*/
+	/* margin: 0 120px 0 120px; */
+	text-align: center;
+	vertical-align: middle;
+	line-height: 55px;
+	border-radius: 5px 5px 0 0;
+}
+
+.videoTitle{
+  color: white;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;
+    float: left;
+    padding: 5px;
+    border-radius: 20%;
+}
+
+.videoExtras {
+    /* margin: 0 120px 0 120px; */
+    border-radius: 0 0 5px 5px;
+    height: 55px;
+    display: flex;
+    vertical-align: middle;
+    /*background: #1e2e84;*/
+    /* background: black; */
+}
+
+.videoExtras button{
+  margin: auto;
+  height: 50%;
+  width: 20%;
+  border-radius:  5px;
+  font-size: 90%;
+}
+
+/*Create new project*/
+#projectDateCheckbox{
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #060000;
+  vertical-align: middle;
+  margin-left: 156px;
+}
+
+#projectDateCheckbox:checked{
+  background: #069dff;
 }

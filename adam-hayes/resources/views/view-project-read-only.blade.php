@@ -11,9 +11,9 @@ use Resources\Templates\Banner;
 ?>
 
 <title>View Project</title>
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="/js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -149,9 +149,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
 
         <div class="row" style="height:20px;"></div>
         </div>
@@ -167,7 +170,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/js/loaders/loader-view-project-readonly.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-view-project-readonly.js"></script>
 
 </body>
 </html>

@@ -10,11 +10,11 @@ use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
 
-<title>Planet Rocket - All Projects</title>
+<title>Planet Rockets - All Projects</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="/adam-hayes/public//css/about-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="/css/about-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
 <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
@@ -23,7 +23,7 @@ use Resources\Templates\Banner;
 <script src='/adam-hayes/fullcalendar/lib/moment.min.js'></script>
 <script src='/adam-hayes/fullcalendar/fullcalendar.js'></script>
 <script src='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.min.js'></script>
-<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
+<script type="text/javascript" src="/public/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -156,54 +156,28 @@ use Resources\Templates\Banner;
 
       <!-- For the CPP logo and statement. -->
       <div class="v-inner">
-        <div class="box" style="height:100%; background:#FFFFFF;">
-         <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">
-            <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
-                <div class="img-wrap-w-center" style="background:#FFFFFF;">
-                  <img class="box" alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2.png">
+        <div class="box">
+          <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+            <div class="h-group" style="margin-top:30px;">
+              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
+                <div class="img-wrap-w-center">
+                  <img class="box" alt="CPP Logo" src="/images/CPP_logo2.png">
                 </div>
               </div>
             </div>
-              <div class="row" style="text-align:center; background:#FFFFFF;"> <h1>Get Ready <strong>For</strong> August</h1>
-                  The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
-                  our Humboldt County community will be going on all month. August is a good time to help out our community.
+              <div class="row" style="text-align:center;"> <h1>HAPPY <strong>CPP</strong> MONTH</h1>
+                  The month of August is Community Pride and Peace month. This month we will work on making the Community
+                  a safer, greener, and happier place to be. Below are events on our community calendar where you can help volunteer.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
-                  idea into a reality.
+                  community changing idea into a reality.
               </div>
             </div>
           </div>
         </div>
-		<div class="v-inner" style="text-align:center;">
-			<div class="box" style="height:100%; background:#FFFFFF;">
-				<div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
-					<div class="row" style="margin-top:20px;">
-					                <?php
-                  if($user) {
-                  ?>
-                    <a href="<?php echo APP_BASE; ?>/user/new-project">
-                      <div class="box formstyles-button">Create a new project!</div>
-                    </a>
-                    <a href="<?php echo APP_BASE; ?>/user/projects">
-                      <div class="box formstyles-button">See your current projects</div>
-                    </a>
-                  <?php
-                  } else {
-                  ?>
-                    <a href="<?php echo APP_BASE; ?>/login">
-                      <div class="box formstyles-button" style="background:#66b517;">Login or sign up!</div>
-                    </a>
-                  <?php
-                  }
 
-                ?>
-					</div>
-				</div>
-			</div>
-		</div>
       <!-- vertical conservation element- the container for the featured posts. -->
       <div class="v-inner">
-        <div class="box" style="height:100%; background:#FFFFFF;">
+        <div class="box">
 
           <!-- This be the featured posts section -->
         <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
@@ -220,8 +194,6 @@ use Resources\Templates\Banner;
                 $short_desc = $project->short_description;
                 $desc = trim(preg_replace('/\s+/',' ', $desc));
                 $short_desc = trim(preg_replace('/\s+/',' ', $short_desc));
-                $desc = str_replace('"', '\"', $desc);
-                $short_desc = str_replace('"', '\"', $short_desc);
 
                 ?>
                 <script>
@@ -257,38 +229,6 @@ use Resources\Templates\Banner;
 
         </div>
       </div>
-
-
-<!--
-		<div class="v-inner">
-			<div class="box" style="height:100%; background:#FFFFFF;">
-				<div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
-					<div class="row" style="margin-top:20px;">
-					                ?php
-                  if($user) {
-                  ?>
-                    <a href="<php echo APP_BASE; ?>/user/new-project">
-                      <div class="box formstyles-button">Create a new project!</div>
-                    </a>
-                    <a href="?php echo APP_BASE; ?>/user/projects">
-                      <div class="box formstyles-button">See your current projects</div>
-                    </a>
-                  ?php
-                  } else {
-                  ?>
-                    <a href="?php echo APP_BASE; ?>/login">
-                      <div class="box formstyles-button" style="background:#66b517;">Login or sign up!</div>
-                    </a>
-                  ?php
-                  }
-
-                ?>
-					</div>
-				</div>
-			</div>
-		</div>
-
--->
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
       <div class="v-inner">
@@ -337,12 +277,9 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
+                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+                Copyright 2018 Planet Rocket
+                </div>
 
         <div class="row" style="height:20px;"></div>
         </div>
@@ -357,7 +294,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-all-projects.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-all-projects.js"></script>
 
 </body>
 </html>
