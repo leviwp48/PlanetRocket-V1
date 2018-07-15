@@ -12,10 +12,10 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - All Projects</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="./css/about-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="./js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/about-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -174,7 +174,7 @@ use Resources\Templates\Banner;
                   <div class="box" style="width:230px;">
 
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="CEO Adam Hayes" src="./images/founder-profile-adam-planet-rocket.png">
+                      <img class="box" alt="CEO Adam Hayes" src="/adam-hayes/public/images/founder-profile-adam-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right">
                         <div class="row"><h2>ADAM HAYES</h2></div>
                         <div class="row"><h3>Chief Executive Officer</h3></div>
@@ -191,7 +191,7 @@ use Resources\Templates\Banner;
 
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="CEO Adam Hayes" src="./images/founder-profile-adam-planet-rocket.png">
+                      <img class="box" alt="CEO Adam Hayes" src="/adam-hayes/public/images/founder-profile-adam-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right">
                         <div class="row"><h2>ADAM HAYES</h2></div>
                         <div class="row"><h3>Chief Executive Officer</h3></div>
@@ -224,7 +224,7 @@ use Resources\Templates\Banner;
                   <div class="box" style="width:230px;">
 
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="CFO Jason Jones" src="./images/founder-profile-jason-planet-rocket.png">
+                      <img class="box" alt="CFO Jason Jones" src="/adam-hayes/public/images/founder-profile-jason-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-left">
                         <div class="row"><h2>JASON JONES</h2></div>
                         <div class="row"><h3>Chief Financial Officer</h3></div>
@@ -244,7 +244,7 @@ use Resources\Templates\Banner;
 
                 <div style="position:relative; display:inline; width:100px; float:left; left:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="CFO Jason Jones" src="./images/founder-profile-jason-planet-rocket.png">
+                      <img class="box" alt="CFO Jason Jones" src="/adam-hayes/public/images/founder-profile-jason-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-left">
                         <div class="row"><h2>JASON JONES</h2></div>
                         <div class="row"><h3>Chief Financial Officer</h3></div>
@@ -277,7 +277,7 @@ use Resources\Templates\Banner;
                   <div class="box" style="width:260px;">
 
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="COO Irene Moreno" src="./images/founder-profile-irene-planet-rocket.png">
+                      <img class="box" alt="COO Irene Moreno" src="/adam-hayes/public/images/founder-profile-irene-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right" style="bottom:10px;">
                         <div class="row"><h2>IRENE MORENO</h2></div>
                         <div class="row"><h3>Chief Operating Officer</h3></div>
@@ -294,7 +294,7 @@ use Resources\Templates\Banner;
 
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
                     <div class="img-wrap-w-center">
-                      <img class="box" alt="COO Irene Moreno" src="./images/founder-profile-irene-planet-rocket.png">
+                      <img class="box" alt="COO Irene Moreno" src="/adam-hayes/public/images/founder-profile-irene-planet-rocket.png">
                       <div class="abox about-orange-font founder-avatar-label-right">
                         <div class="row"><h2>IRENE MORENO</h2></div>
                         <div class="row"><h3>Chief Operating Officer</h3></div>
@@ -344,7 +344,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="./js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

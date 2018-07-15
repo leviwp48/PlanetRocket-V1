@@ -43,9 +43,11 @@ private $_forHomePage = false;
 	                    <li class="box top-nav-item">
 	                       <a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px;">Projects</a>
 	                    </li>
-											<li class="box top-nav-item">
-												 <a class="row" href="<?php echo APP_BASE; ?>/training" style="padding:8px; padding-left:20px; padding-right:20px;">Training</a>
-											</li>
+	                    
+	                    <li class="box top-nav-item">
+	                       <a class="row" href="<?php echo APP_BASE; ?>/resources" style="padding:8px; padding-left:20px; padding-right:20px;">Resources</a>
+	                    </li>
+	                    
 											<!--<li class="box top-nav-item">
 	                       <a class="row" href="/calendar" style="padding:8px; padding-left:20px; padding-right:20px;">Calendar</a>
 	                    </li>-->

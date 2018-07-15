@@ -28,7 +28,8 @@ Route::get('/about', 'UserController@about');
 
 Route::get('/calendar', 'UserController@calendar');
 
-Route::get('/training', 'UserController@training');
+Route::get('/resources', 'UserController@resources');
+
 
 Route::get('/.well-known/acme-challenge/DPRvbXrjTBE5hC0VtR6Px3qNdY9iBMbcKzBupywcdJM', function(){
 return "DPRvbXrjTBE5hC0VtR6Px3qNdY9iBMbcKzBupywcdJM.nQTwwr89cu5Q8sBnj55cMu8EVDzSbJunU2k77TcP930";
