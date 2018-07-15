@@ -38,7 +38,7 @@ use Log;
 
 class UserController extends Controller {
 
-	protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
+protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
 	{
 		$result = $year . "-" . $month . "-";
 		if($day < 10)
@@ -49,32 +49,40 @@ class UserController extends Controller {
 		{
 			$result = $result . $day . " ";
 		}
-
-		if($hour < 10)
+		
+		if($projectAMorPM == "am")
 		{
-			if($projectAMorPM == 'pm')
+			if($hour < "10")
 			{
-				$hour = $hour + 12;
-				$result = $result . $hour . ":";
+				$result = $result . '0' . $hour . ":";
+			}
+			elseif($hour == '12')
+			{
+				$result = $result . "00:";
 			}
 			else
 			{
-				$result = $result . "0" . $hour . ":";
+				$result = $result.$hour.":";
 			}
 		}
-		else
+		
+		elseif($projectAMorPM == 'pm')
 		{
-			if($projectAMorPM == 'pm')
+			if($hour == '12')
 			{
-				$hour = $hour + 12;
+				$result = $result."12:";
 			}
-			$result = $result . $hour . ":";
+			else
+			{
+				$hour = $hour +12;
+				$result = $result.$hour.":";
+			}
 		}
-
+		
 		$result = $result . $min . ":00";
-
+		
 		return $result;
-	}
+	}	
 
 	/**
 	 * a helper function to get the needs hierarchy and turn it into
@@ -948,6 +956,14 @@ class UserController extends Controller {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
 	return \View::make("training")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+	public function resources() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources")
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}

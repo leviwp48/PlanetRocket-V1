@@ -101,13 +101,7 @@ private $_user;
             		</a>
             	</li>
 
-                <li class="box top-nav-item">
-                    <a class="row" 
-                    href="<?php echo APP_BASE; ?>/register" 
-                    style="padding:8px; padding-left:20px; padding-right:20px;">
-                        Register
-                    </a>
-                </li>
+
 
         	<?php
 
