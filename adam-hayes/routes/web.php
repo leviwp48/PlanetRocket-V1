@@ -28,6 +28,8 @@ Route::get('/about', 'UserController@about');
 
 Route::get('/calendar', 'UserController@calendar');
 
+Route::get('/training', 'UserController@training');
+
 Route::get('/resources', 'UserController@resources');
 
 

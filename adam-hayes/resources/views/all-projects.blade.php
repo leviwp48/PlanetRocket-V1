@@ -23,7 +23,7 @@ use Resources\Templates\Banner;
 <script src='/adam-hayes/fullcalendar/lib/moment.min.js'></script>
 <script src='/adam-hayes/fullcalendar/fullcalendar.js'></script>
 <script src='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.min.js'></script>
-<script type="text/javascript" src="/public/js/lib/html5.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -157,7 +157,7 @@ use Resources\Templates\Banner;
       <!-- For the CPP logo and statement. -->
       <div class="v-inner">
         <div class="box" style="height:100%; background:#FFFFFF;">
-         <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">  
+         <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">
             <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
                 <div class="img-wrap-w-center" style="background:#FFFFFF;">
@@ -171,7 +171,7 @@ use Resources\Templates\Banner;
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.
               </div>
-            </div>          
+            </div>
           </div>
         </div>
 		<div class="v-inner" style="text-align:center;">
@@ -264,22 +264,22 @@ use Resources\Templates\Banner;
 			<div class="box" style="height:100%; background:#FFFFFF;">
 				<div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
 					<div class="row" style="margin-top:20px;">
-					                <?php
+					                ?php
                   if($user) {
                   ?>
-                    <a href="<?php echo APP_BASE; ?>/user/new-project">
+                    <a href="<php echo APP_BASE; ?>/user/new-project">
                       <div class="box formstyles-button">Create a new project!</div>
                     </a>
-                    <a href="<?php echo APP_BASE; ?>/user/projects">
+                    <a href="?php echo APP_BASE; ?>/user/projects">
                       <div class="box formstyles-button">See your current projects</div>
                     </a>
-                  <?php
+                  ?php
                   } else {
                   ?>
-                    <a href="<?php echo APP_BASE; ?>/login">
+                    <a href="?php echo APP_BASE; ?>/login">
                       <div class="box formstyles-button" style="background:#66b517;">Login or sign up!</div>
                     </a>
-                  <?php
+                  ?php
                   }
 
                 ?>

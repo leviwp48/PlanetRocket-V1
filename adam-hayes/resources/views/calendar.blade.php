@@ -13,9 +13,9 @@ use Resources\Templates\Banner;
 <title>Planet Rocket - Calendar</title>
 
 <head>
-  <link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
-  <link rel="stylesheet" id="about-page" href="/css/about-page.css" type="text/css" media="all">
-  <link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
+  <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+  <link rel="stylesheet" id="about-page" href="/adam-hayes/public/adam-hayes/public/css/about-page.css" type="text/css" media="all">
+  <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
   <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
   <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
   <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
@@ -246,7 +246,7 @@ use Resources\Templates\Banner;
   window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>
