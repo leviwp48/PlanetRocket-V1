@@ -671,7 +671,7 @@ class UserController extends Controller {
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
 	    		for($i=0; $i<count($projectImages); $i++) {
-	    		$projectImageFromClient = $projectImages[$i];
+	    		$projectImageFromClient["correlation"] = $projectImages[$i];
 
 	    		$correlationID = $projectImageFromClient["correlation"];
 
@@ -682,6 +682,7 @@ class UserController extends Controller {
 	    			}
 
 	    		$projectCoverImage->claimImageWithProject($project->id);
+					
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    		$projectCoverImage->save();
