@@ -38,7 +38,7 @@ use Log;
 
 class UserController extends Controller {
 
-protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
+	protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
 	{
 		$result = $year . "-" . $month . "-";
 		if($day < 10)
@@ -50,40 +50,32 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			$result = $result . $day . " ";
 		}
 		
-		if($projectAMorPM == "am")
+		if($hour < 10)
 		{
-			if($hour < "10")
+			if($projectAMorPM == 'pm')
 			{
-				$result = $result . '0' . $hour . ":";
-			}
-			elseif($hour == '12')
-			{
-				$result = $result . "00:";
+				$hour = $hour + 12;
+				$result = $result . $hour . ":";
 			}
 			else
 			{
-				$result = $result.$hour.":";
+				$result = $result . "0" . $hour . ":";
 			}
 		}
-		
-		elseif($projectAMorPM == 'pm')
+		else
 		{
-			if($hour == '12')
+			if($projectAMorPM == 'pm')
 			{
-				$result = $result."12:";
+				$hour = $hour + 12;
 			}
-			else
-			{
-				$hour = $hour +12;
-				$result = $result.$hour.":";
-			}
+			$result = $result . $hour . ":";
 		}
 		
 		$result = $result . $min . ":00";
 		
 		return $result;
 	}	
-
+	
 	/**
 	 * a helper function to get the needs hierarchy and turn it into
 	 * a nested array structure. this is always tricky because of PHP's stupid stupid stupid
@@ -96,8 +88,8 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	$len = count($needs);
 	$rootContainer;
 	$rootKey = '';
-
-	$containers = [];
+	
+	$containers = [];	
 
 	$log = '';
 
@@ -112,7 +104,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		$isRoot = $i == 0;
 
 
-			//if there isn't a container for this ID, then make one
+			//if there isn't a container for this ID, then make one 
 		    //and add it to the containers
 			if(!@$containers[$needIDKey]) {
 			$containers[$needIDKey] = ['id'=>$needID, 'name'=>$name, 'description'=>$desc, 'children'=>[]];
@@ -129,7 +121,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			}
 
 		}
-
+	
 
 	return json_encode($containers[$rootKey]);
 	}
@@ -170,7 +162,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		if(!$needsArray) {
 		$newErr = ["field"=>"needs", "message"=>"Your project must have at least 1 requirement!"];
 		$errs[] = $newErr;
-		} else
+		} else 
 		if(count($needsArray) == 0) {
 		$newErr = ["field"=>"needs", "message"=>"Your project must have at least 1 requirement!"];
 		$errs[] = $newErr;
@@ -185,7 +177,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	 * A helper function used for project images.
 	 * We get the new project-images from the client and we compare them against the old project
 	 * images and this function will tell us which ones need to be added, which need to be edited
-	 * and which ones weill get deleted.
+	 * and which ones weill get deleted. 
 	 *
 	 */
 	protected function getAddDeleteEdit($news, $olds) {
@@ -201,7 +193,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 			for($j=0; $j<count($olds); $j++) {
 			$old = $olds[$j];
-
+			
 				if($newID == $old["id"]) {
 				$newWasFoundInOld = true;
 				$editThese[] = ["old"=>$old, "new"=>$new];
@@ -210,7 +202,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			}
 
 			if(!$newWasFoundInOld) {
-			$newToAdd[] = $new;
+			$newToAdd[] = $new;	
 			}
 
 		}
@@ -223,7 +215,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 			for($j=0; $j<count($news); $j++) {
 			$new = $news[$j];
-
+			
 				if($oldID == $new["id"]) {
 				$oldWasFoundInNew = true;
 				}
@@ -231,7 +223,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			}
 
 			if(!$oldWasFoundInNew) {
-			$oldToDelete[] = $old2;
+			$oldToDelete[] = $old2;	
 			}
 
 		}
@@ -328,7 +320,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		//if there were any form errors, then complain to the user.
 		if(count($errs) > 0) {
 		return json_encode(["message"=>"Form failed with errors.", "success"=>false, "errors"=>$errs]);
-		}
+		} 
 
 		//else, get the inputs and create the project
 		else {
@@ -344,36 +336,36 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 		//the images
 		$projectImages = json_decode( trim($request->input('project_images')),  true);
-
-
+		
+		
 		/*
 			BEGIN ALEC'S EDITS
 		*/
-
+			
 
 
 		//the daynum
 		$projectDayNum = trim($request->input('daynum'));
-
+		
 		//the month
 		$projectMonth = trim($request->input('month'));
-
+		
 		//the year
 		$projectYear = trim($request->input('pyear'));
-
+		
 		//the hour
 		$projectStartHour = trim($request->input('hour'));
-
+		
 		//the minute
 		$projectStartMin = trim($request->input('minute'));
-
+		
 		//am or pm
 		$projectAMorPM = trim($request->input('amORpm'));
-
+		
 		$projectReoccur = trim($request->input('reoccur'));
-
-		$nodatebox = $request->input('datebox');
-
+		
+		$nodatebox = $request->input('datebox');		
+		
 		if($nodatebox === 'dateless')
 		{
 						$projectDayNum = null;
@@ -383,17 +375,17 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			$projectStartMin = null;
 			$projectAMorPM = null;
 			$projectReoccur = 'none';
+			
 
-
-
-		}
+					
+		} 
 				$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
 		/*
 			END ALEC'S EDITS
 		*/
 
-		//the project needs. they come in as a json array of objects:
+		//the project needs. they come in as a json array of objects: 
 		//{"id":need-id, "user_description":the user description of the need}
         //do we're going to put these into an array so that laravel can digest them and
         //create all of the many-to-many connections with the sync function
@@ -415,36 +407,36 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    $project->name = $projectName;
 	    $project->description = $projectDescription;
 	    $project->short_description = $shortProjectDescription;
-
+	    
 		/*
 			BEGIN ALEC'S EDITS
 		*/
-
+		
 		$startTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
-
+		
 		if($startTime != false)
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 	    }
-
+	    
 	    /*
 			END ALEC'S EDITS
 		*/
-
+		
 	    $project->save();
 
 
 	    /*
 			BEGIN ALEC'S EDITS
 		*/
-
+	
 			// here we handle reoccuring events. In the code directly above, we created
 			// our new event in the database. We will use the same code but with logic to handle the reoccurance
-
+			
 			if($projectReoccur != 'none')
 			{
-
-
+				
+				
 					    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -458,7 +450,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -468,25 +460,25 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 	    					}
 			}
-
+				
 				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
 				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
 				$projectReoccurYear = trim($request->input('reoccuryear'));
-
+				
 				$reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
-
+				
 				date_default_timezone_set('America/Los_Angeles');
-
+				
 				$projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
 				$reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
-
+				
 				$pdaynum = date_format($projectDateTime, 'd');
-
+				
 				if($projectReoccur == 'daily')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 day"));
 					while($reoccurStopDateTime >= $projectDateTime)
-					{
+					{		
 						$project = new Project();
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
@@ -494,7 +486,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 day"));
-
+	    				
 	    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -508,7 +500,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -519,14 +511,14 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    					}
 			}
 
-					}
+					}	
 				}
-
+				
 				elseif($projectReoccur == 'weekly')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 week"));
 					while($reoccurStopDateTime >= $projectDateTime)
-					{
+					{								
 						$project = new Project();
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
@@ -534,7 +526,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 week"));
-
+	    				
 	    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -548,7 +540,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -557,11 +549,11 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    					$projectCoverImage->save();
 	    					}
 			}
-
-
-					}
+	    				
+	    				
+					}	
 				}
-
+				
 				elseif($projectReoccur == 'monthly')
 				{
 					if($pdaynum > 28)
@@ -581,7 +573,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 month"));
-
+	    				
   					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -595,7 +587,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -604,9 +596,9 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    					$projectCoverImage->save();
 	    					}
 			}
-					}
+					}	
 				}
-
+				
 				elseif($projectReoccur == 'yearly')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 year"));
@@ -633,7 +625,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -643,7 +635,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 	    					}
 			}
-					}
+					}	
 				}
 					    					return json_encode(["message"=>"Form succeeded.", "success"=>true, "errors"=>[], "created_record_id"=>$project->id]);
 
@@ -653,7 +645,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		 /*
 			END ALEC'S EDITS
 		*/
-
+		
 	    //sync it with the different needs that it has. this is a cool function to manage all of the
 	    //pivot many-to-many connections automatically. painful code to write yourself and believe me I know.
 	    $project->needs()->sync($syncNeedData);
@@ -672,9 +664,9 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	        //return to us in this endpoint, and basically we're going to take the id (correlation) of each project-image
 	        //then hunt if down and "claim" it for this project.
 	    	if($projectImages) {
-	    	//heres the projectImages:
+	    	//heres the projectImages: 
 	    	//[{"file":"X_39-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg","correlation":103,"description":"Testing 1 2 3"},
-	    	//{"file":"X_39-opbhsd3cw6n01.jpg","correlation":104,"description":"Testng 4 5 6"}]
+	    	//{"file":"X_39-opbhsd3cw6n01.jpg","correlation":104,"description":"Testng 4 5 6"}] 
 
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
@@ -686,7 +678,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    		$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    			if(!$projectCoverImage) {
-	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
 	    			}
 
 	    		$projectCoverImage->claimImageWithProject($project->id);
@@ -704,7 +696,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		return json_encode(["message"=>"Form succeeded.", "success"=>true, "errors"=>[], "created_record_id"=>$project->id]);
     	}
     	}
-
+	
 
 	}
 
@@ -743,7 +735,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			->with("logged_in", true)
 			->with("project_name", $name);
 
-		}
+		} 
 
 		//if they don't own the project, then just return the read-only view of the project.
 		else {
@@ -775,13 +767,13 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    //pivot table. As far as I can tell this kind of query is outside the abilities of Laravel's ORM.
 		$selectNeedsRawQuery = "SELECT needs.*, need_project.*
 		FROM needs
-
+			
 			INNER JOIN need_project
 			ON needs.id = need_project.need_id
 
 				INNER JOIN  projects
 		        	ON need_project.project_id = projects.id
-
+				
     	WHERE projects.id = :projectID";
 
 		$needs = DB::select( DB::raw($selectNeedsRawQuery), array(
@@ -817,7 +809,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		} else {
 		$projectID = $request->input('id');
 
-		//same thing as we did for the create_project function. Put together an array for laravel's
+		//same thing as we did for the create_project function. Put together an array for laravel's 
 		//sync function to chew on.
 		$needsArrayFromForm = json_decode( trim($request->input('needs')),  true);
 		$syncNeedData = [];
@@ -834,7 +826,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 		$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
 
-			//get the add-edit-delete lists from the old project images to the new project images and
+			//get the add-edit-delete lists from the old project images to the new project images and 
 		    //rectify everything.
 			if($projectImagesEditedFromClient) {
 
@@ -851,7 +843,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			$projectCoverImagesCurrent = ProjectCoverImage::where("project_id","=",$projectID)->get();
 
 			//get the three lists of things to rectify here. the new records to add, the old records to delete
-			//and the current records that need editing.
+			//and the current records that need editing. 
 			$addDeleteEdit = $this->getAddDeleteEdit($arrayOfProjectCoverImagesObjsFromClient, $projectCoverImagesCurrent);
 
 			$projectCoverImagesToAdd = &$addDeleteEdit["add"];
@@ -876,7 +868,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
-				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);
+				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);	
 				}
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
@@ -886,17 +878,17 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 				$newCoverImageData = $oldNew['new'];
 				//the description is the only thing to edit here.
 
-				$oldCoverImageToEdit->description = @$newCoverImageData["description"];
+				$oldCoverImageToEdit->description = @$newCoverImageData["description"];				
 				$oldCoverImageToEdit->save();
 
 
 				}
 
-			}
+			} 
 
 			//else, there are no cover-images, so they were all deleted.
 			else {
-			$project->project_cover_images()->delete();
+			$project->project_cover_images()->delete();	
 			}
 
 
@@ -916,7 +908,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	}
 
 
-	//////////////////////////////////////////////////////////////////////////////////                                                //
+	//////////////////////////////////////////////////////////////////////////////////                                                //                
 	//                                                                              //
 	// some regular old pages like the index page, about us blah blah               //
     //                                                                              //
@@ -952,6 +944,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		->with("logged_in", $loggedIn);
 	}
 
+
 	public function training() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -969,9 +962,12 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	}
 
 
+
+
+
 	//////////////////////////////////////////////////////////////////////////////////
 	//                                                                              //
-	// SeeinG the user's projects                                                   //
+	// SeeinG the user's projects                                                   //                
 	//                                                                              //
 	// The view for the projects table for the user, and the table-service hook     //
     //                                                                              //
@@ -1059,13 +1055,13 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 		$selectNeedsRawQuery = "SELECT needs.*, need_project.*
 		FROM needs
-
+			
 			INNER JOIN need_project
 			ON needs.id = need_project.need_id
 
 				INNER JOIN  projects
 		        	ON need_project.project_id = projects.id
-
+				
     	WHERE projects.id = :projectID";
 
 		$needResults = DB::select( DB::raw($selectNeedsRawQuery), array(
@@ -1121,7 +1117,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			$userID = $user->id;
 
 				if($ownerID == $userID) {
-				$userProjectRole = "owner";
+				$userProjectRole = "owner";	
 				} else {
 
 					for($i=0; $i<count($projectUsers); $i++) {
@@ -1137,13 +1133,13 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			$numberOfJoinRequests = JoinRequest::where("sender_id", $userID)->where("project_id", $projectID)->count();
 			}
 
-
+			
 	//put together a response for the client.
 	$toClient = [];
 	$toClient['name'] = $project->name;
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
-
+	
 	$fulltime = $project->start_time;
 	if($fulltime)
 	{
@@ -1156,63 +1152,63 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	{
 		$pmonth = "January";
 	}
-
+	
 	elseif($pmonth == "02")
 	{
 		$pmonth = "February";
 	}
-
+	
 	elseif($pmonth == "03")
 	{
 		$pmonth = "March";
 	}
-
+	
 	elseif($pmonth == "04")
 	{
 		$pmonth = "April";
 	}
-
+	
 	elseif($pmonth == "05")
 	{
 		$pmonth = "May";
 	}
-
+	
 	elseif($pmonth == "06")
 	{
 		$pmonth = "June";
 	}
-
+	
 	elseif($pmonth == "07")
 	{
 		$pmonth = "July";
 	}
-
+	
 	elseif($pmonth == "08")
 	{
 		$pmonth = "August";
 	}
-
+	
 	elseif($pmonth == "09")
 	{
 		$pmonth = "September";
 	}
-
+	
 	elseif($pmonth == "10")
 	{
 		$pmonth = "October";
 	}
-
+	
 	elseif($pmonth == "11")
 	{
 		$pmonth = "November";
 	}
-
+	
 	elseif($pmonth == "12")
 	{
 		$pmonth = "December";
 	}
 	$ptime = $pmonth." ".$pday.", ".$pyear;
-
+	
 	if($phour >= 12)
 	{
 		if($phour == 12)
@@ -1228,8 +1224,8 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	else
 	{
 		$ptime = $ptime." ".$phour.":".$pmin."am";
-	}
-
+	}	
+	
 	$toClient['start_time'] = $ptime;
 	}
 	else
@@ -1282,7 +1278,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	//returns an empty string if there's no input
 	$sortField = $request->input("sort_field");
 
-	$sortDir   = $request->input("sort_dir") == "ASC" ? "ASC" : "DESC";
+	$sortDir   = $request->input("sort_dir") == "ASC" ? "ASC" : "DESC"; 
 
 	//https://stackoverflow.com/questions/29276065/order-by-row-and-limit-result-in-laravel-5
 	//https://stackoverflow.com/questions/15229303/is-there-a-way-to-limit-the-result-with-eloquent-orm-of-laravel
@@ -1308,12 +1304,12 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		//return json_encode($projects);
 		return json_encode($response);
 
-		}
+		} 
 
 		//else, this is being used for user-specific tables and in that case we need
-		//to get either all of the projects that the user is involved with, or
+		//to get either all of the projects that the user is involved with, or 
 		//projects that the user owns, or projects that the user is involved with, but doesn't own.
-		else
+		else 
 		if($isUser) {
 
 		$user = Auth::user();
@@ -1347,8 +1343,8 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 			} else {
 
 			//https://stackoverflow.com/questions/28256933/eloquent-where-not-equal-to
-			//you need this orWhereNull thing or it won't catch the nulls. of course.
-			//actually, this type of query turned out to be really problematic, so
+			//you need this orWhereNull thing or it won't catch the nulls. of course. 
+			//actually, this type of query turned out to be really problematic, so 
 			//I redid the database and just made a default value to get around this null issue.
 				$count = Project::whereHas('users', function($q) use($userID) {
 
@@ -1380,7 +1376,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 					$q->where('id', '=', $userID);
 				});
 
-			}
+			} 
 
 			//if just the projects that the user owns.
 			else
@@ -1396,7 +1392,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 				});
 
-			}
+			} 
 
 
 			//if just the projects that the user is involved with but doesn't own.
@@ -1427,5 +1423,5 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 
 	}
 
-
+    
 }
