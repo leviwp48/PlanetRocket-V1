@@ -63,95 +63,91 @@ use Resources\Templates\Banner;
 
         </div>
       </div>
-
-      <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
       <div class="v-inner">
-          <div class="box" style="height:100%; background:#FFFFFF;">
+        <div class="box">
 
-            <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+          <!-- This be the featured posts section -->
+          <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF;">
 
-
-            <div class="row homepage" style="text-align:center; margin-top:20px;"><h1>Welcome!</h1></div>
-            <div class="row" style="text-align:center;">Welcome! Planet Rocket is a <strong>collaborative approach</strong> to problem solving. We believe that issues touch upon many systems, and that all sides need to be heard to come up with the best solution. We welcome <strong>idea people, doers, and funders</strong> here. But how can you use this platform? Do you have an idea about improving your community? Do you have time to volunteer to projects that will help out your neighbors? Are you able to contribute to projects with funding to carry out those projects? You can do all of that and more, here on Planet Rocket!
+            <div class="row" style="text-align:center; margin-top:30px;">
+              <h1>
+                Community Trainings
+              </h1>
             </div>
 
-            <div class="row homepage" style="text-align:center; margin-top:40px;">
-              <h2>How can you use Planet Rocket?</h2>
-            </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Individuals" src="./images/home-page-individuals.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Individuals</h3></div>
-                Do you have an idea about improving your community? Do you have time to volunteer to projects that will help out your neighbors? Do you need funding to carry out your project?
-              </div>
-            </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-groups.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Groups</h3></div>
-                Do you need help locating others to join your cause? Do you have ideas or research you can share with others on how to improve your community?
-              </div>
-            </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-entrepreneurs.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Entrepreneurs</h3></div>
-                Find people who are interested in your idea. Share your idea with others to get feedback. Get funding from people who want to see you succeed.
-              </div>
-            </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-nonprofits.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Nonprofits</h3></div>
-                Do you have an issue that you are trying to solve and you need community input? Are you interested in hearing from other agencies or community members who have had success with those issues?
-              </div>
-            </div>
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-companies.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Companies</h3></div>
-                Share the great projects you are working on and get feedback from others. Have open communication about how you can better serve your customers!
-              </div>
-            </div>
-
-
-            <div class="row" style="margin-top:40px;"></div>
-
-            </div>
-            <!-- End of Center column -->
+          </div>
 
         </div>
       </div>
+      <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
+            <div class="v-inner">
+        <div class="box">
+
+          <!-- This be the featured posts section -->
+          <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF;">
+
+
+            
+
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/food">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; font-weight:100; ">Food</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/housing">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Housing</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/lgbtq">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">LGBTQ+</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/medical">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Medical</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/shelters">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Shelters</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="/adam-hayes/public/resources/transportation">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Transportation</button>
+					</a>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+          </div>
+
+        </div>
+      </div>
+      
+
+      
 
       <!-- The footer -->
       <div id="footer" class="v-inner">
