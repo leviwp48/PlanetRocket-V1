@@ -210,7 +210,8 @@ ul li:hover > ul {
 
 .footer {
   background: #FFFFFF;
-  border-top: 7px solid #1e2e84; }
+  border-top: 7px solid #1e2e84;
+}
 
 .dropdown-nav-menu-item {
   padding: 10px;

@@ -128,6 +128,7 @@ use Resources\Templates\Banner;
               echo Form::submit("Request to join this project!", ['class'=>'row formstyles-submit-button']);
               echo Form::close();
               ?>
+
             </div>
 
             <!-- This be the regular posts section -->
@@ -136,14 +137,44 @@ use Resources\Templates\Banner;
 
             </div>
 
-
-            <!-- End of Center column -->
-
+          </div>
         </div>
-      </div>
 
+        <!--
+             Levi Edit 7/21/18
+             Added the disqus comment API. Added a border-bottom to row to make a line and margin-bottom to push the footer down. Added a box-shadow to make the shadow.
+         -->
 
+            <div class="v-inner">
+              <div class="box" style="height:59%; background:#FFFFFF;">
+                <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia; padding-top: 10px;">
+                  <div class="row" style="margin-top:20px; margin-bottom: 20px; border-bottom: 1.2px solid #888888; "></div>
 
+                  <div id="disqus_thread" style="border-top: 1px solid #FFFFFF; margin-bottom: 50px; box-shadow: 5px 5px 10px 1px #a8a8a8;"></div>
+
+                  <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+                    var disqus_config = function () {
+                      this.page.url = "http://localhost/adam-hayes/public/projects/view-project/" + "<?php echo $project_id ?>" ;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = "<?php echo $project_id ?>"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+                      s.src = 'https://planetrocket.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                    })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div>
+              </div>
+            </div>
 
       <!-- The footer -->
       <div id="footer" class="v-inner">
@@ -157,8 +188,8 @@ use Resources\Templates\Banner;
           </div>
 
         <div class="row" style="height:20px;"></div>
-        </div>
       </div>
+    </div>
 
     </div>
 

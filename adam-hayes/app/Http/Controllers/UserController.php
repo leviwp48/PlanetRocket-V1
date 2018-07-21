@@ -49,7 +49,7 @@ class UserController extends Controller {
 		{
 			$result = $result . $day . " ";
 		}
-		
+
 		if($hour < 10)
 		{
 			if($projectAMorPM == 'pm')
@@ -70,12 +70,12 @@ class UserController extends Controller {
 			}
 			$result = $result . $hour . ":";
 		}
-		
+
 		$result = $result . $min . ":00";
-		
+
 		return $result;
-	}	
-	
+	}
+
 	/**
 	 * a helper function to get the needs hierarchy and turn it into
 	 * a nested array structure. this is always tricky because of PHP's stupid stupid stupid
@@ -88,8 +88,8 @@ class UserController extends Controller {
 	$len = count($needs);
 	$rootContainer;
 	$rootKey = '';
-	
-	$containers = [];	
+
+	$containers = [];
 
 	$log = '';
 
@@ -104,7 +104,7 @@ class UserController extends Controller {
 		$isRoot = $i == 0;
 
 
-			//if there isn't a container for this ID, then make one 
+			//if there isn't a container for this ID, then make one
 		    //and add it to the containers
 			if(!@$containers[$needIDKey]) {
 			$containers[$needIDKey] = ['id'=>$needID, 'name'=>$name, 'description'=>$desc, 'children'=>[]];
@@ -121,7 +121,7 @@ class UserController extends Controller {
 			}
 
 		}
-	
+
 
 	return json_encode($containers[$rootKey]);
 	}
@@ -162,7 +162,7 @@ class UserController extends Controller {
 		if(!$needsArray) {
 		$newErr = ["field"=>"needs", "message"=>"Your project must have at least 1 requirement!"];
 		$errs[] = $newErr;
-		} else 
+		} else
 		if(count($needsArray) == 0) {
 		$newErr = ["field"=>"needs", "message"=>"Your project must have at least 1 requirement!"];
 		$errs[] = $newErr;
@@ -177,7 +177,7 @@ class UserController extends Controller {
 	 * A helper function used for project images.
 	 * We get the new project-images from the client and we compare them against the old project
 	 * images and this function will tell us which ones need to be added, which need to be edited
-	 * and which ones weill get deleted. 
+	 * and which ones weill get deleted.
 	 *
 	 */
 	protected function getAddDeleteEdit($news, $olds) {
@@ -193,7 +193,7 @@ class UserController extends Controller {
 
 			for($j=0; $j<count($olds); $j++) {
 			$old = $olds[$j];
-			
+
 				if($newID == $old["id"]) {
 				$newWasFoundInOld = true;
 				$editThese[] = ["old"=>$old, "new"=>$new];
@@ -202,7 +202,7 @@ class UserController extends Controller {
 			}
 
 			if(!$newWasFoundInOld) {
-			$newToAdd[] = $new;	
+			$newToAdd[] = $new;
 			}
 
 		}
@@ -215,7 +215,7 @@ class UserController extends Controller {
 
 			for($j=0; $j<count($news); $j++) {
 			$new = $news[$j];
-			
+
 				if($oldID == $new["id"]) {
 				$oldWasFoundInNew = true;
 				}
@@ -223,7 +223,7 @@ class UserController extends Controller {
 			}
 
 			if(!$oldWasFoundInNew) {
-			$oldToDelete[] = $old2;	
+			$oldToDelete[] = $old2;
 			}
 
 		}
@@ -320,7 +320,7 @@ class UserController extends Controller {
 		//if there were any form errors, then complain to the user.
 		if(count($errs) > 0) {
 		return json_encode(["message"=>"Form failed with errors.", "success"=>false, "errors"=>$errs]);
-		} 
+		}
 
 		//else, get the inputs and create the project
 		else {
@@ -336,36 +336,36 @@ class UserController extends Controller {
 
 		//the images
 		$projectImages = json_decode( trim($request->input('project_images')),  true);
-		
-		
+
+
 		/*
 			BEGIN ALEC'S EDITS
 		*/
-			
+
 
 
 		//the daynum
 		$projectDayNum = trim($request->input('daynum'));
-		
+
 		//the month
 		$projectMonth = trim($request->input('month'));
-		
+
 		//the year
 		$projectYear = trim($request->input('pyear'));
-		
+
 		//the hour
 		$projectStartHour = trim($request->input('hour'));
-		
+
 		//the minute
 		$projectStartMin = trim($request->input('minute'));
-		
+
 		//am or pm
 		$projectAMorPM = trim($request->input('amORpm'));
-		
+
 		$projectReoccur = trim($request->input('reoccur'));
-		
-		$nodatebox = $request->input('datebox');		
-		
+
+		$nodatebox = $request->input('datebox');
+
 		if($nodatebox === 'dateless')
 		{
 						$projectDayNum = null;
@@ -375,17 +375,17 @@ class UserController extends Controller {
 			$projectStartMin = null;
 			$projectAMorPM = null;
 			$projectReoccur = 'none';
-			
 
-					
-		} 
+
+
+		}
 				$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
 		/*
 			END ALEC'S EDITS
 		*/
 
-		//the project needs. they come in as a json array of objects: 
+		//the project needs. they come in as a json array of objects:
 		//{"id":need-id, "user_description":the user description of the need}
         //do we're going to put these into an array so that laravel can digest them and
         //create all of the many-to-many connections with the sync function
@@ -407,36 +407,36 @@ class UserController extends Controller {
 	    $project->name = $projectName;
 	    $project->description = $projectDescription;
 	    $project->short_description = $shortProjectDescription;
-	    
+
 		/*
 			BEGIN ALEC'S EDITS
 		*/
-		
+
 		$startTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
-		
+
 		if($startTime != false)
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 	    }
-	    
+
 	    /*
 			END ALEC'S EDITS
 		*/
-		
+
 	    $project->save();
 
 
 	    /*
 			BEGIN ALEC'S EDITS
 		*/
-	
+
 			// here we handle reoccuring events. In the code directly above, we created
 			// our new event in the database. We will use the same code but with logic to handle the reoccurance
-			
+
 			if($projectReoccur != 'none')
 			{
-				
-				
+
+
 					    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -450,7 +450,7 @@ class UserController extends Controller {
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -460,25 +460,25 @@ class UserController extends Controller {
 
 	    					}
 			}
-				
+
 				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
 				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
 				$projectReoccurYear = trim($request->input('reoccuryear'));
-				
+
 				$reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
-				
+
 				date_default_timezone_set('America/Los_Angeles');
-				
+
 				$projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
 				$reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
-				
+
 				$pdaynum = date_format($projectDateTime, 'd');
-				
+
 				if($projectReoccur == 'daily')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 day"));
 					while($reoccurStopDateTime >= $projectDateTime)
-					{		
+					{
 						$project = new Project();
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
@@ -486,7 +486,7 @@ class UserController extends Controller {
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 day"));
-	    				
+
 	    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -500,7 +500,7 @@ class UserController extends Controller {
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -511,14 +511,14 @@ class UserController extends Controller {
 	    					}
 			}
 
-					}	
+					}
 				}
-				
+
 				elseif($projectReoccur == 'weekly')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 week"));
 					while($reoccurStopDateTime >= $projectDateTime)
-					{								
+					{
 						$project = new Project();
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
@@ -526,7 +526,7 @@ class UserController extends Controller {
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 week"));
-	    				
+
 	    				  					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -540,7 +540,7 @@ class UserController extends Controller {
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -549,11 +549,11 @@ class UserController extends Controller {
 	    					$projectCoverImage->save();
 	    					}
 			}
-	    				
-	    				
-					}	
+
+
+					}
 				}
-				
+
 				elseif($projectReoccur == 'monthly')
 				{
 					if($pdaynum > 28)
@@ -573,7 +573,7 @@ class UserController extends Controller {
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
 	    				date_add($projectDateTime, date_interval_create_from_date_string("1 month"));
-	    				
+
   					  	$project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
@@ -587,7 +587,7 @@ class UserController extends Controller {
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -596,9 +596,9 @@ class UserController extends Controller {
 	    					$projectCoverImage->save();
 	    					}
 			}
-					}	
+					}
 				}
-				
+
 				elseif($projectReoccur == 'yearly')
 				{
 					date_add($projectDateTime, date_interval_create_from_date_string("1 year"));
@@ -625,7 +625,7 @@ class UserController extends Controller {
 	    						$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    					if(!$projectCoverImage) {
-	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
 	    					$projectCoverImage->claimImageWithProject($project->id);
@@ -635,7 +635,7 @@ class UserController extends Controller {
 
 	    					}
 			}
-					}	
+					}
 				}
 					    					return json_encode(["message"=>"Form succeeded.", "success"=>true, "errors"=>[], "created_record_id"=>$project->id]);
 
@@ -645,7 +645,7 @@ class UserController extends Controller {
 		 /*
 			END ALEC'S EDITS
 		*/
-		
+
 	    //sync it with the different needs that it has. this is a cool function to manage all of the
 	    //pivot many-to-many connections automatically. painful code to write yourself and believe me I know.
 	    $project->needs()->sync($syncNeedData);
@@ -664,24 +664,25 @@ class UserController extends Controller {
 	        //return to us in this endpoint, and basically we're going to take the id (correlation) of each project-image
 	        //then hunt if down and "claim" it for this project.
 	    	if($projectImages) {
-	    	//heres the projectImages: 
+	    	//heres the projectImages:
 	    	//[{"file":"X_39-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg","correlation":103,"description":"Testing 1 2 3"},
-	    	//{"file":"X_39-opbhsd3cw6n01.jpg","correlation":104,"description":"Testng 4 5 6"}] 
+	    	//{"file":"X_39-opbhsd3cw6n01.jpg","correlation":104,"description":"Testng 4 5 6"}]
 
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
 	    		for($i=0; $i<count($projectImages); $i++) {
-	    		$projectImageFromClient = $projectImages[$i];
+	    		$projectImageFromClient["correlation"] = $projectImages[$i];
 
 	    		$correlationID = $projectImageFromClient["correlation"];
 
 	    		$projectCoverImage = ProjectCoverImage::find($correlationID);
 
 	    			if(!$projectCoverImage) {
-	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);	
+	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    			}
 
 	    		$projectCoverImage->claimImageWithProject($project->id);
+					
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    		$projectCoverImage->save();
@@ -696,7 +697,7 @@ class UserController extends Controller {
 		return json_encode(["message"=>"Form succeeded.", "success"=>true, "errors"=>[], "created_record_id"=>$project->id]);
     	}
     	}
-	
+
 
 	}
 
@@ -735,7 +736,7 @@ class UserController extends Controller {
 			->with("logged_in", true)
 			->with("project_name", $name);
 
-		} 
+		}
 
 		//if they don't own the project, then just return the read-only view of the project.
 		else {
@@ -767,13 +768,13 @@ class UserController extends Controller {
 	    //pivot table. As far as I can tell this kind of query is outside the abilities of Laravel's ORM.
 		$selectNeedsRawQuery = "SELECT needs.*, need_project.*
 		FROM needs
-			
+
 			INNER JOIN need_project
 			ON needs.id = need_project.need_id
 
 				INNER JOIN  projects
 		        	ON need_project.project_id = projects.id
-				
+
     	WHERE projects.id = :projectID";
 
 		$needs = DB::select( DB::raw($selectNeedsRawQuery), array(
@@ -809,7 +810,7 @@ class UserController extends Controller {
 		} else {
 		$projectID = $request->input('id');
 
-		//same thing as we did for the create_project function. Put together an array for laravel's 
+		//same thing as we did for the create_project function. Put together an array for laravel's
 		//sync function to chew on.
 		$needsArrayFromForm = json_decode( trim($request->input('needs')),  true);
 		$syncNeedData = [];
@@ -826,7 +827,7 @@ class UserController extends Controller {
 
 		$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
 
-			//get the add-edit-delete lists from the old project images to the new project images and 
+			//get the add-edit-delete lists from the old project images to the new project images and
 		    //rectify everything.
 			if($projectImagesEditedFromClient) {
 
@@ -843,7 +844,7 @@ class UserController extends Controller {
 			$projectCoverImagesCurrent = ProjectCoverImage::where("project_id","=",$projectID)->get();
 
 			//get the three lists of things to rectify here. the new records to add, the old records to delete
-			//and the current records that need editing. 
+			//and the current records that need editing.
 			$addDeleteEdit = $this->getAddDeleteEdit($arrayOfProjectCoverImagesObjsFromClient, $projectCoverImagesCurrent);
 
 			$projectCoverImagesToAdd = &$addDeleteEdit["add"];
@@ -868,7 +869,7 @@ class UserController extends Controller {
 				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
-				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);	
+				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);
 				}
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
@@ -878,17 +879,17 @@ class UserController extends Controller {
 				$newCoverImageData = $oldNew['new'];
 				//the description is the only thing to edit here.
 
-				$oldCoverImageToEdit->description = @$newCoverImageData["description"];				
+				$oldCoverImageToEdit->description = @$newCoverImageData["description"];
 				$oldCoverImageToEdit->save();
 
 
 				}
 
-			} 
+			}
 
 			//else, there are no cover-images, so they were all deleted.
 			else {
-			$project->project_cover_images()->delete();	
+			$project->project_cover_images()->delete();
 			}
 
 
@@ -908,7 +909,7 @@ class UserController extends Controller {
 	}
 
 
-	//////////////////////////////////////////////////////////////////////////////////                                                //                
+	//////////////////////////////////////////////////////////////////////////////////                                                //
 	//                                                                              //
 	// some regular old pages like the index page, about us blah blah               //
     //                                                                              //
@@ -952,7 +953,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 	public function resources() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -967,7 +968,7 @@ class UserController extends Controller {
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//                                                                              //
-	// SeeinG the user's projects                                                   //                
+	// SeeinG the user's projects                                                   //
 	//                                                                              //
 	// The view for the projects table for the user, and the table-service hook     //
     //                                                                              //
@@ -1055,13 +1056,13 @@ class UserController extends Controller {
 
 		$selectNeedsRawQuery = "SELECT needs.*, need_project.*
 		FROM needs
-			
+
 			INNER JOIN need_project
 			ON needs.id = need_project.need_id
 
 				INNER JOIN  projects
 		        	ON need_project.project_id = projects.id
-				
+
     	WHERE projects.id = :projectID";
 
 		$needResults = DB::select( DB::raw($selectNeedsRawQuery), array(
@@ -1117,7 +1118,7 @@ class UserController extends Controller {
 			$userID = $user->id;
 
 				if($ownerID == $userID) {
-				$userProjectRole = "owner";	
+				$userProjectRole = "owner";
 				} else {
 
 					for($i=0; $i<count($projectUsers); $i++) {
@@ -1133,13 +1134,13 @@ class UserController extends Controller {
 			$numberOfJoinRequests = JoinRequest::where("sender_id", $userID)->where("project_id", $projectID)->count();
 			}
 
-			
+
 	//put together a response for the client.
 	$toClient = [];
 	$toClient['name'] = $project->name;
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
-	
+
 	$fulltime = $project->start_time;
 	if($fulltime)
 	{
@@ -1152,63 +1153,63 @@ class UserController extends Controller {
 	{
 		$pmonth = "January";
 	}
-	
+
 	elseif($pmonth == "02")
 	{
 		$pmonth = "February";
 	}
-	
+
 	elseif($pmonth == "03")
 	{
 		$pmonth = "March";
 	}
-	
+
 	elseif($pmonth == "04")
 	{
 		$pmonth = "April";
 	}
-	
+
 	elseif($pmonth == "05")
 	{
 		$pmonth = "May";
 	}
-	
+
 	elseif($pmonth == "06")
 	{
 		$pmonth = "June";
 	}
-	
+
 	elseif($pmonth == "07")
 	{
 		$pmonth = "July";
 	}
-	
+
 	elseif($pmonth == "08")
 	{
 		$pmonth = "August";
 	}
-	
+
 	elseif($pmonth == "09")
 	{
 		$pmonth = "September";
 	}
-	
+
 	elseif($pmonth == "10")
 	{
 		$pmonth = "October";
 	}
-	
+
 	elseif($pmonth == "11")
 	{
 		$pmonth = "November";
 	}
-	
+
 	elseif($pmonth == "12")
 	{
 		$pmonth = "December";
 	}
 	$ptime = $pmonth." ".$pday.", ".$pyear;
-	
+
 	if($phour >= 12)
 	{
 		if($phour == 12)
@@ -1224,8 +1225,8 @@ class UserController extends Controller {
 	else
 	{
 		$ptime = $ptime." ".$phour.":".$pmin."am";
-	}	
-	
+	}
+
 	$toClient['start_time'] = $ptime;
 	}
 	else
@@ -1278,7 +1279,7 @@ class UserController extends Controller {
 	//returns an empty string if there's no input
 	$sortField = $request->input("sort_field");
 
-	$sortDir   = $request->input("sort_dir") == "ASC" ? "ASC" : "DESC"; 
+	$sortDir   = $request->input("sort_dir") == "ASC" ? "ASC" : "DESC";
 
 	//https://stackoverflow.com/questions/29276065/order-by-row-and-limit-result-in-laravel-5
 	//https://stackoverflow.com/questions/15229303/is-there-a-way-to-limit-the-result-with-eloquent-orm-of-laravel
@@ -1304,12 +1305,12 @@ class UserController extends Controller {
 		//return json_encode($projects);
 		return json_encode($response);
 
-		} 
+		}
 
 		//else, this is being used for user-specific tables and in that case we need
-		//to get either all of the projects that the user is involved with, or 
+		//to get either all of the projects that the user is involved with, or
 		//projects that the user owns, or projects that the user is involved with, but doesn't own.
-		else 
+		else
 		if($isUser) {
 
 		$user = Auth::user();
@@ -1343,8 +1344,8 @@ class UserController extends Controller {
 			} else {
 
 			//https://stackoverflow.com/questions/28256933/eloquent-where-not-equal-to
-			//you need this orWhereNull thing or it won't catch the nulls. of course. 
-			//actually, this type of query turned out to be really problematic, so 
+			//you need this orWhereNull thing or it won't catch the nulls. of course.
+			//actually, this type of query turned out to be really problematic, so
 			//I redid the database and just made a default value to get around this null issue.
 				$count = Project::whereHas('users', function($q) use($userID) {
 
@@ -1376,7 +1377,7 @@ class UserController extends Controller {
 					$q->where('id', '=', $userID);
 				});
 
-			} 
+			}
 
 			//if just the projects that the user owns.
 			else
@@ -1392,7 +1393,7 @@ class UserController extends Controller {
 
 				});
 
-			} 
+			}
 
 
 			//if just the projects that the user is involved with but doesn't own.
@@ -1423,5 +1424,5 @@ class UserController extends Controller {
 
 	}
 
-    
+
 }
