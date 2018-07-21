@@ -60,5 +60,3 @@ Ajax.bootstrap();
 }
 
 });
-
-
