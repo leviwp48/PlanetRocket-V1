@@ -38,7 +38,7 @@ use Log;
 
 class UserController extends Controller {
 
-protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
+	protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMorPM)
 	{
 		$result = $year . "-" . $month . "-";
 		if($day < 10)
@@ -49,40 +49,32 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		{
 			$result = $result . $day . " ";
 		}
-		
-		if($projectAMorPM == "am")
+
+		if($hour < 10)
 		{
-			if($hour < "10")
+			if($projectAMorPM == 'pm')
 			{
-				$result = $result . '0' . $hour . ":";
-			}
-			elseif($hour == '12')
-			{
-				$result = $result . "00:";
+				$hour = $hour + 12;
+				$result = $result . $hour . ":";
 			}
 			else
 			{
-				$result = $result.$hour.":";
+				$result = $result . "0" . $hour . ":";
 			}
 		}
-		
-		elseif($projectAMorPM == 'pm')
+		else
 		{
-			if($hour == '12')
+			if($projectAMorPM == 'pm')
 			{
-				$result = $result."12:";
+				$hour = $hour + 12;
 			}
-			else
-			{
-				$hour = $hour +12;
-				$result = $result.$hour.":";
-			}
+			$result = $result . $hour . ":";
 		}
-		
+
 		$result = $result . $min . ":00";
-		
+
 		return $result;
-	}	
+	}
 
 	/**
 	 * a helper function to get the needs hierarchy and turn it into
@@ -679,7 +671,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
 	    		for($i=0; $i<count($projectImages); $i++) {
-	    		$projectImageFromClient = $projectImages[$i];
+	    		$projectImageFromClient["correlation"] = $projectImages[$i];
 
 	    		$correlationID = $projectImageFromClient["correlation"];
 
@@ -690,6 +682,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 	    			}
 
 	    		$projectCoverImage->claimImageWithProject($project->id);
+					
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    		$projectCoverImage->save();
@@ -952,6 +945,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		->with("logged_in", $loggedIn);
 	}
 
+
 	public function training() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -959,7 +953,7 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 	public function resources() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -967,6 +961,9 @@ protected function returnDateTime($day, $month, $year, $hour, $min, $projectAMor
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
+
+
+
 
 
 	//////////////////////////////////////////////////////////////////////////////////

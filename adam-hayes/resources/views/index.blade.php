@@ -12,10 +12,10 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="./css/index-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="./js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="css/index-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -73,77 +73,35 @@ use Resources\Templates\Banner;
 
 
             <div class="row homepage" style="text-align:center; margin-top:20px;"><h1>Welcome!</h1></div>
-            <div class="row" style="text-align:center;">Welcome! Planet Rocket is a <strong>collaborative approach</strong> to problem solving. We believe that issues touch upon many systems, and that all sides need to be heard to come up with the best solution. We welcome <strong>idea people, doers, and funders</strong> here. But how can you use this platform? Do you have an idea about improving your community? Do you have time to volunteer to projects that will help out your neighbors? Are you able to contribute to projects with funding to carry out those projects? You can do all of that and more, here on Planet Rocket!
+            <div class="row" style="text-align:center;">
+              Welcome to Planet Rocket! Watch this tutorial to Rock your own project!
             </div>
 
             <div class="row homepage" style="text-align:center; margin-top:40px;">
-              <h2>How can you use Planet Rocket?</h2>
+              <h2>Watch This!</h2>
             </div>
 
 
             <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Individuals" src="./images/home-page-individuals.png">
-                </div>
-              </div>
               <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Individuals</h3></div>
-                Do you have an idea about improving your community? Do you have time to volunteer to projects that will help out your neighbors? Do you need funding to carry out your project?
+                <div class="row homepage"><h3>The video goes here!</h3></div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
 
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-groups.png">
+            <!-- Levi Edit 7/21/18 -->
+            <!-- changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
+            <div class="row homepage" style="text-align:center; margin-top:90px;">
+              <div class="h-group" style="margin-top:30px;">
+                <div class="box" style="vertical-align:middle;">
+                  <form action="login" method="get">
+                    <button type="submit" style="margin-top:20px;" class="btn btn-primary formstyles-submit-button">
+                      Enter Our Community!
+                    </button>
+                  </form>
                 </div>
               </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Groups</h3></div>
-                Do you need help locating others to join your cause? Do you have ideas or research you can share with others on how to improve your community?
-              </div>
             </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-entrepreneurs.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Entrepreneurs</h3></div>
-                Find people who are interested in your idea. Share your idea with others to get feedback. Get funding from people who want to see you succeed.
-              </div>
-            </div>
-
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-nonprofits.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Nonprofits</h3></div>
-                Do you have an issue that you are trying to solve and you need community input? Are you interested in hearing from other agencies or community members who have had success with those issues?
-              </div>
-            </div>
-
-            <div class="h-group" style="margin-top:30px;">
-              <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle;">
-                <div class="img-wrap-w-center">
-                  <img class="box" alt="For Groups" src="./images/home-page-companies.png">
-                </div>
-              </div>
-              <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>Companies</h3></div>
-                Share the great projects you are working on and get feedback from others. Have open communication about how you can better serve your customers!
-              </div>
-            </div>
-
 
             <div class="row" style="margin-top:40px;"></div>
 
@@ -153,16 +111,15 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
+
       <!-- The footer -->
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
+                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+                Copyright 2018 Planet Rocket
+                </div>
+
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
@@ -176,7 +133,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="./js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

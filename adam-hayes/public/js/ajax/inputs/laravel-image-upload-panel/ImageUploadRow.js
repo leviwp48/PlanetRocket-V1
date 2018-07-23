@@ -1,5 +1,5 @@
 BlueBox.compose(
-    "ajax.inputs.laravel-image-upload-panel.ImageUploadRow", 
+    "ajax.inputs.laravel-image-upload-panel.ImageUploadRow",
 
 function(_class, _proto) {
 
@@ -20,7 +20,7 @@ var el = HTML.i()
 	.hgroup().class("switch-to-rows")
 		.box()
 			.hgroup()
-				//the box for the 
+				//the box for the
 				.box()
 					//.style("border",'1px solid red')
 					.context(function() {
@@ -42,7 +42,7 @@ var el = HTML.i()
 					._if(base64ImageData)
 
 						// .img()
-						// .src(base64ImageData)	
+						// .src(base64ImageData)
 						// .attr("style","height:60px; width:60px; margin-left:10px; margin-right:10px;")
 						// ._()
 						.box()
@@ -56,7 +56,7 @@ var el = HTML.i()
 							._()
 
 						._()
-						
+
 
 					._else()
 
@@ -117,7 +117,7 @@ box2.html(description);
 
 		var newImageButton = new EndCapButton2(fileNameWithEllipsis, true, "formstyles-x-4-white", "grey", {"end_cap_width":"40px", "padding":"8px"});
 		newImageButton.flattenEndCapWithData("isButton", true);
-		newImageButton.flattenEndCapWithData("file",fileData); 
+		newImageButton.flattenEndCapWithData("file",fileData);
 
 		var addEditDescription = h.row("formstyles-linkstyle add-edit-description");
 		addEditDescription.html("Add/Edit description");
@@ -135,7 +135,7 @@ box2.html(description);
 			b64Img.attr("src",base64ImageData);
 
 		boxWrapperForUI.append(b64Img);
-		} else 
+		} else
 		if(imgURL) {
 
 		//See debug-img-fills-css-demo-2/ for details
@@ -181,7 +181,7 @@ this.jq.data("upload_row", this);
 _proto.imgLoaded = function(img) {
 // var offsetWidth = this.uiBoxInnerWrapper.get(0).offsetWidth+"px";
 // this.uiBox.css("width",offsetWidth);
-// this.descriptionBox.css("width","calc(100% - "+offsetWidth+")");	
+// this.descriptionBox.css("width","calc(100% - "+offsetWidth+")");
 }
 
 
