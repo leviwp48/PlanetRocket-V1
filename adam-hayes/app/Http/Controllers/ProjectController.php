@@ -58,7 +58,7 @@ class ProjectController extends Controller {
 		$uniqueID = ProjectCoverImage::max('id');
 		$uniqueID++;
 
-		//upload the images. Note that we upload them with X_ and this means is that the 
+		//upload the images. Note that we upload them with X_ and this means is that the
 		//images are "unclaimed" by a project. The project has to save before it can claim
 		//those images. Periodically, the server will scan for X_ images over 12 hours old and delete them.
 		$uploaddir = '/var/www/html/adam-hayes/storage/app/public/project-cover-images/';

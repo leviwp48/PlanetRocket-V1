@@ -1,7 +1,7 @@
 /**
  Alex Lowe's core-layout classes for responsive designs.
- We have a classes for horizontally and vertically stacking elements, as well as horizontally and vertically conserving elements. 
- We can do plain-old rows, horizontally-centered columns, and a horizontally and vertically centered divs. 
+ We have a classes for horizontally and vertically stacking elements, as well as horizontally and vertically conserving elements.
+ We can do plain-old rows, horizontally-centered columns, and a horizontally and vertically centered divs.
 
  You'll note all of the appearances of the position:relative; style. This is so that we can place absolutely-positioned
  divs inside these elements. Absolutely-positioned divs are frowned upon, and like anything else that's frowned upon, it's
@@ -27,7 +27,7 @@ margin: 0px; padding: 0px; border: 0px;
 /*border: 1px solid red;*/
 }
 
-/*https://css-tricks.com/removing-the-dotted-outline/ 
+/*https://css-tricks.com/removing-the-dotted-outline/
 get rid of that annoying dotted border around links.*/
 a {
 outline: 0;
@@ -39,7 +39,7 @@ height:100%;
 }
 
 
-/*the basic building blocks: row, box, abox and vbox. Why the position:relative style? It needs that so that 
+/*the basic building blocks: row, box, abox and vbox. Why the position:relative style? It needs that so that
 absoulely positioned elements insice row, box, abox and vbox will work be positioned correctly.*/
 .row {
 box-sizing: border-box;
@@ -67,7 +67,7 @@ left:0px;
 /*Here is our all-purpose wrapper for filling the width and height of a container.*/
 .abox.fill {
 width:100%;
-height:100%; 
+height:100%;
 }
 
 
@@ -76,20 +76,20 @@ height:100%;
 .vbox {
 box-sizing:border-box;
 -moz-box-sizing: border-box;
-display:table-row; 
+display:table-row;
 position:relative;
 }
 
 
 
-/*Box is our main weapon. It stacks horizontally. If it's within an h-group or v-group, then it obeys the laws of 
+/*Box is our main weapon. It stacks horizontally. If it's within an h-group or v-group, then it obeys the laws of
 horizontal or vertical conservation */
 .box {
 box-sizing:border-box;
 -moz-box-sizing: border-box;
-display:inline-block; 
+display:inline-block;
 position:relative;
-/*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html 
+/*why vertical-align:top? See horizontal conservation vertical alignment problem/index.html
 that's the strange problem that happens when you don't have this style.*/
 vertical-align:top;
 }
@@ -100,7 +100,7 @@ height:100%;
 
 .h-group > .box {
 display: table-cell;
-box-sizing:border-box;  
+box-sizing:border-box;
 -moz-box-sizing: border-box;
 position:relative;
 }
@@ -117,11 +117,11 @@ box-sizing:border-box;
 -moz-box-sizing: border-box;
 position:relative;
 
-/*IE 9,10,11 have a problem with max-width images and containers with a percent width. 
+/*IE 9,10,11 have a problem with max-width images and containers with a percent width.
 See img fill issue IE9-10-11 in the html research folder. What happens is that, within a v-group structure an image with
-the usual max-width:100% max-height:100%; sizes to 100% wide and ignores the width of its container unless 
+the usual max-width:100% max-height:100%; sizes to 100% wide and ignores the width of its container unless
 that width is in something like px. This line fixes that.*/
-table-layout:fixed; 
+table-layout:fixed;
 }
 
 
@@ -130,29 +130,29 @@ table-layout:fixed;
 /*Our wrapper classes for horizontal and vertical conservation*/
 .h-group {
 display: table;
-width:100%; 
+width:100%;
 box-sizing:border-box;
 -moz-box-sizing: border-box;
 }
 
-/* an hgroup modified with the fill class. the behavior is that the 
+/* an hgroup modified with the fill class. the behavior is that the
 hgroup will also fill all the available height in addition to the width.*/
 .h-group.fill {
 height:100%;
 }
 
-/*a modifier specifically for the h-group class. This is for when you have fixed-width 
+/*a modifier specifically for the h-group class. This is for when you have fixed-width
 horizontally-conserved boxes.*/
 .h-fixed-widths {
 table-layout:fixed;
 }
 
 
-/*v-group and v-inner. These are really only good for the basic layout of a webpage with a header, body and footer. 
+/*v-group and v-inner. These are really only good for the basic layout of a webpage with a header, body and footer.
 when you have to do something acrobatic with image-fills and lightboxes they're much less useful.*/
 .v-group {
-display:table; 
-height:100%; 
+display:table;
+height:100%;
 width:100%;
 box-sizing:border-box;
 -moz-box-sizing: border-box;
@@ -169,8 +169,8 @@ position:relative;
 https://www.w3.org/Style/Examples/007/center.en.html
 */
 .center_column {
-display:table; 
-margin:auto; 
+display:table;
+margin:auto;
 box-sizing:border-box;
 -moz-box-sizing: border-box;
 position:relative;
@@ -181,7 +181,7 @@ position:relative;
 box-sizing:border-box;
 -moz-box-sizing: border-box;*/
 
-/*display:table; 
+/*display:table;
 margin-left: auto;
 margin-right: auto;
 box-sizing:border-box;
@@ -202,9 +202,9 @@ box-sizing:border-box;
 .center {
 position: relative;
 top: 50%;
-display:table; 
+display:table;
 margin-left:auto;
-margin-right:auto; 
+margin-right:auto;
 box-sizing:border-box;
 -moz-box-sizing: border-box;
 -ms-transform: translateY(-50%);
@@ -252,7 +252,7 @@ Goddamn that's clever.
 
 /*********************************************************** img-fill-h-center ********/
 
-/*the mwxh ones are almost identical to the h ones, the only real difference is 
+/*the mwxh ones are almost identical to the h ones, the only real difference is
 that we have to start with a max-width:inherit style to forward that information to the image within.*/
 .img-wrap-mwxh-center {
 max-width:inherit;
@@ -278,8 +278,8 @@ height:100%;
 overflow:hidden;
 }
 _:-ms-fullscreen, :root .box > .img-wrap-h-center {
-display:table; 
-table-layout:fixed; 
+display:table;
+table-layout:fixed;
 height:100%;
 }
 
@@ -304,8 +304,8 @@ height:100%;
 overflow:hidden;
 }
 _:-ms-fullscreen, :root .row > .box > .img-wrap-h-center {
-display:table; 
-table-layout:fixed; 
+display:table;
+table-layout:fixed;
 height:100%;
 }
 
@@ -319,54 +319,54 @@ height:100%;
 overflow:hidden;
 }
 _:-ms-fullscreen, :root .box > .box > .img-wrap-h-center {
-display:table; 
-table-layout:fixed; 
+display:table;
+table-layout:fixed;
 height:100%;
 }
 
 /*And here's the behavior of the img-fill inside the img-fill-h-center wrapper.*/
 .img-wrap-h-center > img.box {
-max-width: 100%; 
-max-height: 100%; 
-top:50%; 
-left: 50%; 
+max-width: 100%;
+max-height: 100%;
+top:50%;
+left: 50%;
 transform: translateX(-50%) translateY(-50%);
--ms-transform: translateX(-50%) translateY(-50%); 
+-ms-transform: translateX(-50%) translateY(-50%);
 }
 
-/*A container with a definite height and a max-width. 
+/*A container with a definite height and a max-width.
 In this case the padding goes to the image element, not the container. (max-width x height ie mwxh)*/
 .img-wrap-mwxh-center > img.box {
-max-height: 100%; 
-max-width: inherit; 
-top: 50%; 
-left: 50%; 
+max-height: 100%;
+max-width: inherit;
+top: 50%;
+left: 50%;
 transform: translateX(-50%) translateY(-50%);
--ms-transform: translateX(-50%) translateY(-50%); 
+-ms-transform: translateX(-50%) translateY(-50%);
 }
 
 /***** img-fill-w-container **********/
 
 /*The container has a definite width, no height specified
-So what's the deal here with this transform? See, if there's no height specified, then it's going to take 
-up ALL the height that it can and fill the container. So centering the image vertially won't be an issue 
-then. HOWEVER, if the image is MORE narrow than the container then the image will reach its full height 
-before it runs out of width, and in that case, there's going to be this extra horizontal space left-over. 
-So what do we do? We have this extra transforming logic to deal with those cases. When the image is MORE 
+So what's the deal here with this transform? See, if there's no height specified, then it's going to take
+up ALL the height that it can and fill the container. So centering the image vertially won't be an issue
+then. HOWEVER, if the image is MORE narrow than the container then the image will reach its full height
+before it runs out of width, and in that case, there's going to be this extra horizontal space left-over.
+So what do we do? We have this extra transforming logic to deal with those cases. When the image is MORE
 narrow, it will center it horizontally. When the image is LESS narrow, then the width is going to reach the
 walls of the container, and the centering trick will simply have no effect.
 */
 .img-wrap-w-center {
-display:table; 
-table-layout:fixed; 
-width:100%; 
+display:table;
+table-layout:fixed;
+width:100%;
 height:inherit;
 }
 
 .img-wrap-w-center > img.box {
-max-width: 100%; 
-max-height: 100%; 
-left: 50%; 
+max-width: 100%;
+max-height: 100%;
+left: 50%;
 transform: translateX(-50%);
 -ms-transform: translateX(-50%);
 }
@@ -376,12 +376,12 @@ transform: translateX(-50%);
 
 
 
-/*A container with a definite width and a max-height. 
+/*A container with a definite width and a max-height.
 In this case the padding goes to the image element, not the container. (width x max-height ie wxmh)*/
 .img-fill-wxmh-center {
-max-width: 100%; 
-max-height: inherit;  
-left: 50%; 
+max-width: 100%;
+max-height: inherit;
+left: 50%;
 transform: translateX(-50%);
 -ms-transform: translateX(-50%);
 }
@@ -389,7 +389,7 @@ transform: translateX(-50%);
 
 /**
 https://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-they claim that 
+they claim that
 @media screen and (min-width:0\0) {
 will only fire on IE9 and 10, but I also find that it fires on IE11 as well.
 */
@@ -402,7 +402,7 @@ will only fire on IE9 and 10, but I also find that it fires on IE11 as well.
 /*_:-ms-fullscreen, :root .img-fill, .img-fill-wxh-center, .img-fill-h-center, .img-fill-w-center, .img-fill-wxmh-center, .img-fill-mwxh {
   }*/
 /*_:-ms-fullscreen, :root .img-fill-h-center-wrapper4 {
-width:100%; height:0px; min-height:100%; 
+width:100%; height:0px; min-height:100%;
 }*/
 
 
@@ -410,7 +410,7 @@ width:100%; height:0px; min-height:100%;
 /**
   for an h-group, we can add a class which will make the structure revert to row when the screen reaches below a critical width
   within a group of h-conserved elements, we can include a box with the class switch-to-hgroup, and it will have the opposite effect.
-  the box will become an h-group, and all boxes therein will become h-conserved by that h-group. 
+  the box will become an h-group, and all boxes therein will become h-conserved by that h-group.
 
   So the idea is that you have h-conserved elements that you want to turn into rows, but SOME of them you want them to STAY as h-conserved
   elements. For instance, maybe you have a name and a thumbnail, but when the screen gets small you want those elements to to REMAIN
@@ -446,7 +446,7 @@ width:100%; height:0px; min-height:100%;
     /*these are boxes which switch to h-groups at this width*/
     .box.switch-to-hgroup {
     display: table;
-    width:100% !important; 
+    width:100% !important;
     box-sizing:border-box;
     -moz-box-sizing: border-box;
     vertical-align:baseline;
@@ -480,7 +480,7 @@ width:100%; height:0px; min-height:100%;
     /*And the first level of boxes within become horizontally-conserved elements.*/
     .box.switch-to-hgroup > .box {
     display: table-cell;
-    box-sizing:border-box;  
+    box-sizing:border-box;
     -moz-box-sizing: border-box;
     position:relative;
     vertical-align:baseline;
@@ -517,13 +517,9 @@ width:100%; height:0px; min-height:100%;
     overflow:hidden;
     }
     _:-ms-fullscreen, :root .h-group.switch-to-rows > .box > .box > .img-wrap-h-center {
-    display:table; 
-    table-layout:fixed; 
+    display:table;
+    table-layout:fixed;
     height:100%;
     }
 
-  } 
-
-
-
-
+  }

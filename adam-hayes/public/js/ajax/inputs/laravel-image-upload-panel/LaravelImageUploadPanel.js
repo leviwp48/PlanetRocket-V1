@@ -13,8 +13,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 BlueBox.compose(
-	"ajax.inputs.BaseInputInterface", 
-    "ajax.inputs.laravel-image-upload-panel.LaravelImageUploadPanel", 
+	"ajax.inputs.BaseInputInterface",
+    "ajax.inputs.laravel-image-upload-panel.LaravelImageUploadPanel",
 
 function(_class, _proto, _super) {
 
@@ -28,7 +28,7 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 	_super._build.call(this, formElementJQ);
 
 	var ctx = this;
-	
+
 	var panelRow = formElementJQ.parent().prev();
 
 	this._imgDescriptionLightBox = new LightBox();
@@ -128,8 +128,8 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 
 
 	/**
-	 * we have to do this annoying thing where we manually manage the visiblity of the 
-	 * darned default message for dropzone, because there's no hooks to manuually 
+	 * we have to do this annoying thing where we manually manage the visiblity of the
+	 * darned default message for dropzone, because there's no hooks to manuually
 	 *
 	 */
 	_proto.imageDroppedOntoZone = function(file) {
@@ -233,7 +233,7 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 
 
 	/**
-	 * set the initial value of this input object. in this case, we 
+	 * set the initial value of this input object. in this case, we
 	 * have to loop through the json and create the project-cover-images.
 	 *
 	 */
@@ -250,7 +250,7 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 			description = '';
 			}
 
-		this.fileAddedToForm(projectImage["url"], projectImage["url"], projectImage["id"], description,  null, url, true); 
+		this.fileAddedToForm(projectImage["url"], projectImage["url"], projectImage["id"], description,  null, url, true);
 		//Object { id: 363, project_id: 5699, url: "363-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg", created_at: "2018-03-27 19:57:13", updated_at: "2018-03-27 19:57:35", description: "Testing 1 2 3", claimed: 1 }
 
 		}
