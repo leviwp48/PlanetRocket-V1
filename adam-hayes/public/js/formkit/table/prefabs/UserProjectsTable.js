@@ -155,6 +155,29 @@ this._table = Table
 	// 	.setWidthPx(250)
 	// .endConfigure()
 
+	//add a delete button to the end of the row
+	.setColumn()
+		.setField("id")
+		.setTitle("  ")
+		.setCellFormatter(function(display) {
+		return "";
+		})
+		.setCellRenderer(function(cell, column, row){
+
+			if(row > -1){
+			var deleteButton = HTMLHelper.i().row("formstyles-button delete-project-button");
+			deleteButton.html("Delete");
+			deleteButton.attr("style","padding:7px; margin:2px; margin-left:5px; margin-right:5px; text-align:center");
+			cell.append(deleteButton);
+			var id = cell.data("data");
+			deleteButton.data("id",id)
+			}
+
+		})
+		.setWidthPx(80)
+		//.setWidthClass("sortable_table_id_column_width")
+	.endConfigure()
+
 	.setColumn()
 		.setField("short_description")
 		.setTitle("Description")
@@ -224,6 +247,16 @@ var url = '';
 	} else {
 	url = window["_APP_BASE"]+"/user/edit-project/";
 	}
+
+	
+this._table.jq.on("click",".delete-project-button",function(){
+	
+	var id = $(this).data("id");
+	url = window["_APP_BASE"]+"/user/delete-project/";
+	window.location.href = url+id
+	
+
+})
 
 //when the edit button is clicked, sed
 this._table.jq.on("click", ".view-project-button", function() { 
