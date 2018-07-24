@@ -41,6 +41,7 @@ this._container = this._jq.parent().parent();
 this._defaultButton = new EndCapButton("Add a requirement for your project", true, "formstyles-plus-4-white", "blue");
 this._container.append(this._defaultButton.jq);
 
+
 this._defaultButton.jq.on("click", function(e){
 	e.stopPropagation();
 	ctx.openUpLightBoxWithNeedSelector()

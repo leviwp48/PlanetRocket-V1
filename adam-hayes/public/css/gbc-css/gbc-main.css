@@ -1392,6 +1392,7 @@ Added by Eric Mott
 
 .videoTitle{
   color: white;
+  /* background-color:  white; */
 }
 
 .avatar{
@@ -1422,7 +1423,7 @@ Added by Eric Mott
 }
 
 /*Create new project*/
-#projectDateCheckbox{
+.projectCheckbox{
   -webkit-appearance: none;
   width: 30px;
   height: 30px;
@@ -1430,9 +1431,8 @@ Added by Eric Mott
   border-radius: 5px;
   border: 2px solid #060000;
   vertical-align: middle;
-  margin-left: 156px;
 }
 
-#projectDateCheckbox:checked{
+.projectCheckbox:checked{
   background: #069dff;
 }
