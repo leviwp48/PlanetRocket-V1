@@ -99,7 +99,7 @@ a.styled_sidebar_item:visited {
 a.styled_sidebar_item:visited:hover {
   color: #f95462; }
 
-/* We need this little margin-bottom:100px thing here because somehow it doesn't trigger the scrolling bar 
+/* We need this little margin-bottom:100px thing here because somehow it doesn't trigger the scrolling bar
       when the options expand otherwise and I'm not sure what's going on. */
 .sidenav_menu_container {
   padding-left: 10px;
@@ -254,7 +254,7 @@ ul li:hover > ul {
   width: 100px; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   background: #FFFFFF;
   line-height: 1.5;
   font-size: 15px;
@@ -379,7 +379,7 @@ h2.featured_post_tile_title {
     width: 200px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -503,7 +503,7 @@ h2.featured_post_tile_title {
     width: 300px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -627,7 +627,7 @@ h2.featured_post_tile_title {
     width: 100px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 15px;
@@ -751,7 +751,7 @@ h2.featured_post_tile_title {
     width: 200px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -875,7 +875,7 @@ h2.featured_post_tile_title {
     width: 300px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;

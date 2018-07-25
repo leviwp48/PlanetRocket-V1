@@ -32,7 +32,7 @@
     --breakpoint-md:768px;
     --breakpoint-lg:992px;
     --breakpoint-xl:1200px;
-    --font-family-sans-serif:"Raleway",sans-serif;
+    /*--font-family-sans-serif:"Raleway",sans-serif; */
     --font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
 }
 *,:after,:before{
@@ -40,7 +40,7 @@
     box-sizing:border-box
 }
 html{
-    font-family:sans-serif;
+    /*font-family:sans-serif;*/
     line-height:1.15;
     -webkit-text-size-adjust:100%;
     -ms-text-size-adjust:100%;
@@ -55,7 +55,7 @@ article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{
 }
 body{
     margin:0;
-    font-family:Raleway,sans-serif;
+    /*font-family:Raleway,sans-serif;*/
     font-size:.9rem;
     font-weight:400;
     line-height:1.6;
@@ -4549,7 +4549,7 @@ button.close{
     z-index:1070;
     display:block;
     margin:0;
-    font-family:Raleway,sans-serif;
+    /*font-family:Raleway,sans-serif;*/
     font-style:normal;
     font-weight:400;
     line-height:1.6;
@@ -4643,7 +4643,7 @@ button.close{
     left:0;
     z-index:1060;
     max-width:276px;
-    font-family:Raleway,sans-serif;
+  /* font-family:Raleway,sans-serif; */
     font-style:normal;
     font-weight:400;
     line-height:1.6;
