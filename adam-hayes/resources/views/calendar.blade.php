@@ -162,7 +162,7 @@ use Resources\Templates\Banner;
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+            <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%;">
 
 
             <?php

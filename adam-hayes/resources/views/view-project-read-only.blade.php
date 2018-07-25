@@ -147,7 +147,7 @@ use Resources\Templates\Banner;
 
             <div class="v-inner">
               <div class="box" style="height:59%; background:#FFFFFF;">
-                <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia; padding-top: 10px;">
+                <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; padding-top: 10px;">
                   <div class="row" style="margin-top:20px; margin-bottom: 20px; border-bottom: 1.2px solid #888888; "></div>
 
                   <div id="disqus_thread" style="border-top: 1px solid #FFFFFF; margin-bottom: 50px; box-shadow: 5px 5px 10px 1px #a8a8a8;"></div>

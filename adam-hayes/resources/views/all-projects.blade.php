@@ -155,9 +155,12 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- For the CPP logo and statement. -->
+
+
       <div class="v-inner" id="parallaxwithbanner">
         <!--<div class="box" style="height:100%; background:#FFFFFF;">
          <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">
+
             <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
                 <div class="img-wrap-w-center" style="background:#FFFFFF;">
@@ -217,7 +220,7 @@ use Resources\Templates\Banner;
         <div class="box" style="height:100%; background:#FFFFFF;">
 
           <!-- This be the featured posts section -->
-        <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+        <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%;">
             <?php
               $results = DB::table('projects')->get();
 
