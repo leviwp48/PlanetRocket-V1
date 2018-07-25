@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Resources\Templates;
 
@@ -17,7 +17,7 @@ private $_user;
 	echo $n->concatenate();
 	}
 
-	public function concatenate() {  ob_start(); 
+	public function concatenate() {  ob_start();
 
         $linkElement = '';
 
@@ -25,8 +25,8 @@ private $_user;
         	$emailEx = explode("@", $this->_user->email);
         	$name = $emailEx[0];
 
-        	?> 
-        		
+        	?>
+
 
 			 	    <li class="box top-nav-item" id="user-nav-widget">
         			<div class="row" style="padding:8px; padding-left:20px; padding-right:20px;">
@@ -34,7 +34,7 @@ private $_user;
         			         <?php echo $name; ?>
                         </div>
         			</div>
-        		
+
         			<ul class="abox hidden dropdown-nav-menu-container" id="user-widget-dropdown-container"
         			style="top:100%; right:0px; left:auto; min-width:100%; width:auto; white-space:normal;">
 
@@ -55,7 +55,7 @@ private $_user;
 
                 		<a class="sidebar_link" href="<?php echo APP_BASE; ?>/user/new-project">
                     		<li class="row dropdown-nav-menu-item" style="max-width:300px;">
-                    			
+
                     			<div class="abox left-decorator"></div>
 
                     			<div class="row" style="white-space:nowrap; height:0px; overflow:hidden;">
@@ -92,11 +92,12 @@ private $_user;
         	} else {
 
         	?>
-
+					<!-- Levi Edit 7/23/18: Added the link to OpenSans font and adding font-family styling -->
+					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
             	<li class="box top-nav-item">
-            		<a class="row" 
-            		href="<?php echo APP_BASE; ?>/login" 
-            		style="padding:8px; padding-left:20px; padding-right:20px;">
+            		<a class="row"
+            		href="<?php echo APP_BASE; ?>/login"
+            		style="padding:8px; padding-left:20px; padding-right:20px; font-family: 'Open Sans', sans-serif;">
             			Login
             		</a>
             	</li>
@@ -108,7 +109,7 @@ private $_user;
         	}
 
 	    $linkElement = ob_get_clean();
-	
+
     return $linkElement;
 	}
 
