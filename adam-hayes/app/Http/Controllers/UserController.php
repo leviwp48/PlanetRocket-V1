@@ -747,6 +747,17 @@ class UserController extends Controller {
 
 	}
 
+	public function delete_project($id){
+
+		$user = Auth::user();
+		if(Project::doesProjectIDBelongToUser($id)){
+			$project = Project::find($id);
+			$project->delete();
+			return $this->projects();
+		}
+	}
+
+
 	/**
 	 * get the project. this hook is supposed to be kind of generic, and it's used
 	 * by the edit form to fetch the record for editing.

@@ -14,6 +14,42 @@ font-size:2em;
 font-size:1.5em;
 }
 
+.parallax{
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	height:40vw;
+	margin-left: 0em;
+	margin-right: 0em;
+	text-align: center;
+}
+
+#parallaxpanel1-Homepage{
+	background-image: url(../images/party-Homepage.jpg);
+	color: white;
+	font-size: 3em;
+	padding-top: 10vw;
+		
+}
+
+#parallaxpanel2-Homepage{
+	background-image: url(../images/plantwall-Homepage.jpg);
+}
+
+#parallaxpanel3-Homepage{
+	background-image: url(../images/shoutinglady-Homepage.jpg);
+}
+
+#parallaxpanel4-Hompage{
+	background-image: url(../images/veggies-Homepage.jpg);
+}
+
+.textbreak{
+	text-align: center;
+	font-size:3em;
+	margin: 5vw;
+}
 .icon-width {
 width:200px;
 }
