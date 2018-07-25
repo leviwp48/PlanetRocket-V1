@@ -65,54 +65,40 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-      <div class="v-inner">
-          <div class="box" style="height:100%; background:#FFFFFF;">
+      
+          
 
-            <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
-
-
-            <div class="row homepage" style="text-align:center; margin-top:20px;"><h1>Welcome!</h1></div>
-            <div class="row" style="text-align:center;">
-              Welcome to Planet Rocket! Watch this tutorial to Rock your own project!
-            </div>
-
-            <div class="row homepage" style="text-align:center; margin-top:40px;">
-              <h2>Watch This!</h2>
-            </div>
+      
+            
 
 
+          <div class="parallax" id="parallaxpanel1-Homepage">
             <div class="h-group" style="margin-top:30px;">
               <div class="box" style="vertical-align:middle;">
-                <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <div class="row homepage"><h3>What if we worked together to improve our community?</h3></div>
               </div>
             </div>
-
-            <!-- Levi Edit 7/21/18 -->
-            <!-- changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
-            <div class="row homepage" style="text-align:center; margin-top:90px;">
-              <div class="h-group" style="margin-top:30px;">
-                <div class="box" style="vertical-align:middle;">
-                  <form action="login" method="get">
-                    <button type="submit" style="margin-top:20px;" class="btn btn-primary formstyles-submit-button">
-                      Enter Our Community!
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+          </div>
 
             <div class="row" style="margin-top:40px;"></div>
 
-            </div>
-            <!-- End of Center column -->
+      <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
 
-        </div>
-      </div>
+      <div class="parallax" id="parallaxpanel2-Homepage"></div>
+
+      <h3 class="textbreak">Take your ideas and projects and launch them into our <strong> COMMUNITY</strong></h3>
+      
+      <div class="parallax" id="parallaxpanel3-Homepage"></div>
+
+      <h3 class="textbreak">We are based in <strong>ARCATA</strong>, California and our whole website is local, organic, and non-gmo </h3>
+      
+      <div class="parallax" id="parallaxpanel4-Hompage"></div>
+
+      <h3 class="textbreak">If you are based in Humboldt County, we have created something very special just for you </h3>
+      
 
 
-      <!-- The footer -->
+      
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 

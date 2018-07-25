@@ -155,6 +155,20 @@ this._table = Table
 	// 	.setWidthPx(250)
 	// .endConfigure()
 
+	.setColumn()
+		.setField("short_description")
+		.setTitle("Description")
+		.setWidthPct(100)
+		//.setWidthClass("sortable_table_desc_column_width")
+		.setCellFormatter(function(string, dataRow) {
+			//the title has an undefined data-row.
+			if(dataRow) {
+			return "<b>"+dataRow["name"]+"</b> "+string;
+			} 
+		return string;
+		})
+	.endConfigure()
+
 	//add a delete button to the end of the row
 	.setColumn()
 		.setField("id")
@@ -174,22 +188,8 @@ this._table = Table
 			}
 
 		})
-		.setWidthPx(80)
+		.setWidthPx(120)
 		//.setWidthClass("sortable_table_id_column_width")
-	.endConfigure()
-
-	.setColumn()
-		.setField("short_description")
-		.setTitle("Description")
-		.setWidthPct(100)
-		//.setWidthClass("sortable_table_desc_column_width")
-		.setCellFormatter(function(string, dataRow) {
-			//the title has an undefined data-row.
-			if(dataRow) {
-			return "<b>"+dataRow["name"]+"</b> "+string;
-			} 
-		return string;
-		})
 	.endConfigure()
 
 	.setPagination()
@@ -250,10 +250,11 @@ var url = '';
 
 	
 this._table.jq.on("click",".delete-project-button",function(){
-	
-	var id = $(this).data("id");
-	url = window["_APP_BASE"]+"/user/delete-project/";
-	window.location.href = url+id
+	if(confirm("Are you sure you want to delete this project?")){
+		var id = $(this).data("id");
+		url = window["_APP_BASE"]+"/user/delete-project/";
+		window.location.href = url+id
+	}
 	
 
 })

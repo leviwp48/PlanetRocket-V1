@@ -155,8 +155,8 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- For the CPP logo and statement. -->
-      <div class="v-inner">
-        <div class="box" style="height:100%; background:#FFFFFF;">
+      <div class="v-inner" id="parallaxwithbanner">
+        <!--<div class="box" style="height:100%; background:#FFFFFF;">
          <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">
             <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
@@ -165,14 +165,25 @@ use Resources\Templates\Banner;
                 </div>
               </div>
             </div>
+            
               <div class="row" style="text-align:center; background:#FFFFFF;"> <h1>Get Ready <strong>For</strong> August</h1>
                   The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. August is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.
               </div>
+            
             </div>
           </div>
+          
+        -->
+        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2.png">
+        <h1>Get Ready <strong>For</strong> August</h1>
+                  The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
+                  our Humboldt County community will be going on all month. August is a good time to help out our community.
+                  If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
+                  idea into a reality.
+        
         </div>
 		<div class="v-inner" style="text-align:center;">
 			<div class="box" style="height:100%; background:#FFFFFF;">
@@ -256,6 +267,8 @@ use Resources\Templates\Banner;
           </div>
 
         </div>
+
+        
       </div>
 
 
@@ -291,6 +304,10 @@ use Resources\Templates\Banner;
 -->
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
+
+      <div id="astroparallax">
+          <h1> Project stuff below </h1>  
+        </div>
       <div class="v-inner">
           <div class="box" style="height:100%; background:#FFFFFF;">
 

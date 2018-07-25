@@ -10,11 +10,15 @@
  https://colintoh.com/blog/display-table-anti-hero
  **/
 @font-face {
-  font-family: 'Neuropol';
+
+  font-family: 'Open Sans';
+  font-weight: lighter;
+  
+  /*font-family: 'Neuropol';
   src:  url('neuropol-x-rg.woff2') format('woff2'),
         url('neuropol-x-rg.woff') format('woff'),
         url('neuropol-x-rg.ttf')  format('truetype');
-
+  */
 }
 
 
@@ -33,9 +37,40 @@ a {
 outline: 0;
 }
 
+#parallaxwithbanner
+{
+  background-image: url(../images/lightroad-Projects.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color:white;
+    text-align: center;
+    font-size: 3em;
+}
+
+#astroparallax
+{
+  background-image: url(../images/astronaut-Projects.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 body, html {
 height:100%;
+
 }
 
 
