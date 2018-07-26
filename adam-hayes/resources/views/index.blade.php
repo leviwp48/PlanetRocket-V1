@@ -72,7 +72,7 @@ use Resources\Templates\Banner;
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%;">
+            
 
 
       
@@ -80,36 +80,22 @@ use Resources\Templates\Banner;
 
 
           <div class="parallax" id="parallaxpanel1-Homepage">
-            <div class="h-group" style="margin-top:30px;">
+            
+            <div class="h-group" id="#parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
                 <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="300" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
 
             <!-- Levi Edit 7/21/18 changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
             <!-- Levi Edit 7/22/18 Added CSS to the login button. Also a new CSS file called login-button-animation in public/css/ -->
 
-            <div class="row homepage" style="text-align:center; margin-top:90px;">
-              <div class="h-group" style="margin-top:30px;">
-                <div class="box" style="vertical-align:middle;">
-                  <form action="login" method="get">
-                    <button type="submit" style="margin-top:20px; font-family: OpenSans;" class="btn btn-primary formstyles-submit-button  btn--trees">
-                      Enter Our Community!
-                      <div class='trees'>
-                        <i class='fa fa-tree tree-one'></i>
-                        <i class='fa fa-tree tree-two'></i>
-                        <i class='fa fa-tree tree-three'></i>
-                      </div>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+           
           </div>
 
-            <div class="row" style="margin-top:40px;"></div>
+            
 
       <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
 
@@ -125,7 +111,23 @@ use Resources\Templates\Banner;
 
       <h3 class="textbreak">If you are based in Humboldt County, we have created something very special just for you </h3>
       
-
+        
+      <div class="row homepage" style="text-align:center; ">
+        <div class="h-group" >
+          <div class="box" style="vertical-align:middle;">
+            <form action="login" method="get">
+              <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
+                Enter Our Community!
+                <div class='trees'>
+                  <i class='fa fa-tree tree-one'></i>
+                  <i class='fa fa-tree tree-two'></i>
+                  <i class='fa fa-tree tree-three'></i>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
 
       
       <div id="footer" class="v-inner">
@@ -139,7 +141,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-    </div>
+    
 
 
 <script type="text/javascript">
