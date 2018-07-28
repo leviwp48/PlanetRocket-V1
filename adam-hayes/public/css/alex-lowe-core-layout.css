@@ -50,31 +50,6 @@ a {
 outline: 0;
 }
 
-#parallaxwithbanner
-{
-  background-image: url(../images/lightroad-Projects.jpg);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color:white;
-    text-align: center;
-    font-size: 3em;
-}
-
-#astroparallax
-{
-  background-image: url(../images/astronaut-Projects.jpg);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-
-    
-}
-
 
 img{
     margin-left: auto;

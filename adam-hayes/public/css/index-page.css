@@ -11,8 +11,9 @@ font-size:2em;
 }
 
 .homepage h3 {
-font-size:1.5em;
+font-size: 3.5vw;
 }
+
 
 .parallax{
 	background-attachment: fixed;
@@ -30,9 +31,19 @@ font-size:1.5em;
 	color: white;
 	font-size: 3em;
 	height:80vh;
-	padding:10vw;
+	padding:5vw;
 	
 		
+}
+
+#parallaxcontainer1
+{
+	height:100%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+	
 }
 
 #parallaxpanel2-Homepage{
@@ -49,7 +60,7 @@ font-size:1.5em;
 
 .textbreak{
 	text-align: center;
-	font-size:3em;
+	font-size:3.5vw;
 	margin: 5vw;
 }
 .icon-width {

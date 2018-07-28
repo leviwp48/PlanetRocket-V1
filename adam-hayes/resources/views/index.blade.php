@@ -60,7 +60,7 @@ use Resources\Templates\Banner;
         <div class="box">
 
           <!-- This be the featured posts section -->
-          <div class="center_column" style="width:90%; max-width:900px; background:#FFFFFF;">
+          <div class="center_column" style=" background:#FFFFFF;">
           </div>
 
         </div>
@@ -81,11 +81,11 @@ use Resources\Templates\Banner;
 
           <div class="parallax" id="parallaxpanel1-Homepage">
             
-            <div class="h-group" id="#parallaxcontainer1">
+            <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
                 <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="560" height="300" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
 
@@ -109,10 +109,10 @@ use Resources\Templates\Banner;
       
       <div class="parallax" id="parallaxpanel4-Hompage"></div>
 
-      <h3 class="textbreak">If you are based in Humboldt County, we have created something very special just for you </h3>
+      <h3 class="textbreak" style="margin-bottom: 2vw;">If you are based in Humboldt County, we have created something very special just for you </h3>
       
         
-      <div class="row homepage" style="text-align:center; ">
+      <div class="row homepage" style="text-align:center; margin-bottom:40px;">
         <div class="h-group" >
           <div class="box" style="vertical-align:middle;">
             <form action="login" method="get">
@@ -130,16 +130,17 @@ use Resources\Templates\Banner;
       </div>
 
       
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
+      <div id="footer" class="v-inner" >
+        <div class="box footer" style="width:100vw;" >
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw">
                 Copyright 2018 Planet Rocket
                 </div>
 
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
+    </div>
 
     
 

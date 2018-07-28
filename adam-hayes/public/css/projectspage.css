@@ -1,17 +1,36 @@
+
+
 #parallaxwithbanner
 {
-    background-image: url(../images/party-Homepage.jpg);
+  background-image: url(../images/lightroad-Projects.jpg);
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
+    color:cyan;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5vw;
     
 }
-img
+
+#astroparallax
 {
-    margin-left: auto;
-    margin-right: auto;
+  background-image: url(../images/astronaut-Projects.jpg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    
+    font-size: 2.5vw;
+    text-align: center;
+    height:
+
+    
+}
+
+#parallax_text_container
+{
+    margin:auto;
 }
