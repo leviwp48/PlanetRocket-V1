@@ -71,7 +71,7 @@ use Resources\Templates\Banner;
 
             <div class="row" style="text-align:center; margin-top:30px; margin-bottom:30px;">
               <h1>
-                Community Trainings
+                Community Resources
               </h1>
             </div>
 
