@@ -69,7 +69,7 @@ use Resources\Templates\Banner;
           <!-- This be the featured posts section -->
           <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF;">
 
-            <div class="row" style="text-align:center; margin-top:30px;">
+            <div class="row" style="text-align:center; margin-top:30px; margin-bottom:30px;">
               <h1>
                 Community Trainings
               </h1>
@@ -132,7 +132,7 @@ use Resources\Templates\Banner;
 			<div class="button-group">
 				<div style="text-align:center;">
 					<a href="/adam-hayes/public/resources/transportation">
-						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Transportation</button>
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;margin-bottom:30px;font-weight:100; ">Transportation</button>
 					</a>
 				</div>
 			</div>
