@@ -12,13 +12,16 @@
 
 /*
 @font-face {
-  font-family: 'Neuropol';
+
+  font-family: 'Open Sans';
+  font-weight: lighter;
+  
+  /*font-family: 'Neuropol';
   src:  url('neuropol-x-rg.woff2') format('woff2'),
         url('neuropol-x-rg.woff') format('woff'),
         url('neuropol-x-rg.ttf')  format('truetype');
+  */
 
-}
-*/
 
 /*
   Levi Edit 7/22/18: Added the OpenSans-Bold.ttf and OpenSans-Light.ttf and OpenSans-Regular.ttf files to the css folder. Adding them the site below.
@@ -48,8 +51,15 @@ outline: 0;
 }
 
 
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 body, html {
 height:100%;
+
 }
 
 

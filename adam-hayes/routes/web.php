@@ -94,6 +94,8 @@ Route::get('/user/get-project/{project}', 'UserController@get_project')->middlew
 
 Route::get('/user/edit-project/{project}', 'UserController@edit_project')->middleware('auth');
 
+Route::get('user/delete-project/{project}', 'UserController@delete_project')->middleware('auth');
+
 Route::post('/user/edit-existing-project', array( "as" => "user.edit-existing-project", "uses" => "UserController@edit_existing_project"));
 
 Route::post('/user/projects-table-service', array( "as" => "user.projects-table-service", "uses" => "UserController@projects_table_service"));

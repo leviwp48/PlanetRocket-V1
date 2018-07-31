@@ -11,12 +11,77 @@ font-size:2em;
 }
 
 .homepage h3 {
-font-size:1.5em;
+font-size: 3.5vw;
+
 }
+
+iframe{
+	height: 60vh;
+	width: 80vw;
+}
+
+.parallax{
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	height:40vw;
+	margin-left: 0em;
+	margin-right: 0em;
+	text-align: center;
+}
+
+#parallaxpanel1-Homepage{
+	background-image: url(../images/party-Homepage.jpg);
+	color: white;
+	font-size: 3em;
+	height:80vh;
+	padding:5vw;
+	
+		
+}
+
+#parallaxcontainer1
+{
+	height:100%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+	
+}
+
+#parallaxpanel2-Homepage{
+	background-image: url(../images/plantwall-Homepage.jpg);
+}
+
+#parallaxpanel3-Homepage{
+	background-image: url(../images/shoutinglady-Homepage.jpg);
+}
+
+#parallaxpanel4-Hompage{
+	background-image: url(../images/veggies-Homepage.jpg);
+}
+
+.textbreak{
+	text-align: center;
+	font-size:3.5vw;
+	margin: 10vw;
+	font-weight: lighter;
+}
+
+.last_textbreak_container{
+
+	
+
+}
+
 
 .icon-width {
 width:200px;
 }
+
+
 
    @media only screen and (max-device-width : 600px), only screen and (max-width: 600px) {
 
@@ -25,3 +90,4 @@ width:200px;
 		}   	
 
    }
+

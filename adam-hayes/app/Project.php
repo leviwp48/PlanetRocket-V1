@@ -54,6 +54,13 @@ public static $foundProject;
     return $this->hasMany('App\JoinRequest');
     }
 
+    /**
+     * The repeating date occurences for a project
+     */
+    public function project_occurences(){
+        return $this->hasMany('App\ProjectOccurence');
+    }
+
 
     /**
      * a helper function to help determine if a project belongs to a user

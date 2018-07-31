@@ -35,6 +35,8 @@ use Illuminate\Support\Facades\DB;
 
 use Log;
 
+use \Carbon\Carbon;
+
 
 class UserController extends Controller {
 
@@ -437,7 +439,7 @@ class UserController extends Controller {
 			{
 
 
-					    				  					  	$project->needs()->sync($syncNeedData);
+					    $project->needs()->sync($syncNeedData);
 	    				$project->save();
 	    				$user->projects()->attach([$project->id => ["auth"=>"owner"]]);
 	   					$user->save();
@@ -729,12 +731,20 @@ class UserController extends Controller {
 		if(Project::doesProjectIDBelongToUser($id)) {
 
 		$name = Project::getFoundProject()->name;
+		$startdate = Project::getFoundProject()->start_time;
+		$starttime = Carbon::parse($startdate);
+		$description = Project::getFoundProject()->description;
+		$short_description = Project::getFoundProject()->short_description;
 
 		return \View::make("edit-project")
 			->with("all_needs", $this->getNeedsTreeAsJSON())
 			->with("user", $user)
 			->with("logged_in", true)
-			->with("project_name", $name);
+			->with("project_name", $name)
+			->with("start_time", $starttime)
+			->with("description", $description)
+			->with("short_description", $short_description);
+
 
 		}
 
@@ -746,6 +756,17 @@ class UserController extends Controller {
 		}
 
 	}
+
+	public function delete_project($id){
+
+		$user = Auth::user();
+		if(Project::doesProjectIDBelongToUser($id)){
+			$project = Project::find($id);
+			$project->delete();
+			return $this->projects();
+		}
+	}
+
 
 	/**
 	 * get the project. this hook is supposed to be kind of generic, and it's used
@@ -897,6 +918,7 @@ class UserController extends Controller {
 		$project->name = $request->input('name');
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
+		$project->start_time = $request->input('start_time');
 		$project->needs()->sync($syncNeedData);
 
 		$project->save();
