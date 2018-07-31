@@ -184,18 +184,20 @@ use Resources\Templates\Banner;
         <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> August</h1>
         <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2_clear.png" >
         
-                  <p>The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
+                  <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. August is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.</p>
         
         </div>
-		<div class="v-inner" style="text-align:center;">
+		<div class="v-inner" style="text-align:center; padding:5vw;">
 			<div class="box" style="height:100%; background:#FFFFFF;">
+
+      <h1>Our Community Calendar</h1>
+            <p>This is the place to find <strong>VOLUNTEERING</strong> opportunities. <strong>INERESTING</strong> projects to help with, and where you can <strong>CREATE</strong> your own events!</p>
 				<div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
 					<div class="row" style="margin-top:20px;">
-            <h1>Our Community Calendar</h1>
-            <p>This is the place to find <strong>VOLUNTEERING</strong> opportunities. <strong>INERESTING</strong> projects to help with, and where you can <strong>CREATE</strong> your own events!</p>
+            
 					                <?php
                   if($user) {
                   ?>
@@ -220,7 +222,7 @@ use Resources\Templates\Banner;
 			</div>
 		</div>
       <!-- vertical conservation element- the container for the featured posts. -->
-      <div class="v-inner">
+      <div class="v-inner" >
         <div class="box" style="height:100%; background:#FFFFFF;">
 
           <!-- This be the featured posts section -->
@@ -314,17 +316,19 @@ use Resources\Templates\Banner;
 
       <div id="astroparallax">
         <div id="parallax_text_container">
-          <h1 style="margin-bottom: 2vw;"> Our Project Page </h1>  
+          <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
         </div>
         </div>
-      <div class="v-inner">
+      <div class="v-inner" >
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
+            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF; text-align:center; margin-bottom: 5vh; margin-top: 5vh;">
 
-              <div class="row" style="margin-top:20px;">
+             
+
+                <h2>Create something for our community</h2>
 
                 <?php
                   if($user) {
@@ -346,14 +350,9 @@ use Resources\Templates\Banner;
 
                 ?>
 
-              </div>
+              
 
-              <div class="row" style="margin-top:20px;"><h2>Create something for our community</h2></div>
-
-              <div id="all_projects" style="margin-top:20px;" class="row"></div>
-
-              <div class="row" style="margin-top:40px;"></div>
-
+                   
             </div>
             <!-- End of Center column -->
 
@@ -364,7 +363,7 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw; font-size:1.5vw;">
             <p class="copyright">&copy; 2018 Planet Rocket</p>
             <a href="<?php echo APP_BASE; ?>/contact">
               <p class="contact_us">Contact Us</p>
