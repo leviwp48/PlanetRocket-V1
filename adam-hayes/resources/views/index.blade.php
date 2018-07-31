@@ -134,13 +134,19 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner" >
         <div class="box footer" style="width:100vw;" >
 
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw">
-                Copyright 2018 Planet Rocket
-                  <a href="<?php echo APP_BASE; ?>/contact">
-                    <p class="contact_us">Contact Us</p>
-                  </a>
-                </div>
-                
+
+
+      <!-- The footer -->
+      <div id="footer" class="v-inner">
+        <div class="box footer" style="color:#FFFFFF;">
+    
+            <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+            <p class="copyright">&copy; 2018 Planet Rocket</p>
+            <a href="<?php echo APP_BASE; ?>/contact">
+              <p class="contact_us">Contact Us</p>
+            </a>
+          </div>
+
 
         <div class="row" style="height:20px;"></div>
         </div>
