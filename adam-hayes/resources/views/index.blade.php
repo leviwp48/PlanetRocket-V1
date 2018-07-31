@@ -109,33 +109,38 @@ use Resources\Templates\Banner;
       
       <div class="parallax" id="parallaxpanel4-Hompage"></div>
 
-      <h3 class="textbreak" style="margin-bottom: 2vw;">If you are based in Humboldt County, we have created something very special just for you </h3>
-      
+      <div class="last_textbreak_container">
         
-      <div class="row homepage" style="text-align:center; margin-bottom:40px;">
-        <div class="h-group" >
-          <div class="box" style="vertical-align:middle;">
-            <form action="login" method="get">
-              <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
-                Enter Our Community!
-                <div class='trees'>
-                  <i class='fa fa-tree tree-one'></i>
-                  <i class='fa fa-tree tree-two'></i>
-                  <i class='fa fa-tree tree-three'></i>
-                </div>
-              </button>
-            </form>
+        <h3 class="textbreak" >If you are based in Humboldt County, we have created something very special just for you </h3>
+        
+        <div class="row homepage" style="text-align:center; margin-bottom:40px;">
+          <div class="h-group" >
+            <div class="box" style="vertical-align:middle;">
+              <form action="login" method="get">
+                <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
+                  Enter Our Community!
+                  <div class='trees'>
+                    <i class='fa fa-tree tree-one'></i>
+                    <i class='fa fa-tree tree-two'></i>
+                    <i class='fa fa-tree tree-three'></i>
+                  </div>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-
       
       <div id="footer" class="v-inner" >
         <div class="box footer" style="width:100vw;" >
 
                 <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw">
                 Copyright 2018 Planet Rocket
+                  <a href="<?php echo APP_BASE; ?>/contact">
+                    <p class="contact_us">Contact Us</p>
+                  </a>
                 </div>
+                
 
         <div class="row" style="height:20px;"></div>
         </div>
