@@ -20,17 +20,16 @@
 
 #astroparallax
 {
-  background-image: url(../images/astronaut-Projects.jpg);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+  
+    
     
     font-size: 2.5vw;
     text-align: center;
 
-    margin-top: 5vh;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:5vh;
+    
     
 
     
@@ -38,11 +37,7 @@
     
 }
 
-#parallax_text_container
-{
-    margin-left:10vw;
-    margin-right:10vw;
-}
+
 
 h1{
     font-size: 3.5vw;

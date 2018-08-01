@@ -169,11 +169,10 @@ use Resources\Templates\Banner;
                 </div>
               </div>
             </div>
-
-              <div class="row" style="text-align:center; background:#FFFFFF;"> <h1>Get Ready For September</h1>
-                  The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
-                  our Humboldt County community will be going on all month. September is a good time to help out our community.
-
+            
+              <div class="row" style="text-align:center; background:#FFFFFF;"> <h1>Get Ready <strong>For</strong> August</h1>
+                  The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
+                  our Humboldt County community will be going on all month. August is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.
               </div>
@@ -317,8 +316,12 @@ use Resources\Templates\Banner;
 
       <div id="astroparallax">
         <div id="parallax_text_container">
-          <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
+          <!--
+            <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
+                -->
+
+          <embed src="/adam-hayes/public/images/Artboard_4.svg">
         </div>
         </div>
       <div class="v-inner" >

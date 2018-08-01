@@ -152,11 +152,11 @@ use Resources\Templates\Banner;
             <strong>Irene Moreno</strong> brings several years of nonprofit and government experience to Planet Rocket. Irene has been working in the public sector since 2009. Her roles have included motivating others to reach their full potential, overcoming obstacles to reach goals, and mentoring youth to build their own businesses. Irene’s passions include uniting others and is a firm believer that anything can be accomplished when we work together.
 
 -->
-
+<!--
               <div class="row" style="margin:20px;"><h1 class="about-page-title">TRAITS <span class="about-orange-font">&</span> PROFILES<div class="row about-page-title2">of Our Founders</div></h1></div>
 
 
-              <!-- The rows for Adam Hayes, visible at large-screen-size. -->
+              <!-- The rows for Adam Hayes, visible at large-screen-size. 
               <div class="row founder-row-visible-gt-600px">
                 <div class="h-group" style="padding:20px; background:#343434; color:#F2F2F2;">
                   <div class="box">
@@ -186,7 +186,7 @@ use Resources\Templates\Banner;
                 </div>
               </div>
 
-               <!-- The row for Adam Hayes, visible at tablet/phone screen-size -->
+               <!-- The row for Adam Hayes, visible at tablet/phone screen-size 
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2;">
 
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
@@ -205,7 +205,7 @@ use Resources\Templates\Banner;
 
 
 
-              <!-- The rows for Jason JOnes, visible at large-screen-size. -->
+              <!-- The rows for Jason JOnes, visible at large-screen-size. 
               <div class="row founder-row-visible-gt-600px">
                 <div class="h-group" style="padding:20px; background:#343434; color:#F2F2F2;">
 
@@ -239,7 +239,7 @@ use Resources\Templates\Banner;
                 </div>
               </div>
 
-               <!-- The row for Jason Jones, visible at tablet/phone screen-size -->
+               <!-- The row for Jason Jones, visible at tablet/phone screen-size
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2; margin-top:40px;">
 
                 <div style="position:relative; display:inline; width:100px; float:left; left:-20px; padding:10px;">
@@ -259,7 +259,7 @@ use Resources\Templates\Banner;
 
 
 
-              <!-- The rows for Irene, visible at large-screen-size. -->
+              <!-- The rows for Irene, visible at large-screen-size.
               <div class="row founder-row-visible-gt-600px">
                 <div class="h-group" style="padding:20px; background:#343434; color:#F2F2F2;">
                   <div class="box">
@@ -289,7 +289,7 @@ use Resources\Templates\Banner;
                 </div>
               </div>
 
-               <!-- The row for Irene, visible at tablet/phone screen-size -->
+               <!-- The row for Irene, visible at tablet/phone screen-size
               <div class="row founder-row-visible-lte-600px" style="padding:20px; background:#343434; color:#F2F2F2; margin-top:40px;">
 
                 <div style="position:relative; display:inline; width:100px; float:right; right:-20px; padding:10px;">
@@ -315,10 +315,12 @@ use Resources\Templates\Banner;
             <div class="row" style="margin-top:40px;"></div>
 
             </div>
-            <!-- End of Center column -->
+            <!-- End of Center column 
 
         </div>
       </div>
+      -->
+      <embed src="/adam-hayes/public/images/Artboard_21.svg">
 
       <!-- The footer -->
       <div id="footer" class="v-inner">
