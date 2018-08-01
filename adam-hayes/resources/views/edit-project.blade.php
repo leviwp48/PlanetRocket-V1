@@ -102,7 +102,7 @@ use Resources\Templates\Banner;
               'data-ajax-client-interface'  => 'EditProject',
               'data-ajax-server-interface'  => 'LaravelServer',
               'data-ajax-form-mode'         => 'edit',
-              'data-ajax-data-hook'         => '/user/get-project'
+              'data-ajax-data-hook'         => '/adam-hayes/public/user/get-project'
               )); ?>
 
               <div class="row" style="margin-top:20px"></div>
