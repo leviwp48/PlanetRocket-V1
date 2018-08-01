@@ -46,7 +46,6 @@ use Resources\Templates\Banner;
         <div class="box">
           <?php
           Banner::go();
-
           NavBar::go($user);
           ?>
         </div>
@@ -203,8 +202,6 @@ window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
-
 <script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-edit-project.js"></script>
-
 </body>
 </html>
