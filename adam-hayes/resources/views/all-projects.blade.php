@@ -324,16 +324,11 @@ use Resources\Templates\Banner;
           <embed src="/adam-hayes/public/images/Artboard_4.svg">
         </div>
         </div>
-      <div class="v-inner" >
+        <div class="v-inner">
           <div class="box" style="height:100%; background:#FFFFFF;">
-
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF; text-align:center; margin-bottom: 5vh; margin-top: 5vh;">
-
-             
-
-                <h2>Create something for our community</h2>
-
+            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
+              <div class="row" style="margin-top:20px;">
                 <?php
                   if($user) {
                   ?>
@@ -351,28 +346,26 @@ use Resources\Templates\Banner;
                     </a>
                   <?php
                   }
-
                 ?>
-
-              
-
-                   
+              </div>
+              <div class="row" style="margin-top:20px;"><h2>Create something for our community</h2></div>
+              <div id="all_projects" style="margin-top:20px;" class="row"></div>
+              <div class="row" style="margin-top:40px;"></div>
             </div>
-            <!-- End of Center column -->
 
         </div>
       </div>
-
       <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
+      <div id="footer" class="v-inner" >
+        <div class="box footer" style="width:100vw;" >
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw; font-size:1.5vw;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
+               
+               <p class="copyright"> Copyright 2018 Planet Rocket</p>
+                  <a href="<?php echo APP_BASE; ?>/contact">
+                    <p class="contact_us">Contact Us</p>
+                  </a>
+                
+                
 
         <div class="row" style="height:20px;"></div>
         </div>
