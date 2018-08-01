@@ -12,12 +12,12 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="css/index-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="css/gbc-css/gbc-main.css" type="text/css" media="all">
-<link rel="stylesheet" id="login-button-animation" href="css/login-button-animation.css" type="text/css" media="all">
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<link rel="stylesheet" id="login-button-animation" href="/adam-hayes/public/css/login-button-animation.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
-<script type="text/javascript" src="js/lib/html5.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -60,7 +60,7 @@ use Resources\Templates\Banner;
         <div class="box">
 
           <!-- This be the featured posts section -->
-          <div class="center_column" style="width:90%; max-width:900px; background:#FFFFFF;">
+          <div class="center_column" style=" background:#FFFFFF;">
           </div>
 
         </div>
@@ -72,7 +72,7 @@ use Resources\Templates\Banner;
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%;">
+            
 
 
       
@@ -80,36 +80,22 @@ use Resources\Templates\Banner;
 
 
           <div class="parallax" id="parallaxpanel1-Homepage">
-            <div class="h-group" style="margin-top:30px;">
+            
+            <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
                 <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
 
             <!-- Levi Edit 7/21/18 changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
             <!-- Levi Edit 7/22/18 Added CSS to the login button. Also a new CSS file called login-button-animation in public/css/ -->
 
-            <div class="row homepage" style="text-align:center; margin-top:90px;">
-              <div class="h-group" style="margin-top:30px;">
-                <div class="box" style="vertical-align:middle;">
-                  <form action="login" method="get">
-                    <button type="submit" style="margin-top:20px; font-family: OpenSans;" class="btn btn-primary formstyles-submit-button  btn--trees">
-                      Enter Our Community!
-                      <div class='trees'>
-                        <i class='fa fa-tree tree-one'></i>
-                        <i class='fa fa-tree tree-two'></i>
-                        <i class='fa fa-tree tree-three'></i>
-                      </div>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+           
           </div>
 
-            <div class="row" style="margin-top:40px;"></div>
+            
 
       <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
 
@@ -123,23 +109,45 @@ use Resources\Templates\Banner;
       
       <div class="parallax" id="parallaxpanel4-Hompage"></div>
 
-      <h3 class="textbreak">If you are based in Humboldt County, we have created something very special just for you </h3>
+      <div class="last_textbreak_container">
+        
+        <h3 class="textbreak" >If you are based in Humboldt County, we have created something very special just for you </h3>
+        
+        <div class="row homepage" style="text-align:center; margin-bottom:40px;">
+          <div class="h-group" >
+            <div class="box" style="vertical-align:middle;">
+              <form action="login" method="get">
+                <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
+                  Enter Our Community!
+                  <div class='trees'>
+                    <i class='fa fa-tree tree-one'></i>
+                    <i class='fa fa-tree tree-two'></i>
+                    <i class='fa fa-tree tree-three'></i>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       
+      <div id="footer" class="v-inner" >
+        <div class="box footer" style="width:100vw;" >
 
-
-      
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
-
-                <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-                Copyright 2018 Planet Rocket
-                </div>
+               
+               <p class="copyright"> Copyright 2018 Planet Rocket</p>
+                  <a href="<?php echo APP_BASE; ?>/contact">
+                    <p class="contact_us">Contact Us</p>
+                  </a>
+                
+                
 
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
-
     </div>
+
+    
 
 
 <script type="text/javascript">
@@ -148,7 +156,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

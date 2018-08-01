@@ -21,8 +21,7 @@
         url('neuropol-x-rg.woff') format('woff'),
         url('neuropol-x-rg.ttf')  format('truetype');
   */
-}
-*/
+
 
 /*
   Levi Edit 7/22/18: Added the OpenSans-Bold.ttf and OpenSans-Light.ttf and OpenSans-Regular.ttf files to the css folder. Adding them the site below.
@@ -51,30 +50,6 @@ a {
 outline: 0;
 }
 
-#parallaxwithbanner
-{
-  background-image: url(../images/lightroad-Projects.jpg);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color:white;
-    text-align: center;
-    font-size: 3em;
-}
-
-#astroparallax
-{
-  background-image: url(../images/astronaut-Projects.jpg);
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-
-    
-}
 
 img{
     margin-left: auto;

@@ -199,14 +199,14 @@ font:inherit;
 border-color:#80bdff;
 outline:0;
 -webkit-box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
-box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
 background:#F9F9F9;
 }
 .formstyles-textarea-input:focus {
 border-color:#80bdff;
 outline:0;
 -webkit-box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
-box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
 background:#F9F9F9;
 }
 
@@ -237,7 +237,7 @@ padding:5px;
 border-color:#80bdff;
 outline:0;
 -webkit-box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
-box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+box-shadow:0 0 0 .2rem rgba(0,123,255,.25);
 background:#F9F9F9;
 }
 .formstyles-pagination-number {
