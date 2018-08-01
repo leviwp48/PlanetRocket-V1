@@ -177,8 +177,8 @@ BlueBox.compose('formkit.table.prefabs.UserProjectsTable', function(_class, _pro
 			return "";
 			})
 			.setCellRenderer(function(cell, column, row){
-	
-				if(row > -1){
+				
+				if(row > -1 && userRelation != 'user_doesnt_own'){
 				var deleteButton = HTMLHelper.i().row("formstyles-button delete-project-button");
 				deleteButton.html("Delete");
 				deleteButton.attr("style","padding:7px; margin:2px; margin-left:5px; margin-right:5px; text-align:center");
