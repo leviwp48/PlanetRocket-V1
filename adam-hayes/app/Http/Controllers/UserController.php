@@ -367,21 +367,21 @@ class UserController extends Controller {
 		$projectReoccur = trim($request->input('reoccur'));
 
 		$nodatebox = $request->input('datebox');
-
 		if($nodatebox === 'dateless')
 		{
-						$projectDayNum = null;
+			$projectDayNum = null;
 			$projectMonth = null;
 			$projectYear = null;
 			$projectStartHour = null;
 			$projectStartMin = null;
 			$projectAMorPM = null;
 			$projectReoccur = 'none';
-
-
-
 		}
-				$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+
+		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+
+		//RSVP bool
+		$has_rsvp = trim($request->input('rsvpBox'));
 
 		/*
 			END ALEC'S EDITS
@@ -424,6 +424,8 @@ class UserController extends Controller {
 	    /*
 			END ALEC'S EDITS
 		*/
+
+			$project->has_rsvp = $has_rsvp;
 
 	    $project->save();
 
@@ -684,7 +686,7 @@ class UserController extends Controller {
 	    			}
 
 	    		$projectCoverImage->claimImageWithProject($project->id);
-					
+
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    		$projectCoverImage->save();
@@ -812,6 +814,7 @@ class UserController extends Controller {
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
 	$toClient['needs'] = $needs;
+	$toClient['rsvp'] = $project->has_rsvp;
 	$toClient['project_images'] = $projectCoverImages;
 
 	return json_encode($toClient);
@@ -1162,10 +1165,11 @@ class UserController extends Controller {
 	$toClient['name'] = $project->name;
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
+	$toClient["rsvp"] = $project->has_rsvp;
+
 
 	$fulltime = $project->start_time;
-	if($fulltime)
-	{
+	if($fulltime){
 	$pyear = substr($fulltime, 0, 4);
 	$pmonth = substr($fulltime, 5, 2);
 	$pday = substr($fulltime, 8, 2);
@@ -1255,6 +1259,7 @@ class UserController extends Controller {
 	{
 		$toClient['start_time'] = null;
 	}
+
 	$toClient['needs'] = $needsForClient;
 	$toClient['logged_in'] = $isUser;
 	$toClient['user_project_role'] = $userProjectRole;
