@@ -12,9 +12,11 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - All Projects</title>
 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="./css/about-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
+
 <script type="text/javascript" src="./js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
@@ -61,9 +63,28 @@ use Resources\Templates\Banner;
         </div>
       </div>
 		
-	  <div style="text-align:center;">
-      <embed src="/adam-hayes/public/images/Artboard_21.svg" style="width:75%;">
+
+	  <div class="v-inner">
+      <div class="box">
+          <div class="center_column" style="margin:5vw;">
+            <h1 style="font-family: 'Open Sans', sans-serif;">Planet Rocket is on a <strong>MISSION</strong></h1>
+            <p class="light-weight" style="font-family: 'Open Sans', sans-serif;">To create a social platform for collaborative solutions to community problems.</p>
+            <p class="standard-weight" style="font-family: 'Open Sans', sans-serif;">We beleive by empowering and connecting cities, nonprofits, small businesses, schools, and community members, there is nothing we cannot do. Also, it wont hurt to have fun in the process</p>
+          </div>
+
+        <embed src="/adam-hayes/public/images/SS_Aboutus1.svg">
+
+        <embed src="/adam-hayes/public/images/SS_Aboutus2.svg">
+
+        <embed src="/adam-hayes/public/images/SS_Aboutus3.svg">
+        
+        <embed src="/adam-hayes/public/images/Artboard_21.svg">
+        
+      </div>
 	  </div>
+    
+    
+
 	  
       <!-- The footer -->
       <div id="footer" class="v-inner" >
@@ -81,7 +102,8 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-    </div>
+
+    
 
 
 	</div>

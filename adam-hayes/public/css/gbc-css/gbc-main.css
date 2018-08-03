@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'Open Sans', sans-serif;
   src: url('/adam-hayes/public/css/OpenSans-Bold.ttf') format(truetype),
        url('/adam-hayes/public/css/OpenSans-Light.ttf') format(truetype);
      }
@@ -278,7 +278,7 @@ ul li:hover > ul {
 
 body {
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  font-family: 'OpenSans';
+  font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
   line-height: 1.5;
   font-size: 15px;
@@ -311,7 +311,7 @@ h2.featured_post_tile_title {
   margin-top: -40px; }
 
 h2.indexpage {
-  font-family: 'Neuropol';
+  font-family: 'Open Sans', sans-serif;
   font-size: 3em;
   font-weight: bold; }
 
@@ -490,7 +490,7 @@ h3.indexpage {
     margin-top: 0px; }
 
   h2.indexpage {
-    font-family: 'Neuropol';
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8em;
     font-weight: bold; }
 
@@ -637,7 +637,7 @@ h3.indexpage {
     width: 300px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -670,7 +670,7 @@ h3.indexpage {
     margin-top: 0px; }
 
   h2.indexpage {
-    font-family: 'Neuropol';
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8em;
     font-weight: bold; }
 
@@ -817,7 +817,7 @@ h3.indexpage {
     width: 100px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 15px;
@@ -850,7 +850,7 @@ h3.indexpage {
     margin-top: -40px; }
 
   h2.indexpage {
-    font-family: 'Neuropol';
+    font-family: 'Open Sans', sans-serif;
     font-size: 3em;
     font-weight: bold; }
 
@@ -995,7 +995,7 @@ h3.indexpage {
     width: 200px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -1028,7 +1028,7 @@ h3.indexpage {
     margin-top: 0px; }
 
   h2.indexpage {
-    font-family: 'Neuropol';
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8em;
     font-weight: bold; }
 
@@ -1175,7 +1175,7 @@ h3.indexpage {
     width: 300px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -1208,7 +1208,7 @@ h3.indexpage {
     margin-top: 0px; }
 
   h2.indexpage {
-    font-family: 'Neuropol';
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8em;
     font-weight: bold; }
 

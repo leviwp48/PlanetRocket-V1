@@ -80,7 +80,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-            <div class="v-inner">
+      <div class="v-inner">
         <div class="box">
 
           <!-- This be the featured posts section -->
@@ -150,6 +150,7 @@ use Resources\Templates\Banner;
       
 
       <!-- The footer -->
+
       <div id="footer" class="v-inner" >
         <div class="box footer" style="width:100vw;" >
 
@@ -158,9 +159,7 @@ use Resources\Templates\Banner;
                   <a href="<?php echo APP_BASE; ?>/contact">
                     <p class="contact_us">Contact Us</p>
                   </a>
-                
-                
-
+       
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
