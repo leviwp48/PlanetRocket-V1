@@ -419,6 +419,7 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'App\\NeedsTree' => __DIR__ . '/../..' . '/app/NeedsTree.php',
         'App\\Project' => __DIR__ . '/../..' . '/app/Project.php',
         'App\\ProjectCoverImage' => __DIR__ . '/../..' . '/app/ProjectCoverImage.php',
+        'App\\ProjectOccurence' => __DIR__ . '/../..' . '/app/ProjectOccurence.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

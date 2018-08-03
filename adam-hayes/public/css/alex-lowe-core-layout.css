@@ -33,6 +33,20 @@
        url('OpenSans-Light.ttf') format(truetype);
      }
 
+.footer{
+      width:100%; 
+      
+      color:#444444;
+      padding-top:20px; 
+      padding-bottom:50px; 
+         font-size:1vw; 
+         margin-left:2vw; 
+}
+.copyright, .contact_us{
+     font-size:1vw; 
+     margin-left:5vw;
+     margin-right:0;
+}
 
 
 

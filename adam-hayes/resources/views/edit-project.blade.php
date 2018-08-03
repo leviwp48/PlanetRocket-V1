@@ -180,16 +180,17 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-      <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
+     <div id="footer" class="v-inner" >
+        <div class="box footer" style="width:100vw;" >
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
+               
+               <p class="copyright"> Copyright 2018 Planet Rocket</p>
+                  <a href="<?php echo APP_BASE; ?>/contact">
+                    <p class="contact_us">Contact Us</p>
+                  </a>
+                
+                
+
         <div class="row" style="height:20px;"></div>
         </div>
       </div>

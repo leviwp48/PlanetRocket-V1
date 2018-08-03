@@ -52,24 +52,10 @@ h1{
 
 p{
     font-family: 'Open Sans', sans-serif;
+
     font-weight: lighter;
     font-size: 2.5vw;
     margin-left:10vw;
     margin-right:10vw;
-}
-
-.footer{
-    width:90%; 
-    max-width:900px;
-    color:#444444;
-    padding-top:20px; 
-    padding-bottom:50px; 
-    font-size:1vw; 
-    margin-left:2vw; 
-}
-.copyright, .contact_us{
-    font-size:1vw; 
-    margin-left:5vw;
-	margin-right:0;
 }
 
