@@ -20,7 +20,6 @@ class AddResources extends Migration
             $table->string('address',100)->nullable();
             $table->string('phone', 15)->nullable();
             $table->string('website', 30)->nullable();
-            $table->string('region', 15)->nullable();
             $table->string('category', 15)->nullable();
             $table->timestamps();
         });
@@ -32,12 +31,6 @@ class AddResources extends Migration
             $table->primary(['resource_id', 'region']);
         });
         
-        Schema::create('resource_category', function (Blueprint $table) {
-            $table->integer('resource_id')->unsigned()->index();
-            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
-            $table->string('category', 15);
-            $table->primary(['resource_id', 'category']);
-        });
     }
 
     /**
@@ -48,7 +41,6 @@ class AddResources extends Migration
     public function down()
     {
         Schema::dropIfExists('resource_region');
-        Schema::dropIfExists('resource_category');
         Schema::dropIfExists('resources');
     }
 }
