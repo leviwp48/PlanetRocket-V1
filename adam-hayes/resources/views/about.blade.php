@@ -14,8 +14,9 @@ use Resources\Templates\Banner;
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="./css/about-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="./css/about-page.css" type="text/css" media="all">
+
 
 <script type="text/javascript" src="./js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -66,41 +67,51 @@ use Resources\Templates\Banner;
 
 	  <div class="v-inner">
       <div class="box">
-          <div class="center_column" style="margin:5vw;">
-            <h1 style="font-family: 'Open Sans', sans-serif;">Planet Rocket is on a <strong>MISSION</strong></h1>
-            <p class="light-weight" style="font-family: 'Open Sans', sans-serif;">To create a social platform for collaborative solutions to community problems.</p>
-            <p class="standard-weight" style="font-family: 'Open Sans', sans-serif;">We beleive by empowering and connecting cities, nonprofits, small businesses, schools, and community members, there is nothing we cannot do. Also, it wont hurt to have fun in the process</p>
-          </div>
-
-        <embed src="/adam-hayes/public/images/SS_Aboutus1.svg">
-
-        <embed src="/adam-hayes/public/images/SS_Aboutus2.svg">
-
-        <embed src="/adam-hayes/public/images/SS_Aboutus3.svg">
-        
-        <embed src="/adam-hayes/public/images/Artboard_21.svg">
-        
+          <div class="center_column_content" >
+            <h1 class="light-weight" >Planet Rocket is on a <strong>MISSION</strong></h1>
+            <h2 class="light-weight" >To create a social platform for collaborative solutions to community problems.</h2>
+            <p >We beleive by empowering and connecting cities, nonprofits, small businesses, schools, and community members, there is nothing we cannot do. Also, it wont hurt to have fun in the process</p>
+        </div>
       </div>
+    </div>
+      <embed src="/adam-hayes/public/images/SS_Aboutus1.svg" style="background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    background-size: cover;">
+        <div class="v-inner">
+        <div class="box">
+          <div class="center_column_content" >
+            <h1 class="light-weight" >Our <strong>BIG</strong> Vision</h1>
+            <h2 class="light-weight" >A connected, collaborative effort of our planet for a better world</h2>
+            <p >Working on world peace, the mitigation of climate change, creating a sustainable economy, fostering a healthy relationship between technology and humanity, and a more loving and compassionate world are worth for a mission statement</p>
+        </div>
+      </div>
+    </div>
+
+      <embed src="/adam-hayes/public/images/SS_Aboutus2.svg">
+        <div class="v-inner">
+      <div class="box">
+          <div class="center_column_content" >
+            <h1 class="light-weight" >Our <strong>HUMBOLDT</strong> County Vision</h1>
+            <h2 class="light-weight" >We have people, we have the resources, now we need the plan</h2>
+            <p >One of the greatest places on our planet is the perfect place to show the world what a community can really do. There is no problem that we cannot solve in our community. Suppose we did make our community a more vibrant place, what would that look like?</p>
+        </div>
+      </div>
+    </div>
+
+      <embed src="/adam-hayes/public/images/SS_Aboutus3.svg">
+
+      <div class="center_column_content">
+      <embed src="/adam-hayes/public/images/Artboard_21.svg">
+      </div>
+      
 	  </div>
     
     
 
 	  
       <!-- The footer -->
-      <div id="footer" class="v-inner" >
-        <div class="box footer" style="width:100vw;" >
-
-               
-               <p class="copyright"> Copyright 2018 Planet Rocket</p>
-                  <a href="<?php echo APP_BASE; ?>/contact">
-                    <p class="contact_us">Contact Us</p>
-                  </a>
-                
-                
-
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      @include('inc.footer')
 
 
     

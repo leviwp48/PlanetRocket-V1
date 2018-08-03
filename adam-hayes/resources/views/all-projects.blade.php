@@ -322,7 +322,7 @@ use Resources\Templates\Banner;
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
 
-          <embed src="/adam-hayes/public/images/Artboard_4.svg">
+          <embed src="/adam-hayes/public/images/Astro_OurProjectPage.svg">
         </div>
         </div>
         <div class="v-inner">
@@ -356,22 +356,8 @@ use Resources\Templates\Banner;
 
         </div>
       </div>
-      <!-- The footer -->
-      <div id="footer" class="v-inner" >
-        <div class="box footer" style="width:100vw;" >
-
-               
-               <p class="copyright"> Copyright 2018 Planet Rocket</p>
-                  <a href="<?php echo APP_BASE; ?>/contact">
-                    <p class="contact_us">Contact Us</p>
-                  </a>
-                
-                
-
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
-
+      
+      @include('inc.footer')
     </div>
 
 
