@@ -80,7 +80,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-            <div class="v-inner">
+      <div class="v-inner">
         <div class="box">
 
           <!-- This be the featured posts section -->
@@ -92,10 +92,10 @@ use Resources\Templates\Banner;
 			<div class="button-group">
 				<div style="text-align:center;">
 					<a href="/adam-hayes/public/resources/food">
-						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; font-weight:100; ">Food</button>
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Food</button>
 					</a>
 				</div>
-			</div>
+			
 			
 			<div class="button-group">
 				<div style="text-align:center;">
@@ -132,13 +132,13 @@ use Resources\Templates\Banner;
 			<div class="button-group">
 				<div style="text-align:center;">
 					<a href="/adam-hayes/public/resources/transportation">
-						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Transportation</button>
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; margin-bottom:.5em;font-weight:100; ">Transportation</button>
 					</a>
 				</div>
 			</div>
 			
 			
-			
+			</div>
 			
 			
           </div>
@@ -153,12 +153,12 @@ use Resources\Templates\Banner;
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
+          
             <p class="copyright">&copy; 2018 Planet Rocket</p>
             <a href="<?php echo APP_BASE; ?>/contact">
               <p class="contact_us">Contact Us</p>
             </a>
-          </div>
+          
         <div class="row" style="height:20px;"></div>
         </div>
       </div>

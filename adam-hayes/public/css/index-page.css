@@ -12,8 +12,13 @@ font-size:2em;
 
 .homepage h3 {
 font-size: 3.5vw;
+
 }
 
+iframe{
+	height: 60vh;
+	width: 80vw;
+}
 
 .parallax{
 	background-attachment: fixed;
@@ -40,8 +45,8 @@ font-size: 3.5vw;
 {
 	height:100%;
 	width: 80%;
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-left: auto;
+	margin-right: auto;
 
 	
 }
@@ -62,7 +67,32 @@ font-size: 3.5vw;
 	text-align: center;
 	font-size:3.5vw;
 	margin: 10vw;
+	font-weight: lighter;
 }
+
+.last_textbreak_container{
+
+	
+
+}
+
+.footer{
+    widows: 100%; 
+    
+    color:#444444;
+    padding-top:20px; 
+    padding-bottom:50px; 
+	font-size:1vw; 
+	
+    
+}
+
+.copyright, .contact_us{
+	font-size:1vw; 
+	margin-left:5vw;
+	margin-right:0;
+}
+
 .icon-width {
 width:200px;
 }

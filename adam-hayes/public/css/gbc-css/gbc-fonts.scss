@@ -7,8 +7,8 @@ $fontSize: 15px;
 	}
 
 	body {
-	//    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-	//font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    font-family: 'Open Sans', sans-serif;
+	
 	background:#FFFFFF;
 	line-height:1.5;
 	font-size:$fontSize;
@@ -84,7 +84,7 @@ $fontSize:3em;
 	}
 
 	h2.indexpage {
-	font-family:'Neuropol';
+	font-family:'Open Sans', sans-serif;
 	font-size:$fontSize;
 	font-weight:bold;
 	}

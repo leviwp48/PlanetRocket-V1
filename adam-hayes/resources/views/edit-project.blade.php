@@ -8,7 +8,6 @@
 use Resources\Templates\SideNavBar;
 use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
-use \Carbon\Carbon;
 ?>
 
 <title>Edit a project</title>
@@ -47,7 +46,6 @@ use \Carbon\Carbon;
         <div class="box">
           <?php
           Banner::go();
-
           NavBar::go($user);
           ?>
         </div>
@@ -103,7 +101,7 @@ use \Carbon\Carbon;
               'data-ajax-client-interface'  => 'EditProject',
               'data-ajax-server-interface'  => 'LaravelServer',
               'data-ajax-form-mode'         => 'edit',
-              'data-ajax-data-hook'         => '/user/get-project'
+              'data-ajax-data-hook'         => '/adam-hayes/public/user/get-project'
               )); ?>
 
               <div class="row" style="margin-top:20px"></div>
@@ -121,7 +119,7 @@ use \Carbon\Carbon;
                 <div class="box" style="width:30%;"><h3>Project title</h3></div>
 
                 <div class="box" style="width:70%;">
-                <?php echo Form::text('name',$project_name,['class'=>'row formstyles-text-input']); ?>
+                <?php echo Form::text('name','',['class'=>'row formstyles-text-input']); ?>
                 </div>
 
               </div>
@@ -132,7 +130,7 @@ use \Carbon\Carbon;
                 <div class="box" style="width:30%;"><h3>Project Description (Short)</h3></div>
 
                 <div class="box" style="width:70%;">
-                <?php echo Form::textarea('short_description', $short_description,['class'=>'row formstyles-textarea-input']); ?>
+                <?php echo Form::textarea('short_description','',['class'=>'row formstyles-textarea-input']); ?>
                 </div>
 
               </div>
@@ -146,126 +144,6 @@ use \Carbon\Carbon;
                 </div>
 
               </div>
-
-               <div class="date_group">
-
-<!-- Alec's Attempts at adding date/time functionality -->
-
-<div class="h-group switch-to-rows" style="margin-top:35px;">
-
-  <?php
-    $months = [
-      '01' => 'January',
-      '02' => 'February',
-      '03' => 'March',
-      '04' => 'April',
-      '05' => 'May',
-      '06' => 'June',
-      '07' => 'July',
-      '08' => 'August',
-      '09' => 'September',
-      '10' => 'October',
-      '11' => 'November',
-      '12' => 'December'
-      ];
-
-
-  ?>
-      <div class="box" style="width:30%">
-          <h3>When does your project occur?</h3>
-      </div>
-
-      <div class="box" style="display: -webkit-box;">
-          <?php echo Form::selectRange('daynum', 1, 31,null ,['style'=>'font-size:115%;', 'class'=>'tobedisabled']); //'placeholder' => $start_time->format('d')?> 
-          <?php echo Form::select('month', null, null , ['style'=>'font-size:115%;', 'class'=>'tobedisabled']); //'placeholder' => $months[$start_time->format('m') ?>
-          <?php echo Form::selectyear('pyear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled']); //'placeholder' => $start_time->format('Y') ?>
-      </div>
-
-      <div class="box" style="display: -webkit-inline-box;position: initial;margin-top:  15px;">
-          <?php echo Form::selectRange('hour', 1, 12, null,['style'=>'font-size:115%;' , 'class'=>'tobedisabled']); //'placeholder'=>$start_time->format('g') ?>
-          <h3>:</h3>
-          <?php echo Form::select('minute', array('00' => '00', '15' => '15', '30' => '30', '45' => '45'), null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled' ]); //'placeholder'=>$start_time->format('i') ?>
-          <?php echo Form::select('amORpm', array('am' => 'AM', 'pm' => 'PM'), null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled']); //'placeholder'=>$start_time->format('A') ?>
-      </div>
-
-  </div>
-
-  <div class="h-group switch-to-rows" style="margin-top:35px;">
-
-      <div class="box" style="width:30%;">
-        <h3>How often does your project reoccur?</h3>
-      </div>
-
-      <div class="box" id="dropdownthing" style="width:70%;">
-         <?php echo Form::select('reoccur', array('none' => "it doesn't",
-          'daily' => 'every day',
-          'weekly' => 'every week',
-          'monthly' => 'every month',
-          'yearly' => 'every year'),
-          null,['style'=>'font-size:115%;',
-          'class'=>'rcdrpdwn tobedisabled']); ?>
-
-      <script>
-          var reoccurDropdown = document.querySelector(".rcdrpdwn");
-
-          reoccurDropdown.addEventListener('change',function(){
-              if(this.value == "none"){
-                 document.querySelector("#rep_untl").style.display = "none";
-                 document.querySelector("#dropdownthing").style.width = "70%";
-              }
-              else {
-                document.querySelector("#rep_untl").style.display = "block";
-                document.querySelector("#dropdownthing").style.width = "12%";
-              }
-            });
-      </script>
-      </div>
-
-      <div id="rep_untl" style="display:none;">
-
-          <div class="box" style="width:13%;">
-            <h3>Through</h3>
-          </div>
-
-          <div class="box" style="width:35%;">
-             <?php echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled']); ?>
-              <?php echo Form::select('reoccurmonth', ' ', null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled']); //$months ?> 
-              <?php  echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled']); ?>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="h-group switch-to-rows" style="margin-top:35px;">
-  <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
-
-  <script>
-    var checkbox = document.querySelector("input[name=datebox]");
-    var hide = document.querySelector(".date_group");
-    var tobedisabled = document.querySelectorAll(".date_group");
-
-    checkbox.addEventListener('change',function(){
-        if(this.checked){
-            hide.style.display = "none";
-
-            for($i = 0; $i < document.querySelectorAll(".tobedisabled").length; $i++){
-               document.querySelectorAll(".tobedisabled")[$i].disabled = true;
-               document.querySelector("input[name=datebox]").value = "dateless";
-            }
-        }
-        else {
-          hide.style.display = "block";
-          for($i = 0; $i < document.querySelectorAll(".tobedisabled").length; $i++)
-          {
-            document.querySelectorAll(".tobedisabled")[$i].disabled = false;
-            document.querySelector("input[name=datebox]").value = "adfs";
-          }
-
-        }
-      });
-
-  </script>
-</div>
 
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
@@ -324,8 +202,6 @@ window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
-
 <script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-edit-project.js"></script>
-
 </body>
 </html>

@@ -1,6 +1,19 @@
   
+body{
+	font-family: 'Open Sans', sans-serif;
+}
  .adam-margin {
  margin-top:-210px;
+ }
+
+ .light-weight
+ {
+	 font-weight: lighter;
+ }
+ 
+ .standard-weight
+ {
+	 
  }
 
 /* .width-check::after {

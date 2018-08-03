@@ -18,6 +18,7 @@ use Resources\Templates\Banner;
 <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
 <link rel="stylesheet" id="projectspage" href="/adam-hayes/public//css/projectspage.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
 
 <script src='/adam-hayes/fullcalendar/lib/jquery.min.js'></script>
@@ -184,7 +185,7 @@ use Resources\Templates\Banner;
         <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> August</h1>
         <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2_clear.png" >
         
-                  <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
+                  <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. August is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.</p>
@@ -316,20 +317,19 @@ use Resources\Templates\Banner;
 
       <div id="astroparallax">
         <div id="parallax_text_container">
-          <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
+          <!--
+            <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
+                -->
+
+          <embed src="/adam-hayes/public/images/Artboard_4.svg">
         </div>
         </div>
-      <div class="v-inner" >
+        <div class="v-inner">
           <div class="box" style="height:100%; background:#FFFFFF;">
-
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF; text-align:center; margin-bottom: 5vh; margin-top: 5vh;">
-
-             
-
-                <h2>Create something for our community</h2>
-
+            <div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
+              <div class="row" style="margin-top:20px;">
                 <?php
                   if($user) {
                   ?>
@@ -347,28 +347,26 @@ use Resources\Templates\Banner;
                     </a>
                   <?php
                   }
-
                 ?>
-
-              
-
-                   
+              </div>
+              <div class="row" style="margin-top:20px;"><h2>Create something for our community</h2></div>
+              <div id="all_projects" style="margin-top:20px;" class="row"></div>
+              <div class="row" style="margin-top:40px;"></div>
             </div>
-            <!-- End of Center column -->
 
         </div>
       </div>
-
       <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
+      <div id="footer" class="v-inner" >
+        <div class="box footer" style="width:100vw;" >
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px; margin-left:2vw; font-size:1.5vw;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
+               
+               <p class="copyright"> Copyright 2018 Planet Rocket</p>
+                  <a href="<?php echo APP_BASE; ?>/contact">
+                    <p class="contact_us">Contact Us</p>
+                  </a>
+                
+                
 
         <div class="row" style="height:20px;"></div>
         </div>
