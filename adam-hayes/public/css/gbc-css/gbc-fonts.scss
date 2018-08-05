@@ -8,7 +8,7 @@ $fontSize: 15px;
 
 	body {
 	//    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	//font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background:#FFFFFF;
 	line-height:1.5;
 	font-size:$fontSize;
@@ -117,7 +117,7 @@ color:#03C7F4;
 text-transform: uppercase;
 font-size:1em;
 font-weight:bold;
-text-decoration:none;	
+text-decoration:none;
 }
 
 h3.corner_box_title a:hover {
@@ -132,7 +132,7 @@ color:#F9215A;
 a {
 color:#4286f4;
 font-weight:bold;
-text-decoration:none;		
+text-decoration:none;
 }
 
 
@@ -140,7 +140,7 @@ a.featured_article_link {
 color:#03C7F4;
 text-transform: uppercase;
 font-weight:bold;
-text-decoration:none;		
+text-decoration:none;
 }
 // a.featured_article_link h2 {
 // //font-size:20px;
@@ -148,10 +148,10 @@ text-decoration:none;
 // }
 
 a.featured_article_link:hover {
-color:#9DEAFC;		
+color:#9DEAFC;
 }
 a.featured_article_link:visited {
-color:#F9215A;		
+color:#F9215A;
 }
 
 
@@ -159,13 +159,13 @@ a.sidebar_link {
 color:#4286f4 !important;
 text-transform: uppercase;
 font-weight:bold;
-text-decoration:none;		
+text-decoration:none;
 }
 a.sidebar_link:hover {
-color:#2aa3f9 !important;		
+color:#2aa3f9 !important;
 }
 a.sidebar_link:visited {
-color:#F9215A;		
+color:#F9215A;
 }
 
 @mixin page_title_with_background_repeater($isHiRes) {
@@ -175,12 +175,12 @@ $imageURL: getImageURL('GBC-title-background-stroke.png', $isHiRes);
 	.page_title_with_background_repeater {
 	background:url($imageURL) repeat;
 	background-size:121px 61px;
-	top:-300px; 
-	left:-100px; 
-	width:1000px; 
-	height:1000px; 
-	z-index:1; 
-	transform:rotate(45deg); 
+	top:-300px;
+	left:-100px;
+	width:1000px;
+	height:1000px;
+	z-index:1;
+	transform:rotate(45deg);
 	opacity:0.35;
 	}
 

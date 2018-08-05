@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/adam-hayes/public/css/OpenSans-Bold.ttf') format(truetype),
+       url('/adam-hayes/public/css/OpenSans-Light.ttf') format(truetype);
+     }
+
 .photo_caption_credit {
   font-size: 0.8em; }
 
@@ -210,7 +216,8 @@ ul li:hover > ul {
 
 .footer {
   background: #FFFFFF;
-  border-top: 7px solid #1e2e84; }
+  border-top: 7px solid #1e2e84;
+}
 
 .dropdown-nav-menu-item {
   padding: 10px;
@@ -270,7 +277,8 @@ ul li:hover > ul {
   width: 100px; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: 'OpenSans';
   background: #FFFFFF;
   line-height: 1.5;
   font-size: 15px;
@@ -449,7 +457,7 @@ h3.indexpage {
     width: 200px; }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -1391,6 +1399,7 @@ Added by Eric Mott
 
 .videoTitle{
   color: white;
+  /* background-color:  white; */
 }
 
 .avatar{
@@ -1421,7 +1430,7 @@ Added by Eric Mott
 }
 
 /*Create new project*/
-#projectDateCheckbox{
+.projectCheckbox{
   -webkit-appearance: none;
   width: 30px;
   height: 30px;
@@ -1429,9 +1438,8 @@ Added by Eric Mott
   border-radius: 5px;
   border: 2px solid #060000;
   vertical-align: middle;
-  margin-left: 156px;
 }
 
-#projectDateCheckbox:checked{
+.projectCheckbox:checked{
   background: #069dff;
 }

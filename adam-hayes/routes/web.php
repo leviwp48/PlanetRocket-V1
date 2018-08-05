@@ -28,6 +28,11 @@ Route::get('/about', 'UserController@about');
 
 Route::get('/calendar', 'UserController@calendar');
 
+Route::get('/training', 'UserController@training');
+
+Route::get('/resources', 'UserController@resources');
+
+
 Route::get('/.well-known/acme-challenge/DPRvbXrjTBE5hC0VtR6Px3qNdY9iBMbcKzBupywcdJM', function(){
 return "DPRvbXrjTBE5hC0VtR6Px3qNdY9iBMbcKzBupywcdJM.nQTwwr89cu5Q8sBnj55cMu8EVDzSbJunU2k77TcP930";
 });
@@ -88,6 +93,8 @@ Route::get('/projects/view-project/{project}', 'UserController@view_project');
 Route::get('/user/get-project/{project}', 'UserController@get_project')->middleware('auth');
 
 Route::get('/user/edit-project/{project}', 'UserController@edit_project')->middleware('auth');
+
+Route::get('user/delete-project/{project}', 'UserController@delete_project')->middleware('auth');
 
 Route::post('/user/edit-existing-project', array( "as" => "user.edit-existing-project", "uses" => "UserController@edit_existing_project"));
 

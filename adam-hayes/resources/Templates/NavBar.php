@@ -27,6 +27,7 @@ private $_forHomePage = false;
 	}
 
 	public function concatenate() {  ob_start(); ?>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 
 
 	        <div class="row top_nav_bar_blue_rgba  <?php echo (!$this->_forHomePage) ? "top_nav_negative_margin" : ""; ?>">
@@ -38,16 +39,23 @@ private $_forHomePage = false;
 	              <nav class="row styled_dropdowns" style="z-index:4;">
 	                 <ul id="top-xyz" class="h-group">
 	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>" style="padding:8px; padding-left:20px; padding-right:20px;">Home</a>
+	                       <a class="row" href="<?php echo APP_BASE; ?>" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Home</a>
 	                    </li>
 	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px;">Projects</a>
+	                       <a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Projects</a>
 	                    </li>
 											<!--<li class="box top-nav-item">
+												 <a class="row" href="<?php echo APP_BASE; ?>/training" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Training</a>
+											</li>
+											<li class="box top-nav-item">
 	                       <a class="row" href="/calendar" style="padding:8px; padding-left:20px; padding-right:20px;">Calendar</a>
 	                    </li>-->
+
+	                     <li class="box top-nav-item">
+	                       <a class="row" href="<?php echo APP_BASE; ?>/resources" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Resources</a>
+	                    </li>
 	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>/about" style="padding:8px; padding-left:20px; padding-right:20px;">About</a>
+	                       <a class="row" href="<?php echo APP_BASE; ?>/about" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">About</a>
 	                    </li>
 	                    <!--<li class="box top-nav-item"><a class="row" href="/contact" style="padding:8px; padding-left:20px; padding-right:20px;">Contact</a></li>-->
 

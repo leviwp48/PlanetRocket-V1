@@ -12,11 +12,12 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Login</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="/css/index-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<link rel="stylesheet" id="form-styles" href="/css/form-styles.css" type="text/css" media="all">
-<script type="text/javascript" src="/js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<link rel="stylesheet" id="form-styles" href="/adam-hayes/public/css/form-styles.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -55,7 +56,7 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the featured posts. -->
-      <div class="v-inner">
+      <div class="v-inner" style="font-family: 'Open Sans', sans-serif;">
         <div class="box">
 
           <!-- This be the featured posts section -->
@@ -66,11 +67,11 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-      <div class="v-inner">
+      <div class="v-inner" style="font-family: 'Open Sans', sans-serif;">
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+            <div class="center_column" style="width:90%; max-width:800px; height:100%;">
 
 
 
@@ -174,7 +175,7 @@ window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
 <script src="/js/app.js"></script>
-<script type="text/javascript" src="/js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>
