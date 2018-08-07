@@ -142,10 +142,9 @@ use Resources\Templates\Banner;
     Also, we have an overflow:hidden style here because otherwise we tend to get annoying "bleed-off" scrolling
     where it lets us scroll horizontally even through there's nothing there.
     -->
-    <div class="v-group" style="z-index:2; overflow:hidden;">
-
-      <!-- vertical conservation element -->
-      <div class="v-inner">
+    
+        <div class="v-group" style="z-index:2; height:1%;overflow:hidden;;">
+          <div class="v-inner">
         <div class="box">
           <?php
           Banner::go();
@@ -154,6 +153,12 @@ use Resources\Templates\Banner;
           ?>
         </div>
       </div>
+    </div> 
+    
+    
+    <div class="v-group" style="z-index:2; overflow:hidden;">
+
+
 
       <!-- For the CPP logo and statement. -->
 
