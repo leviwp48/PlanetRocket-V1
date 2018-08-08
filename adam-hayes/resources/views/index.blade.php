@@ -82,10 +82,10 @@ use Resources\Templates\Banner;
           <div class="parallax" id="parallaxpanel1-Homepage">
             
             <div class="h-group" id="parallaxcontainer1">
-              <div class="box" style="vertical-align:middle;">
+              <div class="box" style="vertical-align:top;">
 
-                <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <div class="row homepage"><h3>Welcome to Planet Rocket!</h3></div>
+               <!-- <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>-->
               </div>
             </div>
 
