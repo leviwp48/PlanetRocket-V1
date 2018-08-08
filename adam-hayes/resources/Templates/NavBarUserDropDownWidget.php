@@ -94,6 +94,14 @@ private $_user;
         	?>
 					<!-- Levi Edit 7/23/18: Added the link to OpenSans font and adding font-family styling -->
 					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+					
+					
+				<li class="box top-nav-item">
+            		<a class="row" href="<?php echo APP_BASE; ?>/register" style="padding:8px; padding-left:20px; padding-right:20px; font-family: 'Open Sans', sans-serif;">
+            			Register
+            		</a>
+            	</li>
+            	
             	<li class="box top-nav-item">
             		<a class="row"
             		href="<?php echo APP_BASE; ?>/login"
