@@ -66,11 +66,11 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-      <div class="v-inner">
+      <div class="v-inner" style="font-family: 'Open Sans', sans-serif;">
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            <div class="center_column" style="width:90%; max-width:800px; height:100%; font-family:Georgia;">
+            <div class="center_column" style="width:90%; max-width:800px; height:100%;">
 
 
                 <div class="card">

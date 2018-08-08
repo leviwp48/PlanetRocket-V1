@@ -84,8 +84,8 @@ use Resources\Templates\Banner;
             <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
-                <div class="row homepage"><h3>Welcome to Planet Rocket!</h3></div>
-                <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <div class="row homepage" style="top: -176px;"><h3>Welcome to Planet Rocket!</h3></div>
+                <!--<iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>-->
               </div>
             </div>
 
@@ -117,7 +117,7 @@ use Resources\Templates\Banner;
           <div class="h-group" >
             <div class="box" style="vertical-align:middle;">
               <form action="login" method="get">
-                <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
+                <button type="submit" style=" font-family: OpenSans; width: 22%;" class="btn    btn--trees" id="entercommunity">
                   Enter Our Community!
                   <div class='trees'>
                     <i class='fa fa-tree tree-one'></i>
