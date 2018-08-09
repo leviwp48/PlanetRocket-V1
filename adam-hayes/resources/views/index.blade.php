@@ -133,6 +133,7 @@ use Resources\Templates\Banner;
       
       @include('inc.footer')
     </div>
+    
 
     
 

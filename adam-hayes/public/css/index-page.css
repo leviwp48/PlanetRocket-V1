@@ -32,7 +32,7 @@ iframe{
 }
 
 #parallaxpanel1-Homepage{
-	background-image: url(../images/party-Homepage.jpg);
+	background-image: url(../images/party-Homepage.svg);
 	color: white;
 	font-size: 3em;
 	height:80vh;
@@ -52,15 +52,15 @@ iframe{
 }
 
 #parallaxpanel2-Homepage{
-	background-image: url(../images/plantwall-Homepage.jpg);
+	background-image: url(../images/plantwall-Homepage.svg);
 }
 
 #parallaxpanel3-Homepage{
-	background-image: url(../images/shoutinglady-Homepage.jpg);
+	background-image: url(../images/shoutinglady-Homepage.svg);
 }
 
 #parallaxpanel4-Hompage{
-	background-image: url(../images/veggies-Homepage.jpg);
+	background-image: url(../images/veggies-Homepage.svg);
 }
 
 .textbreak{
@@ -70,11 +70,6 @@ iframe{
 	font-weight: lighter;
 }
 
-.last_textbreak_container{
-
-	
-
-}
 
 
 
