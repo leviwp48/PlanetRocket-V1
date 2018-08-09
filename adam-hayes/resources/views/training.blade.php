@@ -60,7 +60,7 @@ use Resources\Templates\Banner;
           <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF;">
 
             <div class="row" style="text-align:center; margin-top:30px;">
-              <h1>
+              <h1 style="font-weight:250;font-size:4em;">
                 Community Trainings
               </h1>
             </div>

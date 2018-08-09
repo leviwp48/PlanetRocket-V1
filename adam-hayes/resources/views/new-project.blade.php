@@ -216,7 +216,12 @@ use Resources\Templates\Banner;
     </div>
 
     <div class="h-group switch-to-rows" style="margin-top:35px;">
-        <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
+      <div class="box" style="width:30%; padding-right:20px;">
+        <h3>No date? Check the box:</h3>
+      </div>
+      <div class="box" style="width:70%;">
+        <input type="checkbox" name="datebox" value="anyy" class="projectCheckbox"/>
+      </div>
 
         <script>
         	var checkbox = document.querySelector("input[name=datebox]");
@@ -249,6 +254,7 @@ use Resources\Templates\Banner;
 
 			<!-- ALEC'S WORK ENDS HERE -->
 
+
               <div class="h-group switch-to-rows" style="margin-top:35px;">
 
                 <div class="box" style="width:30%;"><h3>Briefly describe your project.</h3></div>
@@ -268,6 +274,34 @@ use Resources\Templates\Banner;
                 </div>
 
               </div>
+
+              <!-- Eric's RSVP work -->
+              <div class="h-group switch-to-rows" style="margin-top:35px;">
+                <div class="box" style="width:30%; padding-right:20px;">
+                  <h3>Let members RSVP to the event/project?</h3>
+                </div>
+                <div class="box" style="width:70%;">
+                  <input type="checkbox" name="rsvpBox" value="0" class="projectCheckbox"/>
+                </div>
+              </div>
+
+              <script>
+                var checkbox = document.querySelector("input[name=rsvpBox]");
+
+                checkbox.addEventListener('change',function(){
+                    var check = checkbox.value;
+                    if(check == 1){
+                      checkbox.value = 0;
+                    }
+
+                    else {
+                      checkbox.value = 1;
+                    }
+                  });
+
+              </script>
+
+              <!-- End of Eric's work -->
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
 

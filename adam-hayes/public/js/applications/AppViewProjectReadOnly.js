@@ -62,6 +62,8 @@ this._projectContainer = projectContainer;
 var isLoggedIn = projectData["logged_in"];
 var involvement = projectData["user_project_role"];
 
+var rsvp = projectData["rsvp"];
+
 
 /*
 HTML.i()
@@ -136,7 +138,7 @@ HTML.i()
 
 HTML.i()
 	.definePrefabStart("content-row-title-and-body")
-		
+
 		.row()
 			._if(HTML.param("hasMarginTop"))
 				.style("margin-top","20px")
@@ -186,7 +188,7 @@ HTML.i()
 		._end()
 
 		.loop(coverImages, function(el,i,len) {
-	
+
 			this.box()
 				.style("height","200px")
 				.box()
@@ -224,7 +226,7 @@ HTML.i()
 			.fparam("title","Owned By: "+projectData["owner"]["name"])
 			.fparam("hasMarginTop",true)
 		._()
-	
+
 	._else()
 
 		.prefab("content-row-title-and-body")
@@ -279,7 +281,7 @@ HTML.i()
 			.prefab("content-row-title-and-body")
 				.fparam("title", "You're involved!")
 				//Needs a body or we get a silent error
-				//.fparam("body", "    ") 
+				//.fparam("body", "    ")
 				.fparam("body", "The email for this project is: <b>"+projectData["owner"]['email']+'.</b> Use this email to coordinate with the project leader.')
 				.fparam("hasMarginTop",true)
 			._()
@@ -313,6 +315,7 @@ HTML.i()
 						.fparam("hasMarginTop",true)
 					._()
 
+
 					//We need to be able to put this stuff right in here. not really a good way to do that.
 					.context(function() {
 
@@ -327,8 +330,14 @@ HTML.i()
 					})
 
 				._()
+					.prefab("content-row-title-and-body")
+						.fparam("title", "RSVP!")
+						.fparam("body", "Don't want to help set up? Let "+ projectData["owner"]["name"]+ " know that you would like to partake in the event!")
+						.fparam("hasMarginTop",true)
+					._()
 
-			//else, the user DID show a join request, so 
+
+			//else, the user DID show a join request, so
 			//we're going to just show them a friendly message instead.
 			._else()
 
@@ -400,7 +409,7 @@ this._projectContainer.append(row);
 _proto.selectProjectImage = function(projectCoverImage) {
 
 var description = projectCoverImage["description"];
-	
+
 	if(!description) description = "";
 
 var imgAndDesc = HTML.i()
@@ -441,4 +450,3 @@ var resizer = this.addResizer(new VerticalGroup($(imgAndDesc)));
 
 
 });
-

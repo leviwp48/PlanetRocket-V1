@@ -10,7 +10,7 @@ use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
 
-<title>Planet Rocket - Home</title>
+<title>Planet Rocket - Resources</title>
 
 <link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="./css/index-page.css" type="text/css" media="all">
@@ -67,12 +67,25 @@ use Resources\Templates\Banner;
         <div class="box">
 
           <!-- This be the featured posts section -->
-          <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF;">
+          <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF; ">
 
-            <div class="row" style="text-align:center; margin-top:30px;">
-              <h1>
-                Community Trainings
+            <div class="row" style="text-align:center; margin-top:30px; ">
+              <h1 style="font-weight:250;font-size:4em;">
+                Community Resources
               </h1>
+              
+              <h2 style="font-weight:350;font-size:2.25em; ">
+              What do you need help with?
+              </h2>
+              
+              			              <h5 style="font-weight:900; color:red; text-align:center;">
+              For immediate assistance, call 211 or (707) 441-1001.
+              </h5>
+              
+            	<h4 style="font-weight:900; color:red;text-align:center;">
+			For emergency services, call 911.
+              </h4>
+              
             </div>
 
           </div>
@@ -91,7 +104,7 @@ use Resources\Templates\Banner;
 
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/food">
+					<a href="resources/food">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Food</button>
 					</a>
 				</div>
@@ -99,7 +112,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/housing">
+					<a href="resources/housing">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Housing</button>
 					</a>
 				</div>
@@ -107,7 +120,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/lgbtq">
+					<a href="resources/lgbtq">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">LGBTQ+</button>
 					</a>
 				</div>
@@ -115,7 +128,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/medical">
+					<a href="resources/medical">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Medical</button>
 					</a>
 				</div>
@@ -123,15 +136,23 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/shelters">
-						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Shelters</button>
+					<a href="resources/shelter">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Shelter</button>
 					</a>
 				</div>
 			</div>
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/transportation">
+					<a href="resources/health">
+						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Health & Wellness</button>
+					</a>
+				</div>
+			</div>
+			
+			<div class="button-group">
+				<div style="text-align:center;">
+					<a href="resources/transportation">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; margin-bottom:.5em;font-weight:100; ">Transportation</button>
 					</a>
 				</div>
@@ -140,7 +161,7 @@ use Resources\Templates\Banner;
 			
 			</div>
 			
-			
+
           </div>
 
         </div>

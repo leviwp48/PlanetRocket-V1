@@ -10,12 +10,11 @@ use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
 
-<title>Planet Rocket - All Projects</title>
+<title>Planet Rocket - Health</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="./css/about-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="./js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -48,26 +47,38 @@ use Resources\Templates\Banner;
     Also, we have an overflow:hidden style here because otherwise we tend to get annoying "bleed-off" scrolling
     where it lets us scroll horizontally even through there's nothing there.
     -->
- 
-    
-    <div class="v-group" style="z-index:2; overflow:hidden;;">
-    
-          <div class="v-inner">
+    <div class="v-group" style="z-index:2; overflow:hidden;">
+
+      <!-- vertical conservation element -->
+      <div class="v-inner">
         <div class="box">
           <?php
           Banner::go();
+
           NavBar::go($user);
           ?>
         </div>
       </div>
 
-      <!-- vertical conservation element -->
+      <!-- vertical conservation element- the container for the featured posts. -->
+      <div class="v-inner">
+        <div class="box">
 
-		
-	  <div style="text-align:center; background:#FFFFFF;">
-      <embed src="/adam-hayes/public/images/Artboard_21.svg" style="width:75%;">
-	  </div>
-	  
+          <!-- This be the featured posts section -->
+          <div class="center_column" style="width:90%; max-width:1200px; background:#FFFFFF; ">
+
+            <div class="row" style="text-align:center; margin-top:30px; ">
+              <h1 style="font-weight:250;font-size:4em;">
+                Community Resources
+              </h1>
+				<img src="/adam-hayes/public/images/resources/health.jpg" alt="list of resources" style="width:90%;"/>
+
+            </div>
+            <!-- End of Center column -->
+		</div>
+        </div>
+      </div>
+
       <!-- The footer -->
       <div id="footer" class="v-inner">
         <div class="box footer" style="color:#FFFFFF;">
@@ -83,15 +94,16 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-	</div>
-	
+    </div>
+
+
 <script type="text/javascript">
 window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="./js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

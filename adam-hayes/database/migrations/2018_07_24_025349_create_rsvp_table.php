@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJoinRequestTable extends Migration
+class CreateRsvpTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateJoinRequestTable extends Migration
      */
     public function up()
     {
-        Schema::create('join_requests', function (Blueprint $table) {
+        Schema::create('rsvp', function (Blueprint $table) {
             $table->increments('id');
 
             //the person who sent it
@@ -28,12 +28,6 @@ class CreateJoinRequestTable extends Migration
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
 
-            //the message
-            $table->text("message");
-
-            //the needs, for when the user requests to join.
-            $table->text("needs")->nullable();
-
             //has the message been read yet?
             $table->boolean("unread")->default(true);
 
@@ -42,9 +36,6 @@ class CreateJoinRequestTable extends Migration
 
             //the usual timestamps.
             $table->timestamps();
-
-            //the id.
-            //$table->primary("id");
         });
     }
 
@@ -55,6 +46,6 @@ class CreateJoinRequestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('join_request');
+        Schema::dropIfExists('rsvp');
     }
 }

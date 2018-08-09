@@ -39,10 +39,7 @@
 
 
 /*clear the defaults.*/
-* {
-margin: 0px; padding: 0px; border: 0px;
-/*border: 1px solid red;*/
-}
+* {margin: 0px;padding: 0px;border: 0px;/*border: 1px solid red;*/}
 
 /*https://css-tricks.com/removing-the-dotted-outline/
 get rid of that annoying dotted border around links.*/

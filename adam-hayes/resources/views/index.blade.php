@@ -72,52 +72,52 @@ use Resources\Templates\Banner;
           <div class="box" style="height:100%; background:#FFFFFF;">
 
             <!-- This be the regular posts section -->
-            
 
 
-      
-            
+
+
+
 
 
           <div class="parallax" id="parallaxpanel1-Homepage">
-            
+
             <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
-                <div class="row homepage"><h3>The video goes here!</h3></div>
-                <iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>
+                <div class="row homepage" style="top: -176px;"><h3>Welcome to Planet Rocket!</h3></div>
+                <!--<iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>-->
               </div>
             </div>
 
             <!-- Levi Edit 7/21/18 changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
             <!-- Levi Edit 7/22/18 Added CSS to the login button. Also a new CSS file called login-button-animation in public/css/ -->
 
-           
+
           </div>
 
-            
+
 
       <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
 
       <div class="parallax" id="parallaxpanel2-Homepage"></div>
 
       <h3 class="textbreak">Take your ideas and projects and launch them into our <strong> COMMUNITY</strong></h3>
-      
+
       <div class="parallax" id="parallaxpanel3-Homepage"></div>
 
       <h3 class="textbreak">We are based in <strong>ARCATA</strong>, California and our whole website is local, organic, and non-gmo </h3>
-      
+
       <div class="parallax" id="parallaxpanel4-Hompage"></div>
 
       <div class="last_textbreak_container">
-        
+
         <h3 class="textbreak" >If you are based in Humboldt County, we have created something very special just for you </h3>
-        
+
         <div class="row homepage" style="text-align:center; margin-bottom:40px;">
           <div class="h-group" >
             <div class="box" style="vertical-align:middle;">
               <form action="login" method="get">
-                <button type="submit" style=" font-family: OpenSans;" class="btn    btn--trees" id="entercommunity">
+                <button type="submit" style=" font-family: OpenSans; width: 22%;" class="btn    btn--trees" id="entercommunity">
                   Enter Our Community!
                   <div class='trees'>
                     <i class='fa fa-tree tree-one'></i>
@@ -130,24 +130,24 @@ use Resources\Templates\Banner;
           </div>
         </div>
       </div>
-      
+
       <div id="footer" class="v-inner" >
         <div class="box footer" style="width:100vw;" >
 
-               
+
                <p class="copyright"> Copyright 2018 Planet Rocket</p>
                   <a href="<?php echo APP_BASE; ?>/contact">
                     <p class="contact_us">Contact Us</p>
                   </a>
-                
-                
+
+
 
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
     </div>
 
-    
+
 
 
 <script type="text/javascript">

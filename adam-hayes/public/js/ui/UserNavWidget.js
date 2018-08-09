@@ -37,8 +37,8 @@ var LightBox        = BlueBox.port("ui.LightBox");
 	this._removedNotificationUID = {};
 
 	this._takeActionKVP = {
-	"join_request_incoming":true, 
-	"join_request_outgoing":false, 
+	"join_request_incoming":true,
+	"join_request_outgoing":false,
 	"request_to_join_rejected_with_message":true,
 	"request_to_join_accepted":true
 	};
@@ -96,7 +96,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 					.row()
 						.attr("style","white-space:normal; text-transform:none; font-size:0.9em; color:#444444;")
 						.html(HTML.param("notification_text"))
-					._() 
+					._()
 
 				._else()
 
@@ -107,11 +107,11 @@ var LightBox        = BlueBox.port("ui.LightBox");
 							.class("formstyles-x-5-grey")
 							.style("top","3px")
 						._()
-					._() 
+					._()
 
 				._end()
 
-			._()       
+			._()
 		.definePrefabEnd();
 
 
@@ -122,7 +122,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 				.data("notification", HTML.param("notification"))
 				.class("row")
 				.row()
-					
+
 					._if(HTML.param("take-action-on-click"))
 						.class("styled_sidebar_item click-to-take-action")
 					._else()
@@ -142,12 +142,12 @@ var LightBox        = BlueBox.port("ui.LightBox");
 		.definePrefabStart("red-badge")
 
 			.abox()
-				.attr("style","border-radius:10px; text-align:center; background:#e2184e; color:#FFFFFF; font-weight:bold; padding:8px; min-width:35px;")
+				.attr("style","border-radius:50%; text-align:center; background:#e2184e; color:#FFFFFF; font-weight:bold; padding:2.5px; min-width:25px")
 				.style("transform","translateX(-50%) translateY(-50%)")
 
 					._if(HTML.param("for-top-nav"))
-						.style("top","-10px")
-						.style("left","-10px")
+						.style("top","-8px")
+						.style("left","-8px")
 					._end()
 
 				.html(HTML.param("badgeCount"))
@@ -200,21 +200,21 @@ var LightBox        = BlueBox.port("ui.LightBox");
 					        				._()
 				        				._end()
 							        	._if(HTML.param("granted"))
-								        
+
 							        		.row()
 							        			.class("formstyles-button click-to-see-project-page")
 							        			.style("text-align","center")
 							        			.style("margin","20px")
 							        			.html("Go to the project page")
 							        		._()
-								        	
+
 							        	._end()
 
 
 				        			._()
 
 				        //._()
-	        		
+
 
 
 
@@ -288,7 +288,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 
 
 	/**
-	 * fires from the polling callback. 
+	 * fires from the polling callback.
 	 * run an add-edit-remove loop and deal with all of the notifications that have to be added or removed.
 	 *
 	 */
@@ -306,9 +306,9 @@ var LightBox        = BlueBox.port("ui.LightBox");
 		});
 
 	//call this rectify function to get the add-edit-remove lists.
-	var rectify = this.getAddDeleteEdit(notifications, currentNotifications, 
+	var rectify = this.getAddDeleteEdit(notifications, currentNotifications,
 			function(newEl, oldEl) {
-			return (newEl["uid"] == oldEl.data("uid")) 
+			return (newEl["uid"] == oldEl.data("uid"))
 			});
 
 	//we're interested in the add and edit ones.
@@ -429,7 +429,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 			}
 
 		notification.remove();
-			
+
 		    XHR.postRequest()
 		        .url(window["_APP_BASE"]+"/user/remove-notification-for-id")
 		        .addData("_token", $('meta[name="csrf-token"]').attr('content'))
@@ -464,14 +464,14 @@ var LightBox        = BlueBox.port("ui.LightBox");
 		var uID = notificationObject["uid"];
 		var url = window["_APP_BASE"]+"/user/edit-project/"+projectID+"?u="+uID+"&j="+joinRequestID;
 		window.location.href = url;
-		} 
+		}
 
-		//if the notification is a response to a join request, then we're going to 
-		//pop open a lightbox. when the lightbox is closed, we're going to remove the notification and also send a 
+		//if the notification is a response to a join request, then we're going to
+		//pop open a lightbox. when the lightbox is closed, we're going to remove the notification and also send a
 		//message to the server that it can get rid of the join request because the lifecycle of the object is over.
 		else
 		if(nType == "request_to_join_rejected_with_message" || nType == "request_to_join_accepted") {
-	
+
 		//var lb = new lightbox()
 		var message = notificationObject["message"];
 		var uid = notificationObject["uid"];
@@ -492,7 +492,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 
 
 	/**
-	 * this is a function to show the user the response to 
+	 * this is a function to show the user the response to
 	 *
 	 */
 	_proto.showUserJoinRequestResponse = function(uid, pName, senderName, granted, joinRequestID, projectID) {
@@ -506,7 +506,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 	    .addData("_token", $('meta[name="csrf-token"]').attr('content'))
 	    .addData("join_request_id", joinRequestID)
 	    .onSuccess(function(responseText) {
-	    	
+
 	    	var deletedJoinRequest = $.parseJSON(responseText);
 
 			var lb = new LightBox();
@@ -582,7 +582,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 
 		this._userNavWidgetNameContainer.append(this._redBadge);
 		this._hamburgerIcon.append(this._redBadge2);
-		} 
+		}
 
 		if(badgeCount == 0) {
 		this._redBadge.remove();
@@ -623,7 +623,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 
 			for(j=0; j<olds.length; j++) {
 			old = olds[j];
-			
+
 				if(evaluateEquality(newEl, old)) {
 				newWasFoundInOld = true;
 				editThese.push({"old":old, "new":newEl});
@@ -632,7 +632,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 			}
 
 			if(!newWasFoundInOld) {
-			newToAdd.push(newEl);	
+			newToAdd.push(newEl);
 			}
 
 		}
@@ -644,7 +644,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 
 			for(j=0; j<news.length; j++) {
 			newEl = news[j];
-			
+
 				if(evaluateEquality(newEl, old2)) {
 				oldWasFoundInNew = true;
 				}
@@ -652,7 +652,7 @@ var LightBox        = BlueBox.port("ui.LightBox");
 			}
 
 			if(!oldWasFoundInNew) {
-			oldToDelete.push(old2);	
+			oldToDelete.push(old2);
 			}
 
 		}
