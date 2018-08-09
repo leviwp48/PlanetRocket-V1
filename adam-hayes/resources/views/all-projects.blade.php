@@ -31,15 +31,12 @@ use Resources\Templates\Banner;
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-115020689-1');
 </script>
 <script>
   $(document).ready(function() {
     // page is now ready, initialize the calendar...
-
     var jq = null;
-
     $('#calendar').fullCalendar({
       themeSystem: 'jquery-ui',
       eventLimit: true,
@@ -48,18 +45,15 @@ use Resources\Templates\Banner;
         center: 'title',
         right: 'month,agendaWeek,listMonth'
       },
-
       eventSources:[
         _events
       ],
-
       eventRender: function(event, element) {
         element.attr('href', 'javascript:void(0);');
         element.click(function() {
           var found = false;
           var count = 0;
           var temp_arr = window._events;
-
         //This is terrible I know
         //NEEDS UPDATE TO BETTER ALGO
           for(var i = 0; i < temp_arr.length; i++)
@@ -69,28 +63,22 @@ use Resources\Templates\Banner;
               var projectData = temp_arr[i];
             }
           }
-
           //console.log($.fn.jquery);
-
           if (jq == null)
           {
             jq = jQuery.noConflict( true );
           }
-
           //This is used to make use the short description if the regular description is too long
           if(event.description.length < 600 || event.short_description == null)
           {
             $("#eventContent").html(event.description);
           }
-
           else
           {
             $("#eventContent").html(event.short_description);
           }
-
           //$("eventButton").attr('href', "https//google.com");
           var id = event.id;
-
           $('#eventClickWindow').dialog({
             show: "size",
             hide: "size",
@@ -149,7 +137,6 @@ use Resources\Templates\Banner;
         <div class="box">
           <?php
           Banner::go();
-
           NavBar::go($user);
           ?>
         </div>
@@ -161,7 +148,6 @@ use Resources\Templates\Banner;
       <div class="v-inner" id="parallaxwithbanner">
         <!--<div class="box" style="height:100%; background:#FFFFFF;">
          <div class="center_column about-light-background" style="width:90%; background:#FFFFFF; max-width:800px; height:100%; font-family:Georgia;">
-
             <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
                 <div class="img-wrap-w-center" style="background:#FFFFFF;">
@@ -181,11 +167,11 @@ use Resources\Templates\Banner;
           </div>
           
         -->
-        <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> August</h1>
+        <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> September</h1>
         <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2_clear.png" >
         
                   <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
-                  our Humboldt County community will be going on all month. August is a good time to help out our community.
+                  our Humboldt County community will be going on all month. September is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.</p>
         
@@ -215,7 +201,6 @@ use Resources\Templates\Banner;
                     </a>
                   <?php
                   }
-
                 ?>
 					</div>
 				</div>
@@ -229,11 +214,9 @@ use Resources\Templates\Banner;
         <div class="center_column about-light-background" style="width:90%; max-width:800px; height:100%;">
             <?php
               $results = DB::table('projects')->get();
-
             ?>
 
               <?php
-
               foreach ($results as $project)
               {
                 $desc = $project->description;
@@ -242,16 +225,13 @@ use Resources\Templates\Banner;
                 $short_desc = trim(preg_replace('/\s+/',' ', $short_desc));
                 $desc = str_replace('"', '\"', $desc);
                 $short_desc = str_replace('"', '\"', $short_desc);
-
                 ?>
                 <script>
-
                   var id = <?= $project->id ?>;
                   var title = "<?= $project->name ?>";
                   var start = '<?= $project->start_time ?>';
                   var description = "<?= $desc ?>";
                   var short_description = "<?= $short_desc ?>";
-
                   event = {
                     'id' : id,
                     'title' : title,
@@ -266,7 +246,6 @@ use Resources\Templates\Banner;
                 <?php
               }
             ?>
-
             <div id='calendar'></div>
             <div id='eventClickWindow'>
               <p id='eventContent'></p>
@@ -274,13 +253,9 @@ use Resources\Templates\Banner;
                 More Info</a> </button>-->
             </div>
           </div>
-
         </div>
-
         
       </div>
-
-
 <!--
 		<div class="v-inner">
 			<div class="box" style="height:100%; background:#FFFFFF;">
@@ -303,24 +278,19 @@ use Resources\Templates\Banner;
                     </a>
                   ?php
                   }
-
                 ?>
 					</div>
 				</div>
 			</div>
 		</div>
-
 -->
-
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-
       <div id="astroparallax">
         <div id="parallax_text_container">
           <!--
             <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
-
           <embed src="/adam-hayes/public/images/Artboard_4.svg">
         </div>
         </div>
@@ -352,13 +322,11 @@ use Resources\Templates\Banner;
               <div id="all_projects" style="margin-top:20px;" class="row"></div>
               <div class="row" style="margin-top:40px;"></div>
             </div>
-
         </div>
       </div>
       <!-- The footer -->
       <div id="footer" class="v-inner" >
         <div class="box footer" style="width:100vw;" >
-
                
                <p class="copyright"> Copyright 2018 Planet Rocket</p>
                   <a href="<?php echo APP_BASE; ?>/contact">
@@ -366,21 +334,15 @@ use Resources\Templates\Banner;
                   </a>
                 
                 
-
         <div class="row" style="height:20px;"></div>
         </div>
       </div>
-
     </div>
-
-
 <script type="text/javascript">
 window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
-
 <script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-all-projects.js"></script>
-
 </body>
 </html>

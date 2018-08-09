@@ -132,9 +132,9 @@ use Resources\Templates\Banner;
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="row" style="margin-top:20px; margin-bottom:20px;" href="{{ route('password.request') }}">
+                               <!-- <a class="row" style="margin-top:20px; margin-bottom:20px;" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </form>
