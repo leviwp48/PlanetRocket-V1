@@ -31,6 +31,14 @@ Route::get('/calendar', 'UserController@calendar');
 Route::get('/training', 'UserController@training');
 
 Route::get('/resources', 'UserController@resources');
+Route::get('/resources/transportation', 'UserController@transportation');
+Route::get('/resources/housing', 'UserController@housing');
+Route::get('/resources/food', 'UserController@food');
+Route::get('/resources/shelter', 'UserController@shelter');
+Route::get('/resources/medical', 'UserController@medical');
+Route::get('/resources/health', 'UserController@health');
+Route::get('/resources/lgbtq', 'UserController@lgbtq');
+
 
 
 Route::get('/.well-known/acme-challenge/DPRvbXrjTBE5hC0VtR6Px3qNdY9iBMbcKzBupywcdJM', function(){

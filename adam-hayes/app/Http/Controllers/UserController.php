@@ -982,7 +982,63 @@ class UserController extends Controller {
 	public function resources() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
-	return \View::make("resources")
+	return \View::make("resources/all_resources")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+	public function transportation() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/transportation")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function shelter() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/shelter")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function food() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/food")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function medical() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/medical")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function health() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/health")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function lgbtq() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/lgbtq")
+		->with("user", $user)
+		->with("logged_in", $loggedIn);
+	}
+	
+		public function housing() {
+	$user = Auth::user();
+	$loggedIn = $user ? true : false;
+	return \View::make("resources/housing")
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
@@ -1288,6 +1344,7 @@ class UserController extends Controller {
 	 * working on the client-side.
 	 *
 	 */
+	 
 	public function projects_table_service(Request $request) {
 
 	//For later. Get Laravel to issue flat arrays instead of kvps. why would we bother? to make the responses smaller
@@ -1326,7 +1383,7 @@ class UserController extends Controller {
 			}
 
 		$projects = $query->get();
-
+		
 		$response = ["data"=>$projects, "count"=>$count];
 
 		//return json_encode($projects);
