@@ -10,7 +10,7 @@ use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
 
-<title>Planet Rocket - Health</title>
+<title>Planet Rocket - Health & Wellness</title>
 
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -71,7 +71,7 @@ use Resources\Templates\Banner;
               <h1 style="font-weight:250;font-size:4em;">
                 Community Resources
               </h1>
-				<img src="/adam-hayes/public/images/resources/health.jpg" alt="list of resources" style="width:90%;"/>
+				<embed src="/adam-hayes/public/images/resources/health/1.svg" />
 
             </div>
             <!-- End of Center column -->

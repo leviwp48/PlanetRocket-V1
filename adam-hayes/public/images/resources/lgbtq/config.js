@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"LGBTQ+ Resources","author":"","fileName":"lgbtq.pdf","bounds":[[935,1441]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

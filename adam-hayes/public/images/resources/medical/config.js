@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"Medical Resources","author":"","fileName":"Medical_Resources.pdf","bounds":[[935,3124]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};
