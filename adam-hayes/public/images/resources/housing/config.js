@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"Housing Resources","author":"","fileName":"housing.pdf","bounds":[[935,2829]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

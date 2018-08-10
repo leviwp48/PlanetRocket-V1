@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"Resource Outline","author":"","fileName":"food.pdf","bounds":[[935,4427]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<!-- Page 1 -->
+<svg x="0" y="0" width="935" height="1441" viewBox="0 0 935 1441" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+style="display: block;margin-left: auto;margin-right: auto;">
+<defs>
+<clipPath id="c0_1"><path d="M0,1441V0H935V1441Z" /></clipPath>
+<clipPath id="c1_1"><path d="M150.1,565V323.6H784.9V565Z" /></clipPath>
+
+<style type="text/css"><![CDATA[
+text { white-space: pre; }
+path, image { pointer-events: none; }
+
+.s1_1{
+font-size: 30.56px;
+font-family: OpenSans-Light_8;
+fill: #FFFFFF;
+}
+.s2_1{
+font-size: 22.92px;
+font-family: OpenSans-Bold_a;
+fill: #000000;
+}
+.s3_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_b;
+fill: #000000;
+}
+.s4_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_c;
+fill: #000000;
+}
+
+.g0_1{
+fill: #FFFFFF;
+}
+.g1_1{
+}
+
+]]></style>
+
+</defs>
+<path d="M0,0
+L0,1441
+L935,1441
+L935,0 Z " 
+fill="#FFFFFF" stroke="none" />
+<g clip-path="url(#c0_1)">
+<path d="M0,1442.2H935V0H0V1442.2Z" class="g0_1" />
+</g>
+<path d="M332.5,32.9h270V82.2h-270Z" class="g1_1" />
+<text x="410" y="69" dx="0,-0.6,0,-0.9,-0.6,0,0" class="s1_1">LGBTQ+ </text>
+<path d="M167.8,488.6H772V462.7H167.8v25.9Z" class="g0_1" />
+<path d="M178.5,514.6H761.3v-26H178.5v26Z" class="g0_1" />
+<path d="M169.8,540.6H769.9v-26H169.8v26Z" class="g0_1" />
+<g clip-path="url(#c1_1)">
+<path d="M433.9,566.6h67.2v-26H433.9v26Z" class="g0_1" />
+</g>
+<text x="166" y="347" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Eric Rofes Multicultural Queer Resource Center (ERC) </text>
+<text x="443" y="377" class="s2_1">HSU </text>
+<text x="264" y="405" dx="0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Warren House 53, 1 Harpst St, Arcata, CA 95521 </text>
+<text x="409" y="431" class="s3_1">707-826-3795 </text>
+<text x="330" y="457" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0" class="s3_1">https://www2.humboldt.edu/erc </text>
+<text x="168" y="483" dx="0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">The ERC’s mission is to shift public opinion of the queer community on </text>
+<text x="178" y="509" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">campus and in the local area from tolerance to acceptance. The ERC </text>
+<text x="169" y="535" dx="0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">creates a hub for students to learn about events and organizations on </text>
+<text x="433" y="561" class="s3_1">campus</text>
+<path d="M173.4,1198.7H766.3v-26H173.4v26Z" class="g0_1" />
+<path d="M225,1224.6H710v-25.9H225v25.9Z" class="g0_1" />
+<text x="288" y="1114" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Humboldt Rainbow Connection </text>
+<text x="339" y="1141" dx="0,-2.4,-0.9,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">P.O. Box 111, Eureka CA 95502 </text>
+<text x="281" y="1167" dx="0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">https://www.facebook.com/humboldtpride/ </text>
+<text x="174" y="1193" dx="0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0" class="s3_1">Organizers of the Humboldt Pride Parade and Festival. Provide queer </text>
+<text x="224" y="1219" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0" class="s3_1">community space and can help direct towards resources.</text>
+<text x="427" y="1265" dx="0,0,0,0,-0.5,0,0" class="s2_1">PFLAG, </text>
+<text x="177" y="1295" dx="0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Parents, Families and Friends of Lesbians and Gays </text>
+<text x="265" y="1323" dx="0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">https://www.facebook.com/p</text>
+<text x="513" y="1323" class="s4_1">ﬂ</text>
+<text x="524" y="1323" dx="0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0" class="s3_1">ag.eurekaarcata/ </text>
+<text x="171" y="1349" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Uniting people who are lesbian, gay, bisexual, transgender, and queer </text>
+<text x="197" y="1375" dx="0,0,-0.4,0,-0.5,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">(LGBTQ) with families, friends, and allies, PFLAG is committed to </text>
+<text x="187" y="1401" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">advancing equality through its mission of support, education, and </text>
+<text x="201" y="1427" dx="0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">advocacy. See website for local chapter meeting time/location.</text>
+<path d="M160.3,230.4H777.1v-26H160.3v26Z" class="g0_1" />
+<path d="M176,256.4H763.8v-26H176v26Z" class="g0_1" />
+<path d="M169.3,282.4H770.5v-26H169.3v26Z" class="g0_1" />
+<path d="M253.4,308.3H681.6V282.4H253.4v25.9Z" class="g0_1" />
+<text x="371" y="119" class="s2_1">Queer Humboldt </text>
+<text x="320" y="146" dx="0,-2.4,-0.9,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">P.O. Box 45, Arcata, CA 95518-0045 </text>
+<text x="409" y="172" class="s3_1">707-502-2890 </text>
+<text x="330" y="198" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.queerhumboldt.org/ </text>
+<text x="160" y="224" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">Queer Humboldt is an organization dedicated to providing resources for </text>
+<text x="175" y="250" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">the queer community. Website lists local events, groups, links, visitor </text>
+<text x="169" y="276" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">information, news and pictures that will bene</text>
+<text x="554" y="276" class="s4_1">ﬁ</text>
+<text x="565" y="276" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0" class="s3_1">t the queer community. </text>
+<text x="253" y="302" dx="0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">Website also provides detailed queer resource list.</text>
+<path d="M174.9,1045.2H764.8v-26H174.9v26Z" class="g0_1" />
+<path d="M161.3,1071.1H773.7v-25.9H161.3v25.9Z" class="g0_1" />
+<text x="258" y="935" class="s2_1">Gay and Lesbian Medical Association </text>
+<text x="244" y="961" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">1326 18th Street NW Suite 22 Washington, DC 20036 </text>
+<text x="409" y="987" class="s3_1">202-600-8037 </text>
+<text x="375" y="1013" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.glma.org/ </text>
+<text x="175" y="1039" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Maintains a searchable online database of LGBT friendly doctors and </text>
+<text x="161" y="1065" dx="0,0,0,-0.4,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0" class="s3_1">care providers and web pages devoted to transgender health resources.</text>
+<path d="M212.7,742.1H727v-26H212.7v26Z" class="g0_1" />
+<path d="M169.3,768.1H770.5v-26H169.3v26Z" class="g0_1" />
+<path d="M195.2,794.1H744.6v-26H195.2v26Z" class="g0_1" />
+<path d="M173.1,820H766.7V794.1H173.1V820Z" class="g0_1" />
+<path d="M158,846H777.1V820H158v26Z" class="g0_1" />
+<path d="M198.9,872H745.6V846H198.9v26Z" class="g0_1" />
+<path d="M318.9,897.9H616.1V872H318.9v25.9Z" class="g0_1" />
+<text x="302" y="600" dx="0,-1.1,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Transgender Health Services, </text>
+<text x="311" y="631" class="s2_1">Humboldt Open Door Clinic </text>
+<text x="325" y="658" dx="0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">770 10th Street, Arcata, CA 95521 </text>
+<text x="285" y="684" dx="0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0" class="s3_1">Sergio Codina at: 707-826-8610, ext. *1139 </text>
+<text x="178" y="710" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://opendoorhealth.com/opendoor/transgender-health-services/ </text>
+<text x="212" y="736" dx="0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Support group meets every last Wednesday of the month at </text>
+<text x="169" y="762" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">5:30pm (age 18+ only). Services include primary and preventive health </text>
+<text x="195" y="788" dx="0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,-0.4,-0.7,0" class="s3_1">care, same day appointments, STD screening, hormone therapy, </text>
+<text x="172" y="814" dx="0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,4.8,0,0,0,0" class="s3_1">referrals for sex reassignment surgeries and in-house lab draws. The </text>
+<text x="157" y="840" class="s3_1">clinics also o</text>
+<text x="263" y="840" class="s4_1">ﬀ</text>
+<text x="276" y="840" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">er case management, behavioral health consults, access to </text>
+<text x="198" y="866" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.9,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,4.8" class="s3_1">mental health care and a monthly Transgender Support Group. </text>
+<text x="319" y="892" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.9,-1.3,0,0,0,0,0,0,0,0,0,-0.4,0,0" class="s3_1">Clinicians follow WPATH standards.</text>
+
+
+<!-- Any embedded fonts defined here -->
+<style type="text/css" ><![CDATA[
+
+@font-face {
+	font-family: OpenSans-Regular_b;
+	src: url("fonts/OpenSans-Regular_b.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Bold_a;
+	src: url("fonts/OpenSans-Bold_a.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Light_8;
+	src: url("fonts/OpenSans-Light_8.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Regular_c;
+	src: url("fonts/OpenSans-Regular_c.woff") format("woff");
+}
+
+]]></style>
+
+</svg>

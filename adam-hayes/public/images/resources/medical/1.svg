@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<!-- Page 1 -->
+<svg x="0" y="0" width="935" height="3124" viewBox="0 0 935 3124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+style="display: block;margin-left: auto;margin-right: auto;">
+<defs>
+<clipPath id="c0_1"><path d="M0,3124V0H935V3124Z" /></clipPath>
+
+<style type="text/css"><![CDATA[
+text { white-space: pre; }
+path, image { pointer-events: none; }
+
+.s1_1{
+font-size: 30.56px;
+font-family: OpenSans-Light_8;
+fill: #FFFFFF;
+}
+.s2_1{
+font-size: 22.92px;
+font-family: OpenSans-Bold_c;
+fill: #000000;
+}
+.s3_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_d;
+fill: #000000;
+}
+.s4_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_e;
+fill: #000000;
+}
+
+.g0_1{
+fill: #FFFFFF;
+}
+.g1_1{
+}
+
+]]></style>
+
+</defs>
+<path d="M0,0
+L0,3124
+L935,3124
+L935,0 Z " 
+fill="#FFFFFF" stroke="none" />
+<g clip-path="url(#c0_1)">
+<path d="M0,3124.3H935V0H0V3124.3Z" class="g0_1" />
+</g>
+<path d="M332.5,37.5h270V86.8h-270Z" class="g1_1" />
+<text x="414" y="71" class="s1_1">Medical </text>
+<path d="M176,237.1H763.8V211.2H176v25.9Z" class="g0_1" />
+<path d="M354.9,263.1H580.1v-26H354.9v26Z" class="g0_1" />
+<text x="374" y="126" class="s2_1">NeedyMeds, Inc. </text>
+<text x="320" y="154" dx="0,-2.4,-0.9,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.9,0,0,0,0,0,0,0" class="s3_1">P.O. Box 219, Gloucester, PA 01931 </text>
+<text x="409" y="179" class="s3_1">800-503-6897 </text>
+<text x="346" y="205" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.needymeds.org/ </text>
+<text x="175" y="231" dx="0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0" class="s3_1">Online resource for </text>
+<text x="345" y="231" class="s4_1">ﬁ</text>
+<text x="356" y="231" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0" class="s3_1">nding patient assistance programs that provide </text>
+<text x="354" y="257" dx="0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">free/low-cost medications.</text>
+<path d="M169.9,412.9h600v-26h-600v26Z" class="g0_1" />
+<path d="M158.3,438.9H777.1v-26H158.3v26Z" class="g0_1" />
+<path d="M179.2,464.8H760.6V438.9H179.2v25.9Z" class="g0_1" />
+<path d="M201.1,490.8H738.7v-26H201.1v26Z" class="g0_1" />
+<path d="M274.6,516.8H660.4v-26H274.6v26Z" class="g0_1" />
+<text x="365" y="302" class="s2_1">Rx Safe Humboldt </text>
+<text x="334" y="329" dx="0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">2200 Tydd St, Eureka, CA 95501 </text>
+<text x="409" y="355" class="s3_1">707-443-4563 </text>
+<text x="328" y="381" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.rxsafehumboldt.org/ </text>
+<text x="169" y="407" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">The Rx Safe Humboldt Coalition works to reduce overuse of opioids in </text>
+<text x="158" y="433" dx="0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Humboldt; resources for community members include a Alternative Pain </text>
+<text x="178" y="459" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Management Resource guide. Rx Safe Humboldt Coalition meetings </text>
+<text x="201" y="485" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0" class="s3_1">occur on the 4th Friday of each month at 8:30am in the Eureka </text>
+<text x="275" y="511" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0" class="s3_1">Community Health Center Conference Room.</text>
+<path d="M181.7,665.8H758.1v-26H181.7v26Z" class="g0_1" />
+<path d="M187.7,691.8H752.1v-26H187.7v26Z" class="g0_1" />
+<path d="M165.7,717.8H774.1v-26H165.7v26Z" class="g0_1" />
+<path d="M192.6,743.7H747.2V717.8H192.6v25.9Z" class="g0_1" />
+<path d="M387.9,769.7H547.1v-26H387.9v26Z" class="g0_1" />
+<text x="291" y="555" class="s2_1">Hospice of Humboldt (Medical) </text>
+<text x="291" y="581" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">3327 Timber Fall Court, Eureka, CA 95503 </text>
+<text x="409" y="607" class="s3_1">707-445-8443 </text>
+<text x="313" y="633" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.hospiceofhumboldt.org/ </text>
+<text x="181" y="659" class="s3_1">Help with end of life planning; no cost or obligation for Information </text>
+<text x="187" y="685" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">Visits. Once patient with a terminal illness is enrolled, full range of </text>
+<text x="165" y="711" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0" class="s3_1">medical and supportive services; an interdisciplinary team collaborates </text>
+<text x="192" y="737" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">to design a Plan of Care to meet needs of patient, caregivers and </text>
+<text x="388" y="763" class="s3_1">families or friends.</text>
+<path d="M169.9,920.9H765.1v-26H169.9v26Z" class="g0_1" />
+<text x="359" y="810" class="s2_1">Mad River Hospital </text>
+<text x="331" y="836" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">3800 Janes Rd, Arcata, CA 95521 </text>
+<text x="409" y="862" class="s3_1">707-822-3621 </text>
+<text x="319" y="888" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://www.madriverhospital.com/ </text>
+<text x="169" y="914" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7" class="s3_1">Mad River Community Hospital is a 78-bed, acute care medical facility.</text>
+<path d="M184.9,1100.3h570v-26h-570v26Z" class="g0_1" />
+<path d="M180.8,1126.2H759v-25.9H180.8v25.9Z" class="g0_1" />
+<path d="M220.2,1152.2H719.5v-26H220.2v26Z" class="g0_1" />
+<path d="M190,1178.2H745v-26H190v26Z" class="g0_1" />
+<path d="M377.5,1204.2h180v-26h-180v26Z" class="g0_1" />
+<text x="290" y="963" class="s2_1">Medi-Cal, Social Services, DHHS </text>
+<text x="330" y="991" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">929 Koster St, Eureka, CA 95501, </text>
+<text x="320" y="1017" class="s3_1">Garberville and Hoopa outstations </text>
+<text x="409" y="1043" class="s3_1">877-410-8809 </text>
+<text x="307" y="1069" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://humboldtgov.org/528/Medi-Cal </text>
+<text x="184" y="1095" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1.3,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0" class="s3_1">Medi-Cal is CA's Medicaid program; health care coverage for low to </text>
+<text x="180" y="1121" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">middle income individuals and families. Applications taken over the </text>
+<text x="220" y="1147" class="s3_1">phone at 877-410-8809, at DHHS - Social Services (Mon-Fri </text>
+<text x="189" y="1173" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">7:30am-5:30pm) , and at C4Yourself.com. Call for other locations/</text>
+<text x="377" y="1199" class="s3_1">application methods.</text>
+<path d="M161.5,1383.6H777.1v-26H161.5v26Z" class="g0_1" />
+<path d="M164.3,1409.6H775.4v-26H164.3v26Z" class="g0_1" />
+<path d="M199.1,1435.5H735.9v-25.9H199.1v25.9Z" class="g0_1" />
+<text x="244" y="1241" class="s2_1">Open Door Community Health Centers, </text>
+<text x="209" y="1272" dx="0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Eureka Community Health &amp; Wellness Center </text>
+<text x="340" y="1299" dx="0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Various locations, see website </text>
+<text x="409" y="1325" class="s3_1">707-441-1624 </text>
+<text x="304" y="1351" class="s3_1">http://opendoorhealth.com/opendoor </text>
+<text x="161" y="1377" dx="0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Provides high quality health care and health education to those persons </text>
+<text x="165" y="1403" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0" class="s3_1">without access to care, due to </text>
+<text x="423" y="1403" class="s4_1">ﬁ</text>
+<text x="433" y="1403" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">nancial, geographical, or social barriers. </text>
+<text x="198" y="1429" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0" class="s3_1">Call for nearest location and to check if accepting new patients.</text>
+<text x="258" y="1475" dx="0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Planned Parenthood of Northern CA, </text>
+<text x="345" y="1506" dx="0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Eureka Health Center </text>
+<text x="258" y="1533" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">3225 Timber Fall Court, Suite B, Eureka, CA 95501 </text>
+<text x="409" y="1559" class="s3_1">707-442-5700 </text>
+<text x="314" y="1585" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.2,0" class="s3_1">http://www.plannedparenthood.org </text>
+<text x="158" y="1611" class="s3_1">Information on a variety of healthy living topics; same day appointments </text>
+<text x="165" y="1637" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0" class="s3_1">available; ensures access to reproductive and sexual health care for all. </text>
+<path d="M171.2,1792.8H768.6v-26H171.2v26Z" class="g0_1" />
+<path d="M163.9,1818.8H775.8v-26H163.9v26Z" class="g0_1" />
+<path d="M171.9,1844.7h596v-25.9h-596v25.9Z" class="g0_1" />
+<path d="M390.3,1870.7H544.7v-26H390.3v26Z" class="g0_1" />
+<text x="235" y="1681" class="s2_1">Public Health Clinic, Public Health, DHHS </text>
+<text x="357" y="1709" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">529 I St, Eureka, CA 95501 </text>
+<text x="409" y="1735" class="s3_1">707-445-6200 </text>
+<text x="258" y="1761" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://humboldtgov.org/557/Public-Health-Clinics </text>
+<text x="171" y="1787" class="s3_1">PHC o</text>
+<text x="223" y="1787" class="s4_1">ﬀ</text>
+<text x="235" y="1787" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,-0.2,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">ers adult, travel immunizations, and children's immunizations. </text>
+<text x="163" y="1813" dx="0,-0.9,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Tuberculosis testing/ screening and other services available at the main </text>
+<text x="171" y="1839" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">clinic in Eureka. Limited services are available at the Willow Creek and </text>
+<text x="389" y="1865" class="s3_1">Garberville clinics.</text>
+<path d="M163.8,2019.8H775.9v-25.9H163.8v25.9Z" class="g0_1" />
+<path d="M224.3,2045.8H710.7v-26H224.3v26Z" class="g0_1" />
+<text x="305" y="1909" class="s2_1">Redwood Memorial Hospital </text>
+<text x="317" y="1936" class="s3_1">3300 Renner Dr, Fortuna, CA 95540 </text>
+<text x="409" y="1962" class="s3_1">707-725-3361 </text>
+<text x="330" y="1988" dx="0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">https://www.stjoehumboldt.org/ </text>
+<text x="163" y="2014" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">A St. Joseph Health critical access hospital; along with Eureka campuses </text>
+<text x="224" y="2040" class="s3_1">o</text>
+<text x="235" y="2040" class="s4_1">ﬀ</text>
+<text x="248" y="2040" dx="0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,-0.4,0" class="s3_1">ers comprehensive services including emergency care.</text>
+<path d="M167.4,2197.9h605v-26h-605v26Z" class="g0_1" />
+<path d="M164.9,2223.9H774.8v-26H164.9v26Z" class="g0_1" />
+<path d="M254.3,2249.9H680.7v-26H254.3v26Z" class="g0_1" />
+<text x="343" y="2086" dx="0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,-0.5,0" class="s2_1">Redwood Urgent Care </text>
+<text x="334" y="2114" dx="0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">2440 23rd St, Eureka, CA 95501 </text>
+<text x="409" y="2140" class="s3_1">707-298-2011 </text>
+<text x="304" y="2166" dx="0,0,0,0,0,0,0,0,0,0,0,-0.7,0,-0.4,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,-0.4,0,0,0,0,0,0" class="s3_1">https://www.redwoodurgentcare.com/ </text>
+<text x="168" y="2192" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Open 365 days a year. An alternative to the emergency room for those </text>
+<text x="165" y="2218" dx="0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">without chronic or life threatening conditions. Monday through Sunday </text>
+<text x="253" y="2244" class="s3_1">9 a.m. to 6:30 p.m, major holidays 9 a.m. to 5 p.m.</text>
+<path d="M192.5,2398.4H747.3v-26H192.5v26Z" class="g0_1" />
+<path d="M172.3,2424.3H767.5v-25.9H172.3v25.9Z" class="g0_1" />
+<path d="M315.7,2450.3H619.3v-26H315.7v26Z" class="g0_1" />
+<text x="291" y="2288" dx="0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Redwoods Rural Health Center </text>
+<text x="294" y="2315" dx="0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0" class="s3_1">101 West Coast Road, Redway, CA 95560 </text>
+<text x="409" y="2341" class="s3_1">707-923-2783 </text>
+<text x="380" y="2367" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.rrhc.org/ </text>
+<text x="192" y="2393" dx="0,0,-0.4,-0.4,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0" class="s3_1">Provides responsive, preventive, high quality primary health care </text>
+<text x="172" y="2419" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">services, through a variety of healing disciplines, to all people without </text>
+<text x="316" y="2445" dx="0,-0.4,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">regard to social or economic status.</text>
+<path d="M172.9,2600.3h594v-25.9h-594v25.9Z" class="g0_1" />
+<path d="M185.7,2626.3H754v-26H185.7v26Z" class="g0_1" />
+<path d="M411,2652.3H524v-26H411v26Z" class="g0_1" />
+<text x="282" y="2489" dx="0,0,0,0,0,0,0,0,0,0,-1.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Southern Trinity Health Services </text>
+<text x="333" y="2517" dx="0,-2.4,-0.9,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">P.O. Box 4, Mad River, CA 95552 </text>
+<text x="409" y="2543" class="s3_1">707-574-6616 </text>
+<text x="357" y="2569" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.sthsclinic.org/ </text>
+<text x="172" y="2595" dx="0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0" class="s3_1">Provides access to quality, comprehensive, innovative, and integrated </text>
+<text x="186" y="2621" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,0,0,0,0,0,0,0,0" class="s3_1">primary health care and emergency medical services regardless of </text>
+<text x="410" y="2647" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.7" class="s3_1">ability to pay.</text>
+<path d="M164.9,2804.7h610v-26h-610v26Z" class="g0_1" />
+<path d="M191.5,2830.6H748.3v-25.9H191.5v25.9Z" class="g0_1" />
+<path d="M171.5,2856.6H768.2v-26H171.5v26Z" class="g0_1" />
+<path d="M203.5,2882.6H736.3v-26H203.5v26Z" class="g0_1" />
+<path d="M374.2,2908.6H560.8v-26H374.2v26Z" class="g0_1" />
+<text x="360" y="2694" class="s2_1">St. Joseph Hospital </text>
+<text x="238" y="2720" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">St. Joseph Hospital: 2700 Dolbeer St, Eureka CA 95501 </text>
+<text x="409" y="2746" class="s3_1">707-445-8121 </text>
+<text x="331" y="2772" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.stjosepheureka.org/ </text>
+<text x="165" y="2798" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">St. Joseph Hospital and General Hospital campus located within a block </text>
+<text x="190" y="2824" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0" class="s3_1">of each other in Eureka. O</text>
+<text x="412" y="2824" class="s4_1">ﬀ</text>
+<text x="425" y="2824" dx="0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">ers comprehensive services including </text>
+<text x="171" y="2850" dx="0,0,0,0,-0.2,0,0,0,0,-0.7,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">emergency, cardiac services, an accredited cancer program, childbirth </text>
+<text x="203" y="2876" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.2,0,0,0,-0.7,0,0,0,0,0,0,0,0" class="s3_1">center, orthopedic and sports medicine, neurosurgery, and an </text>
+<text x="374" y="2902" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.7" class="s3_1">outpatient laboratory,</text>
+<path d="M178.1,3058.6H761.7v-26H178.1v26Z" class="g0_1" />
+<path d="M159.1,3084.6h618v-26h-618v26Z" class="g0_1" />
+<path d="M287.1,3110.6H647.9v-26H287.1v26Z" class="g0_1" />
+<text x="297" y="2948" class="s2_1">United Indian Health Services </text>
+<text x="320" y="2975" dx="0,0,0,0,0,0,-0.4,0,0,0,0,0,-0.4,0,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">1600 Weeot Way, Arcata, CA 95521 </text>
+<text x="409" y="3001" class="s3_1">707-825-5000 </text>
+<text x="378" y="3027" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.uihs.org/ </text>
+<text x="178" y="3053" dx="0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Direct Health Care Services are made available to eligible persons of </text>
+<text x="158" y="3079" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">"Indian descent" and eligible non-Indian members (married to, or a child </text>
+<text x="287" y="3105" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1.1,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0.7,0,0" class="s3_1">of a person who is an "enrolled member").</text>
+
+
+<!-- Any embedded fonts defined here -->
+<style type="text/css" ><![CDATA[
+
+@font-face {
+	font-family: OpenSans-Light_8;
+	src: url("fonts/OpenSans-Light_8.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Regular_d;
+	src: url("fonts/OpenSans-Regular_d.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Bold_c;
+	src: url("fonts/OpenSans-Bold_c.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Regular_e;
+	src: url("fonts/OpenSans-Regular_e.woff") format("woff");
+}
+
+]]></style>
+
+</svg>

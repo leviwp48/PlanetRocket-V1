@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<!-- Page 1 -->
+<svg x="0" y="0" width="935" height="2513" viewBox="0 0 935 2513" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+style="display: block;margin-left: auto;margin-right: auto;">
+<defs>
+<clipPath id="c0_1"><path d="M0,2513.5V0H935V2513.5Z" /></clipPath>
+
+<style type="text/css"><![CDATA[
+text { white-space: pre; }
+path, image { pointer-events: none; }
+
+.s1_1{
+font-size: 30.56px;
+font-family: OpenSans-Light_8;
+fill: #FFFFFF;
+}
+.s2_1{
+font-size: 22.92px;
+font-family: OpenSans-Bold_a;
+fill: #000000;
+}
+.s3_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_b;
+fill: #000000;
+}
+.s4_1{
+font-size: 18.33px;
+font-family: OpenSans-Regular_c;
+fill: #000000;
+}
+
+.g0_1{
+fill: #FFFFFF;
+}
+.g1_1{
+}
+
+]]></style>
+
+</defs>
+<path d="M0,0
+L0,2513
+L935,2513
+L935,0 Z " 
+fill="#FFFFFF" stroke="none" />
+<g clip-path="url(#c0_1)">
+<path d="M0,2514.7H935V0H0V2514.7Z" class="g0_1" />
+</g>
+<path d="M332.5,32.9h270V82.2h-270Z" class="g1_1" />
+<text x="343" y="69" dx="0,0,0,0,0,0,0,0,0,0,-0.6,0,0,0,0,0,0,0" class="s1_1">Health &amp; Wellness </text>
+<path d="M169.8,231H769.9V205.1H169.8V231Z" class="g0_1" />
+<path d="M199.2,257H740.6V231H199.2v26Z" class="g0_1" />
+<path d="M171.6,283H768.2V257H171.6v26Z" class="g0_1" />
+<path d="M305.9,308.9H629.1V283H305.9v25.9Z" class="g0_1" />
+<text x="325" y="120" dx="0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,-1.8,0,0,0,0,0,0,-0.5,0,0" class="s2_1">Breastfeeding Task Force </text>
+<text x="323" y="148" dx="0,0,0,0,0,0,0,-0.4,0,0,0,0,0,-0.7,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">4635 Broadway, Eureka, CA 95503 </text>
+<text x="409" y="174" class="s3_1">707-441-5573 </text>
+<text x="227" y="200" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,-0.7,-1.5,0,0,0,0,0,0,-0.4,0,0" class="s3_1">https://humboldtgov.org/2273/Breastfeeding-Task-Force </text>
+<text x="169" y="226" dx="0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,-0.4,0,0,0,0,0,0" class="s3_1">The BFTF’s goal is to boost the duration of breastfeeding by increasing </text>
+<text x="198" y="252" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">community awareness and support for breastfeeding mothers. </text>
+<text x="171" y="278" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Members include lactation consultants, health care providers, nurses, </text>
+<text x="305" y="304" class="s3_1">doulas, peer counselors and mothers.</text>
+<path d="M169.9,459.2h600v-26h-600v26Z" class="g0_1" />
+<path d="M173.6,485.1H766.1V459.2H173.6v25.9Z" class="g0_1" />
+<path d="M319.4,511.1H615.6v-26H319.4v26Z" class="g0_1" />
+<text x="365" y="348" class="s2_1">Rx Safe Humboldt </text>
+<text x="158" y="376" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">Community Health Center Conference Room at 2200 Tydd St, Eureka, CA </text>
+<text x="409" y="402" class="s3_1">707-443-4563 </text>
+<text x="328" y="428" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.rxsafehumboldt.org/ </text>
+<text x="169" y="454" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">The Rx Safe Humboldt Coalition works to reduce overuse of opioids in </text>
+<text x="174" y="480" dx="0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Humboldt; resources for community members include an Alternative </text>
+<text x="319" y="505" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0" class="s3_1">Pain Management Resource guide.</text>
+<path d="M162.3,695H777.1V669H162.3v26Z" class="g0_1" />
+<path d="M161.5,721H777.1V695H161.5v26Z" class="g0_1" />
+<path d="M190.6,746.9H744.4V721H190.6v25.9Z" class="g0_1" />
+<text x="330" y="553" dx="0,-1.6,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Tobacco Free Humboldt, </text>
+<text x="352" y="583" class="s2_1">Public Health, DHHS </text>
+<text x="325" y="611" dx="0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">908 Seventh St, Eureka, CA 95501 </text>
+<text x="409" y="637" class="s3_1">707-268-2132 </text>
+<text x="241" y="663" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,-1.3,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://humboldtgov.org/662/Tobacco-Free-Humboldt </text>
+<text x="161" y="689" dx="0,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0" class="s3_1">Works on several aspects dealing with tobacco cessation. A resource for </text>
+<text x="161" y="715" class="s3_1">those helping people quit smoking as well as for those who want to quit </text>
+<text x="190" y="741" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0" class="s3_1">smoking. Call to learn about available resources and/or trainings.</text>
+<path d="M181,900.4H758.8v-26H181v26Z" class="g0_1" />
+<path d="M164.6,926.4H775.2v-26H164.6v26Z" class="g0_1" />
+<path d="M196.1,952.3H743.6V926.4H196.1v25.9Z" class="g0_1" />
+<path d="M210.5,978.3h514v-26h-514v26Z" class="g0_1" />
+<text x="247" y="790" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0" class="s2_1">North Coast Veterans Resource Center </text>
+<text x="331" y="817" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">109 Fourth St, Eureka, CA 95501 </text>
+<text x="409" y="843" class="s3_1">707-442-4322 </text>
+<text x="255" y="869" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,-0.2,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://www.vetsresource.org/vrc-north-coast.html </text>
+<text x="180" y="895" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">At the HCHV behavioral health program, NCVRC employs a full-time </text>
+<text x="165" y="921" dx="0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0" class="s3_1">therapist as well as a case manager to address some of the higher level </text>
+<text x="195" y="947" class="s3_1">needs clients may be facing including: substance abuse, healthy </text>
+<text x="210" y="973" dx="0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">relationships, anger management and communication skills.</text>
+<path d="M175.3,1128.1H764.4v-26H175.3v26Z" class="g0_1" />
+<path d="M212.4,1154h515v-25.9h-515V1154Z" class="g0_1" />
+<path d="M179.5,1180H760.3v-26H179.5v26Z" class="g0_1" />
+<path d="M247.6,1206H687.4v-26H247.6v26Z" class="g0_1" />
+<text x="221" y="1017" class="s2_1">Remi Vista Community Counseling Services </text>
+<text x="323" y="1045" dx="0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">3960 Walnut Dr, Eureka CA 95503 </text>
+<text x="409" y="1071" class="s3_1">707-268-8722 </text>
+<text x="227" y="1097" dx="0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">https://remivistainc.net/community-counseling-services/ </text>
+<text x="175" y="1123" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Services include group homes, school-based and clinic-based mental </text>
+<text x="212" y="1149" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">health services, wrap around programs, supported living for </text>
+<text x="178" y="1175" dx="0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0" class="s3_1">developmentally disabled adults. Accepting referrals for transitional </text>
+<text x="247" y="1201" class="s3_1">housing. A</text>
+<text x="337" y="1201" class="s4_1">ﬀ</text>
+<text x="349" y="1201" dx="0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">ordable ($50) mental health counseling.</text>
+<path d="M184.8,1385.5H755v-26H184.8v26Z" class="g0_1" />
+<path d="M164.3,1411.5H775.5v-26H164.3v26Z" class="g0_1" />
+<path d="M184.8,1437.4H755v-25.9H184.8v25.9Z" class="g0_1" />
+<path d="M324.2,1463.4H610.8v-26H324.2v26Z" class="g0_1" />
+<text x="265" y="1243" dx="0,0,0,-0.5,0,0,0,0,0,0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5,0,0,0,0" class="s2_1">Street Outreach Services (SOS Van), </text>
+<text x="346" y="1274" class="s2_1">Mental Health, DHHS </text>
+<text x="392" y="1301" dx="0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Various Locations </text>
+<text x="409" y="1327" class="s3_1">707-441-4614 </text>
+<text x="233" y="1353" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0" class="s3_1">http://humboldtgov.org/383/Mobile-Outreach-Program </text>
+<text x="184" y="1379" dx="0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">The DHHS Street Outreach Services (SOS) program delivers mental </text>
+<text x="165" y="1405" class="s3_1">health, public health, and social services to homeless people; especially </text>
+<text x="184" y="1431" dx="0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0" class="s3_1">those experiencing mental illness. Regular services are provided in </text>
+<text x="323" y="1457" dx="0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0" class="s3_1">Eureka, Manila, and McKinleyville.</text>
+<text x="273" y="1503" class="s2_1">Mental Health Same Day Services, </text>
+<text x="346" y="1534" class="s2_1">Mental Health, DHHS </text>
+<text x="337" y="1561" dx="0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">720 Wood St, Eureka CA 95501 </text>
+<text x="409" y="1587" class="s3_1">707-445-7715 </text>
+<text x="177" y="1613" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">https://humboldtgov.org/DocumentCenter/View/845/Mental-Health-</text>
+<text x="352" y="1639" dx="0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Programs-Contact-List-PDF </text>
+<text x="241" y="1665" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.7,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">http://humboldtgov.org/1760/24-hour-Crisis-Services </text>
+<text x="178" y="1691" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Same Day Services and Psychiatric Emergency Services o</text>
+<text x="660" y="1691" class="s4_1">ﬀ</text>
+<text x="673" y="1691" class="s3_1">er mental </text>
+<text x="186" y="1717" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">health crisis and stabilization services for persons exhibiting acute </text>
+<text x="189" y="1743" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,-0.4,-0.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">psychological distress. Outpatient therapy, outpatient medication </text>
+<text x="290" y="1769" class="s3_1">support, and case management available.</text>
+<path d="M176.1,2169.2H763.6v-26H176.1v26Z" class="g0_1" />
+<path d="M171.7,2195.2H768.1v-26H171.7v26Z" class="g0_1" />
+<path d="M161.7,2221.2H777.1v-26H161.7v26Z" class="g0_1" />
+<path d="M253.3,2247.1H681.7v-25.9H253.3v25.9Z" class="g0_1" />
+<text x="284" y="2058" class="s2_1">Humboldt Family Service Center </text>
+<text x="313" y="2085" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">1802 California St, Eureka, CA 95501 </text>
+<text x="409" y="2111" class="s3_1">707-443-7358 </text>
+<text x="322" y="2137" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://humboldtfamilyservice.org/ </text>
+<text x="175" y="2163" dx="0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Variety of sponsored programs including substance abuse, gambling </text>
+<text x="171" y="2189" class="s3_1">addiction, family violence and counseling services for both adults and </text>
+<text x="161" y="2215" dx="0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">children; Medi-Cal and other insurance accepted, and sliding fee scale is </text>
+<text x="253" y="2241" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">available; clinical intake form available on website.</text>
+<path d="M168.7,2370.8H771.1v-26H168.7v26Z" class="g0_1" />
+<path d="M178.4,2396.8H761.3v-26H178.4v26Z" class="g0_1" />
+<path d="M173,2422.7H766.8v-25.9H173v25.9Z" class="g0_1" />
+<path d="M181.2,2448.7H758.6v-26H181.2v26Z" class="g0_1" />
+<path d="M201.4,2474.7H738.3v-26H201.4v26Z" class="g0_1" />
+<path d="M252.6,2500.7H682.4v-26H252.6v26Z" class="g0_1" />
+<text x="276" y="2285" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,-1.6,-0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Crisis Line Text Messaging Option </text>
+<text x="375" y="2313" dx="0,-1.3,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Text HOME to 741741 </text>
+<text x="281" y="2339" dx="0,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,-0.2,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">https://www.crisistextline.org/how-it-works/ </text>
+<text x="168" y="2365" dx="0,0,0,0,0,0,0,0,-1.3,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Crisis Text Line serves anyone, in any type of crisis, providing access to </text>
+<text x="178" y="2391" dx="0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,-1.3,-0.4,0,0,0,0,0,0,0,0,0,0" class="s3_1">free, 24/7 support and information via text messages. Text HOME to </text>
+<text x="172" y="2417" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">741741 about any type of crisis to reach a volunteer Crisis Counselor. </text>
+<text x="181" y="2443" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">The goal of any text conversation is to get you to a calm, safe place. </text>
+<text x="201" y="2469" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,-0.4,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">Sometimes that means providing a referral to further help and </text>
+<text x="252" y="2495" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">sometimes it just means being there and listening.</text>
+<path d="M176.5,1965H763.3v-25.9H176.5V1965Z" class="g0_1" />
+<path d="M171.3,1991H768.4v-26H171.3v26Z" class="g0_1" />
+<path d="M351.5,2017h232v-26h-232v26Z" class="g0_1" />
+<text x="230" y="1824" class="s2_1">North Coast Association of Mental Health </text>
+<text x="391" y="1855" dx="0,0,-0.5,0,0,0,0,0,0,0,0,0,0,0" class="s2_1">Professionals </text>
+<text x="331" y="1881" dx="0,-2.4,-0.9,-0.7,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">P.O. Box 5363, Eureka, CA 95502 </text>
+<text x="409" y="1906" class="s3_1">707-441-3832 </text>
+<text x="362" y="1932" dx="0,0,0,0,0,0,0,0,0,0,-0.7,0,0,0,0,0,0,0,0,0,-0.2,0,0" class="s3_1">http://www.ncamhp.org/ </text>
+<text x="177" y="1958" dx="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">A clinical membership directory of local mental health professionals. </text>
+<text x="171" y="1984" dx="0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,-0.7,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0" class="s3_1">Listing searchable by specialty, region, clinician name, etc. Resource is </text>
+<text x="351" y="2010" dx="0,0,0,0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" class="s3_1">available by print or online.</text>
+
+
+<!-- Any embedded fonts defined here -->
+<style type="text/css" ><![CDATA[
+
+@font-face {
+	font-family: OpenSans-Regular_b;
+	src: url("fonts/OpenSans-Regular_b.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Bold_a;
+	src: url("fonts/OpenSans-Bold_a.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Light_8;
+	src: url("fonts/OpenSans-Light_8.woff") format("woff");
+}
+
+@font-face {
+	font-family: OpenSans-Regular_c;
+	src: url("fonts/OpenSans-Regular_c.woff") format("woff");
+}
+
+]]></style>
+
+</svg>
