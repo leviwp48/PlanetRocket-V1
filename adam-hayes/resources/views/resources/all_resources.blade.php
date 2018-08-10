@@ -93,7 +93,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
       <!-- vertical conservation element- the container for the regular posts as well as the left column for ads. -->
-            <div class="v-inner">
+      <div class="v-inner">
         <div class="box">
 
           <!-- This be the featured posts section -->
@@ -171,18 +171,8 @@ use Resources\Templates\Banner;
       
 
       <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      @include('inc.footer')
 
     </div>
 

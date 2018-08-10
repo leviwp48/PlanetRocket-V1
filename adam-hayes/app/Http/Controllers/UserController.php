@@ -13,6 +13,8 @@
 
 namespace App\Http\Controllers;
 
+use Composer\XdebugHandler\XdebugHandler;
+
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +38,10 @@ use Illuminate\Support\Facades\DB;
 use Log;
 
 use \Carbon\Carbon;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+;
 
 
 class UserController extends Controller {
@@ -408,7 +414,10 @@ class UserController extends Controller {
 		$project = new Project();
 	    $project->name = $projectName;
 	    $project->description = $projectDescription;
-	    $project->short_description = $shortProjectDescription;
+		$project->short_description = $shortProjectDescription;
+		
+		
+		
 
 		/*
 			BEGIN ALEC'S EDITS
@@ -511,9 +520,8 @@ class UserController extends Controller {
 	    					$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    					$projectCoverImage->save();
-
 	    					}
-			}
+						}
 
 					}
 				}
@@ -552,7 +560,7 @@ class UserController extends Controller {
 
 	    					$projectCoverImage->save();
 	    					}
-			}
+						}
 
 
 					}
@@ -921,7 +929,113 @@ class UserController extends Controller {
 		$project->name = $request->input('name');
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
-		$project->start_time = $request->input('start_time');
+		
+
+		//take the time fields and convert it into a datetime format that sql can digest
+		//this code was just taken from the create_new project area and put here
+
+		//php console test
+		
+		
+		
+		// add records to the log
+		//$log->warning('Foo');
+		//$log->error('Bar');
+
+		
+
+		$start_time = Carbon::parse($project->start_time);
+		//the daynum
+
+
+		
+		//Grab the day from the form
+		$projectDayNum = $request->input('daynum');
+		
+		//if the user did not modify the day, grab the original day from the project
+		if($projectDayNum == null){
+
+			$projectDayNum = trim(($start_time)->format('d'));
+			
+		}
+
+		//grab the month
+		$projectMonth = trim($request->input('month'));
+
+		//if the user did not modify the month, grab the original month from the project
+		if($projectMonth == null){
+			$projectMonth = trim(($start_time)->format('m'));
+			
+		}
+
+		//the year
+		$projectYear = $request->input('pyear');
+
+		
+
+		if($projectYear == null){
+			$projectYear = trim(($start_time)->format('Y'));
+			
+		}
+
+		//the hour
+		$projectStartHour = $request->input('hour');
+
+		
+		
+		if($projectStartHour == null){
+			$projectStartHour = ($start_time)->format('H');
+			
+		}
+		//the minute
+		$projectStartMin = $request->input('minute');
+		if($projectStartMin == null){
+			$projectStartMin = ($start_time)->format('i');
+		}
+
+		//am or pm
+		$projectAMorPM = trim($request->input('amORpm'));
+		if($projectAMorPM == null){
+			$projectAMorPM = ($start_time)->format('A');
+		}
+
+		//put reoccurence form getter here once implemented
+
+		$nodatebox = $request->input('datebox');
+
+		if($nodatebox === 'dateless')
+		{
+						$projectDayNum = null;
+			$projectMonth = null;
+			$projectYear = null;
+			$projectStartHour = null;
+			$projectStartMin = null;
+			$projectAMorPM = null;
+			$projectReoccur = 'none';
+
+
+
+		}
+
+		
+		//put all the form inputs into a date string
+		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+
+		
+		
+
+		//convert that string into an sql datetime format
+		$startTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
+		
+		
+
+		if($startTime != false)
+		{
+	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
+		}
+		
+
+
 		$project->needs()->sync($syncNeedData);
 
 		$project->save();

@@ -10,10 +10,10 @@
  https://colintoh.com/blog/display-table-anti-hero
  **/
 @font-face {
-  font-family: 'Neuropol';
-  src:  url('neuropol-x-rg.woff2') format('woff2'),
-        url('neuropol-x-rg.woff') format('woff'),
-        url('neuropol-x-rg.ttf')  format('truetype');
+  font-family: 'Open Sans', sans-serif;
+  src:  url('OpenSans-Bold.ttf') format('ttf'),
+        url('OpenSans-Light.ttf') format('ttf'),
+        url('OpenSans-Regular.ttf')  format('ttf');
 
 }
 

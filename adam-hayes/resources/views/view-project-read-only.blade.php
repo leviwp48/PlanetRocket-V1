@@ -180,23 +180,11 @@ use Resources\Templates\Banner;
                </script>
                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-             </div>
-           </div>
-         </div>
-      <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
+                </div>
+              </div>
+            </div>
 
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
-
-        <div class="row" style="height:20px;"></div>
-      </div>
-    </div>
+            @include('inc.footer')
 
     </div>
 

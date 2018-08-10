@@ -18,6 +18,7 @@ use Resources\Templates\Banner;
 <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
 <link rel="stylesheet" id="projectspage" href="/adam-hayes/public//css/projectspage.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
 
 <script src='/adam-hayes/fullcalendar/lib/jquery.min.js'></script>
@@ -324,19 +325,8 @@ use Resources\Templates\Banner;
             </div>
         </div>
       </div>
-      <!-- The footer -->
-      <div id="footer" class="v-inner" >
-        <div class="box footer" style="width:100vw;" >
-               
-               <p class="copyright"> Copyright 2018 Planet Rocket</p>
-                  <a href="<?php echo APP_BASE; ?>/contact">
-                    <p class="contact_us">Contact Us</p>
-                  </a>
-                
-                
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      
+      @include('inc.footer')
     </div>
 <script type="text/javascript">
 window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
