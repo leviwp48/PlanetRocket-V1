@@ -935,10 +935,7 @@ class UserController extends Controller {
 		//php console test
 		
 		
-		// create a log channel
-		$log = new Logger('test');
-		$log->pushHandler(new StreamHandler('C:\Users\William\AppData\Roaming\Code\logs\20180803T084836\debug.log', Logger::WARNING));
-
+		
 		// add records to the log
 		//$log->warning('Foo');
 		//$log->error('Bar');
@@ -1034,9 +1031,7 @@ class UserController extends Controller {
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 		}
-		else{
-			$log->error('date_create_from_format returned false');
-		}
+		
 
 
 		$project->needs()->sync($syncNeedData);

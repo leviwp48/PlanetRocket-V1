@@ -58,4 +58,10 @@ p{
     margin-left:10vw;
     margin-right:10vw;
 }
+#eventContent
+{
+    font-size:1vw;
+    text-align: justify;
+    margin:0;
+}
 
