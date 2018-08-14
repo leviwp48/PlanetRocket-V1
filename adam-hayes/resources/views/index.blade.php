@@ -13,7 +13,7 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
-<link rel="stylesheet" id="normalize" href="./css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">

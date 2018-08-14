@@ -12,16 +12,19 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Register</title>
 
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
 <link rel="stylesheet" id="form-styles" href="/adam-hayes/public/css/form-styles.css" type="text/css" media="all">
+<link rel="stylesheet" href="/adam-hayes/public/css/register-page.css" type="text/css" media="all">
 <script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="csrf-token" content="{!! csrf_token() !!}">
+</head>
 <body>
 
     <!-- These guys are hidden and fixed rows -->
@@ -135,7 +138,7 @@ use Resources\Templates\Banner;
 
                             <div class="form-group row mb-0" style="margin-top:30px;">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary formstyles-submit-button">
+                                    <button type="submit" class="btn btn-primary formstyles-submit-button" id="submit">
                                         {{ __('Register') }}
                                     </button>
                                 </div>
@@ -155,19 +158,7 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
-
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
-
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      @include('inc.footer')
 
     </div>
 

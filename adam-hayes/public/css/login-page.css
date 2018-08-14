@@ -1,0 +1,23 @@
+#email, #password, #login
+{
+    width: 45em;
+}
+
+
+
+body
+{
+    font: 2.5vw;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font:2.5vh;
+    }
+
+    #email, #password, #login
+    {
+        width:30em;
+    }
+    
+}

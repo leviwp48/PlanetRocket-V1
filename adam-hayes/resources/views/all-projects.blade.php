@@ -13,7 +13,7 @@ use Resources\Templates\Banner;
 <title>Planet Rocket - All Projects</title>
 
 
-<link rel="stylesheet" id="normalize" href="./css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public//css/about-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -294,7 +294,7 @@ use Resources\Templates\Banner;
             <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
-          <embed src="/adam-hayes/public/images/Artboard_4.svg">
+          <embed src="/adam-hayes/public/images/OurProjectPage_Astro.svg">
         </div>
         </div>
         <div class="v-inner">
