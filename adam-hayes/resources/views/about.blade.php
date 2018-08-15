@@ -106,7 +106,7 @@ use Resources\Templates\Banner;
       <embed src="/adam-hayes/public/images/SS_Aboutus3.svg">
 
       <div class="center_column_content">
-      <embed src="/adam-hayes/public/images/Artboard_21.svg">
+      <embed src="/adam-hayes/public/images/OurTeam_Updated.svg">
       </div>
       
 	  </div>

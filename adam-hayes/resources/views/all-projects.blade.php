@@ -171,13 +171,14 @@ use Resources\Templates\Banner;
           
         -->
         <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> September</h1>
-        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2_clear.png" >
+        
+        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_FINAL_Logo_Color.png" id="cpplogo" >
         
                   <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. September is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.</p>
-        
+        </div>
         </div>
 		<div class="v-inner" style="text-align:center; padding:5vw;">
 			<div class="box" style="height:100%; background:#FFFFFF;">
