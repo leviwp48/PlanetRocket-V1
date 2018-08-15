@@ -75,7 +75,8 @@ use Resources\Templates\Banner;
             <!-- This be the regular posts section -->
             <div class="center_column" style="width:90%; max-width:800px; height:100%;">
 
-
+              <div class=shadowbox_panel>
+                <div clas=shadowbox_content>
                 <div class="card">
                     <div class="card-header" style="margin-top:20px;"><h2>{{ __('Register') }}</h2></div>
 
@@ -147,7 +148,8 @@ use Resources\Templates\Banner;
                     </div>
                 </div>
 
-
+                </div>
+              </div>
             <div class="row" style="margin-top:40px;"></div>
 
 

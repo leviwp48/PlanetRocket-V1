@@ -26,14 +26,14 @@ body
     margin:5vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px)  {
     body {
-        font:2.5vh;
+        font:2.5vw;
     }
 
     #email, #password, #login
     {
-        width:30em;
+        width:70vw;
     }
     
 }

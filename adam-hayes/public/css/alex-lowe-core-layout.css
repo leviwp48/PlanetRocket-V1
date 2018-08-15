@@ -48,6 +48,17 @@
      margin-right:0;
 }
 
+@media only screen and (max-width: 1100px){
+  .copyright, .contact_us{
+    font-size: 1.75vh;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .copyright, .contact_us{
+    font-size: 1.25vh;
+  }
+}
 
 
 
@@ -72,6 +83,8 @@ body, html {
 height:100%;
 
 }
+
+
 
 
 /*the basic building blocks: row, box, abox and vbox. Why the position:relative style? It needs that so that

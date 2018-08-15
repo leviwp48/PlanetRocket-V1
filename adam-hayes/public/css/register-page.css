@@ -19,6 +19,7 @@ body
     border: 1px solid grey;
     
     border-radius: 25px;
+    padding:5vw;
 }
 
 .shadowbox_content
@@ -33,7 +34,7 @@ body
 
     #email, #password,  #password-confirm, #submit, #name
     {
-        width:30em;
+        width:70vw;
     }
     
 }
