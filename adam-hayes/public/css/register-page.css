@@ -1,0 +1,40 @@
+#email, #password, #password-confirm, #submit, #name
+{
+    width: 45em;
+}
+
+
+
+body
+{
+    font: 2.5vw;
+}
+
+.shadowbox_panel
+{
+
+    margin:5vw;
+    
+    box-shadow: 10px 10px 5px grey;
+    border: 1px solid grey;
+    
+    border-radius: 25px;
+    padding:5vw;
+}
+
+.shadowbox_content
+{
+    margin:5vw;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font:2.5vh;
+    }
+
+    #email, #password,  #password-confirm, #submit, #name
+    {
+        width:70vw;
+    }
+    
+}

@@ -65,3 +65,44 @@ p{
     margin:0;
 }
 
+#cpplogo
+{
+    width:25vw;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+      font-size: 8vw;  
+    }
+    p{
+        font-size: 5vw;
+    }
+   
+    #cpplogo 
+    {
+        width:15vh;
+    }
+    
+    #parallaxwithbanner
+    {
+        background-image: url(../images/lightroad-Projects.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        color:white;
+        text-align: center;
+        font-size: 2.5vh;
+        margin-bottom: 2.5vh;
+        
+    
+    
+    }
+    .box
+    {
+        padding-bottom:0;
+    }
+}
+
+

@@ -13,7 +13,7 @@ use Resources\Templates\Banner;
 <title>Planet Rocket - All Projects</title>
 
 
-<link rel="stylesheet" id="normalize" href="./css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public//css/about-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -171,13 +171,14 @@ use Resources\Templates\Banner;
           
         -->
         <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> September</h1>
-        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2_clear.png" >
+        
+        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_FINAL_Logo_Color.png" id="cpplogo" >
         
                   <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. September is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.</p>
-        
+        </div>
         </div>
 		<div class="v-inner" style="text-align:center; padding:5vw;">
 			<div class="box" style="height:100%; background:#FFFFFF;">
@@ -294,7 +295,7 @@ use Resources\Templates\Banner;
             <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
-          <embed src="/adam-hayes/public/images/Artboard_4.svg">
+          <embed src="/adam-hayes/public/images/OurProjectPage_Astro.svg">
         </div>
         </div>
         <div class="v-inner">

@@ -12,7 +12,7 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - All Projects</title>
 
-<link rel="stylesheet" id="normalize" href="./css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -106,7 +106,7 @@ use Resources\Templates\Banner;
       <embed src="/adam-hayes/public/images/SS_Aboutus3.svg">
 
       <div class="center_column_content">
-      <embed src="/adam-hayes/public/images/Artboard_21.svg">
+      <embed src="/adam-hayes/public/images/OurTeam_Updated.svg">
       </div>
       
 	  </div>
