@@ -70,6 +70,7 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+            'PhpConsole\\' => 11,
         ),
         'N' => 
         array (
@@ -122,6 +123,7 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'C' => 
         array (
             'Cron\\' => 5,
+            'Composer\\XdebugHandler\\' => 23,
             'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
@@ -242,6 +244,10 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'PhpConsole\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole',
+        ),
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
@@ -329,6 +335,10 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'Composer\\XdebugHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
         ),
         'Collective\\Html\\' => 
         array (
@@ -419,6 +429,7 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'App\\NeedsTree' => __DIR__ . '/../..' . '/app/NeedsTree.php',
         'App\\Project' => __DIR__ . '/../..' . '/app/Project.php',
         'App\\ProjectCoverImage' => __DIR__ . '/../..' . '/app/ProjectCoverImage.php',
+        
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -436,6 +447,9 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
         'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
+        'Composer\\XdebugHandler\\Process' => __DIR__ . '/..' . '/composer/xdebug-handler/src/Process.php',
+        'Composer\\XdebugHandler\\Status' => __DIR__ . '/..' . '/composer/xdebug-handler/src/Status.php',
+        'Composer\\XdebugHandler\\XdebugHandler' => __DIR__ . '/..' . '/composer/xdebug-handler/src/XdebugHandler.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -3074,6 +3088,38 @@ class ComposerStaticInit8922b8bdb29bd7a26e339aef9bfbe7ac
         'PharIo\\Version\\VersionConstraintParser' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintParser.php',
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
+        'PhpConsole\\Auth' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Auth.php',
+        'PhpConsole\\Client' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\ClientAuth' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\Connector' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\DataObject' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\DebugMessage' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\Dispatcher' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Dispatcher.php',
+        'PhpConsole\\Dispatcher\\Debug' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Dispatcher/Debug.php',
+        'PhpConsole\\Dispatcher\\Errors' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Dispatcher/Errors.php',
+        'PhpConsole\\Dispatcher\\Evaluate' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Dispatcher/Evaluate.php',
+        'PhpConsole\\Dumper' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Dumper.php',
+        'PhpConsole\\ErrorMessage' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\EvalProvider' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/EvalProvider.php',
+        'PhpConsole\\EvalResult' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/EvalProvider.php',
+        'PhpConsole\\EvalResultMessage' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\EventMessage' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\Handler' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Handler.php',
+        'PhpConsole\\Helper' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Helper.php',
+        'PhpConsole\\Message' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\OldVersionAdapter' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/OldVersionAdapter.php',
+        'PhpConsole\\PostponedResponse' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\PsrLogger' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/PsrLogger.php',
+        'PhpConsole\\Response' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\ServerAuthStatus' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
+        'PhpConsole\\Storage' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage.php',
+        'PhpConsole\\Storage\\AllKeysList' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/AllKeysList.php',
+        'PhpConsole\\Storage\\ExpiringKeyValue' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/ExpiringKeyValue.php',
+        'PhpConsole\\Storage\\File' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/File.php',
+        'PhpConsole\\Storage\\Memcache' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/Memcache.php',
+        'PhpConsole\\Storage\\MongoDB' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/MongoDB.php',
+        'PhpConsole\\Storage\\Session' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Storage/Session.php',
+        'PhpConsole\\TraceCall' => __DIR__ . '/..' . '/php-console/php-console/src/PhpConsole/Connector.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderFactory' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderFactory.php',
         'PhpParser\\BuilderHelpers' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderHelpers.php',
