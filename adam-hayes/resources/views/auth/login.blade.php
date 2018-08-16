@@ -12,17 +12,21 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Login</title>
 
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
 <link rel="stylesheet" id="form-styles" href="/adam-hayes/public/css/form-styles.css" type="text/css" media="all">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+<link rel="stylesheet" href="/adam-hayes/public/css/login-page.css" type="text/css" media="all">
+
 <script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="csrf-token" content="{!! csrf_token() !!}">
+</head>
 <body>
 
     <!-- These guys are hidden and fixed rows -->
@@ -72,75 +76,70 @@ use Resources\Templates\Banner;
 
             <!-- This be the regular posts section -->
             <div class="center_column" style="width:90%; max-width:800px; height:100%;">
+             <div class="shadowbox_panel">
+                <div class="shadowbox_content">
 
+                    <div class="row" style="margin-top:20px;"><h2>{{ __('Login') }}</h2></div>
 
+                    <a class="row" style="margin-top:20px;" href="<?php echo APP_BASE; ?>/register"><h3>Not registered? Sign up now!</h3></a>
 
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
 
+                            <div class="form-group row" style="margin-top:20px;">
+                                <label for="email" class="col-sm-4 col-form-label text-md-right"><h3>{{ __('E-Mail Address') }}</h3></label>
 
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="row formstyles-text-input form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-
-
-                <div class="row" style="margin-top:20px;"><h2>{{ __('Login') }}</h2></div>
-
-                <a class="row" style="margin-top:20px;" href="<?php echo APP_BASE; ?>/register"><h3>Not registered? Sign up now!</h3></a>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row" style="margin-top:20px;">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right"><h3>{{ __('E-Mail Address') }}</h3></label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="row formstyles-text-input form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row" style="margin-top:20px;">
-                            <label for="password" class="col-md-4 col-form-label text-md-right"><h3>{{ __('Password') }}</h3></label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="row formstyles-text-input form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row" style="margin-top:20px;">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" style="margin-top:20px;" class="btn btn-primary formstyles-submit-button">
-                                    {{ __('Login') }}
-                                </button>
+                            <div class="form-group row" style="margin-top:20px;">
+                                <label for="password" class="col-md-4 col-form-label text-md-right"><h3>{{ __('Password') }}</h3></label>
 
-                               <!-- <a class="row" style="margin-top:20px; margin-bottom:20px;" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a> -->
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="row formstyles-text-input form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                    @if ($errors->has('password'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
 
+                            <div class="form-group row" style="margin-top:20px;">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" style="margin-top:20px;" class="btn btn-primary formstyles-submit-button" id="login">
+                                        {{ __('Login') }}
+                                    </button>
+
+                                <!-- <a class="row" style="margin-top:20px; margin-bottom:20px;" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+              </div>
+            </div>
                 <div class="row" style="margin-top:40px;"></div>
 
 
@@ -151,21 +150,8 @@ use Resources\Templates\Banner;
       </div>
 
       <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
-
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
-
-        <div class="row" style="height:20px;"></div>
-        </div>
+      @include('inc.footer')
       </div>
-
-    </div>
 
 
 <script type="text/javascript">

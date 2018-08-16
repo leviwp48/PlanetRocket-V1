@@ -26,7 +26,7 @@ class AddRsvpToProjectsTable extends Migration
     public function down()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table-dropColumn('has_rsvp');
+            $table->dropColumn('has_rsvp');
         });
     }
 }

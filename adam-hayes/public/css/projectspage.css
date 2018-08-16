@@ -1,5 +1,8 @@
 
-
+body
+{
+    
+}
 #parallaxwithbanner
 {
   background-image: url(../images/lightroad-Projects.jpg);
@@ -10,7 +13,7 @@
     
     color:white;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     margin-bottom: 5vh;
     margin-top: 5vh;
     
@@ -40,7 +43,7 @@
 
 
 h1{
-    font-size: 3.5vw;
+    font-size: 4.5vh;
     margin-left:10vw;
     margin-right:10vw;
     margin-top:2.5vh;
@@ -48,24 +51,58 @@ h1{
 }
 
 p{
-    font-family: 'Open Sans';
+    
+
     font-weight: lighter;
-    font-size: 2.5vw;
+    font-size: 3.5vh;
     margin-left:10vw;
     margin-right:10vw;
 }
+#eventContent
+{
+    font-size:1vw;
+    text-align: justify;
+    margin:0;
+}
 
-.footer{
-    width:90%; 
-    max-width:900px;
-    color:#444444;
-    padding-top:20px; 
-    padding-bottom:50px; 
-    font-size:1vw; 
-    margin-left:2vw; 
+#cpplogo
+{
+    width:25vw;
 }
-.copyright, .contact_us{
-    font-size:1vw; 
-    margin-left:5vw;
-	margin-right:0;
+
+@media only screen and (max-width: 600px) {
+    h1{
+      font-size: 8vw;  
+    }
+    p{
+        font-size: 5vw;
+    }
+   
+    #cpplogo 
+    {
+        width:15vh;
+    }
+    
+    #parallaxwithbanner
+    {
+        background-image: url(../images/lightroad-Projects.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        color:white;
+        text-align: center;
+        font-size: 2.5vh;
+        margin-bottom: 2.5vh;
+        
+    
+    
+    }
+    .box
+    {
+        padding-bottom:0;
+    }
 }
+
+

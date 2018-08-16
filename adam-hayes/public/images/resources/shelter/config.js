@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"Shelter Resources","author":"","fileName":"Shelters.pdf","bounds":[[935,2931]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

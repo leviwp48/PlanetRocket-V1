@@ -254,7 +254,7 @@ ul li:hover > ul {
   width: 100px; }
 
 body {
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Open Sans', sans-serif; 
   background: #FFFFFF;
   line-height: 1.5;
   font-size: 15px;
@@ -379,7 +379,7 @@ h2.featured_post_tile_title {
     width: 200px; }
 
   body {
-  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -503,7 +503,7 @@ h2.featured_post_tile_title {
     width: 300px; }
 
   body {
-  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -627,7 +627,7 @@ h2.featured_post_tile_title {
     width: 100px; }
 
   body {
-  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 15px;
@@ -751,7 +751,7 @@ h2.featured_post_tile_title {
     width: 200px; }
 
   body {
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;
@@ -875,7 +875,7 @@ h2.featured_post_tile_title {
     width: 300px; }
 
   body {
-  /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     background: #FFFFFF;
     line-height: 1.5;
     font-size: 12px;

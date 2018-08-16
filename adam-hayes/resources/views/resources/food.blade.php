@@ -71,7 +71,7 @@ use Resources\Templates\Banner;
               <h1 style="font-weight:250;font-size:4em;">
                 Community Resources
               </h1>
-				<img src="/adam-hayes/public/images/resources/food.jpg" alt="list of resources" style="width:90%;"/>
+				 <embed src="/adam-hayes/public/images/resources/food/1.svg">
 
             </div>
             <!-- End of Center column -->

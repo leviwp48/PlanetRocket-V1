@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" class="" lang="en-US"><head>
+<html prefix="og: http://ogp.me/ns#" class="" lang="en-US">
+<head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
  -->
@@ -12,6 +13,7 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="/adam-hayes/public/css/index-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -23,7 +25,7 @@ use Resources\Templates\Banner;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="csrf-token" content="{!! csrf_token() !!}">
-
+</head>
 <body>
 
     <!-- These guys are hidden and fixed rows -->
@@ -130,22 +132,10 @@ use Resources\Templates\Banner;
           </div>
         </div>
       </div>
-
-      <div id="footer" class="v-inner" >
-        <div class="box footer" style="width:100vw;" >
-
-
-               <p class="copyright"> Copyright 2018 Planet Rocket</p>
-                  <a href="<?php echo APP_BASE; ?>/contact">
-                    <p class="contact_us">Contact Us</p>
-                  </a>
-
-
-
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      
+      @include('inc.footer')
     </div>
+    
 
 
 

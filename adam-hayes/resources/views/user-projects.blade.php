@@ -11,7 +11,7 @@ use Resources\Templates\Banner;
 ?>
 
 <title>Projects for user</title>
-
+<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
 <script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
@@ -29,6 +29,7 @@ use Resources\Templates\Banner;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="csrf-token" content="{!! csrf_token() !!}">
+</head>
 <body>
 
     <!-- These guys are hidden and fixed rows -->
@@ -96,20 +97,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-      <!-- The footer -->
-      <div id="footer" class="v-inner">
-        <div class="box footer" style="color:#FFFFFF;">
-
-          <div class="center_column" style="width:90%; max-width:900px; color:#444444; padding-top:20px; padding-bottom:20px; font-size:12px;">
-            <p class="copyright">&copy; 2018 Planet Rocket</p>
-            <a href="<?php echo APP_BASE; ?>/contact">
-              <p class="contact_us">Contact Us</p>
-            </a>
-          </div>
-
-        <div class="row" style="height:20px;"></div>
-        </div>
-      </div>
+      @include('inc.footer')
 
     </div>
 

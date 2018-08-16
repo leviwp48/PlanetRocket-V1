@@ -36,6 +36,8 @@ class ProjectController extends Controller {
 
 
 
+	
+
 	protected function checkForImageExtensions($imgName) {
 	$arr = explode(".", $imgName);
 	$last = strtoupper( end($arr) );
