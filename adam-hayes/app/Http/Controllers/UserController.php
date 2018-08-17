@@ -313,6 +313,12 @@ class UserController extends Controller {
 
 	}
 
+  /* Begin Levi Work */
+	public function filter_projects(){
+
+
+	}
+
 	/**
 	 * the ajax hook. create a new Project, give it the needs and assign the user
 	 * as the owner of the record.
@@ -415,9 +421,9 @@ class UserController extends Controller {
 	    $project->name = $projectName;
 	    $project->description = $projectDescription;
 		$project->short_description = $shortProjectDescription;
-		
-		
-		
+
+
+
 
 		/*
 			BEGIN ALEC'S EDITS
@@ -438,6 +444,13 @@ class UserController extends Controller {
 
 	    $project->save();
 
+			/*	Begin Levi's Work */
+
+			$category = trim($request->input('category'));
+
+			$project->category = $category;
+
+			$project->save();
 
 	    /*
 			BEGIN ALEC'S EDITS
@@ -823,6 +836,7 @@ class UserController extends Controller {
 	$toClient['short_description'] = $project->short_description;
 	$toClient['needs'] = $needs;
 	$toClient['rsvp'] = $project->has_rsvp;
+	$toClient['category'] = $project->category;
 	$toClient['project_images'] = $projectCoverImages;
 
 	return json_encode($toClient);
@@ -929,34 +943,34 @@ class UserController extends Controller {
 		$project->name = $request->input('name');
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
-		
+
 
 		//take the time fields and convert it into a datetime format that sql can digest
 		//this code was just taken from the create_new project area and put here
 
 		//php console test
-		
-		
-		
+
+
+
 		// add records to the log
 		//$log->warning('Foo');
 		//$log->error('Bar');
 
-		
+
 
 		$start_time = Carbon::parse($project->start_time);
 		//the daynum
 
 
-		
+
 		//Grab the day from the form
 		$projectDayNum = $request->input('daynum');
-		
+
 		//if the user did not modify the day, grab the original day from the project
 		if($projectDayNum == null){
 
 			$projectDayNum = trim(($start_time)->format('d'));
-			
+
 		}
 
 		//grab the month
@@ -965,27 +979,27 @@ class UserController extends Controller {
 		//if the user did not modify the month, grab the original month from the project
 		if($projectMonth == null){
 			$projectMonth = trim(($start_time)->format('m'));
-			
+
 		}
 
 		//the year
 		$projectYear = $request->input('pyear');
 
-		
+
 
 		if($projectYear == null){
 			$projectYear = trim(($start_time)->format('Y'));
-			
+
 		}
 
 		//the hour
 		$projectStartHour = $request->input('hour');
 
-		
-		
+
+
 		if($projectStartHour == null){
 			$projectStartHour = ($start_time)->format('H');
-			
+
 		}
 		//the minute
 		$projectStartMin = $request->input('minute');
@@ -1017,23 +1031,23 @@ class UserController extends Controller {
 
 		}
 
-		
+
 		//put all the form inputs into a date string
 		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
-		
-		
+
+
 
 		//convert that string into an sql datetime format
 		$startTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
-		
-		
+
+
 
 		if($startTime != false)
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 		}
-		
+
 
 
 		$project->needs()->sync($syncNeedData);
@@ -1100,7 +1114,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 	public function transportation() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1108,7 +1122,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function shelter() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1116,7 +1130,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function food() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1124,7 +1138,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function medical() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1132,7 +1146,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function health() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1140,7 +1154,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function lgbtq() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1148,7 +1162,7 @@ class UserController extends Controller {
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
 	}
-	
+
 		public function housing() {
 	$user = Auth::user();
 	$loggedIn = $user ? true : false;
@@ -1336,6 +1350,7 @@ class UserController extends Controller {
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
 	$toClient["rsvp"] = $project->has_rsvp;
+	$toClient["category"] = $project->category;
 
 
 	$fulltime = $project->start_time;
@@ -1458,7 +1473,7 @@ class UserController extends Controller {
 	 * working on the client-side.
 	 *
 	 */
-	 
+
 	public function projects_table_service(Request $request) {
 
 	//For later. Get Laravel to issue flat arrays instead of kvps. why would we bother? to make the responses smaller
@@ -1497,7 +1512,7 @@ class UserController extends Controller {
 			}
 
 		$projects = $query->get();
-		
+
 		$response = ["data"=>$projects, "count"=>$count];
 
 		//return json_encode($projects);
