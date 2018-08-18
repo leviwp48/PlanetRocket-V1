@@ -435,7 +435,7 @@ class UserController extends Controller {
 		*/
 
 			$project->has_rsvp = $has_rsvp;
-
+		$project->reoccur = 'none';
 	    $project->save();
 
 
@@ -446,7 +446,7 @@ class UserController extends Controller {
 			// here we handle reoccuring events. In the code directly above, we created
 			// our new event in the database. We will use the same code but with logic to handle the reoccurance
 
-			if($projectReoccur != 'none')
+			if($projectReoccur != 'none' && 0==1)
 			{
 
 
@@ -493,6 +493,7 @@ class UserController extends Controller {
 					while($reoccurStopDateTime >= $projectDateTime)
 					{
 						$project = new Project();
+						$project->reoccur = 'daily';
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
 	    				$project->short_description = $shortProjectDescription;
@@ -532,6 +533,7 @@ class UserController extends Controller {
 					while($reoccurStopDateTime >= $projectDateTime)
 					{
 						$project = new Project();
+						$project->reoccur = 'weekly';
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
 	    				$project->short_description = $shortProjectDescription;
@@ -581,6 +583,7 @@ class UserController extends Controller {
 						$project = new Project();
 	    				$project->name = $projectName;
 	   			 		$project->description = $projectDescription;
+	   			 		$project->reoccur = 'monthly';
 	    				$project->short_description = $shortProjectDescription;
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
 	    				$project->save();
@@ -618,6 +621,7 @@ class UserController extends Controller {
 					{
 						$project = new Project();
 	    				$project->name = $projectName;
+	    				$project->reoccur = 'yearly';
 	   			 		$project->description = $projectDescription;
 	    				$project->short_description = $shortProjectDescription;
 	    				$project->start_time = date_format($projectDateTime, 'Y-m-d H:i:s');
@@ -657,10 +661,21 @@ class UserController extends Controller {
 		 /*
 			END ALEC'S EDITS
 		*/
+		$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
+				$projectReoccurYear = trim($request->input('reoccuryear'));
 
+				$reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
+
+				date_default_timezone_set('America/Los_Angeles');
+
+				$projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
+				$reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
 	    //sync it with the different needs that it has. this is a cool function to manage all of the
 	    //pivot many-to-many connections automatically. painful code to write yourself and believe me I know.
 	    $project->needs()->sync($syncNeedData);
+	    $project->reoccur = $projectReoccur;
+	    $project->reoccur_through = date_format($reoccurStopDateTime, 'Y-m-d H:i:s');
 	    $project->save();
 
 	    //and attach the project to the user.
