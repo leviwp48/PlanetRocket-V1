@@ -661,7 +661,7 @@ class UserController extends Controller {
 		 /*
 			END ALEC'S EDITS
 		*/
-		$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
 				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
 				$projectReoccurYear = trim($request->input('reoccuryear'));
 
@@ -674,8 +674,65 @@ class UserController extends Controller {
 	    //sync it with the different needs that it has. this is a cool function to manage all of the
 	    //pivot many-to-many connections automatically. painful code to write yourself and believe me I know.
 	    $project->needs()->sync($syncNeedData);
-	    $project->reoccur = $projectReoccur;
-	    $project->reoccur_through = date_format($reoccurStopDateTime, 'Y-m-d H:i:s');
+	    
+	    
+	    
+	    
+	    
+	    $projectDayNum = trim($request->input('daynum'));
+
+		//the month
+		$projectMonth = trim($request->input('month'));
+
+		//the year
+		$projectYear = trim($request->input('pyear'));
+
+		//the hour
+		$projectStartHour = trim($request->input('hour'));
+
+		//the minute
+		$projectStartMin = trim($request->input('minute'));
+
+		//am or pm
+		$projectAMorPM = trim($request->input('amORpm'));
+
+		$projectReoccur = trim($request->input('reoccur'));
+
+		$nodatebox = $request->input('datebox');
+		if($nodatebox === 'dateless')
+		{
+			$projectDayNum = null;
+			$projectMonth = null;
+			$projectYear = null;
+			$projectStartHour = null;
+			$projectStartMin = null;
+			$projectAMorPM = null;
+			$projectReoccur = 'none';
+		}
+		
+	    $OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+	    
+	    $projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+		$projcectReoccurMonth = trim($request->input('reoccurmonth'));
+		$projectReoccurYear = trim($request->input('reoccuryear'));
+	    
+	    $reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
+	    
+	    
+	    $projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
+	    $reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
+	    
+	    if($reoccurStopDateTime >= $projectDateTime && $project->start_time != null)
+	    {
+	    	$project->reoccur = $projectReoccur;
+	   		$project->reoccur_through = date_format($reoccurStopDateTime, 'Y-m-d H:i:s');
+	    }
+	    else
+	    {
+	    	$project->reoccur = null;
+	    	$project->reoccur_through = null;
+	    }
+	    
 	    $project->save();
 
 	    //and attach the project to the user.
@@ -1551,13 +1608,6 @@ class UserController extends Controller {
 		$toClient['reoccur_string'] = $reoccur_string;
 		
 	}
-
-
-
-
-
-
-
 
 
 	$toClient['needs'] = $needsForClient;
