@@ -87,7 +87,7 @@ use Resources\Templates\Banner;
                  help you get started and connect you with people who can lend a hand.</p>
 
 
-              <div class="row"><h3>Upload images for your project</h3><h4>Images will not be uploaded for reoccurring projects past the first occurrence</h4></div>
+              <div class="row"><h3>Upload images for your project</h3></div>
               <?php echo Form::open(array(
               'route' => 'projects.upload-image-endpoint',
               'class'=>'dropzone',
