@@ -729,7 +729,7 @@ class UserController extends Controller {
 	    }
 	    else
 	    {
-	    	$project->reoccur = null;
+	    	$project->reoccur = 'none';
 	    	$project->reoccur_through = null;
 	    }
 	    
@@ -1495,7 +1495,7 @@ class UserController extends Controller {
 		$ptime = $ptime." ".$phour.":".$pmin."am";
 	}
 	
-	if($project->reoccur != 'none')
+	if($project->reoccur != 'none' && $project->reoccur != null)
 	{
 		$ptime = $ptime." and";
 	}
@@ -1511,7 +1511,7 @@ class UserController extends Controller {
 
 	
 
-	if($project->reoccur != 'none')
+	if($project->reoccur != 'none' && $project->reoccur != null)
 	{
 		$reoccur_string = "Reoccurs every ";
 		
