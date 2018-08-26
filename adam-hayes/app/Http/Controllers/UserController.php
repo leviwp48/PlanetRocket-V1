@@ -1419,7 +1419,7 @@ class UserController extends Controller {
 	{
 		$pmonth = "December";
 	}
-	$ptime = $pmonth." ".$pday.", ".$pyear;
+	$ptime = "Begins ".$pmonth." ".$pday.", ".$pyear." at ";
 
 	if($phour >= 12)
 	{
@@ -1437,6 +1437,11 @@ class UserController extends Controller {
 	{
 		$ptime = $ptime." ".$phour.":".$pmin."am";
 	}
+	
+	if($project->reoccur != 'none')
+	{
+		$ptime = $ptime." and";
+	}
 
 	$toClient['start_time'] = $ptime;
 	}
@@ -1444,6 +1449,116 @@ class UserController extends Controller {
 	{
 		$toClient['start_time'] = null;
 	}
+
+	
+
+	
+
+	if($project->reoccur != 'none')
+	{
+		$reoccur_string = "Reoccurs every ";
+		
+		if($project->reoccur == 'daily')
+		{
+			$reoccur_string = $reoccur_string."day through ";
+		}
+		
+		if($project->reoccur == 'weekly')
+		{
+			$reoccur_string = $reoccur_string."week through ";
+		}
+		
+		if($project->reoccur == 'monthly')
+		{
+			$reoccur_string = $reoccur_string."month through ";
+		}
+		
+		if($project->reoccur == 'yearly')
+		{
+			$reoccur_string = $reoccur_string."year through ";
+		}
+		
+		$final_bit_year = substr($project->reoccur_through,0,4);
+		
+		$final_bit_month = substr($project->reoccur_through, 5, 2);
+		
+	if($final_bit_month == "01")
+	{
+		$final_bit_month = "January";
+	}
+
+	elseif($final_bit_month == "02")
+	{
+		$final_bit_month = "February";
+	}
+
+	elseif($final_bit_month == "03")
+	{
+		$final_bit_month = "March";
+	}
+
+	elseif($final_bit_month == "04")
+	{
+		$final_bit_month = "April";
+	}
+
+	elseif($final_bit_month == "05")
+	{
+		$final_bit_month = "May";
+	}
+
+	elseif($final_bit_month == "06")
+	{
+		$final_bit_month = "June";
+	}
+
+	elseif($final_bit_month == "07")
+	{
+		$final_bit_month = "July";
+	}
+
+	elseif($final_bit_month == "08")
+	{
+		$final_bit_month = "August";
+	}
+
+	elseif($final_bit_month == "09")
+	{
+		$final_bit_month = "September";
+	}
+
+	elseif($final_bit_month == "10")
+	{
+		$final_bit_month = "October";
+	}
+
+	elseif($final_bit_month == "11")
+	{
+		$final_bit_month = "November";
+	}
+
+	elseif($final_bit_month == "12")
+	{
+		$final_bit_month = "December";
+	}
+		
+	$final_bit_day = substr($project->reoccur_through, 8, 2);
+	$final_bit_year = substr($project->reoccur_through, 0, 4);	
+	$reoccur_string = $reoccur_string.$final_bit_month." ".$final_bit_day.", ".$final_bit_year;
+		
+		
+		
+		$toClient['reoccur_string'] = $reoccur_string;
+		
+	}
+
+
+
+
+
+
+
+
 
 	$toClient['needs'] = $needsForClient;
 	$toClient['logged_in'] = $isUser;
