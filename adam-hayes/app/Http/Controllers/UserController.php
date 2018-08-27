@@ -812,23 +812,42 @@ class UserController extends Controller {
 	    //we let people edit each others projects willy-nilly.
 		if(Project::doesProjectIDBelongToUser($id)) {
 
-		$name = Project::getFoundProject()->name;
-		$startdate = Project::getFoundProject()->start_time;
-		$starttime = Carbon::parse($startdate);
-		$description = Project::getFoundProject()->description;
-		$short_description = Project::getFoundProject()->short_description;
-
-		return \View::make("edit-project")
-			->with("all_needs", $this->getNeedsTreeAsJSON())
-			->with("user", $user)
-			->with("logged_in", true)
-			->with("project_name", $name)
-			->with("start_time", $starttime)
-			->with("description", $description)
-			->with("short_description", $short_description);
-
-
-		}
+		
+			$name = Project::getFoundProject()->name;
+			$startdate = Project::getFoundProject()->start_time;
+			$starttime = Carbon::parse($startdate);
+			$description = Project::getFoundProject()->description;
+			$short_description = Project::getFoundProject()->short_description;
+	
+			
+			$reoccur = Project::getFoundProject()->reoccur;
+			if($reoccur == null){
+				$reoccur= "none";
+			}
+			
+			$reoccur_through = Project::getFoundProject()->reoccur_through;
+			if($reoccur_through == null){
+				$reoccur_through = "none";
+			}
+			else{
+				$reoccur_through = Carbon::parse($reoccur_through);
+			}
+	
+			return \View::make("edit-project")
+				->with("all_needs", $this->getNeedsTreeAsJSON())
+				->with("user", $user)
+				->with("logged_in", true)
+				->with("project_name", $name)
+				->with("start_time", $starttime)
+				->with("description", $description)
+				->with("short_description", $short_description)
+				->with("reoccur", $reoccur)
+				->with("reoccur_through", $reoccur_through)
+				;
+	
+	
+	
+			}
 
 		//if they don't own the project, then just return the read-only view of the project.
 		else {
@@ -1017,9 +1036,11 @@ class UserController extends Controller {
 		
 
 		$start_time = Carbon::parse($project->start_time);
-		//the daynum
+		
+		$projectReoccur = $project->reoccur;
+		$reoccur_date = Carbon::parse($project->reoccur_through);
 
-
+		
 		
 		//Grab the day from the form
 		$projectDayNum = $request->input('daynum');
@@ -1089,6 +1110,38 @@ class UserController extends Controller {
 
 		}
 
+		$reoccurStopDateTime = null;
+		$projectReoccur = trim($request->input('reoccur'));
+
+		//grab reoccur date if reoccur isnt null
+		if($projectReoccur != 'none' && $projectReoccur != null){
+
+				//if the user does not put in a day, use the previously entered reoccur day
+				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+				if($projectReoccurDayNum == null){
+					$projectReoccurDayNum = trim(($reoccur_date)->format('d'));
+				}
+
+				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
+				if($projcectReoccurMonth ==null){
+					$projcectReoccurMonth = trim(($reoccur_date)->format('m'));
+				}
+
+				$projectReoccurYear = trim($request->input('reoccuryear'));
+				if($projectReoccurYear == null){
+					$projectReoccurYear = trim(($reoccur_date)->format('Y'));
+				}
+				$reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
+
+				date_default_timezone_set('America/Los_Angeles');
+
+				
+				$reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
+
+		}
+		$project->reoccur = $projectReoccur;
+		
+
 		
 		//put all the form inputs into a date string
 		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
@@ -1104,6 +1157,9 @@ class UserController extends Controller {
 		if($startTime != false)
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
+		}
+		if($reoccurStopDateTime != null){
+			$project->reoccur_through = $reoccurStopDateTime;
 		}
 		
 
