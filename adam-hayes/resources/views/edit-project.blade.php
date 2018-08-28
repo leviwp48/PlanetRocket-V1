@@ -280,6 +280,7 @@ use Resources\Templates\Banner;
                     <?php
                       }
                       ?>
+                </div>
             
                 <div class="h-group switch-to-rows" style="margin-top:35px;">
                     <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
