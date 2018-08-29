@@ -247,6 +247,266 @@ use Resources\Templates\Banner;
                     'short_description' : short_description
                   };
                   _events.push(event);
+                  
+                var reoccur = '<?= $project->reoccur ?>';
+                if(reoccur != 'none' && reoccur != null)
+                {
+                    if(reoccur == "daily")
+                    {
+                    	var projectdatestart = start;
+                    	
+                    	var reoccurThroughDate = new Date('<?= $project->reoccur_through ?>');
+                    	
+                    	
+                    	var projectDate = new Date(projectdatestart);
+                  		projectDate.setDate(projectDate.getDate() + 1);
+                    	
+                    while(reoccurThroughDate >= projectDate)
+                    {
+                    	var h = projectDate.getHours();
+                    	var min = projectDate.getMinutes();
+                    	var s = "00";
+							
+						var y = projectDate.getFullYear();
+						var month = projectDate.getMonth();
+						var d = projectDate.getDate();
+                  		
+                  		if(h < 10)
+                    	{
+                    		h = "0"+h;
+                		}
+                		
+                		if(min < 10)
+                		{
+                			min = "0"+min;
+                   		}
+                    		
+                		month = month + 1;
+                		if(month < 10)
+                		{
+                			month = "0"+month;
+                		}
+                    		
+                    	if(d < 10)
+                		{
+                			d = "0"+d;
+                		}
+                		
+                		var startString = y + "-" + month + "-" + d + " " + h + ":" + min + ":" + s;
+                  
+                  
+                  var id = <?= $project->id ?>;
+                  var title = "<?= $project->name ?>";
+                  var description = "<?= $desc ?>";
+                  var short_description = "<?= $short_desc ?>";
+                  newEvent = {
+                    'id' : id,
+                    'title' : title,
+                    'allDay' : false,
+                    'start' : startString,
+                    'color' : '#1e2e84',
+                    'description' : description,
+                    'short_description' : short_description
+                  };
+                  _events.push(newEvent);
+                  projectDate.setDate(projectDate.getDate() + 1);
+                  }
+                  }
+                  
+                  
+                  if(reoccur == "weekly")
+                    {
+                    	var projectdatestart = start;
+                    	
+                    	var reoccurThroughDate = new Date('<?= $project->reoccur_through ?>');
+                    	
+                    	
+                    	var projectDate = new Date(projectdatestart);
+                  		 projectDate.setDate(projectDate.getDate() + 7);
+                    	
+                    while(reoccurThroughDate >= projectDate)
+                    {
+                    	var h = projectDate.getHours();
+                    	var min = projectDate.getMinutes();
+                    	var s = "00";
+							
+						var y = projectDate.getFullYear();
+						var month = projectDate.getMonth();
+						var d = projectDate.getDate();
+                  		
+                  		if(h < 10)
+                    	{
+                    		h = "0"+h;
+                		}
+                		
+                		if(min < 10)
+                		{
+                			min = "0"+min;
+                   		}
+                    		
+                		month = month + 1;
+                		if(month < 10)
+                		{
+                			month = "0"+month;
+                		}
+                    		
+                    	if(d < 10)
+                		{
+                			d = "0"+d;
+                		}
+                		
+                		var startString = y + "-" + month + "-" + d + " " + h + ":" + min + ":" + s;
+                  
+                  
+                  var id = <?= $project->id ?>;
+                  var title = "<?= $project->name ?>";
+                  var description = "<?= $desc ?>";
+                  var short_description = "<?= $short_desc ?>";
+                  newEvent = {
+                    'id' : id,
+                    'title' : title,
+                    'allDay' : false,
+                    'start' : startString,
+                    'color' : '#1e2e84',
+                    'description' : description,
+                    'short_description' : short_description
+                  };
+                  _events.push(newEvent);
+                  projectDate.setDate(projectDate.getDate() + 7);
+                  }
+                  }
+                  
+                  
+                  
+                  if(reoccur == "monthly")
+                    {
+                    	var projectdatestart = start;
+                    	
+                    	var reoccurThroughDate = new Date('<?= $project->reoccur_through ?>');
+                    	
+                    	
+                    	var projectDate = new Date(projectdatestart);
+                  		projectDate.setMonth(projectDate.getMonth() + 1);
+                    	
+                    while(reoccurThroughDate >= projectDate)
+                    {
+                    	var h = projectDate.getHours();
+                    	var min = projectDate.getMinutes();
+                    	var s = "00";
+							
+						var y = projectDate.getFullYear();
+						var month = projectDate.getMonth();
+						var d = projectDate.getDate();
+                  		
+                  		if(h < 10)
+                    	{
+                    		h = "0"+h;
+                		}
+                		
+                		if(min < 10)
+                		{
+                			min = "0"+min;
+                   		}
+                    		
+                		month = month + 1;
+                		if(month < 10)
+                		{
+                			month = "0"+month;
+                		}
+                    		
+                    	if(d < 10)
+                		{
+                			d = "0"+d;
+                		}
+                		
+                		var startString = y + "-" + month + "-" + d + " " + h + ":" + min + ":" + s;
+                  
+                  
+                  var id = <?= $project->id ?>;
+                  var title = "<?= $project->name ?>";
+                  var description = "<?= $desc ?>";
+                  var short_description = "<?= $short_desc ?>";
+                  newEvent = {
+                    'id' : id,
+                    'title' : title,
+                    'allDay' : false,
+                    'start' : startString,
+                    'color' : '#1e2e84',
+                    'description' : description,
+                    'short_description' : short_description
+                  };
+                  _events.push(newEvent);
+                  projectDate.setMonth(projectDate.getMonth() + 1);
+                  }
+                  }
+                  
+                  if(reoccur == "yearly")
+                    {
+                    	var projectdatestart = start;
+                    	
+                    	var reoccurThroughDate = new Date('<?= $project->reoccur_through ?>');
+                    	
+                    	
+                    	var projectDate = new Date(projectdatestart);
+                  		projectDate.setFullYear(projectDate.getFullYear() + 1);
+                    	
+                    while(reoccurThroughDate >= projectDate)
+                    {
+                    	var h = projectDate.getHours();
+                    	var min = projectDate.getMinutes();
+                    	var s = "00";
+							
+						var y = projectDate.getFullYear();
+						var month = projectDate.getMonth();
+						var d = projectDate.getDate();
+                  		
+                  		if(h < 10)
+                    	{
+                    		h = "0"+h;
+                		}
+                		
+                		if(min < 10)
+                		{
+                			min = "0"+min;
+                   		}
+                    		
+                		month = month + 1;
+                		if(month < 10)
+                		{
+                			month = "0"+month;
+                		}
+                    		
+                    	if(d < 10)
+                		{
+                			d = "0"+d;
+                		}
+                		
+                		var startString = y + "-" + month + "-" + d + " " + h + ":" + min + ":" + s;
+                  
+                  
+                  var id = <?= $project->id ?>;
+                  var title = "<?= $project->name ?>";
+                  var description = "<?= $desc ?>";
+                  var short_description = "<?= $short_desc ?>";
+                  newEvent = {
+                    'id' : id,
+                    'title' : title,
+                    'allDay' : false,
+                    'start' : startString,
+                    'color' : '#1e2e84',
+                    'description' : description,
+                    'short_description' : short_description
+                  };
+                  _events.push(newEvent);
+                  projectDate.setFullYear(projectDate.getFullYear() + 1);
+                  }
+                  }
+                  
+                  
+                  
+                  
+                  
+                }
                 </script>
                 <?php
               }
