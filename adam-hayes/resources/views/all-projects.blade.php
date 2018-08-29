@@ -20,6 +20,7 @@ use Resources\Templates\Banner;
 <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
 <link rel="stylesheet" id="projectspage" href="/adam-hayes/public//css/projectspage.css" type="text/css" media="all">
+<link rel='stylesheet' href='/adam-hayes/public/css/filter-dropdown.css'>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
 
@@ -158,22 +159,22 @@ use Resources\Templates\Banner;
                 </div>
               </div>
             </div>
-            
+
               <div class="row" style="text-align:center; background:#FFFFFF;"> <h1>Get Ready <strong>For</strong> August</h1>
                   The month of August is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. August is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
                   idea into a reality.
               </div>
-            
+
             </div>
           </div>
-          
+
         -->
         <h1 style="padding-top:3vw;">Get Ready <strong>For</strong> September</h1>
-        
+
         <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_FINAL_Logo_Color.png" id="cpplogo" >
-        
+
                   <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw;">The month of September is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. September is a good time to help out our community.
                   If you have an idea how to make an impact in our community please feel free to launch a project and we can help you turn your
@@ -187,7 +188,7 @@ use Resources\Templates\Banner;
             <p>This is the place to find <strong>VOLUNTEERING</strong> opportunities. <strong>INERESTING</strong> projects to help with, and where you can <strong>CREATE</strong> your own events!</p>
 				<div class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF;">
 					<div class="row" style="margin-top:20px;">
-            
+
 					                <?php
                   if($user) {
                   ?>
@@ -518,7 +519,7 @@ use Resources\Templates\Banner;
             </div>
           </div>
         </div>
-        
+
       </div>
 <!--
 		<div class="v-inner">
@@ -552,7 +553,7 @@ use Resources\Templates\Banner;
       <div id="astroparallax">
         <div id="parallax_text_container">
           <!--
-            <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
+            <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
           <embed src="/adam-hayes/public/images/OurProjectPage_Astro.svg">
@@ -583,12 +584,35 @@ use Resources\Templates\Banner;
                 ?>
               </div>
               <div class="row" style="margin-top:20px;"><h2>Create something for our community</h2></div>
+
+              <!-- Begin Levi Work -->
+
+                <div class="row" style="padding:8px; padding-left:20px; padding-right:20px;">
+                          <div class="box" id="user-nav-widget-name-container">
+                            <div class="dropdown">
+                              Filter
+                              <div class="dropdown-content">
+                                <a href="<?php echo APP_BASE; ?>/user/projects">
+                                  <div class="box formstyles-button">tech</div>
+                                </a>
+                                <a href="<?php echo APP_BASE; ?>/user/projects">
+                                  <div class="box formstyles-button">labor</div>
+                                </a>
+                                <a href="<?php echo APP_BASE; ?>/user/projects">
+                                  <div class="box formstyles-button">transportation</div>
+                                </a>
+                              </div>
+                           </div>
+                          </div>
+                </div>
+
+
               <div id="all_projects" style="margin-top:20px;" class="row"></div>
               <div class="row" style="margin-top:40px;"></div>
             </div>
         </div>
       </div>
-      
+
       @include('inc.footer')
     </div>
 <script type="text/javascript">

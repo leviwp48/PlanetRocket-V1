@@ -33,7 +33,7 @@ return array(
     'App\\NeedsTree' => $baseDir . '/app/NeedsTree.php',
     'App\\Project' => $baseDir . '/app/Project.php',
     'App\\ProjectCoverImage' => $baseDir . '/app/ProjectCoverImage.php',
-    
+    'App\\ProjectOccurence' => $baseDir . '/app/ProjectOccurence.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
