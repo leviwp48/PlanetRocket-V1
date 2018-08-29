@@ -679,7 +679,7 @@ class UserController extends Controller {
 		 /*
 			END ALEC'S EDITS
 		*/
-		$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
 				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
 				$projectReoccurYear = trim($request->input('reoccuryear'));
 
@@ -692,8 +692,65 @@ class UserController extends Controller {
 	    //sync it with the different needs that it has. this is a cool function to manage all of the
 	    //pivot many-to-many connections automatically. painful code to write yourself and believe me I know.
 	    $project->needs()->sync($syncNeedData);
-	    $project->reoccur = $projectReoccur;
-	    $project->reoccur_through = date_format($reoccurStopDateTime, 'Y-m-d H:i:s');
+	    
+	    
+	    
+	    
+	    
+	    $projectDayNum = trim($request->input('daynum'));
+
+		//the month
+		$projectMonth = trim($request->input('month'));
+
+		//the year
+		$projectYear = trim($request->input('pyear'));
+
+		//the hour
+		$projectStartHour = trim($request->input('hour'));
+
+		//the minute
+		$projectStartMin = trim($request->input('minute'));
+
+		//am or pm
+		$projectAMorPM = trim($request->input('amORpm'));
+
+		$projectReoccur = trim($request->input('reoccur'));
+
+		$nodatebox = $request->input('datebox');
+		if($nodatebox === 'dateless')
+		{
+			$projectDayNum = null;
+			$projectMonth = null;
+			$projectYear = null;
+			$projectStartHour = null;
+			$projectStartMin = null;
+			$projectAMorPM = null;
+			$projectReoccur = 'none';
+		}
+		
+	    $OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
+	    
+	    $projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+		$projcectReoccurMonth = trim($request->input('reoccurmonth'));
+		$projectReoccurYear = trim($request->input('reoccuryear'));
+	    
+	    $reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
+	    
+	    
+	    $projectDateTime = date_create_from_format('Y-m-d H:i:s', $OGDateString);
+	    $reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
+	    
+	    if($reoccurStopDateTime >= $projectDateTime && $project->start_time != null)
+	    {
+	    	$project->reoccur = $projectReoccur;
+	   		$project->reoccur_through = date_format($reoccurStopDateTime, 'Y-m-d H:i:s');
+	    }
+	    else
+	    {
+	    	$project->reoccur = 'none';
+	    	$project->reoccur_through = null;
+	    }
+	    
 	    $project->save();
 
 	    //and attach the project to the user.
@@ -773,23 +830,42 @@ class UserController extends Controller {
 	    //we let people edit each others projects willy-nilly.
 		if(Project::doesProjectIDBelongToUser($id)) {
 
-		$name = Project::getFoundProject()->name;
-		$startdate = Project::getFoundProject()->start_time;
-		$starttime = Carbon::parse($startdate);
-		$description = Project::getFoundProject()->description;
-		$short_description = Project::getFoundProject()->short_description;
-
-		return \View::make("edit-project")
-			->with("all_needs", $this->getNeedsTreeAsJSON())
-			->with("user", $user)
-			->with("logged_in", true)
-			->with("project_name", $name)
-			->with("start_time", $starttime)
-			->with("description", $description)
-			->with("short_description", $short_description);
-
-
-		}
+		
+			$name = Project::getFoundProject()->name;
+			$startdate = Project::getFoundProject()->start_time;
+			$starttime = Carbon::parse($startdate);
+			$description = Project::getFoundProject()->description;
+			$short_description = Project::getFoundProject()->short_description;
+	
+			
+			$reoccur = Project::getFoundProject()->reoccur;
+			if($reoccur == null){
+				$reoccur= "none";
+			}
+			
+			$reoccur_through = Project::getFoundProject()->reoccur_through;
+			if($reoccur_through == null){
+				$reoccur_through = "none";
+			}
+			else{
+				$reoccur_through = Carbon::parse($reoccur_through);
+			}
+	
+			return \View::make("edit-project")
+				->with("all_needs", $this->getNeedsTreeAsJSON())
+				->with("user", $user)
+				->with("logged_in", true)
+				->with("project_name", $name)
+				->with("start_time", $starttime)
+				->with("description", $description)
+				->with("short_description", $short_description)
+				->with("reoccur", $reoccur)
+				->with("reoccur_through", $reoccur_through)
+				;
+	
+	
+	
+			}
 
 		//if they don't own the project, then just return the read-only view of the project.
 		else {
@@ -981,9 +1057,9 @@ class UserController extends Controller {
 
 
 		$start_time = Carbon::parse($project->start_time);
-		//the daynum
-
-
+		
+		$projectReoccur = $project->reoccur;
+		$reoccur_date = Carbon::parse($project->reoccur_through);
 
 		//Grab the day from the form
 		$projectDayNum = $request->input('daynum');
@@ -1053,6 +1129,36 @@ class UserController extends Controller {
 
 		}
 
+		$reoccurStopDateTime = null;
+		$projectReoccur = trim($request->input('reoccur'));
+
+		//grab reoccur date if reoccur isnt null
+		if($projectReoccur != 'none' && $projectReoccur != null){
+
+				//if the user does not put in a day, use the previously entered reoccur day
+				$projectReoccurDayNum = trim($request->input('reoccurdaynum'));
+				if($projectReoccurDayNum == null){
+					$projectReoccurDayNum = trim(($reoccur_date)->format('d'));
+				}
+
+				$projcectReoccurMonth = trim($request->input('reoccurmonth'));
+				if($projcectReoccurMonth ==null){
+					$projcectReoccurMonth = trim(($reoccur_date)->format('m'));
+				}
+
+				$projectReoccurYear = trim($request->input('reoccuryear'));
+				if($projectReoccurYear == null){
+					$projectReoccurYear = trim(($reoccur_date)->format('Y'));
+				}
+				$reoccurStopString = $this->returnDateTime($projectReoccurDayNum, $projcectReoccurMonth, $projectReoccurYear, '23', '59', '59');
+
+				date_default_timezone_set('America/Los_Angeles');
+
+				
+				$reoccurStopDateTime = date_create_from_format('Y-m-d H:i:s', $reoccurStopString);
+
+		}
+		$project->reoccur = $projectReoccur;
 
 		//put all the form inputs into a date string
 		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
@@ -1069,8 +1175,11 @@ class UserController extends Controller {
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 		}
-
-
+		
+    if($reoccurStopDateTime != null){
+		$project->reoccur_through = $reoccurStopDateTime;
+		}
+		
 
 		$project->needs()->sync($syncNeedData);
 
@@ -1441,7 +1550,7 @@ class UserController extends Controller {
 	{
 		$pmonth = "December";
 	}
-	$ptime = $pmonth." ".$pday.", ".$pyear;
+	$ptime = "Begins ".$pmonth." ".$pday.", ".$pyear." at ";
 
 	if($phour >= 12)
 	{
@@ -1459,6 +1568,11 @@ class UserController extends Controller {
 	{
 		$ptime = $ptime." ".$phour.":".$pmin."am";
 	}
+	
+	if($project->reoccur != 'none' && $project->reoccur != null)
+	{
+		$ptime = $ptime." and";
+	}
 
 	$toClient['start_time'] = $ptime;
 	}
@@ -1466,6 +1580,109 @@ class UserController extends Controller {
 	{
 		$toClient['start_time'] = null;
 	}
+
+	
+
+	
+
+	if($project->reoccur != 'none' && $project->reoccur != null)
+	{
+		$reoccur_string = "Reoccurs every ";
+		
+		if($project->reoccur == 'daily')
+		{
+			$reoccur_string = $reoccur_string."day through ";
+		}
+		
+		if($project->reoccur == 'weekly')
+		{
+			$reoccur_string = $reoccur_string."week through ";
+		}
+		
+		if($project->reoccur == 'monthly')
+		{
+			$reoccur_string = $reoccur_string."month through ";
+		}
+		
+		if($project->reoccur == 'yearly')
+		{
+			$reoccur_string = $reoccur_string."year through ";
+		}
+		
+		$final_bit_year = substr($project->reoccur_through,0,4);
+		
+		$final_bit_month = substr($project->reoccur_through, 5, 2);
+		
+	if($final_bit_month == "01")
+	{
+		$final_bit_month = "January";
+	}
+
+	elseif($final_bit_month == "02")
+	{
+		$final_bit_month = "February";
+	}
+
+	elseif($final_bit_month == "03")
+	{
+		$final_bit_month = "March";
+	}
+
+	elseif($final_bit_month == "04")
+	{
+		$final_bit_month = "April";
+	}
+
+	elseif($final_bit_month == "05")
+	{
+		$final_bit_month = "May";
+	}
+
+	elseif($final_bit_month == "06")
+	{
+		$final_bit_month = "June";
+	}
+
+	elseif($final_bit_month == "07")
+	{
+		$final_bit_month = "July";
+	}
+
+	elseif($final_bit_month == "08")
+	{
+		$final_bit_month = "August";
+	}
+
+	elseif($final_bit_month == "09")
+	{
+		$final_bit_month = "September";
+	}
+
+	elseif($final_bit_month == "10")
+	{
+		$final_bit_month = "October";
+	}
+
+	elseif($final_bit_month == "11")
+	{
+		$final_bit_month = "November";
+	}
+
+	elseif($final_bit_month == "12")
+	{
+		$final_bit_month = "December";
+	}
+		
+	$final_bit_day = substr($project->reoccur_through, 8, 2);
+	$final_bit_year = substr($project->reoccur_through, 0, 4);	
+	$reoccur_string = $reoccur_string.$final_bit_month." ".$final_bit_day.", ".$final_bit_year;
+		
+		
+		
+		$toClient['reoccur_string'] = $reoccur_string;
+		
+	}
+
 
 	$toClient['needs'] = $needsForClient;
 	$toClient['logged_in'] = $isUser;

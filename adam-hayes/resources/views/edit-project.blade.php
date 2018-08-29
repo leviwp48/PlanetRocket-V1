@@ -21,6 +21,23 @@ use Resources\Templates\Banner;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="csrf-token" content="{!! csrf_token() !!}">
+
+
+<script type="text/javascript">
+ var reoccurDropdown = document.querySelector(".rcdrpdwn");
+ reoccurDropdown.addEventListener('load',function(){
+  if(document.querySelector("#dropdownthing").value == "none"){
+    document.querySelector("#rep_untl").style.display = "none";
+    document.querySelector("#dropdownthing").style.width = "70%";
+    }
+ else {
+  document.querySelector("#rep_untl").style.display = "block";
+  document.querySelector("#dropdownthing").style.width = "12%";
+  }
+});                         
+                            
+  
+ </script>
 </head>
 <body>
 
@@ -168,8 +185,101 @@ use Resources\Templates\Banner;
                     </div>
 
                     <!-- reoccurence form input will be added here once we figure out how to store project occurences -->
+            <div class="h-group switch-to-rows" style="margin-top:35px;">
 
-                <div class="h-group switch-to-rows" style="margin-top:35px;">
+                      <div class="box" style="width:30%;">
+                        <h3>How often does your project reoccur?</h3>
+                      </div>
+
+                      <div class="box" id="dropdownthing" style="width:12%;">
+                        <?php echo Form::select('reoccur', array('none' => "it doesn't",
+                          'daily' => 'every day',
+                          'weekly' => 'every week',
+                          'monthly' => 'every month',
+                          'yearly' => 'every year'),
+                          $reoccur,['style'=>'font-size:115%;',
+                          'class'=>'rcdrpdwn tobedisabled']); ?>
+
+                          <script>
+                            var reoccurDropdown = document.querySelector(".rcdrpdwn");
+
+                            
+                            
+                            reoccurDropdown.addEventListener('change',function(){
+                                if(this.value == "none"){
+                                  document.querySelector("#rep_untl").style.display = "none";
+                                  document.querySelector("#dropdownthing").style.width = "70%";
+                                }
+                                else {
+                                  document.querySelector("#rep_untl").style.display = "block";
+                                  document.querySelector("#dropdownthing").style.width = "12%";
+                                }
+                              });
+                              
+                              
+                        </script>
+                      </div>
+                      <?php
+                      if($reoccur == 'none'){
+                        ?>
+                        <div id="rep_untl" style="display:none;">
+
+                            <div class="box" style="width:13%;">
+                              <h3>Through</h3>
+                            </div>
+
+                            <div class="box" style="width:35%;">
+                              <?php 
+                              if($reoccur == "none"){
+
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+
+                              } else {
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('d')]); 
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('F')]); 
+                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('Y')]);
+                              }
+
+                            ?>
+                            </div>
+                        </div>
+                        </div>
+                      
+                      <?php
+                      //show select boxes if project reoccurs
+                            }
+                      else{
+                      ?>
+                        <div id="rep_untl" style="display:block">
+
+                            <div class="box" style="width:13%;">
+                              <h3>Through</h3>
+                            </div>
+
+                            <div class="box" style="width:35%;">
+                              <?php 
+                              if($reoccur == "none"){
+
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
+
+                              } else {
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('d')]); 
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('F')]); 
+                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('Y')]);
+                              }
+
+                                ?>
+                            </div>
+                        </div>
+                        </div>
+                    <?php
+                      }
+                      ?>
+                </div>                <div class="h-group switch-to-rows" style="margin-top:35px;">
                     <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
 
                     <script>

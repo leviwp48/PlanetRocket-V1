@@ -168,10 +168,19 @@ HTML.i()
 
 	.row()
 		.attr("style","text-align:center; margin-top:10px; margin-bottom:10px;")
-			.h1()
+			.h2()
 			.html(projectData["start_time"])
 			._()
 	._()
+	
+	._if(projectData["reoccur_string"] != null)	
+		.row()
+		.attr("style","text-align:center; margin-top:10px; margin-bottom:10px;")
+			.h2()
+			.html(projectData['reoccur_string'])
+			._()
+	._()
+	._end()
 
 
 	.row("image-row")
