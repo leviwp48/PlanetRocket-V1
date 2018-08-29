@@ -241,7 +241,7 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 
 		for(var i=0; i<projectImages.length; i++) {
 		var projectImage = projectImages[i];
-		var url = window["_APP_BASE"]+"/storage/project-cover-images/"+projectImage["url"];
+		var url = window["_APP_BASE"]+"/storage/app/project-cover-images/"+projectImage["url"];
 
 		//this._panelRow.append(imgBox);
 		var description = projectImage["description"];

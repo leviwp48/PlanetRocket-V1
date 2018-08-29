@@ -96,7 +96,10 @@ use Resources\Templates\Banner;
               'id'=>'my-awesome-dropzone',
               'enctype'=>'multipart/form-data',
               'files'=>true
-              )); ?>
+              ));
+
+              header("HTTP/1.0 400 Bad Request");
+echo "Ups error message"; ?>
 
               <?php
               echo Form::close();
@@ -313,6 +316,11 @@ use Resources\Templates\Banner;
                   <h3>Category for your project</h3>
                 </div>
                 <div class="box" style="width:70%;">
+                  <select>
+                    <option value="miscallaneous" name="category"> Miscallaneous </option>
+                  </select>
+
+<!--
                     <select name="category">
                       <option value="community_improvement">Community Improvement</option>
                       <option value="people_helping_people">People Helping People</option>
@@ -320,15 +328,25 @@ use Resources\Templates\Banner;
                       <option value="innovation">Innovation</option>
                       <option value="social">Social</option>
                       <option value="the_environment">THE Environment</option>
-
-
-
                     </select>
               </div>
               </div>
 
+              <script>
+                var option = document.querySelector("input[name=category]");
 
+                option.addEventListener('change',function(){
+                    var optionSelect = option.value;
+                    if(optionSelect == 1){
+                      option.value = 0;
+                    }
+                    else {
+                      option.value = 1;
+                    }
+                  });
+              </script>
 
+-->
               <!-- End Levi's work -->
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">

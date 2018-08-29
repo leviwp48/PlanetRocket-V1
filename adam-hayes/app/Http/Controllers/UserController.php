@@ -395,6 +395,9 @@ class UserController extends Controller {
 		//RSVP bool
 		$has_rsvp = trim($request->input('rsvpBox'));
 
+		//category
+		$project_category = trim($request->input('category'));
+
 		/*
 			END ALEC'S EDITS
 		*/
@@ -441,16 +444,18 @@ class UserController extends Controller {
 		*/
 
 			$project->has_rsvp = $has_rsvp;
-		$project->reoccur = 'none';
+
 	    $project->save();
 
 			/*	Begin Levi's Work */
 
-			$category = trim($request->input('category'));
-
-			$project->category = $category;
+			$project->category = $project_category;
 
 			$project->save();
+
+		//	$project->save();
+
+			/*	End Levi's Work */
 
 	    /*
 			BEGIN ALEC'S EDITS
@@ -958,6 +963,8 @@ class UserController extends Controller {
 		$project->name = $request->input('name');
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
+
+		$project->category = trim($request->input('category'));
 
 
 		//take the time fields and convert it into a datetime format that sql can digest

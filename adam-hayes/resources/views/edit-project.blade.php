@@ -129,9 +129,9 @@ use Resources\Templates\Banner;
               <div class="date_group">
 
                   <!-- Alec's Attempts at adding date/time functionality -->
-            
+
                     <div class="h-group switch-to-rows" style="margin-top:35px;">
-            
+
                     <?php
                       $months = [
                         '01' => 'January',
@@ -151,36 +151,36 @@ use Resources\Templates\Banner;
                         <div class="box" style="width:30%">
                             <h3>When does your project occur?</h3>
                         </div>
-            
+
                         <div class="box" style="display: -webkit-box;">
                             <?php echo Form::selectRange('daynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('d')]); ?>
                             <?php echo Form::select('month', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('F')]); ?>
                             <?php echo Form::selectyear('pyear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('Y')]); ?>
                         </div>
-            
+
                         <div class="box" style="display: -webkit-inline-box;position: initial;margin-top:  15px;">
                             <?php echo Form::selectRange('hour', 1, 12, null,['style'=>'font-size:115%;' , 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('g')]); ?>
                             <h3>:</h3>
                             <?php echo Form::select('minute', array('00' => '00', '15' => '15', '30' => '30', '45' => '45'), null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('i')]); ?>
                             <?php echo Form::select('amORpm', array('am' => 'AM', 'pm' => 'PM'), null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$start_time->format('A')]); ?>
                         </div>
-            
+
                     </div>
-            
+
                     <!-- reoccurence form input will be added here once we figure out how to store project occurences -->
-            
+
                 <div class="h-group switch-to-rows" style="margin-top:35px;">
                     <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
-            
+
                     <script>
                       var checkbox = document.querySelector("input[name=datebox]");
                       var hide = document.querySelector(".date_group");
                       var tobedisabled = document.querySelectorAll(".date_group");
-            
+
                       checkbox.addEventListener('change',function(){
                           if(this.checked){
                               hide.style.display = "none";
-            
+
                               for($i = 0; $i < document.querySelectorAll(".tobedisabled").length; $i++){
                                  document.querySelectorAll(".tobedisabled")[$i].disabled = true;
                                  document.querySelector("input[name=datebox]").value = "dateless";
@@ -193,10 +193,10 @@ use Resources\Templates\Banner;
                               document.querySelectorAll(".tobedisabled")[$i].disabled = false;
                               document.querySelector("input[name=datebox]").value = "adfs";
                             }
-            
+
                           }
                         });
-            
+
                     </script>
                 </div>
 
@@ -241,6 +241,24 @@ use Resources\Templates\Banner;
 
               </div>
 
+              <!-- Begin Levi's work -->
+              <div class="h-group switch-to-rows" style="margin-top:35px;">
+                <div class="box" style="width:30%; padding-right:20px;">
+                  <h3>Category for your project</h3>
+                </div>
+                <div class="box" style="width:70%;">
+                  <?php echo Form::select('category', array('people_helping_people' => 'People Helping People',
+                                                            'the_environment' => 'The Environment', 'miscallaneous' => 'Miscallaneous')); ?>
+                  <script>
+                  {
+                    var selectOption = document.querySelector("select[name=category]");
+                    var temp = 'miscallaneous';
+                    selectOption.value = temp;
+                  }
+                  </script>
+
+
+              <!-- End Levi's work -->
 
               <div class="row" style="margin-top:35px;"></div>
               <?php
@@ -256,7 +274,7 @@ use Resources\Templates\Banner;
         </div>
       </div>
 
-      
+
 
     </div>
     @include('inc.footer')

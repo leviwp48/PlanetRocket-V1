@@ -36,7 +36,7 @@ class ProjectController extends Controller {
 
 
 
-	
+
 
 	protected function checkForImageExtensions($imgName) {
 	$arr = explode(".", $imgName);
@@ -63,7 +63,7 @@ class ProjectController extends Controller {
 		//upload the images. Note that we upload them with X_ and this means is that the
 		//images are "unclaimed" by a project. The project has to save before it can claim
 		//those images. Periodically, the server will scan for X_ images over 12 hours old and delete them.
-		$uploaddir = '/var/www/html/adam-hayes/storage/app/public/project-cover-images/';
+		$uploaddir = '/adam-hayes/public/storage/app/project-cover-images/';
 
 		$messyFileName = $_FILES['file']['name'];
 
