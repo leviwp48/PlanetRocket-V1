@@ -8,6 +8,11 @@
   1. Create Project
   2. Form a team 
   3. Guide in steps of creating a project 
+  4. Provide suggested solutions to current community problems
+  5. Give exsposure to projects (vetting/featured projects)
+  6. List goals and effects of the completion of the project on the community
+    * GUI of tracked overall stuff, scoreboard
+    * Proof of work 
   
 ###What is a project###
     * The actualization of an idea
@@ -15,7 +20,17 @@
     * non profit
     * event 
     * Team/community 
-    * Course 
+    * Course
+
+# Users/clientel #
+
+* unis
+* non profits 
+* change makers
+* cities (government)
+* businesses 
+(we need to survey each of these groups to see who will use it the most)
+
  ####How would can planet rocket help a Business####
    * Walk through idea generation
       * What problem are you solving
@@ -27,15 +42,56 @@
    * Test business models
    * Central working hub for all team members involved
    * Some sort of way to ask for help/ invite people
+   * courses on how to use the site/ start your business/project
 --Should be good without people, valuable without the social aspect (doesnt need others to be good)
-   
+
+####How can planet rocket help a non profit####
+  * Raise money
+  * Recruit volunteers
+  * platform tocommunicate needs of project or organization
+  * Connect skilled workers with corresponding needs of projects
+  * suggested project structure
   
+####How can planet rocket help a university? ####
+  * Give students real life experience
+  * Help organize club events
+  * create multi disciplinary projects
+  * Students set trackable goals for future of university
+  * Help Connect students to opportunity in the community
+  * etc
+####How can planet rocket help 'changemakers' ####
+  * This refers to individuals in communities passionate about making change
+  * Basically everything our current site does
+  * Connect people with corresponding needs 
 
 
-
-
-# Users/clientel #
 
 
 
 # Business Model (do we need this here?)# 
+
+##Model for non profit##
+  * Subscription based
+  * Scale pricing based off of org. size and functions needed
+  * pay to 'boost' a project for more exsposure
+  * donation scarping?
+  * advertising
+  * Scrape challenge reward
+ 
+##Model for university##
+  * SAAS 
+  * gimme that monthly/annual money!!!
+  * donation scraping?
+  * Scrape challenge reward
+
+##model for businesses##
+  * subscription for business
+  * fee for course on business start
+  * advertising
+
+##Changemakers model ##
+  * yearly subscription fee
+  * Reach out to famous changemakers and offer free use
+  * more of a club
+  * host events and invite club members
+  * Scrape challenge reward
