@@ -89,17 +89,14 @@ use Resources\Templates\Banner;
                  help you get started and connect you with people who can lend a hand.</p>
 
 
-              <div class="row"><h3>Upload images for your project</h3></div>
-              <?php echo Form::open(array(
-              'route' => 'projects.upload-image-endpoint',
-              'class'=>'dropzone',
-              'id'=>'my-awesome-dropzone',
-              'enctype'=>'multipart/form-data',
-              'files'=>true
-              ));
-
-              header("HTTP/1.0 400 Bad Request");
-echo "Ups error message"; ?>
+               <!--    <div class="row"><h3>Upload images for your project</h3></div> -->
+               <?php echo Form::open(array(
+               'route' => 'projects.upload-image-endpoint',
+               'class'=>'dropzone',
+               'id'=>'my-awesome-dropzone',
+               'enctype'=>'multipart/form-data',
+               'files'=>true
+               )); ?>
 
               <?php
               echo Form::close();
@@ -121,8 +118,8 @@ echo "Ups error message"; ?>
               </div>
               <div class="row" style="height:0px; overflow:hidden;">
                 <?php echo Form::text('project_images'); ?>
-              </div>
-              <!-- -->
+				</div>
+
 
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
@@ -310,7 +307,8 @@ echo "Ups error message"; ?>
 
               <!-- End of Eric's work -->
 
-              <!-- Begin Levi's work -->
+              <!-- Begin Levi's work
+
               <div class="h-group switch-to-rows" style="margin-top:35px;">
                 <div class="box" style="width:30%; padding-right:20px;">
                   <h3>Category for your project</h3>
@@ -319,6 +317,7 @@ echo "Ups error message"; ?>
                   <select>
                     <option value="miscallaneous" name="category"> Miscallaneous </option>
                   </select>
+                -->
 
 <!--
                     <select name="category">

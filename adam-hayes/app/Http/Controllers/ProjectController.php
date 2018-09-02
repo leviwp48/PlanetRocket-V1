@@ -52,6 +52,7 @@ class ProjectController extends Controller {
 	 * for exactly that purpose.
 	 *
 	 */
+
 	public function upload_image_endpoint(Request $request) {
 
 		if ($request->hasFile('file')) {
@@ -63,7 +64,7 @@ class ProjectController extends Controller {
 		//upload the images. Note that we upload them with X_ and this means is that the
 		//images are "unclaimed" by a project. The project has to save before it can claim
 		//those images. Periodically, the server will scan for X_ images over 12 hours old and delete them.
-		$uploaddir = '/adam-hayes/public/storage/app/project-cover-images/';
+		$uploaddir = 'var/www/html/adam-hayes/storage/app/public/project-cover-images/';
 
 		$messyFileName = $_FILES['file']['name'];
 
@@ -81,7 +82,6 @@ class ProjectController extends Controller {
 			$coverImage->project_id = 0;
 			$coverImage->url = $uploadFileName;
 			$coverImage->save();
-
 			$id = $coverImage->id;
 
 			return json_encode(["message"=>"success", "errors"=>[], "filename"=>$uploadFileName, "correlation"=>$id]);
@@ -97,10 +97,5 @@ class ProjectController extends Controller {
 		}
 
 	}
-
-
-
-
-
 
 }
