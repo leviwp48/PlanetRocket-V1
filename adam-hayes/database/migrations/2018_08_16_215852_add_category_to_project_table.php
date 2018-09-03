@@ -14,7 +14,7 @@ class AddCategoryToProjectTable extends Migration
     public function up()
     {
         Schema::table('projects', function($table) {
-        $table->string('category',500);
+        $table->string('category',500)->default("miscallaneous");
         });
     }
 

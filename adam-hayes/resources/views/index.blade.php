@@ -86,9 +86,9 @@ use Resources\Templates\Banner;
             <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
-                <div class="row homepage" style="top: -176px;"><h3>Welcome to Planet Rocket!</h3></div>
-                <!--<iframe width="60%" height="60%" src="https://www.youtube.com/embed/tIBxavsiHzM" frameborder="0" allowfullscreen></iframe>-->
+                <div class="row homepage" style="top: -236px;"><h3>Welcome to Planet Rocket!</h3></div>
               </div>
+
             </div>
 
             <!-- Levi Edit 7/21/18 changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
@@ -97,6 +97,8 @@ use Resources\Templates\Banner;
 
           </div>
 
+          <!-- The video needs to go here -->
+      <iframe class="textbreak" width="70" height="80" style="position:absolute; top: 80px; right: 0px;" src="https://www.youtube.com/embed/tIBxavsiHzM?&rel=0" frameborder="0" allowfullscreen></iframe>
 
 
       <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
@@ -132,10 +134,10 @@ use Resources\Templates\Banner;
           </div>
         </div>
       </div>
-      
+
       @include('inc.footer')
     </div>
-    
+
 
 
 
