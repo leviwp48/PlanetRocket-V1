@@ -93,7 +93,7 @@
   * donation scraping?
   * Scrape challenge reward
 
-## model for businesses
+## Model for businesses
 
   * subscription for business
   * fee for course on business start
