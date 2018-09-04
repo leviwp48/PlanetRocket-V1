@@ -1,9 +1,11 @@
 # Goals and Vision #
 
-##Source of the idea##
+## Source of the idea
+
 *Wishing to have a globe with all the issues labeled on it, along with the needs that are required to solve that issue
 
-##what purpose does this software serve?##
+## what purpose does this software serve?
+
 * Social entrepeneurs being able to 
   1. Create Project
   2. Form a team 
@@ -14,7 +16,8 @@
     * GUI of tracked overall stuff, scoreboard
     * Proof of work 
   
-###What is a project###
+### What is a project
+   
     * The actualization of an idea
     * Business
     * non profit
@@ -22,7 +25,7 @@
     * Team/community 
     * Course
 
-# Users/clientel #
+# Users/clientel 
 
 * unis
 * non profits 
@@ -31,7 +34,8 @@
 * businesses 
 (we need to survey each of these groups to see who will use it the most)
 
- ####How would can planet rocket help a Business####
+ #### How would can planet rocket help a Business
+ 
    * Walk through idea generation
       * What problem are you solving
       * what is your solution
@@ -45,21 +49,24 @@
    * courses on how to use the site/ start your business/project
 --Should be good without people, valuable without the social aspect (doesnt need others to be good)
 
-####How can planet rocket help a non profit####
+#### How can planet rocket help a non profit
+
   * Raise money
   * Recruit volunteers
   * platform tocommunicate needs of project or organization
   * Connect skilled workers with corresponding needs of projects
   * suggested project structure
   
-####How can planet rocket help a university? ####
+#### How can planet rocket help a university?
+
   * Give students real life experience
   * Help organize club events
   * create multi disciplinary projects
   * Students set trackable goals for future of university
   * Help Connect students to opportunity in the community
   * etc
-####How can planet rocket help 'changemakers' ####
+#### How can planet rocket help 'changemakers'
+
   * This refers to individuals in communities passionate about making change
   * Basically everything our current site does
   * Connect people with corresponding needs 
@@ -68,9 +75,10 @@
 
 
 
-# Business Model (do we need this here?)# 
+# Business Model (do we need this here?)
 
-##Model for non profit##
+## Model for non profit
+
   * Subscription based
   * Scale pricing based off of org. size and functions needed
   * pay to 'boost' a project for more exsposure
@@ -78,18 +86,21 @@
   * advertising
   * Scrape challenge reward
  
-##Model for university##
+## Model for university
+
   * SAAS 
   * gimme that monthly/annual money!!!
   * donation scraping?
   * Scrape challenge reward
 
-##model for businesses##
+## model for businesses
+
   * subscription for business
   * fee for course on business start
   * advertising
 
-##Changemakers model ##
+## Changemakers model
+
   * yearly subscription fee
   * Reach out to famous changemakers and offer free use
   * more of a club
