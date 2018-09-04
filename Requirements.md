@@ -25,7 +25,7 @@
     * Team/community 
     * Course
 
-# Users/clientel 
+# Users/Clientel 
 
 * unis
 * non profits 
@@ -34,7 +34,7 @@
 * businesses 
 (we need to survey each of these groups to see who will use it the most)
 
- #### How would can planet rocket help a Business
+ #### How would can Planet Rocket help a Business
  
    * Walk through idea generation
       * What problem are you solving
@@ -49,7 +49,7 @@
    * courses on how to use the site/ start your business/project
 --Should be good without people, valuable without the social aspect (doesnt need others to be good)
 
-#### How can planet rocket help a non profit
+#### How can Planet Rocket help a non profit
 
   * Raise money
   * Recruit volunteers
@@ -57,7 +57,7 @@
   * Connect skilled workers with corresponding needs of projects
   * suggested project structure
   
-#### How can planet rocket help a university?
+#### How can Planet Rocket help a university?
 
   * Give students real life experience
   * Help organize club events
@@ -65,7 +65,8 @@
   * Students set trackable goals for future of university
   * Help Connect students to opportunity in the community
   * etc
-#### How can planet rocket help 'changemakers'
+  
+#### How can Planet Rocket help 'changemakers'
 
   * This refers to individuals in communities passionate about making change
   * Basically everything our current site does
