@@ -55,7 +55,8 @@ class ProjectController extends Controller {
 
 	public function upload_image_endpoint(Request $request) {
 
-		if ($request->hasFile('file')) {
+		//if ($request->hasFile('image')) {
+			if ($request->hasFile('file')) {
 
 		//grab the minimum-id for the cover-image.
 		$uniqueID = ProjectCoverImage::max('id');
