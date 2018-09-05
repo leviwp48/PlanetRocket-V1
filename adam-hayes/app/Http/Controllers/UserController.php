@@ -396,7 +396,7 @@ class UserController extends Controller {
 		$has_rsvp = trim($request->input('rsvpBox'));
 
 		//category
-		$project_category = trim($request->input('category'));
+		//$project_category = trim($request->input('category'));
 
 		/*
 			END ALEC'S EDITS
@@ -449,9 +449,9 @@ class UserController extends Controller {
 
 			/*	Begin Levi's Work */
 
-			$project->category = $project_category;
+			//$project->category = $project_category;
 
-			$project->save();
+			//$project->save();
 
 		//	$project->save();
 
