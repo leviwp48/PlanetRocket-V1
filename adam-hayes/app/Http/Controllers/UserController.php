@@ -765,29 +765,43 @@ class UserController extends Controller {
 	        //as the user was using the form, and the id was returned to the user, and so now the ids of the project-images
 	        //return to us in this endpoint, and basically we're going to take the id (correlation) of each project-image
 	        //then hunt if down and "claim" it for this project.
-	    	if($projectImages) {
+					$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
+	    	if($projectCoverImages) {
 	    	//heres the projectImages:
 	    	//[{"file":"X_39-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg","correlation":103,"description":"Testing 1 2 3"},
 	    	//{"file":"X_39-opbhsd3cw6n01.jpg","correlation":104,"description":"Testng 4 5 6"}]
 
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
-	    		for($i=0; $i<count($projectImages); $i++) {
-	    		$projectImageFromClient["correlation"] = $projectImages[$i];
+	    	//	for($i=0; $i<count($projectImages); $i++) {
+				foreach($projectCoverImages as $projectCoverImagesSingle){
 
-	    		$correlationID = $projectImageFromClient["correlation"];
+	    	//	$projectImageFromClient = $projectImages[$i];
 
-	    		$projectCoverImage = ProjectCoverImage::find($correlationID);
+	    	//	$correlationID = $projectImageFromClient["correlation"];
+				$correlationID = $projectCoverImagesSingle->id;
 
+	    	$projectCoverImage = ProjectCoverImage::find($correlationID);
+
+				if(!$projectCoverImage) {
+				return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
+				}
+
+			$projectCoverImage->claimImageWithProject($project->id);
+
+			//$projectCoverImagesSingle->description = @$projectImageFromClient["description"];
+
+			$projectCoverImage->save();
+			/*
 	    			if(!$projectCoverImage) {
 	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    			}
 
-	    		//$projectCoverImage->claimImageWithProject($project->id);
+	    		$projectCoverImage->claimImageWithProject($project->id);
 
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
-	    		$projectCoverImage->save();
+	    		$projectCoverImage->save();*/
 	    		}
 
 

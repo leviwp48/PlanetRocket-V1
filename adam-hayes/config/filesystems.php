@@ -51,9 +51,8 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            // Added /adam-hayes, -- was originally only /storage
-            // Changes now undone. Comment for reference
-            'url' => env('APP_URL').'/storage',
+            // Added /project-cover-images/, -- was originally only /storage
+            'url' => env('APP_URL').'/storage/project-cover-images/',
             'visibility' => 'public',
         ],
 
