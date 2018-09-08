@@ -247,7 +247,8 @@ var HTMLHelper       = BlueBox.port("util.HTMLHelper");
 		//var url = "/adam-hayes/public/storage/project-cover-images/"+projectImage["url"];
 
 		//this._panelRow.append(imgBox);
-		var description = projectImage["description"];
+		//var description = projectImage["description"];
+		var description = '';
 
 			if(!description) {
 			description = '';

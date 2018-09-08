@@ -396,7 +396,7 @@ class UserController extends Controller {
 		$has_rsvp = trim($request->input('rsvpBox'));
 
 		//category
-		$project_category = trim($request->input('category'));
+		//$project_category = trim($request->input('category'));
 
 		/*
 			END ALEC'S EDITS
@@ -449,9 +449,9 @@ class UserController extends Controller {
 
 			/*	Begin Levi's Work */
 
-			$project->category = $project_category;
+			//$project->category = $project_category;
 
-			$project->save();
+			//$project->save();
 
 		//	$project->save();
 
@@ -765,7 +765,7 @@ class UserController extends Controller {
 	        //as the user was using the form, and the id was returned to the user, and so now the ids of the project-images
 	        //return to us in this endpoint, and basically we're going to take the id (correlation) of each project-image
 	        //then hunt if down and "claim" it for this project.
-					$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
+			$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
 	    	if($projectCoverImages) {
 	    	//heres the projectImages:
 	    	//[{"file":"X_39-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg","correlation":103,"description":"Testing 1 2 3"},
@@ -945,8 +945,7 @@ class UserController extends Controller {
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
 	$toClient['needs'] = $needs;
-	$toClient['rsvp'] = $project->has_rsvp;
-	$toClient['category'] = $project->category;
+
 	$toClient['project_images'] = $projectCoverImages;
 
 	return json_encode($toClient);
@@ -981,19 +980,29 @@ class UserController extends Controller {
 		//get the project.
 		$project = Project::findOrFail($projectID);
 
-		$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
+		//$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
 
 			//get the add-edit-delete lists from the old project images to the new project images and
 		    //rectify everything.
-			if($projectImagesEditedFromClient) {
+				$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
+				if($projectCoverImages) {
+
+					$arrayOfProjectCoverImagesObjsFromClient = [];
+
+					foreach($projectCoverImages as $projectCoverImagesSingle){
+
+		//	if($projectImagesEditedFromClient) {
 
 			$arrayOfProjectCoverImagesObjsFromClient = [];
 
-				for($i=0; $i<count($projectImagesEditedFromClient); $i++) {
-				$fromClient = $projectImagesEditedFromClient[$i];
-				$fromClientProjectCoverImageID = $fromClient["correlation"];
-				$descriptionFromClient = @$fromClient["description"];
-				$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$fromClient["file"], "description"=>$descriptionFromClient];
+			//	for($i=0; $i<count($projectImagesEditedFromClient); $i++) {
+			//	$fromClient = $projectCoverImagesSingle;
+			//	$fromClientProjectCoverImageID = $fromClient["correlation"];
+				$fromClientProjectCoverImageID = $projectCoverImagesSingle->id;
+				//$descriptionFromClient = @$fromClient["description"];
+				//$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$fromClient["file"], "description"=>$descriptionFromClient];
+				$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$projectCoverImagesSingle->url];
+
 				$arrayOfProjectCoverImagesObjsFromClient[] = $fromClientObj;
 				}
 
@@ -1016,7 +1025,7 @@ class UserController extends Controller {
 				$addObj = $projectCoverImagesToAdd[$i];
 				$newCoverImage = ProjectCoverImage::find($addObj["id"]);
 				$newCoverImage->url = $addObj["url"];
-				$newCoverImage->description = @$addObj["description"];
+				//$newCoverImage->description = @$addObj["description"];
 				$newCoverImage->claimImageWithProject($projectID);
 				$newCoverImage->save();
 				}
@@ -1025,7 +1034,7 @@ class UserController extends Controller {
 				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
-				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);
+				Storage::delete('/public/project-cover-images/'.$coverImageToDelete["url"]);
 				}
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
@@ -1035,7 +1044,7 @@ class UserController extends Controller {
 				$newCoverImageData = $oldNew['new'];
 				//the description is the only thing to edit here.
 
-				$oldCoverImageToEdit->description = @$newCoverImageData["description"];
+				//$oldCoverImageToEdit->description = @$newCoverImageData["description"];
 				$oldCoverImageToEdit->save();
 
 
@@ -1054,7 +1063,7 @@ class UserController extends Controller {
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
 
-		$project->category = trim($request->input('category'));
+		//$project->category = trim($request->input('category'));
 
 
 		//take the time fields and convert it into a datetime format that sql can digest
@@ -1142,6 +1151,7 @@ class UserController extends Controller {
 
 
 		}
+
 
 		$reoccurStopDateTime = null;
 		$projectReoccur = trim($request->input('reoccur'));
@@ -1503,7 +1513,7 @@ class UserController extends Controller {
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
 	$toClient["rsvp"] = $project->has_rsvp;
-	$toClient["category"] = $project->category;
+	//$toClient["category"] = $project->category;
 
 
 	$fulltime = $project->start_time;
