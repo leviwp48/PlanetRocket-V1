@@ -199,6 +199,7 @@ class UserController extends Controller {
 		$newID = $new["id"];
 		$newWasFoundInOld = false;
 
+
 			for($j=0; $j<count($olds); $j++) {
 			$old = $olds[$j];
 
@@ -1013,7 +1014,7 @@ class UserController extends Controller {
 			$addDeleteEdit = $this->getAddDeleteEdit($arrayOfProjectCoverImagesObjsFromClient, $projectCoverImagesCurrent);
 
 			$projectCoverImagesToAdd = &$addDeleteEdit["add"];
-			$projectCoverImagesToDelete = $addDeleteEdit["delete"];
+		//	$projectCoverImagesToDelete = $addDeleteEdit["delete"];
 			$projectCoverImagesToEdit = $addDeleteEdit["edit"];
 
 
@@ -1031,11 +1032,11 @@ class UserController extends Controller {
 				}
 
 				//llop through and delete the project-cover-image records as well as the actual files
-				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
+				/*for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
 				Storage::delete('/public/project-cover-images/'.$coverImageToDelete["url"]);
-				}
+			}*/
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
 				for($i=0; $i<count($projectCoverImagesToEdit); $i++) {
