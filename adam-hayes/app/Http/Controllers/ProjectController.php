@@ -65,7 +65,7 @@ class ProjectController extends Controller {
 		//upload the images. Note that we upload them with X_ and this means is that the
 		//images are "unclaimed" by a project. The project has to save before it can claim
 		//those images. Periodically, the server will scan for X_ images over 12 hours old and delete them.
-		$uploaddir = getcwd() . '/storage/project-cover-images/';
+		$uploaddir = getcwd() . '/storage/project-cover-images';
 
 		$messyFileName = $_FILES['file']['name'];
 

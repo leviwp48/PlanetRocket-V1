@@ -52,7 +52,7 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             // Added /project-cover-images/, -- was originally only /storage
-            'url' => env('APP_URL').'/storage/project-cover-images/',
+            'url' => env('APP_URL').'/storage/project-cover-images',
             'visibility' => 'public',
         ],
 

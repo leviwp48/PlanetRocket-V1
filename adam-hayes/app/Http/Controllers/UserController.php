@@ -350,7 +350,7 @@ class UserController extends Controller {
 		$shortProjectDescription = trim($request->input('short_description'));
 
 		//the images
-		$projectImages = json_decode( trim($request->input('project_images')),  true);
+		$projectCoverImages = json_decode( trim($request->input('project_images')),  true);
 
 
 		/*
@@ -766,7 +766,7 @@ class UserController extends Controller {
 	        //as the user was using the form, and the id was returned to the user, and so now the ids of the project-images
 	        //return to us in this endpoint, and basically we're going to take the id (correlation) of each project-image
 	        //then hunt if down and "claim" it for this project.
-			$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
+			//$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
 	    	if($projectCoverImages) {
 	    	//heres the projectImages:
 	    	//[{"file":"X_39-cf6d4f3ca1de08fa1b2647a12563c8e1.jpg","correlation":103,"description":"Testing 1 2 3"},
@@ -774,13 +774,13 @@ class UserController extends Controller {
 
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
-	    	//	for($i=0; $i<count($projectImages); $i++) {
-				foreach($projectCoverImages as $projectCoverImagesSingle){
+	    		for($i=0; $i<count($projectCoverImages); $i++) {
+				//foreach($projectCoverImages as $projectCoverImagesSingle){
 
-	    	//	$projectImageFromClient = $projectImages[$i];
+	    		$projectImageFromClient = $projectCoverImages[$i];
 
-	    	//	$correlationID = $projectImageFromClient["correlation"];
-				$correlationID = $projectCoverImagesSingle->id;
+	    		$correlationID = $projectImageFromClient["correlation"];
+				//$correlationID = $projectCoverImagesSingle->id;
 
 	    	$projectCoverImage = ProjectCoverImage::find($correlationID);
 
@@ -790,7 +790,7 @@ class UserController extends Controller {
 
 			$projectCoverImage->claimImageWithProject($project->id);
 
-			//$projectCoverImagesSingle->description = @$projectImageFromClient["description"];
+			$projectCoverImage->description = @$projectImageFromClient["description"];
 
 			$projectCoverImage->save();
 			/*
@@ -981,28 +981,28 @@ class UserController extends Controller {
 		//get the project.
 		$project = Project::findOrFail($projectID);
 
-		//$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
+		$projectImagesEditedFromClient = json_decode( trim($request->input('project_images')),  true);
 
 			//get the add-edit-delete lists from the old project images to the new project images and
 		    //rectify everything.
-				$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
-				if($projectCoverImages) {
+			//	$projectCoverImages = DB::table('project_cover_images')->where('claimed', '0')->get();
+				//if($projectCoverImages) {
 
-					$arrayOfProjectCoverImagesObjsFromClient = [];
+					//$arrayOfProjectCoverImagesObjsFromClient = [];
 
-					foreach($projectCoverImages as $projectCoverImagesSingle){
+					//foreach($projectCoverImages as $projectCoverImagesSingle){
 
-		//	if($projectImagesEditedFromClient) {
+			if($projectImagesEditedFromClient) {
 
 			$arrayOfProjectCoverImagesObjsFromClient = [];
 
-			//	for($i=0; $i<count($projectImagesEditedFromClient); $i++) {
-			//	$fromClient = $projectCoverImagesSingle;
-			//	$fromClientProjectCoverImageID = $fromClient["correlation"];
-				$fromClientProjectCoverImageID = $projectCoverImagesSingle->id;
-				//$descriptionFromClient = @$fromClient["description"];
-				//$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$fromClient["file"], "description"=>$descriptionFromClient];
-				$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$projectCoverImagesSingle->url];
+				for($i=0; $i<count($projectImagesEditedFromClient); $i++) {
+					$fromClient = $projectImagesEditedFromClient[$i];
+				$fromClientProjectCoverImageID = $fromClient["correlation"];
+			//	$fromClientProjectCoverImageID = $projectCoverImagesSingle->id;
+				$descriptionFromClient = @$fromClient["description"];
+				$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$fromClient["file"], "description"=>$descriptionFromClient];
+				//$fromClientObj = ["id"=>$fromClientProjectCoverImageID, "url"=>$projectCoverImagesSingle->url];
 
 				$arrayOfProjectCoverImagesObjsFromClient[] = $fromClientObj;
 				}
@@ -1014,7 +1014,7 @@ class UserController extends Controller {
 			$addDeleteEdit = $this->getAddDeleteEdit($arrayOfProjectCoverImagesObjsFromClient, $projectCoverImagesCurrent);
 
 			$projectCoverImagesToAdd = &$addDeleteEdit["add"];
-		//	$projectCoverImagesToDelete = $addDeleteEdit["delete"];
+		  $projectCoverImagesToDelete = $addDeleteEdit["delete"];
 			$projectCoverImagesToEdit = $addDeleteEdit["edit"];
 
 
@@ -1026,17 +1026,17 @@ class UserController extends Controller {
 				$addObj = $projectCoverImagesToAdd[$i];
 				$newCoverImage = ProjectCoverImage::find($addObj["id"]);
 				$newCoverImage->url = $addObj["url"];
-				//$newCoverImage->description = @$addObj["description"];
+				$newCoverImage->description = @$addObj["description"];
 				$newCoverImage->claimImageWithProject($projectID);
 				$newCoverImage->save();
 				}
 
 				//llop through and delete the project-cover-image records as well as the actual files
-				/*for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
+				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
 				Storage::delete('/public/project-cover-images/'.$coverImageToDelete["url"]);
-			}*/
+			}
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
 				for($i=0; $i<count($projectCoverImagesToEdit); $i++) {
@@ -1045,7 +1045,7 @@ class UserController extends Controller {
 				$newCoverImageData = $oldNew['new'];
 				//the description is the only thing to edit here.
 
-				//$oldCoverImageToEdit->description = @$newCoverImageData["description"];
+				$oldCoverImageToEdit->description = @$newCoverImageData["description"];
 				$oldCoverImageToEdit->save();
 
 
