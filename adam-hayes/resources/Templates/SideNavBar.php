@@ -45,12 +45,12 @@ private $_user;
 											<a href="<?php echo APP_BASE; ?>/calendar" class="row styled_sidebar_item">
 												Calendar
 											</a>
-										</li>
-										<li class="row">
-											<a href="<?php echo APP_BASE; ?>/Training" class="row styled_sidebar_item">
-												Training
-											</a>
 										</li>-->
+			<li class="row">
+				<a href="<?php echo APP_BASE; ?>/Training" class="row styled_sidebar_item">
+					Training
+				</a>
+			</li>
 	                  <li class="row">
 	                  	<a href="<?php echo APP_BASE; ?>/about" class="row styled_sidebar_item">
 	            					About
