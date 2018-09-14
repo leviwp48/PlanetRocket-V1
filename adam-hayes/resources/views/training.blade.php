@@ -87,109 +87,19 @@ use Resources\Templates\Banner;
               <div class="videoCard">
                 <div class="videoHeader">
                   <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
+                  <h3 class="videoTitle">Arcata Mayor Sofia Pereira</h3>
                 </div>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xDl9C3BYvMY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
                 <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
+                  <!-- This is the buttom section of the video-->
                 </div>
               </div>
 
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/twitch_logo_small.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
+             
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-              <div class="videoCard">
-                <div class="videoHeader">
-                  <img src="/adam-hayes/public/images/logo_white_PlanetRocket.png" alt="Avatar" class="avatar">
-                  <h3 class="videoTitle">Killer Fortnite Video</h3>
-                </div>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IagLdgXVTcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                <div class="videoExtras">
-                  <button> Likes </button>
-                  <button> Shares </button>
-                  <button> Projects </button>
-                </div>
-              </div>
-
-            </div>
+          </div>
 
             <div class="row" style="margin-top:40px;"></div>
 
@@ -205,9 +115,9 @@ use Resources\Templates\Banner;
 
 
 <script type="text/javascript">
-window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
-window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
-window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
+  window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
+  window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
+  window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
 <script type="text/javascript" src="./js/loaders/loader-index-page.js"></script>
