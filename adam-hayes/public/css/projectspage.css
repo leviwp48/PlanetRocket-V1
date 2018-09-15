@@ -1,7 +1,15 @@
+.footer{
+      width:100%;
 
+      color:#444444;
+      padding-top:20px;
+      padding-bottom:50px;
+         font-size:1vw;
+         margin-left:2vw;
+}
 body
 {
-    
+
 }
 #parallaxwithbanner
 {
@@ -10,34 +18,34 @@ body
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     color:white;
     text-align: center;
     font-size: 2.5vh;
     margin-bottom: 5vh;
     margin-top: 5vh;
-    
-    
+
+
 }
 
 
 #astroparallax
 {
-  
-    
-    
+
+
+
     font-size: 2.5vw;
     text-align: center;
 
     margin-left:0px;
     margin-right:0px;
     margin-top:5vh;
-    
-    
 
-    
 
-    
+
+
+
+
 }
 
 
@@ -51,7 +59,7 @@ h1{
 }
 
 p{
-    
+
 
     font-weight: lighter;
     font-size: 3.5vh;
@@ -72,17 +80,17 @@ p{
 
 @media only screen and (max-width: 600px) {
     h1{
-      font-size: 8vw;  
+      font-size: 8vw;
     }
     p{
         font-size: 5vw;
     }
-   
-    #cpplogo 
+
+    #cpplogo
     {
         width:15vh;
     }
-    
+
     #parallaxwithbanner
     {
         background-image: url(../images/lightroad-Projects.jpg);
@@ -90,19 +98,17 @@ p{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
+
         color:white;
         text-align: center;
         font-size: 2.5vh;
         margin-bottom: 2.5vh;
-        
-    
-    
+
+
+
     }
     .box
     {
         padding-bottom:0;
     }
 }
-
-

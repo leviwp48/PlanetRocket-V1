@@ -34,9 +34,9 @@ use Resources\Templates\Banner;
   document.querySelector("#rep_untl").style.display = "block";
   document.querySelector("#dropdownthing").style.width = "12%";
   }
-});                         
-                            
-  
+});
+
+
  </script>
 </head>
 <body>
@@ -101,7 +101,7 @@ use Resources\Templates\Banner;
 
               <div class="row" id="join-requests-table"></div>
 
-              <div class="row" style="margin-top:35px;"><h3>Upload images for your project</h3><h4>Images will not be uploaded for reoccurring projects past the first occurrence</h4></div>
+             <!-- <div class="row" style="margin-top:35px;"><h3>Upload images for your project</h3><h4>Images will not be uploaded for reoccurring projects past the first occurrence</h4></div>
               <?php echo Form::open(array(
               'route' => 'projects.upload-image-endpoint',
               'class'=>'dropzone',
@@ -112,7 +112,7 @@ use Resources\Templates\Banner;
 
               <?php
               echo Form::close();
-              ?>
+              ?> -->
 
               <?php echo Form::open(array(
               'route'                       => 'user.edit-existing-project',
@@ -131,7 +131,6 @@ use Resources\Templates\Banner;
                 <?php echo Form::text('project_images'); ?>
               </div>
 
-              <!-- -->
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
 
@@ -185,7 +184,8 @@ use Resources\Templates\Banner;
                     </div>
 
                     <!-- reoccurence form input will be added here once we figure out how to store project occurences -->
-            <div class="h-group switch-to-rows" style="margin-top:35px;">
+
+                    <div class="h-group switch-to-rows" style="margin-top:35px;">
 
                       <div class="box" style="width:30%;">
                         <h3>How often does your project reoccur?</h3>
@@ -203,8 +203,8 @@ use Resources\Templates\Banner;
                           <script>
                             var reoccurDropdown = document.querySelector(".rcdrpdwn");
 
-                            
-                            
+
+
                             reoccurDropdown.addEventListener('change',function(){
                                 if(this.value == "none"){
                                   document.querySelector("#rep_untl").style.display = "none";
@@ -215,8 +215,8 @@ use Resources\Templates\Banner;
                                   document.querySelector("#dropdownthing").style.width = "12%";
                                 }
                               });
-                              
-                              
+
+
                         </script>
                       </div>
                       <?php
@@ -229,24 +229,20 @@ use Resources\Templates\Banner;
                             </div>
 
                             <div class="box" style="width:35%;">
-                              <?php 
-                              if($reoccur == "none"){
+                              <?php
 
-                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
-                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
-                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
 
-                              } else {
-                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('d')]); 
-                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('F')]); 
-                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('Y')]);
-                              }
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled',  'required'=>'required']);
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled',  'required'=>'required']);
+                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled',  'required'=>'required']);
+
+
 
                             ?>
                             </div>
                         </div>
                         </div>
-                      
+
                       <?php
                       //show select boxes if project reoccurs
                             }
@@ -259,18 +255,12 @@ use Resources\Templates\Banner;
                             </div>
 
                             <div class="box" style="width:35%;">
-                              <?php 
-                              if($reoccur == "none"){
+                              <?php
 
-                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
-                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
-                                echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through, 'required'=>'required']); 
-
-                              } else {
-                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('d')]); 
-                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('F')]); 
+                                echo Form::selectRange('reoccurdaynum', 1, 31, null,['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('d')]);
+                                echo Form::select('reoccurmonth', $months, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('F')]);
                                 echo Form::selectyear('reoccuryear', 2018, 2118, null, ['style'=>'font-size:115%;', 'class'=>'tobedisabled', 'placeholder'=>$reoccur_through->format('Y')]);
-                              }
+
 
                                 ?>
                             </div>
@@ -279,7 +269,9 @@ use Resources\Templates\Banner;
                     <?php
                       }
                       ?>
-                </div>                <div class="h-group switch-to-rows" style="margin-top:35px;">
+                </div>
+
+                <div class="h-group switch-to-rows" style="margin-top:35px;">
                     <h3>No date? Check the box:<input type="checkbox" name="datebox" value="anyy" id="projectDateCheckbox"/></h3>
 
                     <script>
@@ -351,28 +343,10 @@ use Resources\Templates\Banner;
 
               </div>
 
-              <!-- Begin Levi's work -->
-              <div class="h-group switch-to-rows" style="margin-top:35px;">
-                <div class="box" style="width:30%; padding-right:20px;">
-                  <h3>Category for your project</h3>
-                </div>
-                <div class="box" style="width:70%;">
-                  <?php echo Form::select('category', array('people_helping_people' => 'People Helping People',
-                                                            'the_environment' => 'The Environment', 'miscallaneous' => 'Miscallaneous')); ?>
-                  <script>
-                  {
-                    var selectOption = document.querySelector("select[name=category]");
-                    var temp = 'miscallaneous';
-                    selectOption.value = temp;
-                  }
-                  </script>
-
-
-              <!-- End Levi's work -->
 
               <div class="row" style="margin-top:35px;"></div>
               <?php
-              echo Form::submit("Update your project", ['class'=>'row formstyles-submit-button']);
+              echo Form::submit("Update your project", ['class'=>' formstyles-submit-button']);
               echo Form::close();
               ?>
 

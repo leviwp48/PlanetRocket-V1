@@ -28,8 +28,8 @@ class ProjectCoverImage extends Model
 	   	$this->url = substr($originalURL, 2);
 
 	   	//rename the file.
-	   	$oldFile = '/public/project-cover-images/'.$originalURL;
-	   	$newFile = '/public/project-cover-images/'.$this->url;
+	   	$oldFile = '/public/'.$originalURL;
+	   	$newFile = '/public/'.$this->url;
         Storage::move($oldFile, $newFile);
 
    		}

@@ -10,7 +10,7 @@ use Resources\Templates\NavBar;
 use Resources\Templates\Banner;
 ?>
 
-<title>Planet Rocket - Register</title>
+<title>Planet Rocket - Register Now</title>
 
 <link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
@@ -78,7 +78,7 @@ use Resources\Templates\Banner;
               <div class=shadowbox_panel>
                 <div clas=shadowbox_content>
                 <div class="card">
-                    <div class="card-header" style="margin-top:20px;"><h2>{{ __('Register') }}</h2></div>
+                    <div class="card-header" style="margin-top:20px;"><h2>{{ __('Hello my friend, welcome aboard ') }}</h2></div>
 
                     <a class="row" style="margin-top:20px;" href="<?php echo APP_BASE; ?>/login"><h3>Already registered? Login now!</h3></a>
 

@@ -94,7 +94,6 @@ Route::get('/user/needs-tree', 'UserController@needs_tree');
 
 Route::get('/projects/all', 'UserController@all_projects');
 
-
 Route::get('/projects/view-project/{project}', 'UserController@view_project');
 
 //Route::get('/user/edit-project/{project}', 'UserController@edit_project')->middleware('auth');

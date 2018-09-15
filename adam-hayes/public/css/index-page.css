@@ -17,7 +17,7 @@ font-size: 3.5vw;
 
 iframe{
 	height: 60vh;
-	width: 80vw;
+	width: 60vw;
 }
 
 .parallax{
@@ -83,7 +83,31 @@ width:200px;
 
 		.icon-width {
 		width:120px;
-		}   	
+		} 
+		iframe {
+			width:60vw;
+			height:30vh;
+		}  	
+
+		#parallaxpanel1-Homepage{
+			background-image: url(../images/party-Homepage.jpg);
+			color: white;
+			font-size: 3em;
+			height:50vh;
+			padding:5vw;
+			
+				
+		}
+
+		#parallaxcontainer1
+		{
+			height:100%;
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+
+			
+		}
 
    }
 

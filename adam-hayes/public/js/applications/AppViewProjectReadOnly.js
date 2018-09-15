@@ -339,11 +339,11 @@ HTML.i()
 					})
 
 				._()
-					.prefab("content-row-title-and-body")
+					/*.prefab("content-row-title-and-body")
 						.fparam("title", "RSVP!")
 						.fparam("body", "Don't want to help set up? Let "+ projectData["owner"]["name"]+ " know that you would like to partake in the event!")
 						.fparam("hasMarginTop",true)
-					._()
+					._()*/
 
 
 			//else, the user DID show a join request, so

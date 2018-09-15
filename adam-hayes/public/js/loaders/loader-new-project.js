@@ -208,7 +208,7 @@ var user = window['user'];
 var useAlexDebug = false;
 
     if(user) {
-        if(user['email'] == 'alexjameslowe@gmail.com') {
+        if(user['email'] == 'ericmott10@gmail.com') {
         useAlexDebug = true;
         }
     }
@@ -286,6 +286,6 @@ mainPageLoader.enqueue("/js/applications/AppNewProject.js");
 mainPageLoader.resolveQueue(
     function(){
     $(document).ready(blue.applications.AppNewProject.bootstrap());
-        if(window["user"]["email"] == "alexjameslowe@gmail.com") {
+        if(window["user"]["email"] == "ericmott10@gmail.com") {
         }
     });

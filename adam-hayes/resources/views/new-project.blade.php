@@ -14,8 +14,6 @@ use Resources\Templates\Banner;
 <link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/filter-dropdown.css" type="text/css" media="all">
-
 <script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
@@ -89,14 +87,14 @@ use Resources\Templates\Banner;
                  help you get started and connect you with people who can lend a hand.</p>
 
 
-               <!--    <div class="row"><h3>Upload images for your project</h3></div> -->
-               <?php echo Form::open(array(
-               'route' => 'projects.upload-image-endpoint',
-               'class'=>'dropzone',
-               'id'=>'my-awesome-dropzone',
-               'enctype'=>'multipart/form-data',
-               'files'=>true
-               )); ?>
+              <div class="row"><h3>Upload images for your project</h3></div>
+              <?php echo Form::open(array(
+              'route' => 'projects.upload-image-endpoint',
+              'class'=>'dropzone',
+              'id'=>'my-awesome-dropzone',
+              'enctype'=>'multipart/form-data',
+              'files'=>true
+              )); ?>
 
               <?php
               echo Form::close();
@@ -118,8 +116,8 @@ use Resources\Templates\Banner;
               </div>
               <div class="row" style="height:0px; overflow:hidden;">
                 <?php echo Form::text('project_images'); ?>
-				</div>
-
+              </div>
+              <!-- -->
 
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
@@ -279,7 +277,7 @@ use Resources\Templates\Banner;
 
               </div>
 
-              <!-- Eric's RSVP work -->
+              <!-- Eric's RSVP work
               <div class="h-group switch-to-rows" style="margin-top:35px;">
                 <div class="box" style="width:30%; padding-right:20px;">
                   <h3>Let members RSVP to the event/project?</h3>
@@ -304,49 +302,8 @@ use Resources\Templates\Banner;
                   });
 
               </script>
-
-              <!-- End of Eric's work -->
-
-              <!-- Begin Levi's work
-
-              <div class="h-group switch-to-rows" style="margin-top:35px;">
-                <div class="box" style="width:30%; padding-right:20px;">
-                  <h3>Category for your project</h3>
-                </div>
-                <div class="box" style="width:70%;">
-                  <select>
-                    <option value="miscallaneous" name="category"> Miscallaneous </option>
-                  </select>
-                -->
-
-<!--
-                    <select name="category">
-                      <option value="community_improvement">Community Improvement</option>
-                      <option value="people_helping_people">People Helping People</option>
-                      <option value="the_environment">THE Environment</option>
-                      <option value="innovation">Innovation</option>
-                      <option value="social">Social</option>
-                      <option value="the_environment">THE Environment</option>
-                    </select>
-              </div>
-              </div>
-
-              <script>
-                var option = document.querySelector("input[name=category]");
-
-                option.addEventListener('change',function(){
-                    var optionSelect = option.value;
-                    if(optionSelect == 1){
-                      option.value = 0;
-                    }
-                    else {
-                      option.value = 1;
-                    }
-                  });
-              </script>
-
 -->
-              <!-- End Levi's work -->
+              <!-- End of Eric's work -->
 
               <div class="h-group switch-to-rows" style="margin-top:35px;">
 

@@ -1,4 +1,14 @@
-  
+
+.footer{
+      width:100%;
+
+      color:#444444;
+      padding-top:20px;
+      padding-bottom:50px;
+         font-size:1vw;
+         margin-left:2vw;
+}
+
 h1{
 	font-size: 3.5vw;
 
@@ -14,8 +24,8 @@ p{
 
 .center_column_content
 {
-	margin:5vw; 
-	margin-left:10vw; 
+	margin:5vw;
+	margin-left:10vw;
 	margin-right:10vw;
 }
  .adam-margin {
@@ -26,8 +36,8 @@ p{
  {
 	 font-weight: lighter;
  }
- 
- 
+
+
 /* .width-check::after {
  content:'800px';
  }
@@ -62,8 +72,8 @@ p{
  }
 
 div.founder-avatar-label-right {
-text-align:right; 
-bottom:30px; 
+text-align:right;
+bottom:30px;
 top:auto;
 right:0px;
 left:auto;
@@ -74,7 +84,7 @@ padding-right:10px;
 background: rgba(0,0,0,0.6);
 }
 
-.founder-avatar-label-right h2 { 
+.founder-avatar-label-right h2 {
 line-height: 1;
 white-space: nowrap;
 }
@@ -87,15 +97,15 @@ font-weight:normal;
 }
 
 
-div.founder-avatar-label-left { 
-bottom:30px; 
+div.founder-avatar-label-left {
+bottom:30px;
 top:auto;
 left:0px;
 width:130%;
 padding:5px;
 background: rgba(0,0,0,0.6);
 }
-.founder-avatar-label-left h2 { 
+.founder-avatar-label-left h2 {
 line-height: 1;
 white-space: nowrap;
 }
@@ -135,8 +145,8 @@ font-weight:normal;
 
 
 	div.founder-avatar-label-right {
-	text-align:right; 
-	bottom:0px; 
+	text-align:right;
+	bottom:0px;
 	top:auto;
 	right:0px;
 	left:auto;
@@ -146,8 +156,8 @@ font-weight:normal;
 	padding-right:5px;
 	background: rgba(0,0,0,0.6);
 	}
-	div.founder-avatar-label-left { 
-	bottom:0px; 
+	div.founder-avatar-label-left {
+	bottom:0px;
 	top:auto;
 	left:0px;
 	width:110%;
@@ -157,14 +167,14 @@ font-weight:normal;
 	background: rgba(0,0,0,0.6);
 	}
 
-	.founder-avatar-label-right h2 { 
+	.founder-avatar-label-right h2 {
 	font-size: 1em;
 	}
 	.founder-avatar-label-right h3 {
 	margin-top:0px;
 	font-size: 1em;
 	}
-	.founder-avatar-label-left h2 { 
+	.founder-avatar-label-left h2 {
 	font-size: 1em;
 	}
 	.founder-avatar-label-left h3 {

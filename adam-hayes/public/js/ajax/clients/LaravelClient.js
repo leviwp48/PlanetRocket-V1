@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////
 
 BlueBox.compose(
-	"ajax.clients.BaseClientInterface",
+	"ajax.clients.BaseClientInterface",  
 	"ajax.clients.LaravelClient", function(_class, _proto, _super) {
 
 	var LaravelTextInput    		   = BlueBox.port("ajax.inputs.LaravelTextInput");
@@ -70,7 +70,7 @@ BlueBox.compose(
 			ctx._imageUploadPanel.fileAddedToForm(file.name, serverResponse["filename"], serverResponse["correlation"], '', base64ImageData);
 
 		  	});
-				
+
 		    this.on("error", function(file, responseText) {
 		  	console.log(file+"  "+responseText);
 		  	});
@@ -90,7 +90,7 @@ BlueBox.compose(
 		    //   // Maybe show form again, and notify user of error
 		    // });
 		  }
-
+		 
 		}
 
 
@@ -134,7 +134,7 @@ BlueBox.compose(
 	// 	      // Maybe show form again, and notify user of error
 	// 	    });
 	// 	  }
-
+		 
 	// 	}
 
 
@@ -143,7 +143,7 @@ BlueBox.compose(
 
 	/**
 	 * the fields in this setup are identified uniquely by name.
-	 *
+	 * 
 	 */
 	_proto.config = function() {
 	this.configSetUniqueIdentifierForInput("name");
@@ -164,7 +164,7 @@ BlueBox.compose(
 		if(id == "project_images"){
 		this._imageUploadPanel = new LaravelImageUploadPanel(formElementJQ);
 		return this._imageUploadPanel;
-		}
+		} 
 
 		else {
 		return new LaravelTextInput(formElementJQ);
@@ -217,7 +217,7 @@ BlueBox.compose(
 	//xhr, textStatus, errorThrown
 	//xhr.statusText
 	//this.failedWithNetworkError(xhr, textStatus, errorThrown);
-
+	
 	}
 	_proto.editModeFetchRecordStart = function() {
 	//the fetch started
@@ -225,7 +225,7 @@ BlueBox.compose(
 
 
 	/**
-	 * The form failed with errors. Show them in a lightbox.
+	 * The form failed with errors. Show them in a lightbox. 
 	 *
 	 */
 	_proto.failedWithNetworkError = function(responseText, textStatus, errorThrown) {

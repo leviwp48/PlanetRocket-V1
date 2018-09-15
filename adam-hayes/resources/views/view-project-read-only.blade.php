@@ -141,10 +141,10 @@ use Resources\Templates\Banner;
             <!-- This be the regular posts section -->
             <div id="project_container" class="center_column" style="width:90%; max-width:1200px; height:100%; background:#FFFFFF; padding-bottom:30px;">
 
-              <div id="rsvpContainer" style="position: absolute; top: 99%; z-index: 10; width: 100%;">
+        	  <!--<div id="rsvpContainer" style="position: absolute; top: 99%; z-index: 10; width: 100%;">
                 <button class="row formstyles-submit-button"> RSVP to this project! </button>
 
-              </div>
+              </div>-->
             </div>
 
           </div>

@@ -313,12 +313,6 @@ class UserController extends Controller {
 
 	}
 
-  /* Begin Levi Work */
-	public function filter_projects(){
-
-
-	}
-
 	/**
 	 * the ajax hook. create a new Project, give it the needs and assign the user
 	 * as the owner of the record.
@@ -392,11 +386,7 @@ class UserController extends Controller {
 
 		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
-		//RSVP bool
-		$has_rsvp = trim($request->input('rsvpBox'));
 
-		//category
-		$project_category = trim($request->input('category'));
 
 		/*
 			END ALEC'S EDITS
@@ -443,19 +433,10 @@ class UserController extends Controller {
 			END ALEC'S EDITS
 		*/
 
-			$project->has_rsvp = $has_rsvp;
 
+		$project->reoccur = 'none';
 	    $project->save();
 
-			/*	Begin Levi's Work */
-
-			$project->category = $project_category;
-
-			$project->save();
-
-		//	$project->save();
-
-			/*	End Levi's Work */
 
 	    /*
 			BEGIN ALEC'S EDITS
@@ -535,7 +516,7 @@ class UserController extends Controller {
 	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
-	    					//$projectCoverImage->claimImageWithProject($project->id);
+	    					$projectCoverImage->claimImageWithProject($project->id);
 	    					$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    					$projectCoverImage->save();
@@ -575,7 +556,7 @@ class UserController extends Controller {
 	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
-	    					//$projectCoverImage->claimImageWithProject($project->id);
+	    					$projectCoverImage->claimImageWithProject($project->id);
 	    					$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    					$projectCoverImage->save();
@@ -623,7 +604,7 @@ class UserController extends Controller {
 	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
-	    					//$projectCoverImage->claimImageWithProject($project->id);
+	    					$projectCoverImage->claimImageWithProject($project->id);
 	    					$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    					$projectCoverImage->save();
@@ -662,7 +643,7 @@ class UserController extends Controller {
 	    						return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    					}
 
-	    					//$projectCoverImage->claimImageWithProject($project->id);
+	    					$projectCoverImage->claimImageWithProject($project->id);
 	    					$projectCoverImage->description = @$projectImageFromClient["description"];
 
 	    					$projectCoverImage->save();
@@ -773,7 +754,7 @@ class UserController extends Controller {
 	    		//loop through and correlate all of the project-image records with this project.
 	    		//the claimImageWithProject will handle the url and the file itself.
 	    		for($i=0; $i<count($projectImages); $i++) {
-	    		$projectImageFromClient["correlation"] = $projectImages[$i];
+						$projectImageFromClient = $projectImages[$i];
 
 	    		$correlationID = $projectImageFromClient["correlation"];
 
@@ -783,7 +764,7 @@ class UserController extends Controller {
 	    			return json_encode(["message"=>"Form failed.", "success"=>false, "errors"=>["Could not save image."]]);
 	    			}
 
-	    		//$projectCoverImage->claimImageWithProject($project->id);
+	    		$projectCoverImage->claimImageWithProject($project->id);
 
 	    		$projectCoverImage->description = @$projectImageFromClient["description"];
 
@@ -931,8 +912,7 @@ class UserController extends Controller {
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
 	$toClient['needs'] = $needs;
-	$toClient['rsvp'] = $project->has_rsvp;
-	$toClient['category'] = $project->category;
+
 	$toClient['project_images'] = $projectCoverImages;
 
 	return json_encode($toClient);
@@ -1011,7 +991,7 @@ class UserController extends Controller {
 				for($i=0; $i<count($projectCoverImagesToDelete); $i++) {
 				$coverImageToDelete = $projectCoverImagesToDelete[$i];
 				$coverImageToDelete->delete();
-				Storage::delete('/adam-hayes/public/project-cover-images/'.$coverImageToDelete["url"]);
+				Storage::delete('/public/'.$coverImageToDelete["url"]);
 				}
 
 				//loop through and make the existing project-cover-image match the edited data from the client.
@@ -1040,8 +1020,6 @@ class UserController extends Controller {
 		$project->description = $request->input('description');
 		$project->short_description = $request->input('short_description');
 
-		$project->category = trim($request->input('category'));
-
 
 		//take the time fields and convert it into a datetime format that sql can digest
 		//this code was just taken from the create_new project area and put here
@@ -1060,6 +1038,8 @@ class UserController extends Controller {
 
 		$projectReoccur = $project->reoccur;
 		$reoccur_date = Carbon::parse($project->reoccur_through);
+
+
 
 		//Grab the day from the form
 		$projectDayNum = $request->input('daynum');
@@ -1160,6 +1140,8 @@ class UserController extends Controller {
 		}
 		$project->reoccur = $projectReoccur;
 
+
+
 		//put all the form inputs into a date string
 		$OGDateString = $this->returnDateTime($projectDayNum, $projectMonth, $projectYear, $projectStartHour, $projectStartMin, $projectAMorPM);
 
@@ -1175,10 +1157,10 @@ class UserController extends Controller {
 		{
 	    	$project->start_time = date_format($startTime, 'Y-m-d H:i:s');
 		}
-
-    if($reoccurStopDateTime != null){
-		$project->reoccur_through = $reoccurStopDateTime;
+		if($reoccurStopDateTime != null){
+			$project->reoccur_through = $reoccurStopDateTime;
 		}
+
 
 
 		$project->needs()->sync($syncNeedData);
@@ -1321,14 +1303,6 @@ class UserController extends Controller {
 	return \View::make("all-projects")
 		->with("user", $user)
 		->with("logged_in", $loggedIn);
-	}
-
-	public function images(){
-		$user = Auth::user();
-		$loggedIn = $user ? true : false;
-		return \View::make("image")
-			->with("user", $user)
-			->with("logged_in", $loggedIn);
 	}
 
 	/**
@@ -1488,8 +1462,7 @@ class UserController extends Controller {
 	$toClient['name'] = $project->name;
 	$toClient['description'] = $project->description;
 	$toClient['short_description'] = $project->short_description;
-	$toClient["rsvp"] = $project->has_rsvp;
-	$toClient["category"] = $project->category;
+
 
 
 	$fulltime = $project->start_time;

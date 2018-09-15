@@ -36,6 +36,12 @@ private $_user;
 	            					Home
 	            				</a>
 	                  </li>
+	                  
+	                   <li class="row">
+	                    <a href="<?php echo APP_BASE; ?>/resources" class="row styled_sidebar_item">
+	            					Resources
+	            				</a>
+	                  </li>
 	                  <li class="row">
 	                  	<a href="<?php echo APP_BASE; ?>/projects/all" class="row styled_sidebar_item">
 	            					Projects
@@ -46,11 +52,11 @@ private $_user;
 												Calendar
 											</a>
 										</li>-->
-			<li class="row">
-				<a href="<?php echo APP_BASE; ?>/Training" class="row styled_sidebar_item">
-					Training
-				</a>
-			</li>
+					<li class="row">
+						<a href="<?php echo APP_BASE; ?>/training" class="row styled_sidebar_item">
+							Training
+						</a>
+					</li>
 	                  <li class="row">
 	                  	<a href="<?php echo APP_BASE; ?>/about" class="row styled_sidebar_item">
 	            					About

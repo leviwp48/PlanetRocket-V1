@@ -86,9 +86,10 @@ use Resources\Templates\Banner;
             <div class="h-group" id="parallaxcontainer1">
               <div class="box" style="vertical-align:middle;">
 
-                <div class="row homepage" style="top: -236px;"><h3>Welcome to Planet Rocket!</h3></div>
+                <div class="row homepage" ><h3>Welcome to Planet Rocket!</h3></div>
+                
+                <div class="row homepage" id="iframe-container"><iframe  src="https://www.youtube.com/embed/RmSxhcjb9m8"  allowfullscreen></iframe></div>
               </div>
-
             </div>
 
             <!-- Levi Edit 7/21/18 changed the margin-top to 90px (from 30px) to put the login button between the video and the footer -->
@@ -97,8 +98,6 @@ use Resources\Templates\Banner;
 
           </div>
 
-          <!-- The video needs to go here -->
-      <iframe class="textbreak" width="70" height="80" style="position:absolute; top: 80px; right: 0px;" src="https://www.youtube.com/embed/tIBxavsiHzM?&rel=0" frameborder="0" allowfullscreen></iframe>
 
 
       <h3 class="textbreak"> We are a platform for creating community <strong>SOLUTIONS</strong></h3>
@@ -120,7 +119,7 @@ use Resources\Templates\Banner;
         <div class="row homepage" style="text-align:center; margin-bottom:40px;">
           <div class="h-group" >
             <div class="box" style="vertical-align:middle;">
-              <form action="login" method="get">
+              <form action="register" method="get">
                 <button type="submit" style=" font-family: OpenSans; width: 22%;" class="btn    btn--trees" id="entercommunity">
                   Enter Our Community!
                   <div class='trees'>
@@ -134,10 +133,10 @@ use Resources\Templates\Banner;
           </div>
         </div>
       </div>
-
+      
       @include('inc.footer')
     </div>
-
+    
 
 
 
