@@ -25,10 +25,13 @@ private $_forHomePage = false;
 	$n = new NavBar($user, $forHomePage);
 	echo $n->concatenate();
 	}
+	
+	
+
 
 	public function concatenate() {  ob_start(); ?>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
-
+		
 
 	        <div class="row top_nav_bar_blue_rgba  <?php echo (!$this->_forHomePage) ? "top_nav_negative_margin" : ""; ?>">
 
@@ -38,26 +41,113 @@ private $_forHomePage = false;
 
 	              <nav class="row styled_dropdowns" style="z-index:4;">
 	                 <ul id="top-xyz" class="h-group">
-	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Home</a>
-	                    </li>
-	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Projects</a>
-	                    </li>
-						<li class="box top-nav-item">
-							<a class="row" href="<?php echo APP_BASE; ?>/training" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Training</a>
-						</li>
+	                 <?php
+	                 	$currurl = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	                	if(('https://planetrocket.com/' === $currurl) or ('https://127.0.0.1/adam-hayes/public/' === $currurl))
+						{
+							?>
+		                    <li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif; ">Home</a>
+	                    	</li>
+	                    	<?php		
+						}
+	                 	else
+	                 	{
+	                 		?>
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Home</a>
+	                    	</li>
+	                    	<?php
+	                    }
+	                    
+	                    
+	                    
+	                    
+	                    
+	                	if((strpos($currurl, 'projects') !== false) and (strpos($currurl,'public/user/projects') === false))
+						{
+							?>	
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;background-color:rgba(6, 157, 255, 0.5);">Projects</a>
+	                    	</li>
+	                    	<?php
+	                    }
+	                    
+	                    else
+	                    {
+	                    	?>
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/projects/all" style="padding:8px; padding-left:20px; padding-right:20px; font-family: 'Open Sans', sans-serif;">Projects</a>
+	                    	</li>
+	                    	<?php
+	                    }
+	                   
+	                   
+	                    
+	                    
+	                    if(strpos($currurl, 'training') !== false)
+						{
+							?>
+							<li class="box top-nav-item">
+								<a class="row" href="<?php echo APP_BASE; ?>/training" style="padding:8px; padding-left:20px; padding-right:20px;background-color:rgba(6, 157, 255, 0.5);font-family: 'Open Sans', sans-serif;">Training</a>
+							</li>
+							<?php
+						}
+						
+						else
+						{	
+							?>
+							<li class="box top-nav-item">
+								<a class="row" href="<?php echo APP_BASE; ?>/training" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Training</a>
+							</li>
+							<?php
+						}
+						
+						?>
 						<!--<li class="box top-nav-item">
 	                       <a class="row" href="/calendar" style="padding:8px; padding-left:20px; padding-right:20px;">Calendar</a>
 	                    </li>-->
 						
-	                     <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>/resources" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Resources</a>
-	                    </li>
+						
+						<?php
+						if(strpos($currurl, 'resources') !== false)
+						{
+							?>
+	                    	 <li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/resources" style="padding:8px; padding-left:20px; padding-right:20px;background-color:rgba(6, 157, 255, 0.5);font-family: 'Open Sans', sans-serif;">Resources</a>
+	                    	</li>
+	                    	<?php
+	                    }
 	                    
-	                    <li class="box top-nav-item">
-	                       <a class="row" href="<?php echo APP_BASE; ?>/about" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">About</a>
-	                    </li>
+	                    else
+	                    {
+	                    	?>
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/resources" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">Resources</a>
+	                    	</li>
+	                    	<?php
+	                    }	
+	                    
+	                    
+	                    
+	                    if(strpos($currurl, 'about') !== false)
+						{
+	                    	?>
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/about" style="padding:8px; padding-left:20px; background-color:rgba(6, 157, 255, 0.5); padding-right:20px;font-family: 'Open Sans', sans-serif;">About</a>
+	                    	</li>
+	                    	<?php
+	                    }
+	                    
+	                    else
+	                    {
+	                    	?>
+	                    	<li class="box top-nav-item">
+	                       		<a class="row" href="<?php echo APP_BASE; ?>/about" style="padding:8px; padding-left:20px; padding-right:20px;font-family: 'Open Sans', sans-serif;">About</a>
+	                    	</li>
+	                    	<?php
+	                    }
+	                    ?>
 	                    <!--<li class="box top-nav-item"><a class="row" href="/contact" style="padding:8px; padding-left:20px; padding-right:20px;">Contact</a></li>-->
 
 	                    <?php
