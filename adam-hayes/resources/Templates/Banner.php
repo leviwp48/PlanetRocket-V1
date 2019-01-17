@@ -33,7 +33,7 @@ private $_forHomePage = false;
             <div class="row main_title_height">
 
 
-							<iframe src="/adam-hayes/resources/assets/html/header.html"
+							<iframe src="/assets/html/header.html"
 								style="width:100%; height:100%;">
 							</iframe>
 
