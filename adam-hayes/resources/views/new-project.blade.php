@@ -87,36 +87,6 @@ use Resources\Templates\Banner;
                  help you get started and connect you with people who can lend a hand.</p>
 
 
-              <div class="row"><h3>Upload images for your project</h3></div>
-              <?php echo Form::open(array(
-              'route' => 'projects.upload-image-endpoint',
-              'class'=>'dropzone',
-              'id'=>'my-awesome-dropzone',
-              'enctype'=>'multipart/form-data',
-              'files'=>true
-              )); ?>
-
-              <?php
-              echo Form::close();
-              ?>
-
-
-              <?php echo Form::open(array(
-              'route' => 'user.create-new-project',
-              'class'=>'ajax',
-              'data-ajax-client-interface'=>'CreateProject',
-              'data-ajax-server-interface'=>'LaravelServer',
-              )); ?>
-
-
-
-              <div class="row" style="margin-top:20px"></div>
-              <!-- The project-image panel row has to sit above the wrapper for the text-field-->
-              <div class="row">
-              </div>
-              <div class="row" style="height:0px; overflow:hidden;">
-                <?php echo Form::text('project_images'); ?>
-              </div>
               <!-- -->
 
 
