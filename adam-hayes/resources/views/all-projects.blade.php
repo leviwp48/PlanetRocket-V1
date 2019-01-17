@@ -15,18 +15,18 @@ use Resources\Templates\Banner;
 
 <link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="//css/about-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="/css/about-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
-<link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
-<link rel="stylesheet" id="projectspage" href="//css/projectspage.css" type="text/css" media="all">
+<link rel='stylesheet' href='/fullcalendar/fullcalendar.css' />
+<link rel='stylesheet' href='/jquery-ui-1.12.1.custom/jquery-ui.css' />
+<link rel="stylesheet" id="projectspage" href="/css/projectspage.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
 
-<script src='/adam-hayes/fullcalendar/lib/jquery.min.js'></script>
-<script src='/adam-hayes/fullcalendar/lib/moment.min.js'></script>
-<script src='/adam-hayes/fullcalendar/fullcalendar.js'></script>
-<script src='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.min.js'></script>
+<script src='/fullcalendar/lib/jquery.min.js'></script>
+<script src='/fullcalendar/lib/moment.min.js'></script>
+<script src='/fullcalendar/fullcalendar.js'></script>
+<script src='/jquery-ui-1.12.1.custom/jquery-ui.min.js'></script>
 <script type="text/javascript" src="/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
