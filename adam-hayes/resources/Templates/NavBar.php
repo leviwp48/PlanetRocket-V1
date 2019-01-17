@@ -43,7 +43,7 @@ private $_forHomePage = false;
 	                 <ul id="top-xyz" class="h-group">
 	                 <?php
 	                 	$currurl = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	                	if(('https://planetrocket.com/' === $currurl) or ('https://127.0.0.1/adam-hayes/public/' === $currurl))
+	                	if(('https://planetrocket.com/' === $currurl) or ('https://127.0.0.1/' === $currurl))
 						{
 							?>
 		                    <li class="box top-nav-item">

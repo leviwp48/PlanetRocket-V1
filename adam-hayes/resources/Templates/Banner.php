@@ -38,7 +38,7 @@ private $_forHomePage = false;
 							</iframe>
 
 							<a href="<?php echo APP_BASE; ?>"><img class="box" style="max-width:100%; max-height:100%;"
-              						id="logo_main" src="/adam-hayes/public/images/logo_white_PlanetRocket.png"/> </a>
+              						id="logo_main" src="/images/logo_white_PlanetRocket.png"/> </a>
 
               <div class="visible_at_screen_gt_size1">
               </div>

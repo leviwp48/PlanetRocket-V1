@@ -14,10 +14,10 @@ use Resources\Templates\Banner;
 
 <head>
 
-  <link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
-  <link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
-  <link rel="stylesheet" id="about-page" href="/adam-hayes/public/adam-hayes/public/css/about-page.css" type="text/css" media="all">
-  <link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+  <link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
+  <link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
+  <link rel="stylesheet" id="about-page" href="/css/about-page.css" type="text/css" media="all">
+  <link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
   <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
   <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
   <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
@@ -98,7 +98,7 @@ use Resources\Templates\Banner;
                 }
               ],
                open: function (event, ui){
-                 $('#more_info').wrap('<a href="/adam-hayes/public/projects/view-project/'+id+'"></a>');
+                 $('#more_info').wrap('<a href="/projects/view-project/'+id+'"></a>');
                }
             });
             //$( '#eventClickWindow' ).dialog("open");
@@ -235,7 +235,7 @@ use Resources\Templates\Banner;
   window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

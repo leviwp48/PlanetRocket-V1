@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Open Sans', sans-serif;
-  src: url('/adam-hayes/public/css/OpenSans-Bold.ttf') format(truetype),
-       url('/adam-hayes/public/css/OpenSans-Light.ttf') format(truetype);
+  src: url('/css/OpenSans-Bold.ttf') format(truetype),
+       url('/css/OpenSans-Light.ttf') format(truetype);
      }
 
 .photo_caption_credit {

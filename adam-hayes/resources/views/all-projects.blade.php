@@ -13,13 +13,13 @@ use Resources\Templates\Banner;
 <title>Planet Rocket - All Projects</title>
 
 
-<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="about-page" href="/adam-hayes/public//css/about-page.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="about-page" href="//css/about-page.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
 <link rel='stylesheet' href='/adam-hayes/fullcalendar/fullcalendar.css' />
 <link rel='stylesheet' href='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.css' />
-<link rel="stylesheet" id="projectspage" href="/adam-hayes/public//css/projectspage.css" type="text/css" media="all">
+<link rel="stylesheet" id="projectspage" href="//css/projectspage.css" type="text/css" media="all">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 <!--<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/dot-luv/jquery-ui.css'/>-->
 
@@ -27,7 +27,7 @@ use Resources\Templates\Banner;
 <script src='/adam-hayes/fullcalendar/lib/moment.min.js'></script>
 <script src='/adam-hayes/fullcalendar/fullcalendar.js'></script>
 <script src='/adam-hayes/jquery-ui-1.12.1.custom/jquery-ui.min.js'></script>
-<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
+<script type="text/javascript" src="/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -96,7 +96,7 @@ use Resources\Templates\Banner;
               }
             ],
              open: function (event, ui){
-               $('#more_info').wrap('<a href="/adam-hayes/public/projects/view-project/'+id+'"></a>');
+               $('#more_info').wrap('<a href="/projects/view-project/'+id+'"></a>');
              }
           });
           //$( '#eventClickWindow' ).dialog("open");
@@ -154,7 +154,7 @@ use Resources\Templates\Banner;
             <div class="h-group" style="margin-top:30px; background:#FFFFFF;">
               <div class="box icon-width" style="padding-left:10px; padding-right:10px; vertical-align:middle; background:#FFFFFF;">
                 <div class="img-wrap-w-center" style="background:#FFFFFF;">
-                  <img class="box" alt="CPP Logo" src="/adam-hayes/public/images/CPP_logo2.png">
+                  <img class="box" alt="CPP Logo" src="/images/CPP_logo2.png">
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ use Resources\Templates\Banner;
         -->
         <h1 style="padding-top:3vw;font-size:2.5em;font-weight:500;">Welcome to CPP Month</h1>
         
-        <img  alt="CPP Logo" src="/adam-hayes/public/images/CPP_FINAL_Logo_Color.png" id="cpplogo" >
+        <img  alt="CPP Logo" src="/images/CPP_FINAL_Logo_Color.png" id="cpplogo" >
         
                  <p style="margin-bottom:10vh; margin-left:10vw; margin-right:10vw; font-size:3.4vh;">September is Community Pride & Peace month. Projects, events, and trainings for enriching
                   our Humboldt County community will be going on all month. September is a good time to help out our community.
@@ -555,7 +555,7 @@ use Resources\Templates\Banner;
             <h1 style="margin-bottom: 10vw;"> Our Project Page </h1>  
           <p>Do You have a good idea? Do you want to help someone who has a good idea? Check out all of our projects where you can take your ideas and turn them into realities.</p>
                 -->
-          <embed src="/adam-hayes/public/images/OurProjectPage_Astro.svg">
+          <embed src="/images/OurProjectPage_Astro.svg">
         </div>
         </div>
         <div class="v-inner">
@@ -596,6 +596,6 @@ window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-all-projects.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-all-projects.js"></script>
 </body>
 </html>

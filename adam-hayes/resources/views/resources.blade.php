@@ -12,7 +12,7 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Home</title>
 
-<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="alex-lowe-core-layout" href="./css/alex-lowe-core-layout.css" type="text/css" media="all">
 <link rel="stylesheet" id="about-page" href="./css/index-page.css" type="text/css" media="all">
 <link rel="stylesheet" id="gbc-main" href="./css/gbc-css/gbc-main.css" type="text/css" media="all">
@@ -92,7 +92,7 @@ use Resources\Templates\Banner;
 
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/food">
+					<a href="/resources/food">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Food</button>
 					</a>
 				</div>
@@ -100,7 +100,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/housing">
+					<a href="/resources/housing">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; font-weight:100; ">Housing</button>
 					</a>
 				</div>
@@ -108,7 +108,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/lgbtq">
+					<a href="/resources/lgbtq">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">LGBTQ+</button>
 					</a>
 				</div>
@@ -116,7 +116,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/medical">
+					<a href="/resources/medical">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Medical</button>
 					</a>
 				</div>
@@ -124,7 +124,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/shelters">
+					<a href="/resources/shelters">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em;font-weight:100; ">Shelters</button>
 					</a>
 				</div>
@@ -132,7 +132,7 @@ use Resources\Templates\Banner;
 			
 			<div class="button-group">
 				<div style="text-align:center;">
-					<a href="/adam-hayes/public/resources/transportation">
+					<a href="/resources/transportation">
 						<button style="background:#000000; color:white; height:125%; width:30%; font-size:2.3em; margin-top:.5em; margin-bottom:.5em;font-weight:100; ">Transportation</button>
 					</a>
 				</div>

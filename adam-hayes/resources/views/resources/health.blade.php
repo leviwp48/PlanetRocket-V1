@@ -12,9 +12,9 @@ use Resources\Templates\Banner;
 
 <title>Planet Rocket - Health & Wellness</title>
 
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/js/lib/html5.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115020689-1"></script>
 <script>
@@ -71,7 +71,7 @@ use Resources\Templates\Banner;
               <h1 style="font-weight:250;font-size:4em;">
                 Community Resources
               </h1>
-				<embed src="/adam-hayes/public/images/resources/health/1.svg" />
+				<embed src="/images/resources/health/1.svg" />
 
             </div>
             <!-- End of Center column -->
@@ -103,7 +103,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-index-page.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-index-page.js"></script>
 
 </body>
 </html>

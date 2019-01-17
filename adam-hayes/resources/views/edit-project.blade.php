@@ -11,11 +11,11 @@ use Resources\Templates\Banner;
 ?>
 
 <title>Edit a project</title>
-<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
 
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
+<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -120,7 +120,7 @@ use Resources\Templates\Banner;
               'data-ajax-client-interface'  => 'EditProject',
               'data-ajax-server-interface'  => 'LaravelServer',
               'data-ajax-form-mode'         => 'edit',
-              'data-ajax-data-hook'         => '/adam-hayes/public/user/get-project'
+              'data-ajax-data-hook'         => '/user/get-project'
               )); ?>
 
               <div class="row" style="margin-top:20px"></div>
@@ -369,6 +369,6 @@ window["_loggedIn"] = <?php echo $logged_in ? "true" : "false" ?>;
 window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-edit-project.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-edit-project.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 */
 
 //define('APP_BASE', 'http://138.68.248.178');
-define('APP_BASE', 'https://127.0.0.1/adam-hayes/public');
+define('APP_BASE', 'https://pr1.arlevin.org');
 
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')

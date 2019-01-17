@@ -11,10 +11,10 @@ use Resources\Templates\Banner;
 ?>
 
 <title>View Project</title>
-<link rel="stylesheet" id="normalize" href="/adam-hayes/public/css/normalize.css" type="text/css" media="all">
-<link rel="stylesheet" id="alex-lowe-core-layout" href="/adam-hayes/public/css/alex-lowe-core-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="gbc-main" href="/adam-hayes/public/css/gbc-css/gbc-main.css" type="text/css" media="all">
-<script type="text/javascript" src="/adam-hayes/public/js/lib/html5.js"></script>
+<link rel="stylesheet" id="normalize" href="/css/normalize.css" type="text/css" media="all">
+<link rel="stylesheet" id="alex-lowe-core-layout" href="/css/alex-lowe-core-layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="gbc-main" href="/css/gbc-css/gbc-main.css" type="text/css" media="all">
+<script type="text/javascript" src="/js/lib/html5.js"></script>
 
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -169,7 +169,7 @@ use Resources\Templates\Banner;
                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
                  var disqus_config = function () {
-                   this.page.url = "http://localhost/adam-hayes/public/projects/view-project/" + "<?php echo $project_id ?>" ;  // Replace PAGE_URL with your page's canonical URL variable
+                   this.page.url = "http://localhost/projects/view-project/" + "<?php echo $project_id ?>" ;  // Replace PAGE_URL with your page's canonical URL variable
                    this.page.identifier = "<?php echo $project_id ?>"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                  };
 
@@ -198,7 +198,7 @@ window["user"] = <?php echo $logged_in ? json_encode($user) : "null" ?>;
 window["_APP_BASE"] = "<?php echo APP_BASE; ?>";
 </script>
 
-<script type="text/javascript" src="/adam-hayes/public/js/loaders/loader-view-project-readonly.js"></script>
+<script type="text/javascript" src="/js/loaders/loader-view-project-readonly.js"></script>
 
 </body>
 </html>
