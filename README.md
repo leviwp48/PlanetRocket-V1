@@ -1,11 +1,11 @@
 # PlanetRocket
-This is the location of the repo for the Planet Rocket website. 
 
-Dev Team: 
-Eric Mott, 
-Alec Levin, 
-Levi Pole,
-Will Doudna
+This is a web application that I worked on for Planet Rocket. 
 
-Past Dev Members: 
-Alex Lowe
+Version 2: 
+
+Tech
+====
+This utilizes a LAMP (Linux, Apache, MySQL, PHP) stack and uses a Laravel framework.
+
+
