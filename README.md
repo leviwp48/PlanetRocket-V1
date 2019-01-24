@@ -6,6 +6,6 @@ Version 2:
 
 Tech
 ====
-This utilizes a LAMP (Linux, Apache, MySQL, PHP) stack and uses a Laravel framework.
+This utilizes a LAMP (Linux, Apache, MySQL, PHP) stack built with a Laravel framework.
 
 
