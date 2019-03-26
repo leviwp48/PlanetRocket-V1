@@ -1,11 +1,9 @@
 # PlanetRocket
 
-This is a web application that I worked on for Planet Rocket. 
+This is version 1 of a web application that I worked on for Planet Rocket (Startup). 
 
-Version 2: 
-
-Tech
-====
+Technologies
+============
 This utilizes a LAMP (Linux, Apache, MySQL, PHP) stack built with a Laravel framework.
 
 
